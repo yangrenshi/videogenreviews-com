@@ -1,0 +1,63 @@
+---
+interface ScenarioItem {
+  title: string;
+  recommendedTool: string;
+  badge: string;
+  rationale: string;
+}
+
+const scenarios: ScenarioItem[] = [
+  {
+    title: 'TikTok & Reels Viral Shorts (9:16 Vertical)',
+    recommendedTool: 'Kling AI 1.5',
+    badge: 'Best Physics & Dynamics',
+    rationale:
+      'Native vertical aspect ratio support without cropping distortion. Superior human limb handling, dance motion coherence, and rapid turnaround for daily content batching.',
+  },
+  {
+    title: 'Performance Marketing & E-Commerce Ads',
+    recommendedTool: 'Runway Gen-3 Alpha',
+    badge: 'Pro Camera & Motion Control',
+    rationale:
+      'Granular multi-motion brush, keyframing, and custom camera pans allow precise product rotation showcases. Zero random morphing on branded packaging.',
+  },
+  {
+    title: 'Cinematic Storytelling & Indie Filmmaking',
+    recommendedTool: 'Luma Dream Machine 1.6',
+    badge: 'Atmospheric Lighting & Depth',
+    rationale:
+      'Rich volumetric lighting, cinematic color palettes, and natural depth-of-field transitions that mimic anamorphic lenses without excessive prompt engineering.',
+  },
+  {
+    title: 'Strictly 0-Dollar Free Allowance',
+    recommendedTool: 'Hailuo AI (MiniMax)',
+    badge: 'Generous No-Card Credits',
+    rationale:
+      'Offers high daily complimentary generation credits without asking for credit card verification upfront. Excellent photorealism for testing concepts without burning money.',
+  },
+];
+---
+
+<div class="my-10">
+  <h3 class="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
+    Which AI Video Tool Should You Pick by Use Case?
+  </h3>
+  <p class="text-xs md:text-sm text-slate-400 mb-6">
+    Skip the trial-and-error cycle. Here is our direct recommendation matched to specific production workflows.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {scenarios.map((s) => (
+      <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-slate-700 transition-colors">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+            {s.badge}
+          </span>
+          <span class="text-sm font-bold text-sky-400">{s.recommendedTool}</span>
+        </div>
+        <h4 class="text-base font-semibold text-slate-100 mb-2">{s.title}</h4>
+        <p class="text-xs md:text-sm text-slate-300 leading-relaxed">{s.rationale}</p>
+      </div>
+    ))}
+  </div>
+</div>

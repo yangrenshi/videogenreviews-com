@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import KeyTakeaway from '../components/KeyTakeaway.astro';
+import FaqAccordion, { type FaqItem } from '../components/FaqAccordion.astro';
+
+const title = 'Everygen AI: What It Is, Models, Pricing & Best Alternatives';
+const description = 'Complete guide to Everygen AI (formerly Viewmax). Discover supported diffusion models, free credit limits, verified pricing, and top alternative tools.';
+const canonicalPath = '';
+
+const faqs: FaqItem[] = [
+  {
+    question: 'What is Everygen AI?',
+    answer:
+      'Everygen AI is an all-in-one AI media generation platform that aggregates multiple text-to-video, image-to-video, and image enhancement foundational models under a unified interface. It was originally launched under the name Viewmax AI before undergoing rebranding in late 2026.',
+  },
+  {
+    question: 'Is Everygen AI completely free to use?',
+    answer:
+      'Everygen AI offers a limited free trial upon account registration that allows users to test standard generation parameters. However, recurring renders require either monthly subscriptions or top-up credit bundles. For a full breakdown of quota limits, see our dedicated test on is Everygen AI free.',
+  },
+  {
+    question: 'What models does Everygen AI support?',
+    answer:
+      'Everygen provides routing access to popular visual diffusion backends, including variations of open and consumer-tier video synthesis models, allowing creators to switch engines without maintaining separate API accounts.',
+  },
+  {
+    question: 'How do I cancel my Everygen AI subscription?',
+    answer:
+      'Subscriptions can be managed directly via your account profile settings under the "Billing & Plans" dashboard. Once cancelled, your paid quota remains active until the end of your billing cycle.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  schema={faqSchema}
+>
+  <div class="space-y-12">
+    <!-- Hero / Navigation Intent Section -->
+    <section class="text-center py-6 sm:py-10 max-w-3xl mx-auto">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-4">
+        <span>Independent Review Hub · Updated Nov 2026</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+        Everygen AI (Formerly Viewmax): Architecture, Costs & Alternatives
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+        Everything you need to know about Everygen AI before subscribing. We benchmark its generation latency, test actual free trial constraints, and break down where standalone generators outperform it.
+      </p>
+
+      <!-- 快速导航入口卡片 -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8 text-left">
+        <a
+          href="/everygen-ai-alternatives/"
+          class="p-4 rounded-xl border border-sky-500/30 bg-sky-950/20 hover:bg-sky-900/30 hover:border-sky-400 transition-all group"
+        >
+          <div class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-1">Top Recommendations</div>
+          <div class="text-sm font-semibold text-white group-hover:text-sky-300 flex items-center justify-between">
+            <span>Everygen Alternatives</span>
+            <span>&rarr;</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1">10 tested competitors with better motion & free tiers.</p>
+        </a>
+
+        <a
+          href="/is-everygen-ai-free/"
+          class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:bg-slate-800/60 hover:border-slate-700 transition-all group"
+        >
+          <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Free Allowance Test</div>
+          <div class="text-sm font-semibold text-white group-hover:text-emerald-300 flex items-center justify-between">
+            <span>Is It Really Free?</span>
+            <span>&rarr;</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1">Exact trial credits, watermark rules & limitations.</p>
+        </a>
+
+        <a
+          href="/everygen-ai-review/"
+          class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:bg-slate-800/60 hover:border-slate-700 transition-all group"
+        >
+          <div class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-1">Performance Benchmarks</div>
+          <div class="text-sm font-semibold text-white group-hover:text-indigo-300 flex items-center justify-between">
+            <span>Hands-on Review</span>
+            <span>&rarr;</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-1">Quality scoring, latency tests & prompt adherence.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Key Takeaway -->
+    <KeyTakeaway
+      pickA="Everygen AI"
+      forScenarioA="all-in-one multi-model prompt testing across varied styles"
+      pickB="Kling AI or Runway Gen-3"
+      forScenarioB="high-motion fidelity, commercial video editing, or daily vertical shorts"
+    />
+
+    <!-- 1. What is Everygen AI? (Core Explainer) -->
+    <section class="rounded-xl border border-slate-800 bg-slate-900/30 p-6 md:p-8">
+      <h2 class="text-2xl font-bold text-white tracking-tight mb-4">
+        What is Everygen AI? (The Viewmax Transition)
+      </h2>
+      <div class="prose prose-invert max-w-none text-slate-300 text-sm md:text-base space-y-4 leading-relaxed">
+        <p>
+          <strong>Everygen AI</strong> is a browser-based generative video suite that gained traction among digital marketers and video editors in mid-2026. Initially operating as <span class="text-slate-100 font-semibold">Viewmax AI</span>, the service rebranded to consolidate video generation, image-to-video synthesis, and creative prompt assistance under one dashboard.
+        </p>
+        <p>
+          Unlike dedicated foundational research labs such as OpenAI (Sora) or Runway, Everygen AI operates as a unified aggregation layer. Users enter a prompt once and can switch underlying model backends without purchasing multiple separate API keys. While this provides initial convenience, it also introduces shared credit pools, variable queue wait times, and less granular temporal steering controls.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Step-by-Step: How Free Credits Actually Work -->
+    <section class="rounded-xl border border-slate-800 bg-slate-900/30 p-6 md:p-8">
+      <h2 class="text-2xl font-bold text-white tracking-tight mb-4">
+        How Everygen AI Free Credits Work: Step-by-Step
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-300">
+        <div class="rounded-lg bg-slate-950/60 p-5 border border-slate-800">
+          <div class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-bold flex items-center justify-center text-sm mb-3">1</div>
+          <h3 class="font-bold text-white text-base mb-1">Registration Bonus</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            New accounts receive a one-off starter package of trial points. This is typically sufficient for 2 to 4 standard 5-second video clips.
+          </p>
+        </div>
+
+        <div class="rounded-lg bg-slate-950/60 p-5 border border-slate-800">
+          <div class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-bold flex items-center justify-center text-sm mb-3">2</div>
+          <h3 class="font-bold text-white text-base mb-1">Queue & Watermark</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Free tier generations run through public compute queues and embed a distinct watermark on the exported MP4 file.
+          </p>
+        </div>
+
+        <div class="rounded-lg bg-slate-950/60 p-5 border border-slate-800">
+          <div class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 font-bold flex items-center justify-center text-sm mb-3">3</div>
+          <h3 class="font-bold text-white text-base mb-1">Credit Depletion</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Unlike platforms that replenish credits daily (such as Kling AI), Everygen requires purchasing a monthly plan once trial tokens expire.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a
+          href="/is-everygen-ai-free/"
+          class="inline-flex items-center text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors"
+        >
+          Read our in-depth free tier test with actual video samples &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- 3. Pricing Overview (Updated Nov 2026) -->
+    <section class="rounded-xl border border-slate-800 bg-slate-900/30 p-6 md:p-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">
+          Everygen AI Pricing Tiers Overview
+        </h2>
+        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-mono">
+          Verified Nov 2026
+        </span>
+      </div>
+      <p class="text-sm text-slate-300 mb-6">
+        Prices for AI video generation change frequently. Here is the current billing breakdown observed in Everygen:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="rounded-xl border border-slate-800 bg-slate-950/80 p-5">
+          <h3 class="text-base font-bold text-slate-200 mb-1">Free Trial</h3>
+          <div class="text-2xl font-extrabold text-white mb-2">$0</div>
+          <p class="text-xs text-slate-400 mb-4">Good for testing prompt syntax and previewing generation speed.</p>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li>&bull; One-off starter credits</li>
+            <li>&bull; Watermark on all exports</li>
+            <li>&bull; Standard queue speed</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-sky-500/40 bg-gradient-to-b from-sky-950/30 to-slate-950/90 p-5 relative">
+          <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded bg-sky-500 text-slate-950">
+            Popular
+          </span>
+          <h3 class="text-base font-bold text-white mb-1">Creator Tier</h3>
+          <div class="text-2xl font-extrabold text-sky-400 mb-2">$14.99 <span class="text-xs text-slate-400 font-normal">/ mo</span></div>
+          <p class="text-xs text-slate-400 mb-4">Suitable for hobbyists and individual social media publishers.</p>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li>&bull; 500 monthly render credits</li>
+            <li>&bull; No watermark on downloads</li>
+            <li>&bull; Commercial monetization rights</li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-slate-800 bg-slate-950/80 p-5">
+          <h3 class="text-base font-bold text-slate-200 mb-1">Pro / Studio</h3>
+          <div class="text-2xl font-extrabold text-white mb-2">$39.99 <span class="text-xs text-slate-400 font-normal">/ mo</span></div>
+          <p class="text-xs text-slate-400 mb-4">Built for high-volume content creators and creative agencies.</p>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li>&bull; 2,000 monthly credits</li>
+            <li>&bull; Priority GPU allocation</li>
+            <li>&bull; Concurrent generation streams</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Alternatives Directory Teaser -->
+    <section class="rounded-xl border border-slate-800 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-slate-900/80 p-6 md:p-8">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">
+          Looking for Higher Motion Fidelity or Dedicated Camera Controls?
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+          While Everygen AI is convenient, competitors like Kling 1.5, Runway Gen-3 Alpha, and Luma Dream Machine provide dedicated motion tools, higher frame coherence, and recurring daily free tiers.
+        </p>
+        <a
+          href="/everygen-ai-alternatives/"
+          class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-colors shadow-lg shadow-sky-500/20"
+        >
+          Compare All 10 Tested Alternatives &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <FaqAccordion faqs={faqs} />
+  </div>
+</BaseLayout>

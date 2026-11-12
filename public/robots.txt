@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://videogenreviews.com/sitemap-index.xml

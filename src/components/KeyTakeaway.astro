@@ -1,0 +1,30 @@
+---
+interface Props {
+  pickA: string;
+  forScenarioA: string;
+  pickB: string;
+  forScenarioB: string;
+  pickC?: string;
+  forScenarioC?: string;
+}
+
+const { pickA, forScenarioA, pickB, forScenarioB, pickC, forScenarioC } = Astro.props;
+---
+
+<div class="my-6 p-5 rounded-xl border border-sky-500/30 bg-gradient-to-br from-sky-950/40 via-slate-900/60 to-slate-900/80 shadow-lg shadow-sky-950/30">
+  <div class="flex items-center space-x-2 text-sky-400 mb-2.5">
+    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
+    <span class="text-xs font-bold uppercase tracking-wider">Quick Verdict · Editor's Choice</span>
+  </div>
+  <p class="text-sm md:text-base text-slate-200 leading-relaxed font-medium">
+    If you need <span class="text-white font-semibold underline decoration-sky-500 decoration-2 underline-offset-4">{forScenarioA}</span>, choose <span class="text-sky-300 font-bold">{pickA}</span>.
+    If you prioritize <span class="text-white font-semibold underline decoration-indigo-500 decoration-2 underline-offset-4">{forScenarioB}</span>, go with <span class="text-indigo-300 font-bold">{pickB}</span>.
+    {pickC && forScenarioC && (
+      <>
+        For <span class="text-white font-semibold underline decoration-emerald-500 decoration-2 underline-offset-4">{forScenarioC}</span>, pick <span class="text-emerald-300 font-bold">{pickC}</span>.
+      </>
+    )}
+  </p>
+</div>
