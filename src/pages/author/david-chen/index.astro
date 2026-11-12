@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+
+const title = 'David Chen - Lead Video AI Research Analyst | VideoGen Reviews';
+const description = 'David Chen leads editorial research and benchmark methodology at VideoGen Reviews, evaluating diffusion models, temporal consistency, and commercial production pipelines.';
+const canonicalPath = 'author/david-chen';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'David Chen',
+  jobTitle: 'Lead Generative Video Analyst',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  description: 'Specialist in generative diffusion architectures, temporal coherence evaluation, and generative VFX production tooling.',
+  sameAs: [
+    'https://twitter.com/videogenreviews',
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  schema={personSchema}
+>
+  <Breadcrumbs crumbs={[{ label: 'Editorial Team' }, { label: 'David Chen' }]} />
+
+  <article class="space-y-10">
+    <!-- Author Header -->
+    <header class="border-b border-paper-300 pb-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+      <div class="w-20 h-20 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold text-2xl shadow-sm shrink-0">
+        DC
+      </div>
+      <div>
+        <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-1">
+          Lead Generative Video Analyst
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-900 tracking-tight">
+          David Chen
+        </h1>
+        <p class="text-sm text-ink-600 mt-2 max-w-2xl leading-relaxed">
+          Tracking the rapid evolution of video diffusion models from early 4-second research checkpoints to commercial 30-second 1080p generative production engines.
+        </p>
+      </div>
+    </header>
+
+    <!-- Biography & Background -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-bold text-ink-900 tracking-tight">
+        Editorial Philosophy & Evaluation Standards
+      </h2>
+      <div class="space-y-4 text-ink-800 text-sm sm:text-base leading-relaxed">
+        <p>
+          At VideoGen Reviews, our mission is to eliminate marketing hyperbole and provide creators, video editors, and engineering teams with verified, specification-grounded evaluations of generative visual software.
+        </p>
+        <p>
+          David focuses on the technical intersection between diffusion transformers, prompt fidelity, and real compute economics. As platforms migrate toward multi-model routing architectures like Everygen AI, our team assesses both centralized aggregators and dedicated standalone software like Kling AI, Runway, and PixVerse.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our 5-Point Evaluation Framework -->
+    <section class="rounded-lg border border-paper-300 bg-paper-100 p-6 sm:p-8 space-y-4">
+      <h2 class="text-lg font-bold text-ink-900">
+        Our Core 5-Point Evaluation Framework
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-ink-700">
+        <div class="border-l-2 border-brand-blue pl-3 space-y-1">
+          <strong class="text-ink-900 block">1. Prompt Adherence</strong>
+          <span>How faithfully does the synthesis engine adhere to subject positioning, lighting cues, and directional verbs without halluncinating artifacts?</span>
+        </div>
+        <div class="border-l-2 border-brand-blue pl-3 space-y-1">
+          <strong class="text-ink-900 block">2. Temporal Consistency</strong>
+          <span>Does the scene maintain character facial anatomy, background architectural lines, and mass stability across continuous multi-second generations?</span>
+        </div>
+        <div class="border-l-2 border-brand-blue pl-3 space-y-1">
+          <strong class="text-ink-900 block">3. Visual Fidelity</strong>
+          <span>Evaluation of texture realism, dynamic lighting range, and prevention of artificial plastic gloss or compression banding.</span>
+        </div>
+        <div class="border-l-2 border-brand-blue pl-3 space-y-1">
+          <strong class="text-ink-900 block">4. Compute Credit Economics</strong>
+          <span>Measuring real cost per usable commercial second, recurring daily refill allowances, and transparency of pricing bundles.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparency & Conflict of Interest Statement -->
+    <section class="border-t border-paper-300 pt-6 space-y-3 text-xs text-ink-600 leading-relaxed">
+      <h3 class="font-bold text-ink-800 uppercase tracking-wider text-xs">
+        Editorial Independence & Disclosure
+      </h3>
+      <p>
+        All evaluations published by David Chen and the VideoGen Reviews team are produced independently. While we may receive affiliate referral compensation from select partners when readers register through tracked links, commercial partnerships never dictate editorial rankings, score adjustments, or critical omissions.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

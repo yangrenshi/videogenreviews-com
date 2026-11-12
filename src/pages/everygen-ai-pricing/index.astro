@@ -1,0 +1,209 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import KeyTakeaway from '../../components/KeyTakeaway.astro';
+import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Everygen AI Pricing: Token Packages, Model Rates & Cost Guide (2026)';
+const description = 'Complete Everygen AI pricing breakdown. Compare token costs for Seedance 2.5, Kling 4.0, and MiniMax across 5s and 30s 1080p generation tiers.';
+const canonicalPath = 'everygen-ai-pricing';
+
+const faqs: FaqItem[] = [
+  {
+    question: 'How does Everygen AI calculate video generation costs?',
+    answer:
+      'Everygen AI uses a compute token ledger rather than a flat monthly video limit. Token consumption scales based on foundational model selection (Seedance 2.5 vs Kling 4.0), video duration (5 seconds vs 30 seconds), and resolution (720p draft vs 1080p production).',
+  },
+  {
+    question: 'Are there hidden subscription lock-ins on Everygen AI?',
+    answer:
+      'Everygen provides both recurring monthly subscription tiers and on-demand top-up credit bundles. Tokens purchased via credit packs do not expire at month-end, providing cost flexibility for irregular creative workloads.',
+  },
+  {
+    question: 'Is it cheaper to use Everygen AI or subscribe directly to Kling and Runway?',
+    answer:
+      'If you generate exclusively on one platform (like Kling AI for its daily 66 free credits), a direct standalone plan is optimal. If your production requires testing across multiple frontier engines (Kling 4.0, Seedance 2.5, Grok Imagine) or integrating into developer MCP tools, Everygen significantly lowers multi-vendor subscription overhead.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.answer,
+    },
+  })),
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Person',
+    name: 'David Chen',
+    url: 'https://videogenreviews.com/author/david-chen/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  datePublished: '2026-11-12',
+  dateModified: '2026-11-12',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://videogenreviews.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Everygen AI Pricing',
+      item: 'https://videogenreviews.com/everygen-ai-pricing/',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  schema={[articleSchema, faqSchema, breadcrumbSchema]}
+>
+  <Breadcrumbs crumbs={[{ label: 'Everygen AI Pricing' }]} />
+
+  <article class="space-y-10">
+    <header class="border-b border-paper-300 pb-8">
+      <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
+        Pricing Guide & Cost Calculator
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Everygen AI Pricing: Token Packages & Model Rates (2026)
+      </h1>
+
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
+        A transparent breakdown of Everygen AI compute token pricing by Viewmax LLC: analyzing token burn rates across Seedance 2.5, Kling 4.0, and 30-second 1080p long-form generations.
+      </p>
+
+      <div class="text-xs text-ink-500 font-medium">
+        Updated November 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+      </div>
+    </header>
+
+    <KeyTakeaway
+      pickA="Everygen Token Bundles"
+      forScenarioA="studios running multi-model evaluations without paying multiple $20-$35/mo solo subscriptions"
+      pickB="Direct Standalone Tiers (Kling/Runway)"
+      forScenarioB="creators generating high daily volume on a single specialized tool"
+    />
+
+    <!-- Model Cost Matrix Table -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Estimated Token Burn by Model & Duration
+      </h2>
+      <p class="text-sm text-ink-700 leading-relaxed">
+        Because Everygen orchestrates partner inference clusters, generation requirements vary according to compute intensity and output duration:
+      </p>
+
+      <div class="overflow-x-auto rounded-lg border border-paper-300 mt-4">
+        <table class="min-w-full divide-y divide-paper-300 text-left text-xs sm:text-sm">
+          <thead class="bg-paper-100 font-semibold text-ink-900">
+            <tr>
+              <th scope="col" class="py-3.5 pl-4 pr-3">Model Engine</th>
+              <th scope="col" class="px-3 py-3.5">Duration</th>
+              <th scope="col" class="px-3 py-3.5">Resolution</th>
+              <th scope="col" class="px-3 py-3.5">Relative Cost Tier</th>
+              <th scope="col" class="px-3 py-3.5 pr-4">Recommended Workflow</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-paper-300 bg-white text-ink-700">
+            <tr>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2.5</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">30 seconds</td>
+              <td class="px-3 py-3.5">1080p FHD</td>
+              <td class="px-3 py-3.5 font-medium text-purple-700">Production High</td>
+              <td class="px-3 py-3.5 pr-4">Cinematic B-roll & storytelling scenes</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Kling AI 4.0</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">30 seconds</td>
+              <td class="px-3 py-3.5">1080p FHD</td>
+              <td class="px-3 py-3.5 font-medium text-purple-700">Production High</td>
+              <td class="px-3 py-3.5 pr-4">Fast human motion & athletic sequences</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">MiniMax H3 Max</td>
+              <td class="px-3 py-3.5">6 seconds</td>
+              <td class="px-3 py-3.5">1080p FHD</td>
+              <td class="px-3 py-3.5 font-medium text-blue-700">Moderate</td>
+              <td class="px-3 py-3.5 pr-4">Close-up character facial portraits</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Grok Imagine</td>
+              <td class="px-3 py-3.5">Still Frame</td>
+              <td class="px-3 py-3.5">High Res</td>
+              <td class="px-3 py-3.5 font-medium text-emerald-700">Economy</td>
+              <td class="px-3 py-3.5 pr-4">Initial storyboard framing & asset concepting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Pricing Strategy Analysis -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        How to Maximize Your Compute Budget
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+        <div class="rounded-lg border border-paper-300 bg-paper-100 p-5 space-y-2">
+          <h3 class="text-base font-bold text-ink-900">1. Draft at 720p First</h3>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Validate camera motion and subject framing using low-token 720p drafts before committing compute tokens to a full 30-second 1080p render.
+          </p>
+        </div>
+
+        <div class="rounded-lg border border-paper-300 bg-paper-100 p-5 space-y-2">
+          <h3 class="text-base font-bold text-ink-900">2. Anchor Character References</h3>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Use high-resolution portrait reference images when prompting Kling 4.0 or Seedance 2.5 to eliminate wasted regeneration cycles.
+          </p>
+        </div>
+
+        <div class="rounded-lg border border-paper-300 bg-paper-100 p-5 space-y-2">
+          <h3 class="text-base font-bold text-ink-900">3. Blend with Free Daily Tools</h3>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Pair your Everygen workflow with standalone free tiers like Kling AI\'s 66 daily credits or Hailuo\'s free allowance to offset testing costs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Navigation -->
+    <section class="rounded-lg bg-paper-100 border border-paper-300 p-6 sm:p-8 space-y-3">
+      <h2 class="text-lg font-bold text-ink-900">Explore Alternatives & Free Account Options</h2>
+      <p class="text-sm text-ink-700 leading-relaxed">
+        Curious how Everygen compares against standalone pricing from Runway, PixVerse, or Luma? Review our complete <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Best Everygen AI Alternatives</a> guide or verify trial policies in our <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">Free Trial Breakdown</a>.
+      </p>
+    </section>
+
+    <!-- FAQs -->
+    <FaqAccordion faqs={faqs} />
+  </article>
+</BaseLayout>

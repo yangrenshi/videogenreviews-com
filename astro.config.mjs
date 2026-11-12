@@ -11,7 +11,7 @@ export default defineConfig({
       applyBaseStyles: true,
     }),
     sitemap({
-      filter: (page) => !page.includes('/404'),
+      filter: (page) => !page.includes('/404') && !page.includes('/go/'),
       lastmod: new Date(),
     }),
   ],

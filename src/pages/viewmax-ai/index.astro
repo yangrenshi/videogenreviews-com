@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import KeyTakeaway from '../../components/KeyTakeaway.astro';
+import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Viewmax AI is Now Everygen AI: What Changed & New Features (2026)';
+const description = 'Viewmax AI has rebranded to Everygen AI under Viewmax LLC. Discover new multi-engine routing across Kling 4.0 and Seedance 2.5, plus native MCP support.';
+const canonicalPath = 'viewmax-ai';
+
+const faqs: FaqItem[] = [
+  {
+    question: 'Is Viewmax AI the same product as Everygen AI?',
+    answer:
+      'Yes. Everygen AI is the official successor and rebranding of Viewmax AI, operated by the same parent company, Viewmax LLC. Existing accounts and user credentials migrate smoothly into the upgraded platform.',
+  },
+  {
+    question: 'Why did Viewmax AI rebrand to Everygen AI?',
+    answer:
+      'The rebrand reflects the suite\'s architectural expansion from early AI image workflows into a comprehensive multimodal generation engine featuring 30-second continuous 1080p video diffusion and Model Context Protocol (MCP) tooling.',
+  },
+  {
+    question: 'Can I still access my Viewmax AI generation history?',
+    answer:
+      'Account balances and saved project histories are preserved under the Everygen platform infrastructure. Users log in using their original Viewmax credentials.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.answer,
+    },
+  })),
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Person',
+    name: 'David Chen',
+    url: 'https://videogenreviews.com/author/david-chen/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  datePublished: '2026-11-12',
+  dateModified: '2026-11-12',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://videogenreviews.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Viewmax AI Migration',
+      item: 'https://videogenreviews.com/viewmax-ai/',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  schema={[articleSchema, faqSchema, breadcrumbSchema]}
+>
+  <Breadcrumbs crumbs={[{ label: 'Viewmax AI Migration' }]} />
+
+  <article class="space-y-10">
+    <header class="border-b border-paper-300 pb-8">
+      <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
+        Rebrand & Migration Brief
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Viewmax AI is Now Everygen AI: What Changed
+      </h1>
+
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
+        Looking for Viewmax AI? Viewmax LLC has evolved the platform into Everygen AI: adding frontier video models (Seedance 2.5, Kling 4.0), 30-second 1080p generation, and native MCP developer tooling.
+      </p>
+
+      <div class="text-xs text-ink-500 font-medium">
+        Updated November 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+      </div>
+    </header>
+
+    <KeyTakeaway
+      pickA="Seamless Migration"
+      forScenarioA="existing Viewmax users accessing active accounts under Everygen AI"
+      pickB="Upgraded Capabilities"
+      forScenarioB="creators seeking 30-second 1080p generation and Model Context Protocol (MCP) agents"
+    />
+
+    <!-- Architectural Evolution -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Why Viewmax LLC Rebranded to Everygen AI
+      </h2>
+      <div class="space-y-4 text-ink-800 text-sm sm:text-base leading-relaxed">
+        <p>
+          When Viewmax LLC initially debuted <strong>Viewmax AI</strong>, the product targeted standard image-generation workflows and early short-form video clip synthesis. As foundational diffusion architectures rapidly advanced in 2026, the company expanded its backend infrastructure to orchestrate multiple tier-one video models under a unified credit ledger.
+        </p>
+        <p>
+          The rebranding to <strong>Everygen AI</strong> reflects this universal multimodal mission: empowering creators and developers to access <em>every generation architecture</em>—including Kling 4.0, Seedance 2.5, and MiniMax H3 Max—from one centralized platform without managing individual accounts.
+        </p>
+      </div>
+    </section>
+
+    <!-- Side-by-Side Comparison of Changes -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Key Upgrades from Viewmax AI to Everygen AI
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <span class="text-xs uppercase font-bold text-brand-blue">Duration</span>
+          <div class="text-lg font-bold text-ink-900">30s vs 5s Clips</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            While Viewmax was historically limited to short 4 to 5-second bursts, Everygen introduces native 30-second continuous 1080p scene rendering via Seedance 2.5.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <span class="text-xs uppercase font-bold text-purple-700">Developer Stack</span>
+          <div class="text-lg font-bold text-ink-900">Native MCP Integration</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Engineers can attach Everygen directly as a Model Context Protocol server inside Cursor, Windsurf, or Claude Desktop to generate video programmatically.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <span class="text-xs uppercase font-bold text-emerald-800">Model Breadth</span>
+          <div class="text-lg font-bold text-ink-900">Frontier Multi-Routing</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Seamlessly switch prompts between Kling 4.0 (athletic movement & physics), Seedance 2.5 (camera consistency), and MiniMax H3 (human skin photorealism).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Hub -->
+    <section class="rounded-lg bg-paper-100 border border-paper-300 p-6 sm:p-8 space-y-3">
+      <h2 class="text-lg font-bold text-ink-900">Explore the Rebranded Platform</h2>
+      <p class="text-sm text-ink-700 leading-relaxed">
+        Ready to dive into the full platform capabilities? Read our comprehensive <a href="/" class="text-brand-blue font-semibold hover:underline">Everygen AI Platform Guide</a>, evaluate <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Top Video Alternatives</a>, or review <a href="/everygen-ai-pricing/" class="text-brand-blue font-semibold hover:underline">Everygen Pricing & Token Packages</a>.
+      </p>
+    </section>
+
+    <!-- FAQs -->
+    <FaqAccordion faqs={faqs} />
+  </article>
+</BaseLayout>

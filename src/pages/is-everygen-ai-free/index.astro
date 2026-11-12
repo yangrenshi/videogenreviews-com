@@ -62,13 +62,31 @@ const breadcrumbSchema = {
     },
   ],
 };
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Person',
+    name: 'David Chen',
+    url: 'https://videogenreviews.com/author/david-chen/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  datePublished: '2026-11-12',
+  dateModified: '2026-11-12',
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   canonicalPath={canonicalPath}
-  schema={[faqSchema, breadcrumbSchema]}
+  schema={[articleSchema, faqSchema, breadcrumbSchema]}
 >
   <Breadcrumbs crumbs={[{ label: 'Is Everygen AI Free?' }]} />
 
@@ -87,7 +105,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 2026 &bull; Published by VideoGen Reviews
+        Updated November 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 

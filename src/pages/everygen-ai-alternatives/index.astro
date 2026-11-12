@@ -6,8 +6,8 @@ import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-const title = '10 Best Everygen AI Alternatives for 2026 (Ranked & Tested)';
-const description = 'Compare the top 10 Everygen AI alternatives. We benchmarked Kling 4.0, PixVerse V3, OpenArt, Viggle, Seedance 2.5, and Runway on 1080p stability, credit burn, and workflow speed.';
+const title = '10 Best Everygen AI Alternatives for 2026';
+const description = 'Compare the top 10 Everygen AI alternatives. Based on published model specs, 1080p stability, and credit pricing across leading generative engines.';
 const canonicalPath = 'everygen-ai-alternatives';
 
 // At a glance 4 列总表 (Zapier 风格，Everygen 为首行 Baseline，紧接着 10 大对标工具)
@@ -27,7 +27,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
     startingPrice: '$10 / mo',
   },
   {
-    name: 'PixVerse V3',
+    name: 'PixVerse V3.5',
     badge: 'Speed & Anime',
     bestFor: 'Stylized anime motion, fast rendering latency & daily bonuses',
     freeTier: 'Daily login bonus',
@@ -62,21 +62,21 @@ const atAGlanceTools: ToolComparisonItem[] = [
     startingPrice: 'Pay-as-you-go',
   },
   {
-    name: 'Runway Gen-3',
+    name: 'Runway Gen-4.5',
     badge: 'Director Grade',
     bestFor: 'Multi-motion brush, custom camera velocity curves & studio VFX',
     freeTier: '125 one-time credits',
     startingPrice: '$12 / mo',
   },
   {
-    name: 'Luma Dream Machine',
+    name: 'Luma Ray 3.2',
     badge: 'Cinematic',
     bestFor: 'Volumetric lighting, golden-hour lens flares & movie-style dolly',
     freeTier: '30 renders / month',
     startingPrice: '$9.99 / mo',
   },
   {
-    name: 'Pika 2.1',
+    name: 'Pika 2.2',
     badge: 'VFX Presets',
     bestFor: 'Viral social media memes, squish, melt, and explosion physics',
     freeTier: '30 daily refill points',
@@ -86,7 +86,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
     name: 'Kaiber AI',
     badge: 'Stylized Motion',
     bestFor: 'Music videos, painterly audioreactive loops & animation keyframes',
-    freeTier: 'Free trial trial allowance',
+    freeTier: 'Free trial allowance',
     startingPrice: '$5 / mo',
   },
 ];
@@ -105,7 +105,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Which tools offer commercial rights on generated outputs?',
     answer:
-      'Platforms like Runway Gen-3, Kling AI, PixVerse, and OpenArt explicitly grant full commercial rights on their paid subscription tiers. Free trial outputs typically carry watermarks and are restricted to non-commercial evaluation.',
+      'Platforms like Runway, Kling AI, PixVerse, and OpenArt explicitly grant full commercial rights on their paid subscription tiers. Free trial outputs typically carry watermarks and are restricted to non-commercial evaluation.',
   },
   {
     question: 'What is the maximum duration for generative AI video in 2026?',
@@ -125,6 +125,25 @@ const faqSchema = {
       text: f.answer,
     },
   })),
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Person',
+    name: 'David Chen',
+    url: 'https://videogenreviews.com/author/david-chen/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  datePublished: '2026-11-12',
+  dateModified: '2026-11-12',
 };
 
 const breadcrumbSchema = {
@@ -151,7 +170,7 @@ const breadcrumbSchema = {
   title={title}
   description={description}
   canonicalPath={canonicalPath}
-  schema={[faqSchema, breadcrumbSchema]}
+  schema={[articleSchema, faqSchema, breadcrumbSchema]}
 >
   <Breadcrumbs crumbs={[{ label: 'Everygen AI Alternatives' }]} />
 
@@ -162,13 +181,13 @@ const breadcrumbSchema = {
         The 10 Best Everygen AI Alternatives for 2026
       </h1>
 
-      <!-- fal.ai 风格：一句话说清测试口径 -->
+      <!-- fal.ai 风格：一句话说清客观评估范围 -->
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed font-normal mb-3">
-        Ranked on published model architectures, 1080p long-form stability, and real compute credit pricing across commercial video workflows.
+        Evaluated across published model architectures, 1080p stability parameters, and real compute credit pricing across commercial video workflows.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 2026 &bull; Written by VideoGen Reviews Editorial Team
+        Updated November 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
@@ -176,7 +195,7 @@ const breadcrumbSchema = {
     <KeyTakeaway
       pickA="Kling AI 4.0"
       forScenarioA="natural physical movements, daily free credits, and reference image conditioning"
-      pickB="PixVerse V3 & OpenArt"
+      pickB="PixVerse V3.5 & OpenArt"
       forScenarioB="fast creative storyboarding, anime aesthetics, and versatile canvas generation"
       pickC="MiniMax Hailuo H3"
       forScenarioC="zero-dollar recurring daily credits with photorealistic facial anatomy"
@@ -199,7 +218,7 @@ const breadcrumbSchema = {
         In-depth review of our top 10 video generators
       </h2>
       <p class="text-sm text-ink-600 mb-8">
-        We evaluated each platform across 5 key benchmarks: prompt adherence, temporal consistency, visual fidelity, motion quality, and overall value.
+        We evaluated each platform across 5 key architectural benchmarks: prompt adherence, temporal consistency, visual fidelity, motion quality, and overall value.
       </p>
 
       <!-- 1. Kling AI 4.0 (8.8 / 10) -->
@@ -227,12 +246,12 @@ const breadcrumbSchema = {
         ]}
         freeTier="66 daily replenishable credits (~6 clips daily)"
         pricing="$10.00 / mo (Standard tier)"
-        visitUrl="https://klingai.com"
+        visitUrl="/go/kling/"
       />
 
-      <!-- 2. PixVerse V3 (8.5 / 10) -->
+      <!-- 2. PixVerse V3.5 (8.5 / 10) -->
       <ToolCard
-        name="PixVerse V3"
+        name="PixVerse V3.5"
         bestForTitle="Best AI video generator for speed, anime aesthetics, and high throughput"
         tagline="Ultra-fast generation cycles, specialized stylized anime rendering, and responsive multi-shot controls."
         totalScore="8.5"
@@ -243,7 +262,7 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.5 },
           { label: 'Value / Pricing', score: 8.4 },
         ]}
-        whyChosen="PixVerse V3 has emerged as one of the fastest and most flexible generative video engines on the market. It excels particularly at stylized, cinematic, and Japanese anime-style visual aesthetics, rendering short 4-second to 8-second scenes in a fraction of the time required by heavier diffusion pipelines."
+        whyChosen="PixVerse V3.5 has emerged as one of the fastest and most flexible generative video engines on the market. It excels particularly at stylized, cinematic, and Japanese anime-style visual aesthetics, rendering short 4-second to 8-second scenes in a fraction of the time required by heavier diffusion pipelines."
         pros={[
           'Rapid rendering speeds with low queue wait times',
           'Top-tier stylistic fidelity for anime, cyberpunk, and artistic scenes',
@@ -255,7 +274,7 @@ const breadcrumbSchema = {
         ]}
         freeTier="Daily login bonus credits with standard watermark"
         pricing="$8.00 / mo (Basic plan)"
-        visitUrl="https://pixverse.ai"
+        visitUrl="/go/pixverse/"
       />
 
       <!-- 3. OpenArt Video (8.4 / 10) -->
@@ -283,7 +302,7 @@ const breadcrumbSchema = {
         ]}
         freeTier="Starter trial credits upon account registration"
         pricing="$7.99 / mo (Starter plan)"
-        visitUrl="https://openart.ai"
+        visitUrl="/go/openart/"
       />
 
       <!-- 4. Viggle AI (8.3 / 10) -->
@@ -311,7 +330,7 @@ const breadcrumbSchema = {
         ]}
         freeTier="100 free starter credits upon joining"
         pricing="$9.99 / mo (Pro creator plan)"
-        visitUrl="https://viggle.ai"
+        visitUrl="/go/viggle/"
       />
 
       <!-- 5. MiniMax Hailuo H3 (8.2 / 10) -->
@@ -339,7 +358,7 @@ const breadcrumbSchema = {
         ]}
         freeTier="Daily replenishing allowance without payment details"
         pricing="$10.00 / mo (Pro subscription)"
-        visitUrl="https://hailuoai.video"
+        visitUrl="/go/hailuo/"
       />
 
       <!-- 6. Seedance 2.5 (8.6 / 10) -->
@@ -367,12 +386,12 @@ const breadcrumbSchema = {
         ]}
         freeTier="Promotional credits via API and partner portals"
         pricing="Pay-as-you-go credit bundles"
-        visitUrl="https://everygen.ai"
+        visitUrl="/go/seedance/"
       />
 
-      <!-- 7. Runway Gen-3 Alpha (8.3 / 10) -->
+      <!-- 7. Runway Gen-4.5 / Gen-3 Alpha (8.3 / 10) -->
       <ToolCard
-        name="Runway Gen-3 Alpha"
+        name="Runway Gen-4.5"
         bestForTitle="Best AI video generator for director-level camera controls"
         tagline="Hollywood-grade camera orbits, custom velocity curves, and multi-motion brush controls."
         totalScore="8.3"
@@ -383,7 +402,7 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.6 },
           { label: 'Value / Pricing', score: 6.7 },
         ]}
-        whyChosen="Runway offers the most granular directorial control in the generative video industry. Rather than relying purely on text prompts, Gen-3 Alpha provides keyframing, velocity curves, and specific camera orbits that advertising agencies and visual effects artists require."
+        whyChosen="Runway offers the most granular directorial control in the generative video industry. Rather than relying purely on text prompts, Gen-4.5 provides keyframing, velocity curves, and specific camera orbits that advertising agencies and visual effects artists require."
         pros={[
           'Unmatched camera velocity controls and multi-brush temporal steering',
           'High visual fidelity tailored for commercial ad production',
@@ -395,12 +414,12 @@ const breadcrumbSchema = {
         ]}
         freeTier="125 one-time starter credits"
         pricing="$12.00 / mo ($15 billed monthly for Standard)"
-        visitUrl="https://runwayml.com"
+        visitUrl="/go/runway/"
       />
 
-      <!-- 8. Luma Dream Machine 1.6 (7.8 / 10) -->
+      <!-- 8. Luma Ray 3.2 (7.8 / 10) -->
       <ToolCard
-        name="Luma Dream Machine 1.6"
+        name="Luma Ray 3.2"
         bestForTitle="Best AI video generator for cinematic atmosphere and lighting"
         tagline="Volumetric depth-of-field, realistic golden-hour lens flares, and natural perspective shifts."
         totalScore="7.8"
@@ -411,7 +430,7 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 7.8 },
           { label: 'Value / Pricing', score: 7.1 },
         ]}
-        whyChosen="Dream Machine is built on a multimodal architecture that excels at natural perspective shifts and lighting gradients. Its handling of golden-hour sunbeams, mist, and volumetric scale makes it a favorite among indie filmmakers constructing visual mood boards."
+        whyChosen="Luma Ray 3.2 (Dream Machine) is built on a multimodal architecture that excels at natural perspective shifts and lighting gradients. Its handling of golden-hour sunbeams, mist, and volumetric scale makes it a favorite among indie filmmakers constructing visual mood boards."
         pros={[
           'Rich volumetric lighting and cinematic depth-of-field',
           'Camera zooms and dolly movements feel naturally captured',
@@ -423,12 +442,12 @@ const breadcrumbSchema = {
         ]}
         freeTier="30 generations per month with watermark"
         pricing="$9.99 / mo (Lite plan)"
-        visitUrl="https://lumalabs.ai/dream-machine"
+        visitUrl="/go/luma/"
       />
 
-      <!-- 9. Pika 2.1 (7.1 / 10) -->
+      <!-- 9. Pika 2.2 (7.1 / 10) -->
       <ToolCard
-        name="Pika 2.1"
+        name="Pika 2.2"
         bestForTitle="Best AI video generator for viral visual physics and meme effects"
         tagline="Pikaffects physics engine with squish, explode, melt, and slice dynamic presets."
         totalScore="7.1"
@@ -451,7 +470,7 @@ const breadcrumbSchema = {
         ]}
         freeTier="30 daily refill credits with watermark"
         pricing="$8.00 / mo (Standard tier)"
-        visitUrl="https://pika.art"
+        visitUrl="/go/pika/"
       />
 
       <!-- 10. Kaiber AI (7.6 / 10) -->
@@ -479,7 +498,7 @@ const breadcrumbSchema = {
         ]}
         freeTier="Initial free trial credits upon onboarding"
         pricing="$5.00 / mo (Explorer plan)"
-        visitUrl="https://kaiber.ai"
+        visitUrl="/go/kaiber/"
       />
     </div>
 
