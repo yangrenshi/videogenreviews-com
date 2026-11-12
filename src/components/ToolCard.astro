@@ -16,6 +16,8 @@ interface Props {
   freeTier: string;
   pricing: string;
   visitUrl: string;
+  screenshotUrl?: string;
+  screenshotCaption?: string;
 }
 
 const {
@@ -30,6 +32,8 @@ const {
   freeTier,
   pricing,
   visitUrl,
+  screenshotUrl,
+  screenshotCaption,
 } = Astro.props;
 
 const numScore = parseFloat(totalScore);
@@ -107,6 +111,24 @@ const numScore = parseFloat(totalScore);
   <div class="space-y-4 text-ink-800 text-sm sm:text-base leading-relaxed">
     <p>{whyChosen}</p>
   </div>
+
+  <!-- 可选实机控制台截图 (浅底极简细边框) -->
+  {screenshotUrl && (
+    <figure class="my-5 rounded-lg overflow-hidden border border-paper-300 bg-paper-100 p-2 shadow-sm">
+      <img
+        src={screenshotUrl}
+        alt={screenshotCaption || `${name} platform interface`}
+        loading="lazy"
+        decoding="async"
+        class="w-full h-auto rounded border border-paper-300/80 object-cover"
+      />
+      {screenshotCaption && (
+        <figcaption class="text-[11px] text-ink-500 text-center pt-2 pb-1 font-medium">
+          {screenshotCaption}
+        </figcaption>
+      )}
+    </figure>
+  )}
 
   <!-- Zapier 风格 Pros / Cons 双列对比 -->
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
