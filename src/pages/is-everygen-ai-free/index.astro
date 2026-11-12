@@ -70,24 +70,25 @@ const breadcrumbSchema = {
   canonicalPath={canonicalPath}
   schema={[faqSchema, breadcrumbSchema]}
 >
-  <Breadcrumbs
-    crumbs={[{ label: 'Is Everygen AI Free?' }]}
-  />
+  <Breadcrumbs crumbs={[{ label: 'Is Everygen AI Free?' }]} />
 
-  <article>
-    <header class="mb-10 text-left">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-bold tracking-tight mb-4">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Account Rules & Quota Breakdown · Updated Nov 2026</span>
+  <article class="space-y-10">
+    <header class="border-b border-paper-300 pb-8">
+      <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider mb-2">
+        Account Policy & Quota Guide
       </div>
 
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-5 font-display">
-        Is Everygen AI Free? <span class="bg-gradient-to-r from-emerald-400 to-cyan-300 bg-clip-text text-transparent">Trial Credits</span>, Watermarks & Limits
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Is Everygen AI Free? Trial Quota, Watermarks & Limits
       </h1>
 
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl font-medium">
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
         Evaluating Everygen AI by Viewmax LLC? We outline official registration allowances, trial watermark policies, multi-model compute costs, and genuinely recurring free alternatives.
       </p>
+
+      <div class="text-xs text-ink-500 font-medium">
+        Updated November 2026 &bull; Published by VideoGen Reviews
+      </div>
     </header>
 
     <!-- Quick Verdict -->
@@ -98,79 +99,67 @@ const breadcrumbSchema = {
       forScenarioB="sampling multi-engine prompt routing (Kling 4.0, Seedance 2.5) with starter tokens"
     />
 
-    <!-- Summary Box -->
-    <section class="my-10 rounded-2xl border border-white/[0.08] bg-dark-900/60 p-6 md:p-8 backdrop-blur-md">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-        <span>Account Structure</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-6">
-        Free Trial Specifications
+    <!-- Summary Specifications Table -->
+    <section class="space-y-4">
+      <h2 class="text-xl sm:text-2xl font-bold text-ink-900 tracking-tight">
+        Free Trial Specifications Summary
       </h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">Plan Structure</span>
-          <span class="text-lg font-black font-display text-amber-400">Starter Trial</span>
-          <span class="text-slate-500 block mt-1.5 text-xs">Promotional trial credits for new accounts.</span>
+        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
+          <span class="text-ink-500 uppercase text-[11px] font-semibold block mb-1">Plan Structure</span>
+          <span class="text-base font-bold text-amber-800">Starter Trial</span>
+          <span class="text-ink-500 block mt-1 text-xs">Promotional credits for new accounts.</span>
         </div>
-        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">Credit Card Needed?</span>
-          <span class="text-lg font-black font-display text-emerald-400">Not Upfront</span>
-          <span class="text-slate-500 block mt-1.5 text-xs">Email or single sign-on creates standard profile.</span>
+        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
+          <span class="text-ink-500 uppercase text-[11px] font-semibold block mb-1">Credit Card Needed?</span>
+          <span class="text-base font-bold text-emerald-800">Not Upfront</span>
+          <span class="text-ink-500 block mt-1 text-xs">Email or SSO creates standard profile.</span>
         </div>
-        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">Trial Watermark?</span>
-          <span class="text-lg font-black font-display text-rose-400">Yes</span>
-          <span class="text-slate-500 block mt-1.5 text-xs">Unwatermarked 1080p exports require paid credits.</span>
+        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
+          <span class="text-ink-500 uppercase text-[11px] font-semibold block mb-1">Trial Watermark?</span>
+          <span class="text-base font-bold text-rose-800">Yes</span>
+          <span class="text-ink-500 block mt-1 text-xs">Unwatermarked exports require paid tier.</span>
         </div>
-        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">Commercial Rights?</span>
-          <span class="text-lg font-black font-display text-slate-300">Paid Tiers</span>
-          <span class="text-slate-500 block mt-1.5 text-xs">Commercial licensing included with paid plans.</span>
+        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
+          <span class="text-ink-500 uppercase text-[11px] font-semibold block mb-1">Commercial Rights?</span>
+          <span class="text-base font-bold text-ink-700">Paid Tiers</span>
+          <span class="text-ink-500 block mt-1 text-xs">Commercial rights with active plans.</span>
         </div>
       </div>
     </section>
 
-    <!-- Key Insights -->
-    <section class="my-14 space-y-6">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-        <span>Key Account Considerations</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-6">
-        Understanding Everygen\'s Credit Structure
+    <!-- Key Account Rules -->
+    <section class="space-y-6 pt-6 border-t border-paper-300">
+      <h2 class="text-xl sm:text-2xl font-bold text-ink-900 tracking-tight">
+        4 Things to Know About Everygen\'s Credit Structure
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300 text-xs md:text-sm">
-        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
-          <div class="w-7 h-7 rounded-lg bg-sky-400/10 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">01</div>
-          <h3 class="text-base font-bold text-white mb-2 font-display">Multi-Engine Credit Variations</h3>
-          <p class="text-slate-400 leading-relaxed">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-ink-800">
+        <div class="space-y-1.5">
+          <h3 class="font-bold text-ink-900">1. Multi-Engine Token Variations</h3>
+          <p class="text-ink-700 leading-relaxed text-xs sm:text-sm">
             Because Everygen routes prompts to different foundational engines (such as Seedance 2.5, Kling 4.0, or MiniMax), token consumption varies dynamically based on model complexity and desired duration (5s vs 30s).
           </p>
         </div>
 
-        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
-          <div class="w-7 h-7 rounded-lg bg-amber-400/10 text-amber-400 font-mono font-bold flex items-center justify-center text-xs mb-3">02</div>
-          <h3 class="text-base font-bold text-white mb-2 font-display">Account-Based Credit Balances</h3>
-          <p class="text-slate-400 leading-relaxed">
+        <div class="space-y-1.5">
+          <h3 class="font-bold text-ink-900">2. Account-Based Ledger, Not Daily Resets</h3>
+          <p class="text-ink-700 leading-relaxed text-xs sm:text-sm">
             Rather than resetting on a daily timer, Everygen uses an account credit ledger. Users top up credit packs or enroll in subscription tiers as their rendering volume requires.
           </p>
         </div>
 
-        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
-          <div class="w-7 h-7 rounded-lg bg-purple-400/10 text-purple-400 font-mono font-bold flex items-center justify-center text-xs mb-3">03</div>
-          <h3 class="text-base font-bold text-white mb-2 font-display">Queue Allocation & Priorities</h3>
-          <p class="text-slate-400 leading-relaxed">
+        <div class="space-y-1.5">
+          <h3 class="font-bold text-ink-900">3. Queue Prioritization</h3>
+          <p class="text-ink-700 leading-relaxed text-xs sm:text-sm">
             Trial generations utilize shared GPU compute queues. Higher subscription tiers receive accelerated priority dispatch across high-demand cluster periods.
           </p>
         </div>
 
-        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
-          <div class="w-7 h-7 rounded-lg bg-emerald-400/10 text-emerald-400 font-mono font-bold flex items-center justify-center text-xs mb-3">04</div>
-          <h3 class="text-base font-bold text-white mb-2 font-display">High-Definition 1080p Access</h3>
-          <p class="text-slate-400 leading-relaxed">
+        <div class="space-y-1.5">
+          <h3 class="font-bold text-ink-900">4. High-Definition 1080p Access</h3>
+          <p class="text-ink-700 leading-relaxed text-xs sm:text-sm">
             Longer continuous outputs (up to 30 seconds at 1080p) unlocked by Seedance 2.5 require dedicated credits, while basic trial runs allow users to verify prompt response without financial commitment.
           </p>
         </div>
@@ -178,48 +167,42 @@ const breadcrumbSchema = {
     </section>
 
     <!-- Recurring Free Alternatives -->
-    <section class="my-14">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-        <span>Daily Free Options</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-2">
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-xl sm:text-2xl font-bold text-ink-900 tracking-tight">
         Need Genuinely Recurring Free Daily Credits?
       </h2>
-      <p class="text-xs md:text-sm text-slate-400 mb-6">
+      <p class="text-sm text-ink-700">
         These tools replenish free credits every 24 hours without requiring an upfront credit card:
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="rounded-2xl border border-emerald-500/30 bg-gradient-to-b from-dark-900 to-dark-950 p-6 shadow-lg shadow-emerald-950/20">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="text-lg font-bold text-white font-display">MiniMax Hailuo H3</h3>
-            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="rounded-lg border border-paper-300 bg-paper-100 p-5">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-base font-bold text-ink-900">MiniMax Hailuo H3</h3>
+            <span class="text-[11px] font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
               Zero-Card Free
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+          <p class="text-xs text-ink-700 leading-relaxed mb-3">
             Generous daily free generations without credit card verification. Incredible facial photorealism and natural camera pan capabilities.
           </p>
-          <a href="/everygen-ai-alternatives/" class="text-xs font-mono font-bold text-emerald-400 hover:text-emerald-300 inline-flex items-center">
-            <span>Read full Hailuo breakdown</span>
-            <span class="ml-1">&rarr;</span>
+          <a href="/everygen-ai-alternatives/" class="text-xs font-semibold text-brand-blue hover:underline">
+            Read full Hailuo breakdown &rarr;
           </a>
         </div>
 
-        <div class="rounded-2xl border border-sky-500/30 bg-gradient-to-b from-dark-900 to-dark-950 p-6 shadow-lg shadow-sky-950/20">
-          <div class="flex items-center justify-between mb-3">
-            <h3 class="text-lg font-bold text-white font-display">Kling AI 4.0</h3>
-            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30">
+        <div class="rounded-lg border border-paper-300 bg-paper-100 p-5">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-base font-bold text-ink-900">Kling AI 4.0</h3>
+            <span class="text-[11px] font-semibold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">
               66 Credits / Day
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+          <p class="text-xs text-ink-700 leading-relaxed mb-3">
             Refills 66 credits every single day automatically. Enough to experiment with ~6 short video clips daily without entering payment details.
           </p>
-          <a href="/everygen-ai-alternatives/" class="text-xs font-mono font-bold text-sky-400 hover:text-sky-300 inline-flex items-center">
-            <span>Read full Kling breakdown</span>
-            <span class="ml-1">&rarr;</span>
+          <a href="/everygen-ai-alternatives/" class="text-xs font-semibold text-brand-blue hover:underline">
+            Read full Kling breakdown &rarr;
           </a>
         </div>
       </div>
@@ -227,17 +210,5 @@ const breadcrumbSchema = {
 
     <!-- FAQs -->
     <FaqAccordion faqs={faqs} />
-
-    <!-- Internal Linking Footer -->
-    <section class="mt-16 rounded-2xl border border-white/[0.08] bg-dark-900/60 p-8">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-        <span>Related Investigations</span>
-      </div>
-      <h3 class="text-xl font-bold text-white font-display mb-2">Explore Related Benchmarks</h3>
-      <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
-        See our complete ranking of the <a href="/everygen-ai-alternatives/" class="text-sky-400 hover:underline font-semibold font-mono">10 best Everygen AI alternatives</a>, read the comprehensive <a href="/everygen-ai-review/" class="text-sky-400 hover:underline font-semibold font-mono">Everygen AI architecture review</a>, or check the root <a href="/" class="text-sky-400 hover:underline font-semibold font-mono">Everygen AI analysis guide</a>.
-      </p>
-    </section>
   </article>
 </BaseLayout>

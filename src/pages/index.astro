@@ -50,69 +50,69 @@ const faqSchema = {
   canonicalPath={canonicalPath}
   schema={faqSchema}
 >
-  <div class="space-y-16">
+  <div class="space-y-12">
     <!-- Hero / Platform Architecture Section -->
-    <section class="text-center pt-4 pb-8 max-w-4xl mx-auto">
-      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-300 text-xs font-mono font-bold tracking-tight mb-6 shadow-sm">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>Official Documentation & Architecture Analysis · Updated Nov 2026</span>
+    <header class="border-b border-paper-300 pb-8">
+      <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
+        Platform Guide & Architecture Analysis
       </div>
 
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] mb-6 font-display">
-        Everygen AI (Formerly Viewmax): <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">Models</span> & Infrastructure
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Everygen AI (Formerly Viewmax): Models, Capabilities & Pricing
       </h1>
 
-      <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-        Everything creators need to know about Everygen AI by Viewmax LLC. We break down supported next-gen backends (Kling 4.0, Seedance 2.5), 30-second 1080p rendering, and MCP client capabilities.
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
+        An editorial breakdown of Everygen AI by Viewmax LLC: examining supported foundational engines (Kling 4.0, Seedance 2.5), 30-second 1080p rendering, and native Model Context Protocol (MCP) client interoperability.
       </p>
 
-      <!-- 快速导航入口三卡片 -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 text-left">
-        <a
-          href="/everygen-ai-alternatives/"
-          class="relative overflow-hidden p-6 rounded-2xl border border-sky-500/30 bg-gradient-to-b from-dark-900/90 to-dark-950/90 hover:border-sky-400 hover:shadow-glow-sky transition-all duration-300 group"
-        >
-          <div class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-mono font-bold text-xs mb-3 group-hover:scale-110 transition-transform">
-            01
-          </div>
-          <div class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider mb-1">Market Overview</div>
-          <div class="text-base font-bold text-white group-hover:text-sky-300 font-display flex items-center justify-between">
-            <span>Alternatives Matrix</span>
-            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-          </div>
-          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Direct comparison against standalone engines like Kling, Luma, and Runway.</p>
-        </a>
-
-        <a
-          href="/is-everygen-ai-free/"
-          class="relative overflow-hidden p-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-dark-900/90 to-dark-950/90 hover:border-emerald-400/40 hover:shadow-2xl transition-all duration-300 group"
-        >
-          <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold text-xs mb-3 group-hover:scale-110 transition-transform">
-            02
-          </div>
-          <div class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-1">Quota Breakdown</div>
-          <div class="text-base font-bold text-white group-hover:text-emerald-300 font-display flex items-center justify-between">
-            <span>Free Credits & Trial</span>
-            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-          </div>
-          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Trial credit rules, export specifications, and verified account limits.</p>
-        </a>
-
-        <a
-          href="/everygen-ai-review/"
-          class="relative overflow-hidden p-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-dark-900/90 to-dark-950/90 hover:border-indigo-400/40 hover:shadow-2xl transition-all duration-300 group"
-        >
-          <div class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-mono font-bold text-xs mb-3 group-hover:scale-110 transition-transform">
-            03
-          </div>
-          <div class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider mb-1">Architecture Deep Dive</div>
-          <div class="text-base font-bold text-white group-hover:text-indigo-300 font-display flex items-center justify-between">
-            <span>System Review</span>
-            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-          </div>
-          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Multi-model routing, prompt alignment, and token economics analyzed.</p>
-        </a>
+      <div class="text-xs text-ink-500 font-medium">
+        Updated November 2026 &bull; Published by VideoGen Reviews
       </div>
+    </header>
+
+    <!-- 快速导航入口三卡片 (浅色出版风) -->
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <a
+        href="/everygen-ai-alternatives/"
+        class="rounded-lg border border-paper-300 bg-paper-100 hover:border-brand-blue hover:bg-blue-50/30 p-5 transition-colors group"
+      >
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-blue block mb-1">Ranked Matrix</span>
+        <h3 class="text-base font-bold text-ink-900 group-hover:text-brand-blue transition-colors flex items-center justify-between">
+          <span>Top Alternatives</span>
+          <span>&rarr;</span>
+        </h3>
+        <p class="text-xs text-ink-600 mt-2 leading-relaxed">
+          Compare 10 standalone generators like Kling 4.0, Seedance 2.5, and Runway Gen-3.
+        </p>
+      </a>
+
+      <a
+        href="/is-everygen-ai-free/"
+        class="rounded-lg border border-paper-300 bg-paper-100 hover:border-brand-blue hover:bg-blue-50/30 p-5 transition-colors group"
+      >
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 block mb-1">Account Rules</span>
+        <h3 class="text-base font-bold text-ink-900 group-hover:text-brand-blue transition-colors flex items-center justify-between">
+          <span>Free Credits & Trial</span>
+          <span>&rarr;</span>
+        </h3>
+        <p class="text-xs text-ink-600 mt-2 leading-relaxed">
+          Understand trial credits, watermark policies, and genuinely free daily tools.
+        </p>
+      </a>
+
+      <a
+        href="/everygen-ai-review/"
+        class="rounded-lg border border-paper-300 bg-paper-100 hover:border-brand-blue hover:bg-blue-50/30 p-5 transition-colors group"
+      >
+        <span class="text-xs font-bold uppercase tracking-wider text-indigo-800 block mb-1">Lab Analysis</span>
+        <h3 class="text-base font-bold text-ink-900 group-hover:text-brand-blue transition-colors flex items-center justify-between">
+          <span>System Review</span>
+          <span>&rarr;</span>
+        </h3>
+        <p class="text-xs text-ink-600 mt-2 leading-relaxed">
+          Deep dive into multi-model routing, prompt alignment, and MCP developer workflows.
+        </p>
+      </a>
     </section>
 
     <!-- Key Takeaway -->
@@ -124,69 +124,53 @@ const faqSchema = {
     />
 
     <!-- 1. What is Everygen AI? (Core Explainer) -->
-    <section class="rounded-2xl border border-white/[0.08] bg-dark-900/50 p-7 md:p-9 backdrop-blur-sm">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-        <span>Corporate Identity & Ecosystem</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-4">
+    <section class="space-y-4 pt-4">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
         What is Everygen AI? (The Viewmax LLC Evolution)
       </h2>
-      <div class="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed">
+      <div class="space-y-4 text-ink-800 text-sm sm:text-base leading-relaxed">
         <p>
-          <strong class="text-white">Everygen AI</strong> is a cutting-edge multimodal generation platform developed by <span class="text-white font-semibold">Viewmax LLC</span>. Originally operating under the domain <span class="text-sky-300 font-mono">Viewmax AI</span>, the suite underwent comprehensive rebranding in late 2026 to reflect its expanded architectural ambition: a unified ecosystem spanning video, image synthesis, and AI agent interoperability.
+          <strong>Everygen AI</strong> is a multimodal generation platform operated by <strong>Viewmax LLC</strong>. Originally launched under the domain <em>Viewmax AI</em>, the suite was rebranded in late 2026 to reflect its expanded architectural scope: a unified web and API layer combining video generation, image diffusion, and agent interoperability.
         </p>
         <p>
-          Rather than relying solely on a single proprietary diffusion model, Everygen orchestrates top-tier foundational engines. Creators can deploy state-of-the-art models like <strong class="text-white">Seedance 2.5</strong> (generating continuous 30-second clips at 1080p), <strong class="text-white">Kling 4.0</strong> (supporting advanced reference-image conditioning for up to 30 seconds), <strong class="text-white">MiniMax H3 Max</strong>, and <strong class="text-white">Grok Imagine</strong>.
+          Rather than training an isolated proprietary diffusion model, Everygen orchestrates top-tier foundational engines. Creators can deploy state-of-the-art models like <strong>Seedance 2.5</strong> (generating continuous 30-second clips at 1080p), <strong>Kling 4.0</strong> (supporting advanced reference-image conditioning), <strong>MiniMax H3 Max</strong>, and <strong>Grok Imagine</strong> within a single interface.
         </p>
       </div>
     </section>
 
     <!-- 2. Technical Capabilities: 30s 1080p & MCP -->
-    <section class="rounded-2xl border border-white/[0.08] bg-dark-900/50 p-7 md:p-9 backdrop-blur-sm">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-indigo-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
-        <span>Key Technical Innovations</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-6">
-        Two Critical Differentiators
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Two Critical Technical Differentiators
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm text-slate-300">
-        <div class="rounded-xl bg-dark-950/70 p-6 border border-white/[0.06]">
-          <div class="w-9 h-9 rounded-xl bg-sky-400/10 text-sky-400 border border-sky-400/20 font-bold flex items-center justify-center text-sm font-mono mb-4">30s</div>
-          <h3 class="font-bold text-white text-base mb-2 font-display">Long-Form 30-Second 1080p Generation</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            While legacy consumer models were historically locked to 4 or 5-second outputs, Everygen\'s integration of Seedance 2.5 and Kling 4.0 delivers native 30-second sequences with temporal consistency and 1080p visual fidelity.
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-ink-900">1. Long-Form 30-Second 1080p Generation</h3>
+          <p class="text-sm text-ink-700 leading-relaxed">
+            While legacy consumer models were historically locked to 4 or 5-second outputs, Everygen\'s integration of Seedance 2.5 and Kling 4.0 delivers native 30-second sequences with high temporal consistency and 1080p visual fidelity.
           </p>
         </div>
 
-        <div class="rounded-xl bg-dark-950/70 p-6 border border-white/[0.06]">
-          <div class="w-9 h-9 rounded-xl bg-indigo-400/10 text-indigo-400 border border-indigo-400/20 font-bold flex items-center justify-center text-sm font-mono mb-4">MCP</div>
-          <h3 class="font-bold text-white text-base mb-2 font-display">Model Context Protocol (MCP) Interoperability</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            By exposing MCP endpoints, Everygen bridges visual AI with agentic developer environments. Teams can prompt, generate, and orchestrate video workflows directly inside Cursor, Claude, or ChatGPT agents without manual web UI copy-pasting.
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-ink-900">2. Model Context Protocol (MCP) Interoperability</h3>
+          <p class="text-sm text-ink-700 leading-relaxed">
+            By exposing native MCP endpoints, Everygen bridges visual AI with agentic developer environments. Teams can prompt, generate, and orchestrate video assets directly inside Cursor, Claude Desktop, or ChatGPT without manual browser copy-pasting.
           </p>
         </div>
       </div>
     </section>
 
     <!-- 3. Dynamic Pricing & Credit Structure -->
-    <section class="rounded-2xl border border-white/[0.08] bg-dark-900/50 p-7 md:p-9 backdrop-blur-sm">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-        <span>Account & Pricing Notice</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-3">
-        Credit Allocations & Official Pricing
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Account Quotas & Credit Pricing
       </h2>
-      <p class="text-sm text-slate-300 leading-relaxed max-w-3xl mb-6">
-        Generation credit costs vary depending on the chosen model engine (e.g. Seedance 2.5 vs Kling 4.0), output length (5s vs 30s), and resolution parameters. Dynamic credit packages and promotional bundles are managed on the official Everygen platform.
+      <p class="text-sm text-ink-700 leading-relaxed">
+        Generation credit costs vary depending on the chosen model engine (Seedance 2.5 vs Kling 4.0), output length (5s vs 30s), and resolution parameters. Dynamic credit packages and promotional bundles are managed on the official platform.
       </p>
 
-      <div class="rounded-xl bg-dark-950/80 border border-white/[0.06] p-6 text-xs text-slate-400 leading-relaxed">
-        <p>
-          <strong class="text-slate-200">Official Platform Reference:</strong> Users are advised to review the active quota balances in their Everygen account dashboard. Our guides focus on architectural compatibility, comparative feature sets, and workflow optimization.
-        </p>
+      <div class="rounded-lg bg-paper-100 border border-paper-300 p-5 text-xs text-ink-600 leading-relaxed">
+        <strong>Notice:</strong> Always review the active quota balances in your Everygen account dashboard. Our guides focus on architectural compatibility, comparative feature sets, and workflow optimization.
       </div>
     </section>
 

@@ -1,132 +1,153 @@
 ---
+export interface MetricScore {
+  label: string;
+  score: number; // 0 to 10
+}
+
 interface Props {
-  rank: number;
   name: string;
-  badge?: string;
+  bestForTitle: string;
   tagline: string;
-  rating: string;
+  totalScore: string; // e.g. "8.8" or "6.4"
+  metrics: MetricScore[];
   whyChosen: string;
-  idealFor: string;
-  biggestFlaw: string;
-  freeTierDetails: string;
-  pricingStarts: string;
+  pros: string[];
+  cons: string[];
+  freeTier: string;
+  pricing: string;
   visitUrl: string;
 }
 
 const {
-  rank,
   name,
-  badge,
+  bestForTitle,
   tagline,
-  rating,
+  totalScore,
+  metrics,
   whyChosen,
-  idealFor,
-  biggestFlaw,
-  freeTierDetails,
-  pricingStarts,
+  pros,
+  cons,
+  freeTier,
+  pricing,
   visitUrl,
 } = Astro.props;
+
+const numScore = parseFloat(totalScore);
 ---
 
-<div class="my-10 relative overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b from-dark-900/90 via-dark-850/80 to-dark-950/90 p-6 md:p-8 hover:border-sky-500/30 hover:shadow-2xl hover:shadow-sky-500/5 transition-all duration-300">
-  <!-- 头部信息 -->
-  <div class="flex flex-col md:flex-row md:items-start justify-between gap-5 border-b border-white/[0.08] pb-6 mb-6">
-    <div class="space-y-2">
-      <div class="flex flex-wrap items-center gap-2.5">
-        <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-gradient-to-br from-sky-400/20 to-indigo-500/20 border border-sky-400/40 text-sky-300 font-mono font-black text-sm shadow-sm">
-          #{rank}
-        </span>
-        <h3 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight font-display">
-          {name}
-        </h3>
-        {badge && (
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 tracking-tight">
-            {badge}
-          </span>
-        )}
-      </div>
-      <p class="text-xs md:text-sm text-slate-400 font-medium leading-relaxed max-w-xl">
-        {tagline}
-      </p>
-    </div>
-
-    <!-- 评分与官网 CTA -->
-    <div class="flex items-center space-x-4 shrink-0">
-      <div class="rounded-xl bg-dark-950/90 border border-white/[0.08] px-4 py-2 text-center min-w-[90px]">
-        <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold">Score</div>
-        <div class="text-xl font-black font-display text-emerald-400 flex items-center justify-center space-x-1">
-          <span>{rating}</span>
-          <span class="text-xs text-slate-500 font-normal">/5</span>
-        </div>
-      </div>
-      <a
-        href={visitUrl}
-        rel="sponsored nofollow noopener noreferrer"
-        target="_blank"
-        class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-300 hover:to-blue-400 text-dark-950 font-bold text-xs shadow-glow-sky hover:shadow-sky-400/30 transition-all duration-200 transform hover:-translate-y-0.5"
-      >
-        <span>Try Official Site</span>
-        <svg class="w-3.5 h-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- 规格四宫格 -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
-    <div class="rounded-xl bg-dark-950/60 p-4 border border-white/[0.06]">
-      <div class="flex items-center space-x-1.5 text-[11px] font-mono uppercase tracking-wider text-slate-400 mb-1">
-        <svg class="w-3.5 h-3.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <span>Free Allowance & Quota</span>
-      </div>
-      <div class="text-xs font-mono font-semibold text-slate-200">{freeTierDetails}</div>
-    </div>
-
-    <div class="rounded-xl bg-dark-950/60 p-4 border border-white/[0.06]">
-      <div class="flex items-center space-x-1.5 text-[11px] font-mono uppercase tracking-wider text-slate-400 mb-1">
-        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-        </svg>
-        <span>Paid Baseline Cost</span>
-      </div>
-      <div class="text-xs font-mono font-semibold text-slate-200">{pricingStarts}</div>
-    </div>
-  </div>
-
-  <!-- 为什么入选与适合人群 -->
-  <div class="space-y-4 text-xs md:text-sm leading-relaxed text-slate-300">
-    <div class="rounded-xl bg-dark-850/50 p-4 border border-white/[0.04]">
-      <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400 mb-1.5 flex items-center">
-        <span>Why It Made The Cut</span>
-      </h4>
-      <p class="text-slate-200">{whyChosen}</p>
-    </div>
-
+<section class="border-t border-paper-300 pt-10 pb-8 space-y-6">
+  <!-- Zapier 风格场景大标题 -->
+  <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
     <div>
-      <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Target Production Workflow</h4>
-      <p class="text-slate-300">{idealFor}</p>
-    </div>
-
-    <!-- 真实致命缺点警示盒 (The Uncensored Flaw) -->
-    <div class="relative overflow-hidden rounded-xl bg-rose-950/20 border border-rose-500/30 p-4 md:p-5 mt-4">
-      <div class="flex items-start space-x-3">
-        <div class="w-6 h-6 rounded-lg bg-rose-500/20 border border-rose-400/40 flex items-center justify-center text-rose-400 shrink-0 mt-0.5">
-          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-        </div>
-        <div>
-          <span class="text-[11px] font-mono font-bold uppercase tracking-widest text-rose-400 block mb-1">
-            The Uncensored Flaw
-          </span>
-          <p class="text-xs md:text-sm text-rose-200/90 font-medium leading-relaxed">
-            {biggestFlaw}
-          </p>
-        </div>
-      </div>
+      <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">
+        {name}
+      </span>
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-ink-900 tracking-tight">
+        {bestForTitle}
+      </h3>
     </div>
   </div>
-</div>
+
+  <p class="text-base text-ink-700 leading-relaxed font-normal">
+    {tagline}
+  </p>
+
+  <!-- Curious Refuge 风格：大号总分 + 5 维细分条形图 Scorecard -->
+  <div class="rounded-lg border border-paper-300 bg-paper-100 p-5 sm:p-6 my-6">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-paper-300/80 pb-5 mb-5">
+      <div>
+        <span class="text-xs uppercase font-semibold text-ink-500 tracking-wider">Editorial Benchmark Score</span>
+        <div class="flex items-baseline space-x-2 mt-1">
+          <span class={`text-4xl sm:text-5xl font-extrabold tracking-tight ${
+            numScore >= 8.0 ? 'text-ink-900' : numScore >= 7.0 ? 'text-blue-800' : 'text-amber-700'
+          }`}>
+            {totalScore}
+          </span>
+          <span class="text-sm font-semibold text-ink-500">/ 10</span>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <a
+          href={visitUrl}
+          rel="sponsored nofollow noopener noreferrer"
+          target="_blank"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-ink-900 hover:bg-brand-blue text-white font-medium text-xs transition-colors shadow-sm"
+        >
+          <span>Visit {name}</span>
+          <svg class="w-3.5 h-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5 维条形图 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+      {metrics.map((m) => (
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs text-ink-700">
+            <span class="truncate pr-1">{m.label}</span>
+            <span class="font-semibold text-ink-900">{m.score.toFixed(1)}</span>
+          </div>
+          <div class="w-full bg-paper-300 h-1.5 rounded-full overflow-hidden">
+            <div
+              class={`h-full rounded-full ${
+                m.score >= 8.5 ? 'bg-emerald-600' : m.score >= 7.0 ? 'bg-blue-600' : 'bg-amber-600'
+              }`}
+              style={`width: ${m.score * 10}%`}
+            ></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- 正文分析段落 -->
+  <div class="space-y-4 text-ink-800 text-sm sm:text-base leading-relaxed">
+    <p>{whyChosen}</p>
+  </div>
+
+  <!-- Zapier 风格 Pros / Cons 双列对比 -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+    <div class="rounded-lg bg-emerald-50/50 border border-emerald-200/80 p-4">
+      <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-900 mb-2 flex items-center">
+        <svg class="w-4 h-4 text-emerald-600 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        </svg>
+        Pros
+      </h4>
+      <ul class="text-xs sm:text-sm space-y-1.5 text-ink-800">
+        {pros.map((p) => (
+          <li class="flex items-start">
+            <span class="text-emerald-600 font-bold mr-2">&bull;</span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="rounded-lg bg-rose-50/50 border border-rose-200/80 p-4">
+      <h4 class="text-xs font-bold uppercase tracking-wider text-rose-900 mb-2 flex items-center">
+        <svg class="w-4 h-4 text-rose-600 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        Cons
+      </h4>
+      <ul class="text-xs sm:text-sm space-y-1.5 text-ink-800">
+        {cons.map((c) => (
+          <li class="flex items-start">
+            <span class="text-rose-600 font-bold mr-2">&bull;</span>
+            <span>{c}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <!-- 规格行 (At a glance specifications) -->
+  <div class="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-xs text-ink-600 border-t border-paper-200">
+    <div><strong>Free Tier:</strong> {freeTier}</div>
+    <div><strong>Pricing:</strong> {pricing}</div>
+  </div>
+</section>

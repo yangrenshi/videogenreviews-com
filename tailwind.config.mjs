@@ -4,33 +4,35 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Plus Jakarta Sans', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+        sans: [
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'sans-serif',
+        ],
       },
       colors: {
-        dark: {
-          950: '#07090e',
-          900: '#0c0f17',
-          850: '#111520',
-          800: '#171c2b',
-          750: '#1e2436',
-          700: '#272f45',
+        paper: {
+          50: '#FFFFFF',
+          100: '#F9FAFB',
+          150: '#F7F7F5',
+          200: '#F3F4F6',
+          300: '#E5E7EB',
         },
-        cyan: {
-          400: '#22d3ee',
-          500: '#06b6d4',
-          950: '#083344',
+        ink: {
+          900: '#111827',
+          800: '#1F2937',
+          700: '#374151',
+          500: '#6B7280',
+          400: '#9CA3AF',
         },
-      },
-      boxShadow: {
-        'glow-cyan': '0 0 25px -5px rgba(34, 211, 238, 0.25)',
-        'glow-sky': '0 0 30px -5px rgba(56, 189, 248, 0.25)',
-        'glow-violet': '0 0 30px -5px rgba(129, 140, 248, 0.25)',
-        'inner-light': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.08)',
-      },
-      animation: {
-        'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        brand: {
+          blue: '#1D4ED8',
+          hover: '#1E40AF',
+          light: '#EFF6FF',
+        },
       },
     },
   },

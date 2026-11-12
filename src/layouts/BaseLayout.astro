@@ -27,7 +27,7 @@ const defaultWebsiteSchema = {
   '@type': 'WebSite',
   'name': 'VideoGen Reviews',
   'url': siteUrl,
-  'description': 'Independent feature comparisons, architectural breakdowns, and free tier specifications for modern AI video generation platforms.',
+  'description': 'Editorial guides, side-by-side feature matrix, and pricing tracking for modern generative AI video platforms.',
 };
 
 const schemasToRender = [defaultWebsiteSchema];
@@ -49,11 +49,11 @@ if (schema) {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <!-- Google Fonts: Inter (高可读出版体系) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -87,45 +87,20 @@ if (schema) {
 
     <style is:global>
       ::selection {
-        background-color: #0284c7;
-        color: #ffffff;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #07090e;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #1e2436;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #272f45;
-      }
-      .bg-grid-pattern {
-        background-size: 40px 40px;
-        background-image: 
-          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-color: #dbeafe;
+        color: #1e3a8a;
       }
     </style>
   </head>
-  <body class="bg-dark-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-sky-500 selection:text-white relative overflow-x-hidden">
-    <!-- 顶部环境光斑 -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-sky-500/15 via-indigo-600/10 to-transparent blur-[120px] pointer-events-none -z-10"></div>
-    <div class="fixed top-[20%] right-[-100px] w-[500px] h-[500px] bg-purple-600/5 blur-[140px] pointer-events-none -z-10"></div>
-    <div class="fixed inset-0 bg-grid-pattern opacity-60 pointer-events-none -z-10"></div>
-
-    <!-- 顶部固定读者支持与联盟透明披露条 -->
-    <div class="bg-dark-900/90 border-b border-white/[0.05] py-1.5 px-4 text-center text-[11px] text-slate-400 font-mono tracking-tight">
-      <span>Disclosure: VideoGen Reviews is reader-supported. We may earn an affiliate commission when you purchase through links on our site. </span>
-      <a href="/affiliate-disclosure/" class="text-sky-400 hover:underline ml-1">Learn more &rarr;</a>
+  <body class="bg-white text-ink-900 min-h-screen flex flex-col font-sans selection:bg-blue-100 selection:text-blue-900">
+    <!-- 顶部透明披露条 (FTC Affiliate Disclosure) -->
+    <div class="bg-paper-100 border-b border-paper-300/80 py-2 px-4 text-center text-xs text-ink-500 font-medium">
+      <span>VideoGen Reviews is reader-supported. When you purchase through links on our site, we may earn an affiliate commission. </span>
+      <a href="/affiliate-disclosure/" class="text-brand-blue hover:underline ml-1 font-semibold">Learn how we evaluate tools &rarr;</a>
     </div>
 
     <Header />
-    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 relative z-0">
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <slot />
     </main>
     <Footer />

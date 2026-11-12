@@ -12,24 +12,21 @@ const { crumbs } = Astro.props;
 ---
 
 <nav aria-label="Breadcrumb" class="mb-6">
-  <ol class="flex items-center space-x-2 text-xs text-slate-400">
+  <ol class="flex items-center space-x-2 text-xs text-ink-500">
     <li>
-      <a href="/" class="hover:text-sky-400 transition-colors flex items-center">
-        <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-        </svg>
+      <a href="/" class="hover:text-brand-blue transition-colors">
         Home
       </a>
     </li>
     {crumbs.map((crumb) => (
       <li class="flex items-center space-x-2">
-        <span class="text-slate-600">/</span>
+        <span class="text-paper-300">/</span>
         {crumb.href ? (
-          <a href={crumb.href} class="hover:text-sky-400 transition-colors">
+          <a href={crumb.href} class="hover:text-brand-blue transition-colors">
             {crumb.label}
           </a>
         ) : (
-          <span class="text-slate-300 font-medium" aria-current="page">
+          <span class="text-ink-800 font-medium" aria-current="page">
             {crumb.label}
           </span>
         )}

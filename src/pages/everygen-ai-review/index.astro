@@ -26,7 +26,6 @@ const faqs: FaqItem[] = [
   },
 ];
 
-// 合规的单条 Review 结构化数据 (彻底移除容易违规的 aggregateRating)
 const reviewSchema = {
   '@context': 'https://schema.org',
   '@type': 'Review',
@@ -89,24 +88,25 @@ const breadcrumbSchema = {
   canonicalPath={canonicalPath}
   schema={[reviewSchema, faqSchema, breadcrumbSchema]}
 >
-  <Breadcrumbs
-    crumbs={[{ label: 'Everygen AI Review' }]}
-  />
+  <Breadcrumbs crumbs={[{ label: 'Everygen AI Review' }]} />
 
-  <article>
-    <header class="mb-10 text-left">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-bold tracking-tight mb-4">
-        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
-        <span>Architectural Analysis · Updated November 2026</span>
+  <article class="space-y-10">
+    <header class="border-b border-paper-300 pb-8">
+      <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
+        In-Depth System Review
       </div>
 
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-5 font-display">
-        Everygen AI Review: <span class="bg-gradient-to-r from-indigo-400 via-sky-300 to-cyan-300 bg-clip-text text-transparent">Multi-Engine Routing</span> & Capabilities
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Everygen AI Review: Multi-Engine Routing & Infrastructure
       </h1>
 
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl font-medium">
-        We analyze Everygen AI by Viewmax LLC: examining its multi-engine routing across Kling 4.0 and Seedance 2.5, long-form 30-second 1080p stability, and native MCP developer protocol support.
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
+        An architectural assessment of Everygen AI by Viewmax LLC: examining multi-engine routing across Kling 4.0 and Seedance 2.5, long-form 30-second 1080p stability, and native MCP developer protocol support.
       </p>
+
+      <div class="text-xs text-ink-500 font-medium">
+        Updated November 2026 &bull; Published by VideoGen Reviews Editorial Team
+      </div>
     </header>
 
     <KeyTakeaway
@@ -116,137 +116,142 @@ const breadcrumbSchema = {
       forScenarioB="commercial filmmakers demanding director camera velocity controls"
     />
 
-    <!-- Scorecard HUD -->
-    <section class="my-10 rounded-2xl border border-white/[0.08] bg-dark-900/70 p-6 md:p-9 shadow-2xl backdrop-blur-md">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-white/[0.08] pb-8 mb-8">
+    <!-- Scorecard HUD (浅色版 Curious Refuge 风格) -->
+    <section class="rounded-lg border border-paper-300 bg-paper-100 p-6 sm:p-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-paper-300 pb-6 mb-6">
         <div>
-          <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-1">
-            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-            <span>Composite Architectural Score</span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-ink-500">
+            Composite System Score
+          </span>
+          <div class="flex items-baseline space-x-2 mt-1">
+            <span class="text-4xl sm:text-5xl font-extrabold text-ink-900 tracking-tight">4.2</span>
+            <span class="text-base font-semibold text-ink-500">/ 5.0</span>
           </div>
-          <div class="flex items-baseline space-x-2">
-            <span class="text-5xl font-black text-white font-display tracking-tight">4.2</span>
-            <span class="text-xl text-slate-500 font-mono">/ 5.0</span>
-          </div>
-          <p class="text-xs text-slate-400 mt-2 font-mono">Evaluated on model breadth, MCP extensibility, and 30s rendering stability.</p>
+          <p class="text-xs text-ink-500 mt-1">Evaluated on model breadth, MCP extensibility, and 30s rendering stability.</p>
         </div>
 
         <a
           href="/everygen-ai-alternatives/"
-          class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-gradient-to-r from-sky-400 to-blue-500 text-dark-950 font-bold text-xs uppercase tracking-wider shadow-glow-sky hover:brightness-110 transition-all duration-200 self-start md:self-auto"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-brand-blue hover:bg-brand-hover text-white font-medium text-xs transition-colors shadow-sm self-start sm:self-auto"
         >
           <span>See Comparative Alternatives</span>
           <svg class="w-3.5 h-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </a>
       </div>
 
       <!-- 细分指标条形图 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-        <div class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block mb-1">Model Breadth</span>
-          <span class="text-xl font-bold font-display text-sky-400">4.5 <span class="text-xs text-slate-500">/ 5</span></span>
-          <div class="w-full bg-dark-800 h-1.5 rounded-full mt-2.5 overflow-hidden">
-            <div class="bg-sky-400 h-full rounded-full" style="width: 90%"></div>
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs text-ink-700">
+            <span>Model Breadth</span>
+            <span class="font-bold text-ink-900">4.5</span>
+          </div>
+          <div class="w-full bg-paper-300 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-blue-600 h-full rounded-full" style="width: 90%"></div>
           </div>
         </div>
 
-        <div class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block mb-1">Duration Capability</span>
-          <span class="text-xl font-bold font-display text-indigo-400">4.4 <span class="text-xs text-slate-500">/ 5</span></span>
-          <div class="w-full bg-dark-800 h-1.5 rounded-full mt-2.5 overflow-hidden">
-            <div class="bg-indigo-400 h-full rounded-full" style="width: 88%"></div>
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs text-ink-700">
+            <span>Duration Capability</span>
+            <span class="font-bold text-ink-900">4.4</span>
+          </div>
+          <div class="w-full bg-paper-300 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-blue-600 h-full rounded-full" style="width: 88%"></div>
           </div>
         </div>
 
-        <div class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block mb-1">MCP Integration</span>
-          <span class="text-xl font-bold font-display text-emerald-400">4.6 <span class="text-xs text-slate-500">/ 5</span></span>
-          <div class="w-full bg-dark-800 h-1.5 rounded-full mt-2.5 overflow-hidden">
-            <div class="bg-emerald-400 h-full rounded-full" style="width: 92%"></div>
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs text-ink-700">
+            <span>MCP Integration</span>
+            <span class="font-bold text-ink-900">4.6</span>
+          </div>
+          <div class="w-full bg-paper-300 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-emerald-600 h-full rounded-full" style="width: 92%"></div>
           </div>
         </div>
 
-        <div class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block mb-1">Visual Fidelity</span>
-          <span class="text-xl font-bold font-display text-amber-400">4.1 <span class="text-xs text-slate-500">/ 5</span></span>
-          <div class="w-full bg-dark-800 h-1.5 rounded-full mt-2.5 overflow-hidden">
-            <div class="bg-amber-400 h-full rounded-full" style="width: 82%"></div>
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs text-ink-700">
+            <span>Visual Fidelity</span>
+            <span class="font-bold text-ink-900">4.1</span>
+          </div>
+          <div class="w-full bg-paper-300 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-blue-600 h-full rounded-full" style="width: 82%"></div>
           </div>
         </div>
 
-        <div class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.06]">
-          <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block mb-1">Standalone Camera</span>
-          <span class="text-xl font-bold font-display text-rose-400">3.6 <span class="text-xs text-slate-500">/ 5</span></span>
-          <div class="w-full bg-dark-800 h-1.5 rounded-full mt-2.5 overflow-hidden">
-            <div class="bg-rose-400 h-full rounded-full" style="width: 72%"></div>
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs text-ink-700">
+            <span>Camera Controls</span>
+            <span class="font-bold text-ink-900">3.6</span>
+          </div>
+          <div class="w-full bg-paper-300 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-amber-600 h-full rounded-full" style="width: 72%"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pros and Cons -->
-    <section class="my-12 grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div class="rounded-2xl border border-emerald-500/25 bg-emerald-950/10 p-6 md:p-7 shadow-lg">
-        <h3 class="text-lg font-bold text-emerald-400 font-display mb-4 flex items-center space-x-2">
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- Zapier 风格 Pros / Cons 双列 -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="rounded-lg bg-emerald-50/50 border border-emerald-200/80 p-5">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-900 mb-3 flex items-center">
+          <svg class="w-4 h-4 text-emerald-600 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
           </svg>
-          <span>Key Architectural Strengths</span>
+          Key Architectural Strengths
         </h3>
-        <ul class="text-xs md:text-sm space-y-3 text-slate-300 leading-relaxed">
+        <ul class="text-xs sm:text-sm space-y-2 text-ink-800 leading-relaxed">
           <li class="flex items-start">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2.5 shrink-0"></span>
-            <div><strong class="text-white">Long-Form 30s Generation</strong>: Continuous sequence generation at 1080p powered by Seedance 2.5 and Kling 4.0.</div>
+            <span class="text-emerald-600 font-bold mr-2">&bull;</span>
+            <span><strong>Long-Form 30s Generation</strong>: Continuous sequence generation at 1080p via Seedance 2.5 and Kling 4.0.</span>
           </li>
           <li class="flex items-start">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2.5 shrink-0"></span>
-            <div><strong class="text-white">Native MCP Support</strong>: Directly trigger video generations from agentic environments (Cursor, Claude, ChatGPT).</div>
+            <span class="text-emerald-600 font-bold mr-2">&bull;</span>
+            <span><strong>Native MCP Support</strong>: Directly trigger video generation from agentic environments (Cursor, Claude, ChatGPT).</span>
           </li>
           <li class="flex items-start">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 mr-2.5 shrink-0"></span>
-            <div><strong class="text-white">Centralized Billing</strong>: Single credit ledger to access Kling, MiniMax, Grok, and Seedance without multiple subscriptions.</div>
+            <span class="text-emerald-600 font-bold mr-2">&bull;</span>
+            <span><strong>Centralized Billing</strong>: Single credit ledger to access Kling, MiniMax, Grok, and Seedance without multiple subscriptions.</span>
           </li>
         </ul>
       </div>
 
-      <div class="rounded-2xl border border-rose-500/25 bg-rose-950/10 p-6 md:p-7 shadow-lg">
-        <h3 class="text-lg font-bold text-rose-400 font-display mb-4 flex items-center space-x-2">
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div class="rounded-lg bg-rose-50/50 border border-rose-200/80 p-5">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-rose-900 mb-3 flex items-center">
+          <svg class="w-4 h-4 text-rose-600 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
           </svg>
-          <span>Trade-offs & Considerations</span>
+          Trade-offs & Considerations
         </h3>
-        <ul class="text-xs md:text-sm space-y-3 text-slate-300 leading-relaxed">
+        <ul class="text-xs sm:text-sm space-y-2 text-ink-800 leading-relaxed">
           <li class="flex items-start">
-            <span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 mr-2.5 shrink-0"></span>
-            <div><strong class="text-white">Less Granular Camera Brushes</strong>: Standalone tools like Runway Gen-3 offer deeper custom velocity curves.</div>
+            <span class="text-rose-600 font-bold mr-2">&bull;</span>
+            <span><strong>Less Granular Camera Brushes</strong>: Standalone tools like Runway Gen-3 offer deeper custom velocity curves.</span>
           </li>
           <li class="flex items-start">
-            <span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 mr-2.5 shrink-0"></span>
-            <div><strong class="text-white">No Midnight Free Reset</strong>: Runs on purchase credit balances rather than free daily allowances.</div>
+            <span class="text-rose-600 font-bold mr-2">&bull;</span>
+            <span><strong>No Midnight Free Reset</strong>: Runs on purchase credit balances rather than free daily allowances.</span>
           </li>
           <li class="flex items-start">
-            <span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 mr-2.5 shrink-0"></span>
-            <div><strong class="text-white">Shared Cluster Latency</strong>: Higher resolution 30s renders depend on partner compute cluster traffic.</div>
+            <span class="text-rose-600 font-bold mr-2">&bull;</span>
+            <span><strong>Shared Cluster Latency</strong>: Higher resolution 30s renders depend on partner compute cluster traffic.</span>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- The Verdict -->
-    <section class="my-12 rounded-2xl border border-white/[0.08] bg-dark-900/40 p-7 md:p-9 space-y-4">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-        <span>Summary</span>
-      </div>
-      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display">The Bottom Line</h2>
-      <p class="text-sm md:text-base text-slate-300 leading-relaxed">
+    <section class="space-y-4 pt-4 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">The Bottom Line</h2>
+      <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
         Everygen AI by Viewmax LLC represents an evolution from simple UI wrappers to an integrated multimodal infrastructure suite. With support for Kling 4.0, Seedance 2.5, 30-second clips, and MCP protocol integration, it provides compelling utility for agile production teams.
       </p>
-      <p class="text-sm md:text-base text-slate-300 leading-relaxed">
-        If you want to compare its multi-engine ecosystem against individual standalone platforms, review our <a href="/everygen-ai-alternatives/" class="text-sky-400 font-semibold hover:underline font-mono">10 tested Everygen AI alternatives</a> or check the <a href="/is-everygen-ai-free/" class="text-sky-400 font-semibold hover:underline font-mono">trial credit breakdown</a>.
+      <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
+        If you want to compare its multi-engine ecosystem against individual standalone platforms, review our <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 tested Everygen AI alternatives</a> or check the <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">trial credit breakdown</a>.
       </p>
     </section>
 
