@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Evaluation Methodology & Scoring Framework | VideoGen Reviews';
+const description = 'How VideoGen Reviews evaluates generative AI video tools. Detailed breakdown of our 5 architectural criteria, 10-point scoring weights, and editorial standards.';
+const canonicalPath = 'methodology';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Person',
+    name: 'David Chen',
+    url: 'https://videogenreviews.com/author/david-chen/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  datePublished: '2026-11-12',
+  dateModified: '2026-11-12',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://videogenreviews.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Methodology',
+      item: 'https://videogenreviews.com/methodology/',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  schema={[articleSchema, breadcrumbSchema]}
+>
+  <Breadcrumbs crumbs={[{ label: 'Evaluation Methodology' }]} />
+
+  <article class="space-y-10">
+    <header class="border-b border-paper-300 pb-8">
+      <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
+        Editorial Standards & Benchmarks
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Our Generative Video Evaluation Methodology
+      </h1>
+
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
+        A transparent breakdown of how VideoGen Reviews rates text-to-video platforms: examining our 5 weighted criteria, scoring curves, and editorial independence principles.
+      </p>
+
+      <div class="text-xs text-ink-500 font-medium">
+        Updated November 2026 &bull; Published by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+      </div>
+    </header>
+
+    <!-- Core Philosophy -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Why We Reject Blanket Praise
+      </h2>
+      <div class="space-y-3 text-ink-800 text-sm sm:text-base leading-relaxed">
+        <p>
+          Many AI review directories assign high ratings (8.5 to 9.5 out of 10) indiscriminately across every listed software. At VideoGen Reviews, we believe a rating system without meaningful differentiation is useless to working creators and studios.
+        </p>
+        <p>
+          Generative video tools possess distinct architectural trade-offs. A platform that excels at viral character dance memes (such as Viggle AI) may be completely incapable of rendering architectural drone footage. Similarly, an industry titan with Hollywood camera controls (like Runway) may impose compute burn rates so steep that indie filmmakers exhaust their monthly allowance in under two minutes. Our ratings reflect these stark realities.
+        </p>
+      </div>
+    </section>
+
+    <!-- The 5 Core Evaluation Benchmarks -->
+    <section class="space-y-6 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        The 5 Core Evaluation Criteria (Weighted Model)
+      </h2>
+
+      <div class="space-y-4">
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-ink-900">1. Prompt Adherence (25% Weight)</h3>
+            <span class="text-xs font-semibold text-brand-blue bg-blue-100 px-2 py-0.5 rounded">Semantic Fidelity</span>
+          </div>
+          <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+            Measures how accurately the synthesis engine translates complex descriptive syntax into visual reality. We assess directional motion verbs (e.g., "tracking camera dolly forward while subject turns left"), lighting parameters ("golden hour volumetric mist"), and subject placement without hallucinating unrelated artifacts.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-ink-900">2. Temporal Consistency (25% Weight)</h3>
+            <span class="text-xs font-semibold text-purple-800 bg-purple-100 px-2 py-0.5 rounded">Structural Stability</span>
+          </div>
+          <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+            Evaluates whether character faces, limb anatomy, clothing textures, and background geometry preserve mass and shape coherence over continuous video duration (5s to 30s). Models that exhibit rubbery warping, phantom fingers, or flickering background lines receive significant point deductions.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-ink-900">3. Visual Fidelity (20% Weight)</h3>
+            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Texture & Lighting</span>
+          </div>
+          <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+            Scrutinizes micro-textures: authentic skin pores versus artificial airbrushed plastic sheen, natural hair strand dispersion, depth of field falloff, dynamic lighting gradients, and elimination of pixelated compression blockiness in dark shadowed areas.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-ink-900">4. Motion Quality & Biomechanics (15% Weight)</h3>
+            <span class="text-xs font-semibold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Physical Laws</span>
+          </div>
+          <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+            Assesses whether movement conforms to real-world physics: gravity, momentum, natural footstep friction against ground surfaces, and fluid dynamics. Tools that simulate natural inertia (like Kling 4.0) outperform models where subjects appear to glide weightlessly.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-ink-900">5. Compute Credit Value & Pricing Transparency (15% Weight)</h3>
+            <span class="text-xs font-semibold text-rose-800 bg-rose-100 px-2 py-0.5 rounded">Real-World Economics</span>
+          </div>
+          <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+            Calculates real dollar cost per usable second of output. We rigorously factor in daily free refill allowances (e.g., Kling\'s 66 daily recurring credits vs Runway\'s 125 one-time total allowance), commercial license restrictions on entry tiers, and watermark policies. Tools with punitive token burn rates or locked commercial rights receive low scores in this category.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scoring Scale -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        The 10-Point Scorecard Scale
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+        <div class="p-4 rounded border border-emerald-300 bg-emerald-50/50 space-y-1">
+          <span class="font-bold text-emerald-900 text-sm">8.5 - 10.0 &bull; Elite Tier</span>
+          <p class="text-emerald-800 text-xs leading-relaxed">
+            Industry benchmark in its category. Reliable physics, minimal drift, high output utility. (e.g., Kling 4.0, Seedance 2.5).
+          </p>
+        </div>
+        <div class="p-4 rounded border border-blue-300 bg-blue-50/50 space-y-1">
+          <span class="font-bold text-blue-900 text-sm">7.0 - 8.4 &bull; Capable Tier</span>
+          <p class="text-blue-800 text-xs leading-relaxed">
+            Strong specialized performance with notable trade-offs in duration, credit costs, or UI limitations. (e.g., PixVerse, OpenArt, Runway).
+          </p>
+        </div>
+        <div class="p-4 rounded border border-amber-300 bg-amber-50/50 space-y-1">
+          <span class="font-bold text-amber-900 text-sm">6.0 - 6.9 &bull; Niche Tier</span>
+          <p class="text-amber-800 text-xs leading-relaxed">
+            Specialized for narrow use-cases (social memes, body tracking) but lacking broad cinematic versatility. (e.g., Pika, Viggle).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Independence & Affiliate Transparency -->
+    <section class="border-t border-paper-300 pt-6 space-y-3 text-xs text-ink-600 leading-relaxed">
+      <h3 class="font-bold text-ink-800 uppercase tracking-wider text-xs">
+        Editorial Independence & Disclosure Commitment
+      </h3>
+      <p>
+        VideoGen Reviews is an independent publication. While select links across our comparison guides carry affiliate tracking parameters that may generate referral compensation upon subscription purchase, commercial partnerships never influence our benchmark scores, ranking positions, or editorial criticisms.
+      </p>
+      <p>
+        Learn more in our full <a href="/affiliate-disclosure/" class="text-brand-blue font-semibold hover:underline">Affiliate Disclosure</a> and meet our <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">Editorial Lead</a>.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

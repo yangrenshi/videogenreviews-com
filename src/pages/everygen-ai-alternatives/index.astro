@@ -37,8 +37,8 @@ const atAGlanceTools: ToolComparisonItem[] = [
     name: 'OpenArt Video',
     badge: 'Canvas Studio',
     bestFor: 'Multimodal storyboard generation & multi-model style blending',
-    freeTier: 'Free starter tier with credits',
-    startingPrice: '$7.99 / mo',
+    freeTier: 'No free plan (Starts at $14/mo)',
+    startingPrice: '$14 / mo ($13/mo annual)',
   },
   {
     name: 'Viggle AI',
@@ -218,7 +218,7 @@ const breadcrumbSchema = {
         In-depth review of our top 10 video generators
       </h2>
       <p class="text-sm text-ink-600 mb-8">
-        We evaluated each platform across 5 key architectural benchmarks: prompt adherence, temporal consistency, visual fidelity, motion quality, and overall value.
+        We evaluated each platform across 5 key architectural benchmarks detailed in our <a href="/methodology/" class="text-brand-blue font-semibold hover:underline">Evaluation Methodology</a>: prompt adherence, temporal consistency, visual fidelity, motion quality, and compute credit value.
       </p>
 
       <!-- 1. Kling AI 4.0 (8.8 / 10) -->
@@ -251,104 +251,46 @@ const breadcrumbSchema = {
         screenshotCaption="Kling AI 4.0 generation workspace showing prompt input console, duration parameters, and multi-model configuration controls."
       />
 
-      <!-- 2. PixVerse V3.5 (8.5 / 10) -->
+      <!-- 2. Seedance 2.5 (8.5 / 10) -->
       <ToolCard
-        name="PixVerse V3.5"
-        bestForTitle="Best AI video generator for speed, anime aesthetics, and high throughput"
-        tagline="Ultra-fast generation cycles, specialized stylized anime rendering, and responsive multi-shot controls."
+        name="Seedance 2.5"
+        bestForTitle="Best AI video generator for sustained 30-second continuous scenes"
+        tagline="Continuous 30-second sequences at native 1080p resolution with minimal temporal drift."
         totalScore="8.5"
         metrics={[
-          { label: 'Prompt Adherence', score: 8.6 },
-          { label: 'Temporal Consistency', score: 8.4 },
-          { label: 'Visual Fidelity', score: 8.8 },
-          { label: 'Motion Quality', score: 8.5 },
-          { label: 'Value / Pricing', score: 8.4 },
+          { label: 'Prompt Adherence', score: 8.5 },
+          { label: 'Temporal Consistency', score: 8.8 },
+          { label: 'Visual Fidelity', score: 8.7 },
+          { label: 'Motion Quality', score: 8.4 },
+          { label: 'Value / Pricing', score: 8.1 },
         ]}
-        whyChosen="PixVerse V3.5 has emerged as one of the fastest and most flexible generative video engines on the market. It excels particularly at stylized, cinematic, and Japanese anime-style visual aesthetics, rendering short 4-second to 8-second scenes in a fraction of the time required by heavier diffusion pipelines."
+        whyChosen="Seedance 2.5 breaks through the traditional 4-second limitation by generating continuous 30-second shots at native 1080p. As one of the core backends integrated inside Everygen AI, it excels at narrative storytelling where scenes must hold visual stability without abrupt camera jump cuts."
         pros={[
-          'Rapid rendering speeds with low queue wait times',
-          'Top-tier stylistic fidelity for anime, cyberpunk, and artistic scenes',
-          'Generous daily login credits and competitive entry-level pricing',
+          'Native 30-second continuous duration at full 1080p',
+          'Stable camera motion without random scene warping',
+          'Available via Everygen AI with unified MCP integration',
         ]}
         cons={[
-          'Complex multi-character interactions can exhibit occasional hand morphing',
-          'Audio sound effect generation is currently in experimental preview',
+          'Requires structured and descriptive prompts for long sequences',
+          'Higher compute cost per 30-second render compared to short clips',
         ]}
-        freeTier="Daily login bonus credits with standard watermark"
-        pricing="$8.00 / mo (Basic plan)"
-        visitUrl="/go/pixverse/"
-        screenshotUrl="/images/pixverse.webp"
-        screenshotCaption="PixVerse V3.5 creative studio console displaying video generation settings, motion styles, and aspect ratio controls."
+        freeTier="Promotional credits via API and partner portals"
+        pricing="Pay-as-you-go credit bundles"
+        visitUrl="/go/seedance/"
       />
 
-      <!-- 3. OpenArt Video (8.4 / 10) -->
-      <ToolCard
-        name="OpenArt Video"
-        bestForTitle="Best AI video generator for all-in-one canvas storyboarding"
-        tagline="Unified creative workspace connecting multi-model image generation with seamless motion extension."
-        totalScore="8.4"
-        metrics={[
-          { label: 'Prompt Adherence', score: 8.8 },
-          { label: 'Temporal Consistency', score: 8.2 },
-          { label: 'Visual Fidelity', score: 8.6 },
-          { label: 'Motion Quality', score: 8.1 },
-          { label: 'Value / Pricing', score: 8.3 },
-        ]}
-        whyChosen="OpenArt provides an integrated canvas environment designed specifically for digital storytellers and commercial creators. Rather than treating video generation as an isolated black box, OpenArt lets you sketch, generate character stills, and immediately breathe life into them with coordinated camera motions and lighting effects."
-        pros={[
-          'Comprehensive creative suite spanning image-to-video, motion control, and upscaling',
-          'Highly intuitive web UI that accelerates storyboard iteration',
-          'Transparent credit consumption with flexible token roll-over',
-        ]}
-        cons={[
-          'Continuous duration capped at 4 to 8 seconds per render',
-          'Advanced video features require subscription tier activation',
-        ]}
-        freeTier="Starter trial credits upon account registration"
-        pricing="$7.99 / mo (Starter plan)"
-        visitUrl="/go/openart/"
-      />
-
-      <!-- 4. Viggle AI (8.3 / 10) -->
-      <ToolCard
-        name="Viggle AI"
-        bestForTitle="Best AI video generator for character body rigging and dance motion"
-        tagline="Controllable character replacement engine that maps any custom avatar onto reference choreography."
-        totalScore="8.3"
-        metrics={[
-          { label: 'Prompt Adherence', score: 8.7 },
-          { label: 'Temporal Consistency', score: 8.3 },
-          { label: 'Visual Fidelity', score: 8.1 },
-          { label: 'Motion Quality', score: 8.8 },
-          { label: 'Value / Pricing', score: 7.8 },
-        ]}
-        whyChosen="Viggle AI pioneered precise 3D bone rigging from simple 2D still images. By feeding Viggle a reference dance or action video alongside a character PNG, you can transplant that avatar into the exact physical movement without manual keyframe animation, making it unmatched for viral TikTok and meme content."
-        pros={[
-          'Incredible precision in transferring human choreography to fictional characters',
-          'Dedicated Discord and web workspace interfaces for creator communities',
-          'Active template library with trending viral dances and meme formats',
-        ]}
-        cons={[
-          'Specialized primarily in character motion rather than panoramic cinematic landscapes',
-          'Background blending can sometimes require post-editing alpha cleanup',
-        ]}
-        freeTier="100 free starter credits upon joining"
-        pricing="$9.99 / mo (Pro creator plan)"
-        visitUrl="/go/viggle/"
-      />
-
-      <!-- 5. MiniMax Hailuo H3 (8.2 / 10) -->
+      <!-- 3. MiniMax Hailuo H3 (8.3 / 10) -->
       <ToolCard
         name="MiniMax Hailuo H3"
         bestForTitle="Best AI video generator for photorealistic faces and free daily use"
         tagline="Ultra-crisp human faces and buttery-smooth camera pans without synthetic plastic sheen."
-        totalScore="8.2"
+        totalScore="8.3"
         metrics={[
           { label: 'Prompt Adherence', score: 8.0 },
           { label: 'Temporal Consistency', score: 8.4 },
           { label: 'Visual Fidelity', score: 8.7 },
           { label: 'Motion Quality', score: 8.1 },
-          { label: 'Value / Pricing', score: 7.8 },
+          { label: 'Value / Pricing', score: 8.5 },
         ]}
         whyChosen="Developed by MiniMax, Hailuo is widely regarded as one of the best generators for human faces. Skin texture, lighting reflections, and subtle facial micro-expressions look natural rather than AI-generated, making it a standout choice for creators on a zero-dollar budget."
         pros={[
@@ -367,46 +309,77 @@ const breadcrumbSchema = {
         screenshotCaption="MiniMax Hailuo clean prompt input interface with real-time generation options and intuitive camera settings."
       />
 
-      <!-- 6. Seedance 2.5 (8.6 / 10) -->
+      <!-- 4. PixVerse V3.5 (8.1 / 10) -->
       <ToolCard
-        name="Seedance 2.5"
-        bestForTitle="Best AI video generator for sustained 30-second continuous scenes"
-        tagline="Continuous 30-second sequences at native 1080p resolution with minimal temporal drift."
-        totalScore="8.6"
+        name="PixVerse V3.5"
+        bestForTitle="Best AI video generator for speed, anime aesthetics, and high throughput"
+        tagline="Ultra-fast generation cycles, specialized stylized anime rendering, and responsive multi-shot controls."
+        totalScore="8.1"
         metrics={[
-          { label: 'Prompt Adherence', score: 8.5 },
-          { label: 'Temporal Consistency', score: 8.8 },
-          { label: 'Visual Fidelity', score: 8.7 },
-          { label: 'Motion Quality', score: 8.4 },
-          { label: 'Value / Pricing', score: 8.6 },
+          { label: 'Prompt Adherence', score: 8.6 },
+          { label: 'Temporal Consistency', score: 8.1 },
+          { label: 'Visual Fidelity', score: 8.5 },
+          { label: 'Motion Quality', score: 8.2 },
+          { label: 'Value / Pricing', score: 7.3 },
         ]}
-        whyChosen="Seedance 2.5 breaks through the traditional 4-second limitation by generating continuous 30-second shots at native 1080p. As one of the core backends integrated inside Everygen AI, it excels at narrative storytelling where scenes must hold visual stability without abrupt camera jump cuts."
+        whyChosen="PixVerse V3.5 has emerged as one of the fastest and most flexible generative video engines on the market. It excels particularly at stylized, cinematic, and Japanese anime-style visual aesthetics, rendering short 4-second to 8-second scenes in a fraction of the time required by heavier diffusion pipelines."
         pros={[
-          'Native 30-second continuous duration at full 1080p',
-          'Stable camera motion without random scene warping',
-          'Available via Everygen AI with unified MCP integration',
+          'Rapid rendering speeds with low queue wait times',
+          'Top-tier stylistic fidelity for anime, cyberpunk, and artistic scenes',
+          'Generous daily login credits and competitive entry-level pricing',
         ]}
         cons={[
-          'Requires structured and descriptive prompts for long sequences',
-          'Higher compute cost per 30-second render compared to short clips',
+          'Complex multi-character interactions can exhibit hand and limb morphing',
+          'Audio sound effect generation is currently in experimental preview',
         ]}
-        freeTier="Promotional credits via API and partner portals"
-        pricing="Pay-as-you-go credit bundles"
-        visitUrl="/go/seedance/"
+        freeTier="Daily login bonus credits with standard watermark"
+        pricing="$8.00 / mo (Basic plan)"
+        visitUrl="/go/pixverse/"
+        screenshotUrl="/images/pixverse.webp"
+        screenshotCaption="PixVerse V3.5 creative studio console displaying video generation settings, motion styles, and aspect ratio controls."
       />
 
-      <!-- 7. Runway Gen-4.5 / Gen-3 Alpha (8.3 / 10) -->
+      <!-- 5. OpenArt Video (7.8 / 10) -->
+      <ToolCard
+        name="OpenArt Video"
+        bestForTitle="Best AI video generator for all-in-one canvas storyboarding"
+        tagline="Unified creative workspace connecting multi-model image generation with seamless motion extension."
+        totalScore="7.8"
+        metrics={[
+          { label: 'Prompt Adherence', score: 8.6 },
+          { label: 'Temporal Consistency', score: 7.8 },
+          { label: 'Visual Fidelity', score: 8.2 },
+          { label: 'Motion Quality', score: 7.7 },
+          { label: 'Value / Pricing', score: 6.8 },
+        ]}
+        whyChosen="OpenArt provides an integrated canvas environment designed specifically for digital storytellers and commercial creators. Rather than treating video generation as an isolated black box, OpenArt lets you sketch, generate character stills, and immediately breathe life into them with coordinated camera motions and lighting effects."
+        pros={[
+          'Comprehensive creative suite spanning image-to-video, motion control, and upscaling',
+          'Highly intuitive web UI that accelerates storyboard iteration',
+          'Transparent credit consumption with flexible token roll-over',
+        ]}
+        cons={[
+          'No permanent free tier — platform access requires paid Starter tier ($14/mo)',
+          'Commercial usage rights are restricted to Plus tier ($27/mo annual) and above',
+          'Continuous duration capped at 4 to 8 seconds per render',
+        ]}
+        freeTier="No free plan (Paid plans from $14/mo)"
+        pricing="$14.00 / mo ($13/mo annual for Starter; commercial rights require Plus $27/mo)"
+        visitUrl="/go/openart/"
+      />
+
+      <!-- 6. Runway Gen-4.5 (7.5 / 10) -->
       <ToolCard
         name="Runway Gen-4.5"
         bestForTitle="Best AI video generator for director-level camera controls"
         tagline="Hollywood-grade camera orbits, custom velocity curves, and multi-motion brush controls."
-        totalScore="8.3"
+        totalScore="7.5"
         metrics={[
           { label: 'Prompt Adherence', score: 9.1 },
-          { label: 'Temporal Consistency', score: 8.2 },
-          { label: 'Visual Fidelity', score: 8.8 },
-          { label: 'Motion Quality', score: 8.6 },
-          { label: 'Value / Pricing', score: 6.7 },
+          { label: 'Temporal Consistency', score: 8.0 },
+          { label: 'Visual Fidelity', score: 8.6 },
+          { label: 'Motion Quality', score: 8.4 },
+          { label: 'Value / Pricing', score: 5.2 },
         ]}
         whyChosen="Runway offers the most granular directorial control in the generative video industry. Rather than relying purely on text prompts, Gen-4.5 provides keyframing, velocity curves, and specific camera orbits that advertising agencies and visual effects artists require."
         pros={[
@@ -415,82 +388,26 @@ const breadcrumbSchema = {
           'Robust web workspace with built-in asset management and audio sync',
         ]}
         cons={[
-          'High credit burn rate: 10-second renders consume credits rapidly',
-          'Free trial includes only 125 one-time credits with no daily refill',
+          'Extremely steep credit burn rate: $15/mo Standard plan covers only 52 seconds of Gen-4.5',
+          'Free trial gives only 125 one-time credits (~10 seconds total) with zero daily refills',
         ]}
-        freeTier="125 one-time starter credits"
-        pricing="$12.00 / mo ($15 billed monthly for Standard)"
+        freeTier="125 one-time starter credits (~10 seconds total)"
+        pricing="$15.00 / mo ($12/mo billed annually for Standard)"
         visitUrl="/go/runway/"
       />
 
-      <!-- 8. Luma Ray 3.2 (7.8 / 10) -->
-      <ToolCard
-        name="Luma Ray 3.2"
-        bestForTitle="Best AI video generator for cinematic atmosphere and lighting"
-        tagline="Volumetric depth-of-field, realistic golden-hour lens flares, and natural perspective shifts."
-        totalScore="7.8"
-        metrics={[
-          { label: 'Prompt Adherence', score: 8.2 },
-          { label: 'Temporal Consistency', score: 7.6 },
-          { label: 'Visual Fidelity', score: 8.5 },
-          { label: 'Motion Quality', score: 7.8 },
-          { label: 'Value / Pricing', score: 7.1 },
-        ]}
-        whyChosen="Luma Ray 3.2 (Dream Machine) is built on a multimodal architecture that excels at natural perspective shifts and lighting gradients. Its handling of golden-hour sunbeams, mist, and volumetric scale makes it a favorite among indie filmmakers constructing visual mood boards."
-        pros={[
-          'Rich volumetric lighting and cinematic depth-of-field',
-          'Camera zooms and dolly movements feel naturally captured',
-          '30 free generations per month on basic tier',
-        ]}
-        cons={[
-          'Background crowds in complex scenes can lose sharpness over time',
-          'Output duration is typically limited to 5 seconds per generation',
-        ]}
-        freeTier="30 generations per month with watermark"
-        pricing="$9.99 / mo (Lite plan)"
-        visitUrl="/go/luma/"
-      />
-
-      <!-- 9. Pika 2.2 (7.1 / 10) -->
-      <ToolCard
-        name="Pika 2.2"
-        bestForTitle="Best AI video generator for viral visual physics and meme effects"
-        tagline="Pikaffects physics engine with squish, explode, melt, and slice dynamic presets."
-        totalScore="7.1"
-        metrics={[
-          { label: 'Prompt Adherence', score: 7.4 },
-          { label: 'Temporal Consistency', score: 6.8 },
-          { label: 'Visual Fidelity', score: 7.2 },
-          { label: 'Motion Quality', score: 7.5 },
-          { label: 'Value / Pricing', score: 6.8 },
-        ]}
-        whyChosen="Pika carved a distinct niche with creative physics transformations. If your goal is to make objects melt, inflate like balloons, or squish dynamically for social media memes, Pika provides these effects in single-click presets."
-        pros={[
-          'Fun, viral Pikaffects presets for social entertainment content',
-          'Intuitive and friendly user interface',
-          'Daily credit replenishment on standard free accounts',
-        ]}
-        cons={[
-          'Human photorealism and anatomy consistency fall behind Kling and Runway',
-          'Fast turns can introduce noticeable visual warping',
-        ]}
-        freeTier="30 daily refill credits with watermark"
-        pricing="$8.00 / mo (Standard tier)"
-        visitUrl="/go/pika/"
-      />
-
-      <!-- 10. Kaiber AI (7.6 / 10) -->
+      <!-- 7. Kaiber AI (7.2 / 10) -->
       <ToolCard
         name="Kaiber AI"
         bestForTitle="Best AI video generator for stylized music videos and artistic loops"
         tagline="Audioreactive keyframing, painterly frame morphing, and stylized visual storytelling."
-        totalScore="7.6"
+        totalScore="7.2"
         metrics={[
-          { label: 'Prompt Adherence', score: 7.9 },
-          { label: 'Temporal Consistency', score: 7.3 },
-          { label: 'Visual Fidelity', score: 8.0 },
-          { label: 'Motion Quality', score: 7.5 },
-          { label: 'Value / Pricing', score: 7.5 },
+          { label: 'Prompt Adherence', score: 7.8 },
+          { label: 'Temporal Consistency', score: 7.1 },
+          { label: 'Visual Fidelity', score: 7.6 },
+          { label: 'Motion Quality', score: 7.0 },
+          { label: 'Value / Pricing', score: 6.7 },
         ]}
         whyChosen="Kaiber AI was built from the ground up for musicians, animators, and creative agencies producing synchronized music visualizers. Its audioreactive engine allows video pulses and stylistic camera transitions to synchronize directly to uploaded audio stems."
         pros={[
@@ -505,6 +422,90 @@ const breadcrumbSchema = {
         freeTier="Initial free trial credits upon onboarding"
         pricing="$5.00 / mo (Explorer plan)"
         visitUrl="/go/kaiber/"
+      />
+
+      <!-- 8. Luma Ray 3.2 (7.0 / 10) -->
+      <ToolCard
+        name="Luma Ray 3.2"
+        bestForTitle="Best AI video generator for cinematic atmosphere and lighting"
+        tagline="Volumetric depth-of-field, realistic golden-hour lens flares, and natural perspective shifts."
+        totalScore="7.0"
+        metrics={[
+          { label: 'Prompt Adherence', score: 7.9 },
+          { label: 'Temporal Consistency', score: 7.2 },
+          { label: 'Visual Fidelity', score: 8.1 },
+          { label: 'Motion Quality', score: 7.1 },
+          { label: 'Value / Pricing', score: 6.1 },
+        ]}
+        whyChosen="Luma Ray 3.2 (Dream Machine) is built on a multimodal architecture that excels at natural perspective shifts and lighting gradients. Its handling of golden-hour sunbeams, mist, and volumetric scale makes it a favorite among indie filmmakers constructing visual mood boards."
+        pros={[
+          'Rich volumetric lighting and cinematic depth-of-field',
+          'Camera zooms and dolly movements feel naturally captured',
+          '30 free generations per month on basic tier',
+        ]}
+        cons={[
+          'Background crowds in complex scenes can exhibit morphing artifacts over time',
+          'Output duration is typically limited to 5 seconds per generation',
+        ]}
+        freeTier="30 generations per month with watermark"
+        pricing="$9.99 / mo (Lite plan)"
+        visitUrl="/go/luma/"
+      />
+
+      <!-- 9. Pika 2.2 (6.7 / 10) -->
+      <ToolCard
+        name="Pika 2.2"
+        bestForTitle="Best AI video generator for viral visual physics and meme effects"
+        tagline="Pikaffects physics engine with squish, explode, melt, and slice dynamic presets."
+        totalScore="6.7"
+        metrics={[
+          { label: 'Prompt Adherence', score: 7.2 },
+          { label: 'Temporal Consistency', score: 6.3 },
+          { label: 'Visual Fidelity', score: 6.8 },
+          { label: 'Motion Quality', score: 7.1 },
+          { label: 'Value / Pricing', score: 6.2 },
+        ]}
+        whyChosen="Pika carved a distinct niche with creative physics transformations. If your goal is to make objects melt, inflate like balloons, or squish dynamically for social media memes, Pika provides these effects in single-click presets."
+        pros={[
+          'Fun, viral Pikaffects presets for social entertainment content',
+          'Intuitive and friendly user interface',
+          'Daily credit replenishment on standard free accounts',
+        ]}
+        cons={[
+          'Human photorealism and anatomy consistency fall far behind Kling and Hailuo',
+          'Fast turns can introduce noticeable visual warping',
+        ]}
+        freeTier="30 daily refill credits with watermark"
+        pricing="$8.00 / mo (Standard tier)"
+        visitUrl="/go/pika/"
+      />
+
+      <!-- 10. Viggle AI (6.4 / 10) -->
+      <ToolCard
+        name="Viggle AI"
+        bestForTitle="Best AI video generator for character body rigging and dance motion"
+        tagline="Controllable character replacement engine that maps any custom avatar onto reference choreography."
+        totalScore="6.4"
+        metrics={[
+          { label: 'Prompt Adherence', score: 7.6 },
+          { label: 'Temporal Consistency', score: 7.0 },
+          { label: 'Visual Fidelity', score: 6.5 },
+          { label: 'Motion Quality', score: 7.8 },
+          { label: 'Value / Pricing', score: 5.9 },
+        ]}
+        whyChosen="Viggle AI pioneered precise 3D bone rigging from simple 2D still images. By feeding Viggle a reference dance or action video alongside a character PNG, you can transplant that avatar into the exact physical movement without manual keyframe animation, making it unmatched for viral TikTok and meme content."
+        pros={[
+          'Incredible precision in transferring human choreography to fictional characters',
+          'Dedicated Discord and web workspace interfaces for creator communities',
+          'Active template library with trending viral dances and meme formats',
+        ]}
+        cons={[
+          'Specialized strictly in character motion — cannot generate landscapes, environments, or cinematic B-roll',
+          'Background blending frequently requires manual post-production alpha cleanup',
+        ]}
+        freeTier="100 free starter credits upon joining"
+        pricing="$9.99 / mo (Pro creator plan)"
+        visitUrl="/go/viggle/"
       />
     </div>
 
