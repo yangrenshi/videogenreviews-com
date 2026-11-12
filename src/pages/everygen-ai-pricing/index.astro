@@ -4,25 +4,30 @@ import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-const title = 'How Everygen AI Credits Work: Quotas, Model Tiers & Cost Guide (2026)';
-const description = 'Understand how Everygen AI compute credits and token quotas operate. Compare resource burn across Seedance 2.5, Kling 4.0, and 30s 1080p long-form exports.';
+const title = 'Everygen AI Pricing (2026): Starter $9, Pro $19 & Plans Compared';
+const description = 'Official Everygen AI pricing breakdown. Compare Starter ($9/mo, 200 credits), Pro ($19/mo, 500 credits), and Creator ($49/mo), plus model generation costs.';
 const canonicalPath = 'everygen-ai-pricing';
 
 const faqs: FaqItem[] = [
   {
-    question: 'How many free trial credits does Everygen AI provide?',
+    question: 'How much does Everygen AI cost per month?',
     answer:
-      'Newly registered Everygen accounts typically receive an initial allocation of 10 promotional credits upon verification. This starter allowance lets users sample prompt syntax and test short drafts across supported model engines.',
+      'According to official platform pricing, Everygen AI offers three subscription tiers: Starter at $9/mo billed annually (200 credits/mo), Pro at $19/mo (500 credits/mo + 500 bonus credits in month 1), and Creator at $49/mo (1,000 credits/mo + 1,000 bonus credits in month 1).',
   },
   {
-    question: 'Why doesn\'t Everygen AI publish a single fixed dollar price per video?',
+    question: 'Can I monetize videos generated with Everygen AI?',
     answer:
-      'Because Everygen orchestrates multiple foundational clusters (including Kling 4.0, Seedance 2.5, and MiniMax), compute burn is calculated dynamically based on four factors: foundational model weights, clip duration (5s vs 30s), target resolution (720p vs 1080p), and reference image anchoring.',
+      'Yes. Everygen AI explicitly states in its official documentation: "Can I monetize videos made with Everygen? — Yes! without any restrictions." Paid plan subscribers hold full commercial rights to their video outputs.',
   },
   {
-    question: 'Do Everygen credit packs expire at the end of the month?',
+    question: 'Do Everygen AI credits roll over to the next month?',
     answer:
-      'On-demand credit top-up packages generally roll over and remain in your account balance, whereas recurring monthly subscription credits reset according to your active billing cycle. Always verify active terms in your user dashboard.',
+      'Subscription plan credits reset monthly and do not roll over. However, standalone on-demand top-up credit packs remain valid for 90 days from the purchase date.',
+  },
+  {
+    question: 'Does Everygen AI have a free plan?',
+    answer:
+      'Everygen AI does not offer an ongoing permanent free subscription tier. Newly registered accounts receive a one-time promotional starter allowance (10 credits on verified test accounts) to test prompt syntax and MCP connection before upgrading.',
   },
 ];
 
@@ -55,7 +60,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-12',
-  dateModified: '2026-11-12',
+  dateModified: '2026-11-13',
 };
 
 const breadcrumbSchema = {
@@ -89,147 +94,215 @@ const breadcrumbSchema = {
   <article class="space-y-10">
     <header class="border-b border-paper-300 pb-8">
       <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
-        Quota Guide & Billing Architecture
+        Official Quota & Subscription Breakdown
       </div>
 
       <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
-        How Everygen AI Credits Work: Quotas & Model Tiers
+        Everygen AI Pricing: Plans, Credits & Rates (2026)
       </h1>
 
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
-        An objective examination of Everygen AI\'s compute token structure by Viewmax LLC: how starter allowances work, what drives token consumption, and how to budget for 30-second 1080p rendering.
+        A verified breakdown of official Everygen AI subscription plans by Viewmax LLC: comparing Starter ($9/mo), Pro ($19/mo), and Creator ($49/mo), compute token yields, and commercial usage rights.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated November 13, 2026 &bull; Verified against official everygen.ai/pricing &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a>
       </div>
     </header>
 
     <KeyTakeaway
-      pickA="Initial Trial: 10 Credits"
-      forScenarioA="testing short prompt validation and verifying MCP connection without immediate payment"
-      pickB="Dynamic Credit Bundles"
-      forScenarioB="studios requiring continuous 30-second 1080p generation across Kling 4.0 and Seedance 2.5"
+      pickA="Pro Plan ($19/mo)"
+      forScenarioA="best value tier with 500 credits + 500 first-month bonus, supporting ~45-50 video generations"
+      pickB="Starter Plan ($9/mo)"
+      forScenarioB="entry tier for creators testing Seedance 2.5 and Kling 4.0 via MCP agent integrations"
     />
 
-    <!-- Real Account Baseline -->
+    <!-- Official Pricing Tiers Table (3 档真实价格) -->
     <section class="space-y-4">
-      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
-        The Starter Credit Baseline (10 Credits)
-      </h2>
-      <div class="space-y-3 text-ink-800 text-sm sm:text-base leading-relaxed">
-        <p>
-          Newly registered accounts on Everygen AI are credited with a baseline allowance of <strong>10 initial credits</strong>. This starter balance is designed for orientation: validating prompt formatting, exploring the interface, and testing programmatic tool connections via the Model Context Protocol (MCP).
-        </p>
-        <p>
-          Because full-duration 30-second 1080p generations require substantial multi-cluster GPU inference, sustained production workflows necessitate purchasing top-up credit packs or subscribing to ongoing monthly tiers through the official platform console.
-        </p>
+      <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+        <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+          Official Everygen AI Subscription Tiers
+        </h2>
+        <span class="text-xs font-medium text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200">
+          Save up to 64% on annual billing
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+        <!-- Starter Plan -->
+        <div class="rounded-lg border border-paper-300 bg-paper-100 p-6 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="text-xs uppercase font-bold text-ink-500 tracking-wider">Starter Tier</span>
+            <div class="flex items-baseline space-x-1">
+              <span class="text-4xl font-extrabold text-ink-900 tracking-tight">$9</span>
+              <span class="text-xs text-ink-500 font-medium">/ month</span>
+            </div>
+            <p class="text-xs text-ink-500">Billed annually ($108/yr). Entry plan for indie creators.</p>
+            <div class="border-t border-paper-300/80 pt-3 space-y-2 text-xs text-ink-700">
+              <div class="flex items-center">
+                <span class="font-bold text-ink-900 mr-1.5">200 credits</span> / month
+              </div>
+              <div>&bull; Approx. ~18 Seedance 2 Fast clips</div>
+              <div>&bull; Approx. ~50 Nano Banana Pro images</div>
+              <div>&bull; Native MCP client support</div>
+              <div>&bull; Commercial monetization rights</div>
+            </div>
+          </div>
+          <a
+            href="/go/everygen/"
+            target="_blank"
+            rel="sponsored nofollow noopener noreferrer"
+            class="w-full inline-flex items-center justify-center px-4 py-2 rounded-md bg-paper-200 hover:bg-paper-300 text-ink-900 font-semibold text-xs transition-colors"
+          >
+            Select Starter Plan
+          </a>
+        </div>
+
+        <!-- Pro Plan (Popular) -->
+        <div class="rounded-lg border-2 border-brand-blue bg-white p-6 shadow-sm flex flex-col justify-between space-y-4 relative">
+          <div class="absolute -top-3 right-4 bg-brand-blue text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">
+            Most Popular
+          </div>
+          <div class="space-y-2">
+            <span class="text-xs uppercase font-bold text-brand-blue tracking-wider">Pro Tier</span>
+            <div class="flex items-baseline space-x-2">
+              <span class="text-4xl font-extrabold text-ink-900 tracking-tight">$19</span>
+              <span class="text-xs text-ink-500 font-medium">/ month</span>
+              <span class="text-xs text-ink-400 line-through">$49</span>
+            </div>
+            <p class="text-xs text-ink-500">Discounted promotional rate. Recommended for active video creators.</p>
+            <div class="border-t border-paper-300/80 pt-3 space-y-2 text-xs text-ink-700">
+              <div class="flex items-center font-bold text-brand-blue">
+                <span>500 credits / mo + 500 bonus (Month 1)</span>
+              </div>
+              <div>&bull; Approx. ~45 Seedance 2 Fast clips</div>
+              <div>&bull; Kling 4.0 1080p generation access</div>
+              <div>&bull; High-priority GPU dispatch queue</div>
+              <div>&bull; Full commercial license (zero restrictions)</div>
+            </div>
+          </div>
+          <a
+            href="/go/everygen/"
+            target="_blank"
+            rel="sponsored nofollow noopener noreferrer"
+            class="w-full inline-flex items-center justify-center px-4 py-2 rounded-md bg-brand-blue hover:bg-brand-hover text-white font-semibold text-xs transition-colors shadow-sm"
+          >
+            Select Pro Plan
+          </a>
+        </div>
+
+        <!-- Creator Plan -->
+        <div class="rounded-lg border border-paper-300 bg-paper-100 p-6 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="text-xs uppercase font-bold text-purple-700 tracking-wider">Creator Studio</span>
+            <div class="flex items-baseline space-x-2">
+              <span class="text-4xl font-extrabold text-ink-900 tracking-tight">$49</span>
+              <span class="text-xs text-ink-500 font-medium">/ month</span>
+              <span class="text-xs text-ink-400 line-through">$139</span>
+            </div>
+            <p class="text-xs text-ink-500">Heavy production volume for creative agencies and automation pipelines.</p>
+            <div class="border-t border-paper-300/80 pt-3 space-y-2 text-xs text-ink-700">
+              <div class="flex items-center font-bold text-purple-900">
+                <span>1,000 credits / mo + 1,000 bonus (Month 1)</span>
+              </div>
+              <div>&bull; Maximum priority GPU cluster access</div>
+              <div>&bull; Full 30-second continuous 1080p generation</div>
+              <div>&bull; High-throughput MCP and API integration</div>
+              <div>&bull; Dedicated customer support queue</div>
+            </div>
+          </div>
+          <a
+            href="/go/everygen/"
+            target="_blank"
+            rel="sponsored nofollow noopener noreferrer"
+            class="w-full inline-flex items-center justify-center px-4 py-2 rounded-md bg-paper-200 hover:bg-paper-300 text-ink-900 font-semibold text-xs transition-colors"
+          >
+            Select Creator Plan
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- 4 Drivers of Token Consumption -->
+    <!-- Commercial License & Credit Rules -->
     <section class="space-y-4 pt-6 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
-        What Drives Everygen Token Consumption?
+        Commercial Rights & Credit Validity Rules
       </h2>
-      <p class="text-sm text-ink-700 leading-relaxed">
-        Token burn is determined dynamically by four architectural variables rather than a rigid flat rate:
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100 space-y-1">
-          <strong class="text-sm font-bold text-ink-900 block">1. Selected Foundational Model</strong>
-          <p class="text-xs text-ink-700 leading-relaxed">
-            Running heavy physical diffusion architectures (such as Kling 4.0 or Seedance 2.5) consumes a higher credit ratio than rapid ideation models like Grok Imagine.
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-ink-800">
+        <div class="p-5 rounded-lg border border-emerald-200 bg-emerald-50/40 space-y-2">
+          <h3 class="font-bold text-emerald-900 text-base">
+            Can I monetize videos made with Everygen?
+          </h3>
+          <p class="text-xs sm:text-sm text-emerald-950 leading-relaxed">
+            <strong>Yes, without any restrictions.</strong> Everygen AI explicitly confirms in official terms that paid subscribers retain full commercial usage rights for YouTube monetization, client deliverables, advertising campaigns, and social media distributions.
           </p>
         </div>
 
-        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100 space-y-1">
-          <strong class="text-sm font-bold text-ink-900 block">2. Generation Duration (5s vs 30s)</strong>
-          <p class="text-xs text-ink-700 leading-relaxed">
-            A native continuous 30-second sequence demands sequential autoregressive inference, scaling token burn significantly compared to standard 4-second or 5-second test shots.
-          </p>
-        </div>
-
-        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100 space-y-1">
-          <strong class="text-sm font-bold text-ink-900 block">3. Target Output Resolution</strong>
-          <p class="text-xs text-ink-700 leading-relaxed">
-            Exporting in 1080p Full High Definition requires higher GPU VRAM allocation than preliminary 720p drafts used for camera blocking.
-          </p>
-        </div>
-
-        <div class="p-4 rounded-lg border border-paper-300 bg-paper-100 space-y-1">
-          <strong class="text-sm font-bold text-ink-900 block">4. Multi-Frame Reference Anchoring</strong>
-          <p class="text-xs text-ink-700 leading-relaxed">
-            Conditioning video outputs on multiple character portraits or keyframes requires additional multimodal cross-attention computation during generation.
+        <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+          <h3 class="font-bold text-ink-900 text-base">
+            Credit Expiration & Top-Up Packs
+          </h3>
+          <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+            Monthly plan credits reset at the start of each billing cycle and do not roll over. However, users who purchase standalone credit refill packs enjoy a <strong>90-day validity window</strong> to consume their tokens across supported models.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Compute Tier Matrix Table -->
+    <!-- Model Yield Table (Seedance, Kling, MiniMax) -->
     <section class="space-y-4 pt-6 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
-        Model Intensity & Resource Allocation Matrix
+        Estimated Video Generation Yield by Model
       </h2>
       <p class="text-sm text-ink-700 leading-relaxed">
-        Everygen categorizes its integrated engines across relative resource consumption bands:
+        Estimated output volume across Everygen\'s integrated foundational engines:
       </p>
 
       <div class="overflow-x-auto rounded-lg border border-paper-300 mt-4">
         <table class="min-w-full divide-y divide-paper-300 text-left text-xs sm:text-sm">
           <thead class="bg-paper-100 font-semibold text-ink-900">
             <tr>
-              <th scope="col" class="py-3.5 pl-4 pr-3">Model Engine</th>
-              <th scope="col" class="px-3 py-3.5">Max Duration</th>
-              <th scope="col" class="px-3 py-3.5">Resolution</th>
-              <th scope="col" class="px-3 py-3.5">Relative Compute Tier</th>
-              <th scope="col" class="px-3 py-3.5 pr-4">Recommended Strategy</th>
+              <th scope="col" class="py-3.5 pl-4 pr-3">Foundational Engine</th>
+              <th scope="col" class="px-3 py-3.5">Duration</th>
+              <th scope="col" class="px-3 py-3.5">Estimated Yield (200 Credits / Starter)</th>
+              <th scope="col" class="px-3 py-3.5 pr-4">Estimated Yield (500 Credits / Pro)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-paper-300 bg-white text-ink-700">
             <tr>
-              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2.5</td>
-              <td class="px-3 py-3.5 text-brand-blue font-medium">30 seconds</td>
-              <td class="px-3 py-3.5">1080p FHD</td>
-              <td class="px-3 py-3.5 font-medium text-purple-700">Production Tier</td>
-              <td class="px-3 py-3.5 pr-4">Reserve for final narrative takes requiring seamless temporal stability</td>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2 Fast</td>
+              <td class="px-3 py-3.5">5 seconds</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">~18 clips</td>
+              <td class="px-3 py-3.5 pr-4 text-brand-blue font-medium">~45 clips</td>
             </tr>
             <tr>
-              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Kling AI 4.0</td>
-              <td class="px-3 py-3.5 text-brand-blue font-medium">30 seconds</td>
-              <td class="px-3 py-3.5">1080p FHD</td>
-              <td class="px-3 py-3.5 font-medium text-purple-700">Production Tier</td>
-              <td class="px-3 py-3.5 pr-4">Best applied to complex physical interactions and rapid athletic movement</td>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2.5 (1080p)</td>
+              <td class="px-3 py-3.5">30 seconds continuous</td>
+              <td class="px-3 py-3.5 font-medium">~4 to 6 long takes</td>
+              <td class="px-3 py-3.5 pr-4 font-medium">~12 to 15 long takes</td>
             </tr>
             <tr>
-              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">MiniMax H3 Max</td>
-              <td class="px-3 py-3.5">6 seconds</td>
-              <td class="px-3 py-3.5">1080p FHD</td>
-              <td class="px-3 py-3.5 font-medium text-blue-700">Balanced Tier</td>
-              <td class="px-3 py-3.5 pr-4">Ideal for human facial portraits and micro-expression close-ups</td>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Kling AI 4.0 / 3.0</td>
+              <td class="px-3 py-3.5">5s - 10s</td>
+              <td class="px-3 py-3.5 font-medium">~12 to 15 clips</td>
+              <td class="px-3 py-3.5 pr-4 font-medium">~30 to 35 clips</td>
             </tr>
             <tr>
-              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Grok Imagine</td>
-              <td class="px-3 py-3.5">Still Frames</td>
-              <td class="px-3 py-3.5">4K Upscale</td>
-              <td class="px-3 py-3.5 font-medium text-emerald-700">Economy Tier</td>
-              <td class="px-3 py-3.5 pr-4">Rapid conceptual storyboarding prior to video synthesis</td>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Nano Banana Pro</td>
+              <td class="px-3 py-3.5">Still Frame</td>
+              <td class="px-3 py-3.5 font-medium">~50 images</td>
+              <td class="px-3 py-3.5 pr-4 font-medium">~125 images</td>
             </tr>
           </tbody>
         </table>
-      </div>
-
-      <div class="rounded-lg bg-paper-100 border border-paper-300 p-4 text-xs text-ink-600 leading-relaxed mt-4">
-        <strong>Transparency Note:</strong> Because token exchange rates and promotional bundle discounts are subject to active platform updates by Viewmax LLC, always check your active live balance directly inside your account console.
       </div>
     </section>
 
     <!-- Navigation Hub -->
     <section class="rounded-lg bg-paper-100 border border-paper-300 p-6 sm:p-8 space-y-3">
-      <h2 class="text-lg font-bold text-ink-900">Explore Alternative Tools & Methodology</h2>
+      <h2 class="text-lg font-bold text-ink-900">Compare Alternatives & Free Trial Rules</h2>
       <p class="text-sm text-ink-700 leading-relaxed">
-        Looking for platforms with daily recurring free credits? Read our <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">Free Quotas & Trial Guide</a>, compare <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Top Video Alternatives</a>, or examine our <a href="/methodology/" class="text-brand-blue font-semibold hover:underline">5-Point Evaluation Methodology</a>.
+        Seeking free daily credits instead of a paid monthly plan? Read our <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">Free Trial & Quotas Guide</a>, compare <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Top Video Alternatives</a>, or examine our <a href="/methodology/" class="text-brand-blue font-semibold hover:underline">5-Point Evaluation Methodology</a>.
       </p>
     </section>
 
