@@ -25,9 +25,9 @@ const canonicalUrl = cleanCanonicalPath ? `${siteUrl}/${cleanCanonicalPath}/` : 
 const defaultWebsiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  'name': 'VideoGenReviews',
+  'name': 'VideoGen Reviews',
   'url': siteUrl,
-  'description': 'Independent benchmarks, side-by-side feature matrix, and real credit costs for generative AI video models.',
+  'description': 'Independent feature comparisons, architectural breakdowns, and free tier specifications for modern AI video generation platforms.',
 };
 
 const schemasToRender = [defaultWebsiteSchema];
@@ -68,7 +68,7 @@ if (schema) {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="VideoGenReviews" />
+    <meta property="og:site_name" content="VideoGen Reviews" />
     <meta property="og:image" content={`${siteUrl}/og-image.png`} />
 
     <!-- Twitter -->
@@ -86,13 +86,10 @@ if (schema) {
     }
 
     <style is:global>
-      /* 全局平滑渲染与暗黑质感网格 */
       ::selection {
         background-color: #0284c7;
         color: #ffffff;
       }
-
-      /* 细腻滚动条 */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
@@ -107,8 +104,6 @@ if (schema) {
       ::-webkit-scrollbar-thumb:hover {
         background: #272f45;
       }
-
-      /* 微妙高定网格图案背景 */
       .bg-grid-pattern {
         background-size: 40px 40px;
         background-image: 
@@ -118,12 +113,16 @@ if (schema) {
     </style>
   </head>
   <body class="bg-dark-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-sky-500 selection:text-white relative overflow-x-hidden">
-    <!-- 顶部环境光斑与聚光灯效果 (Ambient Glow Aura) -->
+    <!-- 顶部环境光斑 -->
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-sky-500/15 via-indigo-600/10 to-transparent blur-[120px] pointer-events-none -z-10"></div>
     <div class="fixed top-[20%] right-[-100px] w-[500px] h-[500px] bg-purple-600/5 blur-[140px] pointer-events-none -z-10"></div>
-
-    <!-- 背景微暗几何网格 -->
     <div class="fixed inset-0 bg-grid-pattern opacity-60 pointer-events-none -z-10"></div>
+
+    <!-- 顶部固定读者支持与联盟透明披露条 -->
+    <div class="bg-dark-900/90 border-b border-white/[0.05] py-1.5 px-4 text-center text-[11px] text-slate-400 font-mono tracking-tight">
+      <span>Disclosure: VideoGen Reviews is reader-supported. We may earn an affiliate commission when you purchase through links on our site. </span>
+      <a href="/affiliate-disclosure/" class="text-sky-400 hover:underline ml-1">Learn more &rarr;</a>
+    </div>
 
     <Header />
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 relative z-0">

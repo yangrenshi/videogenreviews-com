@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = 'Affiliate & Compensation Disclosure | VideoGen Reviews';
+const description = 'Full FTC-compliant affiliate disclosure detailing how VideoGen Reviews earns compensation through partner links.';
+const canonicalPath = 'affiliate-disclosure';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+>
+  <Breadcrumbs crumbs={[{ label: 'Affiliate Disclosure' }]} />
+
+  <article class="max-w-3xl space-y-8">
+    <header class="border-b border-white/[0.08] pb-6">
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight font-display mb-3">
+        Affiliate Disclosure
+      </h1>
+      <p class="text-base text-slate-300 leading-relaxed font-medium">
+        Transparency regarding our referral partnerships and editorial independence.
+      </p>
+    </header>
+
+    <section class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+      <h2 class="text-xl sm:text-2xl font-bold text-white font-display">Compliance with FTC Guidelines</h2>
+      <p>
+        In compliance with Federal Trade Commission (FTC) guidelines, please be aware that certain outbound links on <strong>videogenreviews.com</strong> are affiliate links. This means that if you click on a link to a software tool or generative video subscription and proceed to make a purchase, VideoGen Reviews may earn an affiliate commission.
+      </p>
+      <p>
+        This referral fee comes at <strong>no extra cost to you</strong>. In many cases, our partner agreements provide discounted rates or introductory credit promotions for our readers.
+      </p>
+    </section>
+
+    <section class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+      <h2 class="text-xl sm:text-2xl font-bold text-white font-display">Our Editorial Guarantee</h2>
+      <p>
+        Affiliate relationships never dictate our editorial verdicts. We highlight genuine software limitations, queue bottlenecks, and pricing drawbacks regardless of whether a partner program exists.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

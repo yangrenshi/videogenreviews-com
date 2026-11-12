@@ -12,6 +12,7 @@ export default defineConfig({
     }),
     sitemap({
       filter: (page) => !page.includes('/404'),
+      lastmod: new Date(),
     }),
   ],
   build: {

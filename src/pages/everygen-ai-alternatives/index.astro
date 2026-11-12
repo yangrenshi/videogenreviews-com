@@ -7,142 +7,139 @@ import ScenarioSection from '../../components/ScenarioSection.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-const title = 'Top 10 Everygen AI Alternatives & Competitors (2026 Tested)';
-const description = 'Looking for the best Everygen AI alternatives? Compare 10+ top generative video tools like Kling, Luma, and Runway by free allowance, pricing, flaws, and speed.';
+const title = 'Top 10 Everygen AI Alternatives & Competitors (2026 Guide)';
+const description = 'Looking for the best Everygen AI alternatives? Compare 10 top video models like Kling 4.0, Seedance 2.5, Runway Gen-3, and MiniMax by specs, limits, and pricing.';
 const canonicalPath = 'everygen-ai-alternatives';
 
+// 对比表数据：Everygen 放在第 1 行作为 Baseline！
 const comparisonTools: ToolComparisonItem[] = [
   {
-    name: 'Kling AI 1.5',
-    badge: 'Best Motion',
-    freeTier: '66 daily credits (~6 free videos)',
-    startingPrice: '$10 / mo',
-    maxDuration: '10 sec',
+    name: 'Everygen AI (Baseline)',
+    badge: 'Multi-Engine Hub',
+    freeTier: 'Trial credits on registration',
+    startingPrice: 'Dynamic credit packs',
+    maxDuration: 'Up to 30s (Seedance / Kling)',
     watermark: 'Free Only',
     commercialUse: 'Paid Only',
-    bestFor: 'Realistic physics & fluid character actions',
+    bestFor: 'Aggregated routing (Kling 4.0, Seedance 2.5) + MCP integration',
   },
   {
-    name: 'Luma Dream Machine',
-    badge: 'Cinematic Depth',
-    freeTier: '30 free gens / month',
-    startingPrice: '$9.99 / mo',
-    maxDuration: '5 sec',
+    name: 'Kling AI 4.0',
+    badge: 'Best Dynamics',
+    freeTier: '66 daily recurring credits',
+    startingPrice: '$10 / mo',
+    maxDuration: 'Up to 30s (with ref image)',
     watermark: 'Free Only',
     commercialUse: 'Paid Only',
-    bestFor: 'Volumetric lighting & movie-style shots',
+    bestFor: 'Complex physics, sports action & character reference consistency',
   },
   {
     name: 'Runway Gen-3 Alpha',
-    badge: 'Pro Grade',
+    badge: 'Pro Director',
     freeTier: '125 one-time credits',
     startingPrice: '$12 / mo',
     maxDuration: '10 sec',
     watermark: 'Free Only',
     commercialUse: 'Paid Only',
-    bestFor: 'Granular director-level camera controls',
+    bestFor: 'Camera orbits, velocity control curves & multi-brush steering',
   },
   {
-    name: 'Hailuo AI (MiniMax)',
-    badge: 'Top Free Option',
-    freeTier: 'High daily free allowance',
+    name: 'Seedance 2.5',
+    badge: '30s Native',
+    freeTier: 'Promotional credits',
+    startingPrice: 'API / Pay-as-you-go',
+    maxDuration: '30 sec (1080p)',
+    watermark: 'No',
+    commercialUse: 'Yes',
+    bestFor: 'Sustained continuous motion & high-resolution stability',
+  },
+  {
+    name: 'MiniMax Hailuo H3',
+    badge: 'Top Free Tier',
+    freeTier: 'Daily free credit replenishment',
     startingPrice: '$10 / mo',
     maxDuration: '6 sec',
     watermark: 'Free Only',
     commercialUse: 'Paid Only',
-    bestFor: 'Hyper-realistic Asian & global human faces',
+    bestFor: 'Hyper-realistic facial micro-expressions & lighting',
+  },
+  {
+    name: 'Luma Dream Machine 1.6',
+    badge: 'Cinematic Depth',
+    freeTier: '30 free monthly renders',
+    startingPrice: '$9.99 / mo',
+    maxDuration: '5 sec',
+    watermark: 'Free Only',
+    commercialUse: 'Paid Only',
+    bestFor: 'Volumetric atmosphere, lens flares & cinematic camera dolly',
   },
   {
     name: 'Pika 2.1',
-    badge: 'Creative Effects',
-    freeTier: '30 daily replenishment credits',
+    badge: 'Pikaffects Physics',
+    freeTier: '30 daily refill credits',
     startingPrice: '$8 / mo',
     maxDuration: '10 sec (extended)',
     watermark: 'Free Only',
     commercialUse: 'Paid Only',
-    bestFor: 'Melt, explode, and whimsical 3D physics',
+    bestFor: 'Squish, melt, explode, and whimsical physical transformations',
   },
   {
     name: 'Viggle AI',
     badge: 'Character Animate',
-    freeTier: '100 free credits',
+    freeTier: '100 free credits on signup',
     startingPrice: '$9.99 / mo',
     maxDuration: '30 sec',
     watermark: 'Free Only',
     commercialUse: 'Yes',
-    bestFor: 'Consistent meme dance replacement',
-  },
-  {
-    name: 'Hedra Character-2',
-    badge: 'Talking Heads',
-    freeTier: '5 daily free minutes',
-    startingPrice: '$10 / mo',
-    maxDuration: 'No limit (audio sync)',
-    watermark: 'Free Only',
-    commercialUse: 'Paid Only',
-    bestFor: 'Lip-sync narrative & podcast avatars',
-  },
-  {
-    name: 'Morph Studio',
-    badge: 'Storyboard Gen',
-    freeTier: 'Limited trial credits',
-    startingPrice: '$15 / mo',
-    maxDuration: 'Variable',
-    watermark: 'Free Only',
-    commercialUse: 'Paid Only',
-    bestFor: 'Multi-shot scene sequence assembling',
+    bestFor: 'Precise motion transfer onto custom 2D/3D characters',
   },
   {
     name: 'PixVerse V3',
-    badge: 'Speed Winner',
+    badge: 'Rapid Render',
     freeTier: 'Daily free login points',
     startingPrice: '$8 / mo',
     maxDuration: '8 sec',
     watermark: 'Free Only',
     commercialUse: 'Paid Only',
-    bestFor: 'Anime aesthetic & instant render latency',
+    bestFor: 'Anime stylized aesthetics & fast server turnaround',
   },
   {
-    name: 'Everygen AI (Baseline)',
-    freeTier: 'Limited trial tokens',
-    startingPrice: '$14.99 / mo',
-    maxDuration: '5 sec',
-    watermark: 'Free Only',
-    commercialUse: 'Paid Only',
-    bestFor: 'All-in-one multi-engine prompt routing',
+    name: 'Grok Imagine Video',
+    badge: 'Uncensored Prompting',
+    freeTier: 'Included in X Premium',
+    startingPrice: '$8 / mo (X Premium)',
+    maxDuration: '6 sec',
+    watermark: 'No',
+    commercialUse: 'Yes',
+    bestFor: 'Permissive prompt interpretation & social meme workflows',
   },
 ];
 
 const faqs: FaqItem[] = [
   {
-    question: 'Why are creators looking for Everygen AI alternatives?',
+    question: 'Why do creators compare Everygen AI against standalone video engines?',
     answer:
-      'While Everygen AI (formerly Viewmax) aggregates multiple foundational models into a single workspace, power users often report token billing opacity, occasional queue delays during peak traffic, and strict watermark locks on its free trial tier. Dedicated standalone generators like Kling and Luma offer faster render times, native camera tools, and transparent pricing.',
+      'Everygen AI (operated by Viewmax LLC) serves as a multi-model aggregation hub supporting engines like Kling 4.0 and Seedance 2.5 with MCP agent support. Creators compare it with standalone tools to decide between centralized credit aggregation versus direct standalone features (like Runway\'s motion brush or Kling\'s daily free allocation).',
   },
   {
-    question: 'Which Everygen AI alternative has the best free tier without paying upfront?',
+    question: 'Which alternative offers the best daily free credits?',
     answer:
-      'Hailuo AI (MiniMax) and Kling AI provide the most generous recurring free credits. Kling grants 66 daily credits (enough for roughly 6 short clips every 24 hours), while Hailuo allows creators to experiment with high-fidelity generation without entering credit card credentials.',
+      'Kling AI and MiniMax Hailuo provide the most consistent recurring allowances. Kling grants 66 credits refreshed every 24 hours without requiring upfront credit card details.',
   },
   {
     question: 'How does Everygen AI compare to OpenAI Sora?',
     answer:
-      'OpenAI Sora is an enterprise-grade foundational diffusion model capable of generating up to 60-second synchronized clips with complex multi-character physics. Everygen AI operates as an application layer routing between available consumer APIs (typically capped at 5 to 10 seconds), meaning it lacks the custom native weights of Sora.',
+      'OpenAI Sora is a closed foundational research model with dedicated compute clusters. Everygen AI operates as a versatile application and API routing layer integrating high-tier commercially available engines such as Seedance 2.5 and Kling 4.0.',
   },
   {
-    question: 'Can I use videos generated from alternative tools for commercial YouTube monetization?',
+    question: 'Can I monetize videos generated by these tools on YouTube or TikTok?',
     answer:
-      'Yes, but strictly on paid subscriptions. Tools like Runway Gen-3, Kling AI, and Luma Dream Machine grant full commercial copyright rights on their Standard and Pro tiers. Video clips created under free tiers are watermarked and restricted to personal non-commercial experimentation.',
+      'Yes, on paid subscription plans. Platforms like Runway Gen-3, Kling AI, and Luma grant commercial copyright licenses on paid tiers. Free trial generations typically include visible watermarks restricted to non-commercial evaluation.',
   },
   {
-    question: 'What is the fastest AI video generator right now?',
+    question: 'Is Viewmax AI the same entity as Everygen AI?',
     answer:
-      'PixVerse V3 and Hailuo AI consistently clock render speeds under 45 seconds for standard 5-second prompts, whereas heavier engines like Runway Gen-3 Alpha during peak US working hours may take between 90 and 180 seconds.',
-  },
-  {
-    question: 'Is Viewmax AI the same as Everygen AI?',
-    answer:
-      'Yes. In late 2026, Viewmax AI completed a full brand migration to Everygen AI, transitioning its interface toward a unified multimodal suite. If you held credits under Viewmax, they ported into Everygen accounts.',
+      'Yes. In late 2026, Viewmax LLC unified its generative video and media toolchain under the Everygen AI brand identity.',
   },
 ];
 
@@ -194,7 +191,7 @@ const breadcrumbSchema = {
     <header class="mb-10 text-left">
       <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-mono font-bold tracking-tight mb-4">
         <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>Verified Benchmarks · November 2026</span>
+        <span>Feature & Specification Tracking · November 2026</span>
       </div>
 
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-5 font-display">
@@ -202,28 +199,27 @@ const breadcrumbSchema = {
       </h1>
 
       <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl font-medium">
-        Everygen AI (formerly Viewmax) created buzz by packaging multiple diffusion models into one browser UI. But between token burn opacity, queue bottlenecks, and watermarked outputs, many creators need more dedicated alternatives.
+        Everygen AI (by Viewmax LLC) combines powerful models like Kling 4.0 and Seedance 2.5 with MCP integration. However, creators evaluating standalone subscriptions need to understand where dedicated platforms like Runway, Luma, or Hailuo provide direct workflow advantages.
       </p>
 
-      <!-- Meta stats bar -->
       <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-5 mt-5 border-t border-white/[0.08] text-xs font-mono text-slate-400">
-        <div><span class="text-slate-200 font-bold">Tested Engines:</span> 10 Standalone Tools</div>
-        <div><span class="text-slate-200 font-bold">Test Prompts:</span> 30 Seed Matches</div>
-        <div><span class="text-slate-200 font-bold">Review Methodology:</span> Blind Render Comparison</div>
+        <div><span class="text-slate-200 font-bold">Featured Engines:</span> 10 Leading Video Tools</div>
+        <div><span class="text-slate-200 font-bold">Coverage:</span> Long-form (30s) to Dynamic Physics</div>
+        <div><span class="text-slate-200 font-bold">Analysis Basis:</span> Official Documentation & Feature Audits</div>
       </div>
     </header>
 
-    <!-- 1. 首屏核心结论框 (三行内直出答案) -->
+    <!-- 1. 首屏核心结论框 -->
     <KeyTakeaway
-      pickA="Kling AI 1.5"
-      forScenarioA="natural physical movements & dynamic human action"
+      pickA="Kling AI 4.0"
+      forScenarioA="natural physical movements, daily free credits, and reference image conditioning"
       pickB="Runway Gen-3 Alpha"
-      forScenarioB="precise camera steering and high-end commercial ad assets"
-      pickC="Hailuo AI"
-      forScenarioC="zero-dollar free daily credits with photorealistic faces"
+      forScenarioB="director-level camera controls, multi-brush velocity, and ad commercial grade"
+      pickC="MiniMax Hailuo H3"
+      forScenarioC="zero-dollar recurring daily credits with photorealistic facial anatomy"
     />
 
-    <!-- 2. 全景对比表 -->
+    <!-- 2. 全景对比表 (Everygen 作为 Baseline 第 1 行) -->
     <section class="my-14">
       <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
         <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
@@ -233,34 +229,34 @@ const breadcrumbSchema = {
         Feature & Pricing Comparison Matrix
       </h2>
       <p class="text-xs md:text-sm text-slate-400 mb-4 max-w-2xl">
-        Compare free tiers, baseline pricing, rendering lengths, and commercial licenses across the 10 leading competitors.
+        Everygen AI is listed in row 1 as our comparative baseline against 9 leading standalone AI video platforms.
       </p>
       <ComparisonTable tools={comparisonTools} />
     </section>
 
-    <!-- 3. 每个工具 150~250 词详细评测 (包含真实致命缺点) -->
+    <!-- 3. 每个工具详细评测卡片 -->
     <section class="my-16">
       <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
         <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-        <span>Deep Dives</span>
+        <span>Platform Deep Dives</span>
       </div>
       <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-2">
-        Detailed Breakdown of the Top 6 Contenders
+        Detailed Breakdown of Leading Contenders
       </h2>
       <p class="text-xs md:text-sm text-slate-400 mb-8 max-w-2xl">
-        We ran identical prompts across each platform (a moving sports car, water droplets splashing, and a close-up speaking portrait). Here are the verified findings.
+        Analyzing core technical strengths, hardware capabilities, and verified workflow limitations.
       </p>
 
       <ToolCard
         rank={1}
-        name="Kling AI 1.5"
+        name="Kling AI 4.0"
         badge="Best Overall Coherence"
-        tagline="State-of-the-art physics simulation with seamless vertical 9:16 rendering."
+        tagline="Advanced physical simulation with reference-image conditioning and up to 30s duration."
         rating="4.8"
-        whyChosen="Kling AI 1.5 has become the undisputed gold standard for human physical interactions. While Everygen sometimes suffers from rubbery limbs or inconsistent mass preservation, Kling models gravity, liquid flow, and athletic motions with astonishing fidelity."
-        idealFor="Content creators producing short-form video content for TikTok, Instagram Reels, and YouTube Shorts."
-        biggestFlaw="Generation queues can spike to 10+ minutes on free tiers during peak hours, and strict content moderation frequently rejects harmless stylized action prompts."
-        freeTierDetails="66 daily replenishable credits (~6 standard 5s clips daily)"
+        whyChosen="Kling AI 4.0 represents the cutting edge of physical simulation. Its reference image conditioning allows creators to anchor character facial consistency across complex dynamic actions, water flow, and rapid camera movements."
+        idealFor="Digital content creators producing short-form video for TikTok, Reels, and YouTube Shorts."
+        biggestFlaw="Public queue wait times can surge during global peak hours on standard tiers, and content filtering is notably strict on dynamic action prompts."
+        freeTierDetails="66 daily replenishable credits (~6 standard renders daily)"
         pricingStarts="$10.00 / month (Standard)"
         visitUrl="https://klingai.com"
       />
@@ -269,70 +265,70 @@ const breadcrumbSchema = {
         rank={2}
         name="Runway Gen-3 Alpha"
         badge="Industry Leader"
-        tagline="Hollywood-standard camera paths and multi-brush temporal steering."
+        tagline="Hollywood-grade camera orbits, custom velocity curves, and multi-motion brush controls."
         rating="4.7"
-        whyChosen="Runway offers the most granular directorial control in the AI video landscape. Rather than relying purely on text prompts like Everygen, Gen-3 Alpha equips creators with keyframing, velocity curves, and specific camera orbits that professional editors demand."
-        idealFor="Advertising agencies, VFX artists, and studio film editors who require reproducible camera angles."
-        biggestFlaw="High credit consumption rate. A single 10-second render can burn through 100 credits in seconds, making experimental iterating costly."
-        freeTierDetails="125 one-time welcome credits (runs out in ~2 clips)"
+        whyChosen="Runway offers the most granular directorial control in generative video. Rather than relying solely on text prompting, Gen-3 Alpha equips creators with keyframing, velocity curves, and specific camera orbits essential for commercial production."
+        idealFor="Advertising agencies, VFX artists, and commercial video editors requiring reproducible camera angles."
+        biggestFlaw="High credit consumption rate. Complex multi-brush renders consume quota rapidly, making extensive iteration costly."
+        freeTierDetails="125 one-time starter credits"
         pricingStarts="$12.00 / month ($15 billed monthly)"
         visitUrl="https://runwayml.com"
       />
 
       <ToolCard
         rank={3}
+        name="Seedance 2.5"
+        badge="30-Second Native"
+        tagline="Continuous 30-second sequences at 1080p with minimal temporal drift."
+        rating="4.7"
+        whyChosen="Seedance 2.5 is one of the premier engines integrated into Everygen AI. It solves the short 4-second barrier by generating continuous 30-second scenes at native 1080p resolution with exceptional mass preservation."
+        idealFor="Storytellers, commercial demo creators, and long-form narrative visualizers."
+        biggestFlaw="Requires descriptive, structured prompt syntax to prevent background morphing on longer 30-second sequences."
+        freeTierDetails="Promotional trial credits via API & integrated partners"
+        pricingStarts="Pay-as-you-go credit rates"
+        visitUrl="https://everygen.ai"
+      />
+
+      <ToolCard
+        rank={4}
         name="Luma Dream Machine 1.6"
         badge="Cinematic Atmosphere"
         tagline="Unmatched depth-of-field, volumetric light, and photorealistic scale."
         rating="4.6"
-        whyChosen="Dream Machine is built on native multimodal architecture that handles camera zooms and perspective shifts effortlessly. Its rendering of natural light—such as golden hour sunbeams and mist—blows aggregated aggregators like Everygen out of the water."
+        whyChosen="Dream Machine is built on native multimodal architecture that handles camera zooms and perspective shifts effortlessly. Its rendering of natural light—such as golden hour sunbeams and mist—blows standard consumer models out of the water."
         idealFor="Indie filmmakers, concept artists, and visual world-builders creating cinematic mood boards."
-        biggestFlaw="Background characters in complex crowds still tend to warp or dissolve into abstract shapes after the 3-second mark."
+        biggestFlaw="Background crowds in complex wide-angle scenes can lose anatomical sharpness beyond extended durations."
         freeTierDetails="30 free generations per month with watermark"
         pricingStarts="$9.99 / month (Lite Plan)"
         visitUrl="https://lumalabs.ai/dream-machine"
       />
 
       <ToolCard
-        rank={4}
-        name="Hailuo AI (MiniMax)"
+        rank={5}
+        name="MiniMax Hailuo H3"
         badge="Best Free Alternative"
         tagline="Ultra-crisp human faces and buttery-smooth 1080p generation."
         rating="4.6"
-        whyChosen="Developed by MiniMax, Hailuo is one of the most exciting breakthroughs in AI video. It renders photorealistic skin textures, reflections, and micro-expressions without the synthetic plastic look common in entry-level tools."
-        idealFor="Creators on a zero-dollar budget who need high aesthetic appeal without entering credit card details."
-        biggestFlaw="The web interface currently lacks advanced camera sliders or motion brush tooling—you rely entirely on textual prompting."
-        freeTierDetails="Generous daily replenishing allowance (~10 to 15 free renders daily)"
+        whyChosen="Developed by MiniMax, Hailuo renders photorealistic skin textures, reflections, and micro-expressions without the synthetic plastic look common in entry-level tools."
+        idealFor="Creators looking for high aesthetic appeal with daily recurring free credits."
+        biggestFlaw="The standard web UI relies on textual prompting without advanced directional camera sliders."
+        freeTierDetails="Generous daily replenishing allowance"
         pricingStarts="$10.00 / month (Pro)"
         visitUrl="https://hailuoai.video"
       />
 
       <ToolCard
-        rank={5}
+        rank={6}
         name="Pika 2.1"
         badge="Best Visual Effects"
-        tagline="Pikaffects physics engine with fun squish, explode, and slice dynamics."
+        tagline="Pikaffects physics engine with squish, explode, and slice dynamics."
         rating="4.4"
         whyChosen="Pika reimagined consumer AI video by adding stylized physics presets. If you need objects to deflate, melt, crumble, or inflate like balloons, Pika delivers these viral visual effects in one click."
-        idealFor="Social media meme accounts, experimental animators, and creative social campaigns."
-        biggestFlaw="Hyper-realistic human proportions are inferior to Kling or Runway; limbs can occasionally glitch during fast turns."
+        idealFor="Social media meme accounts, experimental animators, and viral marketing campaigns."
+        biggestFlaw="Hyper-realistic human proportions are inferior to Kling or Runway; fast body turns may exhibit artifacts."
         freeTierDetails="30 daily refill credits with watermark"
         pricingStarts="$8.00 / month (Standard)"
         visitUrl="https://pika.art"
-      />
-
-      <ToolCard
-        rank={6}
-        name="Viggle AI"
-        badge="Best Character Rigging"
-        tagline="Replace any character in existing video clips with precise motion transfer."
-        rating="4.3"
-        whyChosen="Unlike Everygen which generates whole scenes from scratch, Viggle allows you to take any target character image and inject it into existing video choreography using JALC physics."
-        idealFor="Viral meme editors, dance video parodies, and character-driven gaming content."
-        biggestFlaw="Faces can appear rigid or static during fast body rotations, requiring secondary retouching."
-        freeTierDetails="100 free credits on sign up"
-        pricingStarts="$9.99 / month"
-        visitUrl="https://viggle.ai"
       />
     </section>
 
@@ -342,7 +338,7 @@ const breadcrumbSchema = {
     <!-- 5. 常见问题 (带 FAQPage Schema) -->
     <FaqAccordion faqs={faqs} />
 
-    <!-- 6. 内链导航卡片 (高定流光风格) -->
+    <!-- 6. 内链导航卡片 -->
     <section class="mt-16 rounded-2xl border border-white/[0.08] bg-gradient-to-r from-dark-900 via-dark-850 to-dark-900 p-8 shadow-xl">
       <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
         <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
@@ -352,7 +348,7 @@ const breadcrumbSchema = {
         Continue Exploring AI Video Engines
       </h3>
       <p class="text-xs md:text-sm text-slate-300 leading-relaxed mb-6 max-w-2xl">
-        Still on the fence about whether to switch? Check out our honest tests or dive into the complete hands-on review.
+        Explore detailed platform guides, verified quota specifications, and architectural documentation.
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
@@ -360,18 +356,18 @@ const breadcrumbSchema = {
           href="/is-everygen-ai-free/"
           class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.08] hover:border-sky-400/40 transition-all group"
         >
-          <div class="text-[11px] font-mono text-emerald-400 font-bold mb-1">Quota Testing</div>
+          <div class="text-[11px] font-mono text-emerald-400 font-bold mb-1">Quota Breakdown</div>
           <div class="text-sm font-bold text-white group-hover:text-sky-300 font-display">Is Everygen Free? &rarr;</div>
-          <p class="text-xs text-slate-400 mt-1">Watermark rules and real depletion limits.</p>
+          <p class="text-xs text-slate-400 mt-1">Trial credits, watermarks, and export limits.</p>
         </a>
 
         <a
           href="/everygen-ai-review/"
           class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.08] hover:border-sky-400/40 transition-all group"
         >
-          <div class="text-[11px] font-mono text-indigo-400 font-bold mb-1">Full Lab Review</div>
-          <div class="text-sm font-bold text-white group-hover:text-sky-300 font-display">Everygen In-Depth &rarr;</div>
-          <p class="text-xs text-slate-400 mt-1">Quality scoring, latency, and model routing.</p>
+          <div class="text-[11px] font-mono text-indigo-400 font-bold mb-1">Architecture Review</div>
+          <div class="text-sm font-bold text-white group-hover:text-sky-300 font-display">Everygen Analysis &rarr;</div>
+          <p class="text-xs text-slate-400 mt-1">Multi-model routing, Seedance, and MCP support.</p>
         </a>
 
         <a
@@ -380,7 +376,7 @@ const breadcrumbSchema = {
         >
           <div class="text-[11px] font-mono text-sky-400 font-bold mb-1">Hub Home</div>
           <div class="text-sm font-bold text-white group-hover:text-sky-300 font-display">Everygen Overview &rarr;</div>
-          <p class="text-xs text-slate-400 mt-1">Rebrand history and architecture guide.</p>
+          <p class="text-xs text-slate-400 mt-1">Rebrand history and Viewmax LLC background.</p>
         </a>
       </div>
     </section>

@@ -3,30 +3,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import KeyTakeaway from '../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../components/FaqAccordion.astro';
 
-const title = 'Everygen AI: What It Is, Models, Pricing & Best Alternatives';
-const description = 'Complete guide to Everygen AI (formerly Viewmax). Discover supported diffusion models, free credit limits, verified pricing, and top alternative tools.';
+const title = 'Everygen AI (Formerly Viewmax): Models, Free Credits & Pricing';
+const description = 'Comprehensive guide to Everygen AI (Viewmax LLC). Explore supported foundational engines (Kling 4.0, Seedance 2.5), MCP agent integration, and credit rules.';
 const canonicalPath = '';
 
 const faqs: FaqItem[] = [
   {
     question: 'What is Everygen AI?',
     answer:
-      'Everygen AI is an all-in-one AI media generation platform that aggregates multiple text-to-video, image-to-video, and image enhancement foundational models under a unified interface. It was originally launched under the name Viewmax AI before undergoing rebranding in late 2026.',
+      'Everygen AI is an advanced AI visual generation suite operated by Viewmax LLC. It unifies high-tier text-to-video, image-to-video, and image diffusion backends—including Kling 4.0, Seedance 2.5, MiniMax H3 Max, and Grok Imagine—under one centralized platform.',
   },
   {
-    question: 'Is Everygen AI completely free to use?',
+    question: 'Does Everygen AI support MCP (Model Context Protocol)?',
     answer:
-      'Everygen AI offers a limited free trial upon account registration that allows users to test standard generation parameters. However, recurring renders require either monthly subscriptions or top-up credit bundles. For a full breakdown of quota limits, see our dedicated test on is Everygen AI free.',
+      'Yes. One of Everygen AI\'s standout architectural features is native Model Context Protocol (MCP) support. This allows developers and power users to generate and manage video assets directly inside agentic developer tools like Cursor, Claude Desktop, and ChatGPT.',
   },
   {
-    question: 'What models does Everygen AI support?',
+    question: 'What is the maximum video duration on Everygen AI?',
     answer:
-      'Everygen provides routing access to popular visual diffusion backends, including variations of open and consumer-tier video synthesis models, allowing creators to switch engines without maintaining separate API accounts.',
+      'Unlike first-generation generators capped at 5 seconds, Everygen supports up to 30-second generations at 1080p resolution on modern integrated engines such as Seedance 2.5 and Kling 4.0 with reference image conditioning.',
   },
   {
-    question: 'How do I cancel my Everygen AI subscription?',
+    question: 'How do free credits work on Everygen AI?',
     answer:
-      'Subscriptions can be managed directly via your account profile settings under the "Billing & Plans" dashboard. Once cancelled, your paid quota remains active until the end of your billing cycle.',
+      'Everygen provides initial trial credits for newly registered accounts to sample supported models. Generation requirements vary by resolution and model selection. Dynamic pricing packages and top-up bundles are listed on the official platform.',
   },
 ];
 
@@ -51,22 +51,22 @@ const faqSchema = {
   schema={faqSchema}
 >
   <div class="space-y-16">
-    <!-- Hero / Navigation Intent Section -->
+    <!-- Hero / Platform Architecture Section -->
     <section class="text-center pt-4 pb-8 max-w-4xl mx-auto">
       <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/20 text-sky-300 text-xs font-mono font-bold tracking-tight mb-6 shadow-sm">
         <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>Independent Testing Hub · November 2026</span>
+        <span>Official Documentation & Architecture Analysis · Updated Nov 2026</span>
       </div>
 
       <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] mb-6 font-display">
-        Everygen AI <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">Architecture</span>, Real Costs & Top Picks
+        Everygen AI (Formerly Viewmax): <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">Models</span> & Infrastructure
       </h1>
 
       <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-        Everything creators must verify before buying credits. We benchmarked actual queue latency, tested free trial depletion limits, and isolated where standalone models outperform it.
+        Everything creators need to know about Everygen AI by Viewmax LLC. We break down supported next-gen backends (Kling 4.0, Seedance 2.5), 30-second 1080p rendering, and MCP client capabilities.
       </p>
 
-      <!-- 快速导航入口三卡片 (高定玻璃卡片) -->
+      <!-- 快速导航入口三卡片 -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 text-left">
         <a
           href="/everygen-ai-alternatives/"
@@ -75,12 +75,12 @@ const faqSchema = {
           <div class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-mono font-bold text-xs mb-3 group-hover:scale-110 transition-transform">
             01
           </div>
-          <div class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider mb-1">Top Rated</div>
+          <div class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider mb-1">Market Overview</div>
           <div class="text-base font-bold text-white group-hover:text-sky-300 font-display flex items-center justify-between">
             <span>Alternatives Matrix</span>
             <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </div>
-          <p class="text-xs text-slate-400 mt-2 leading-relaxed">10 tested competitors with superior motion physics and free daily refills.</p>
+          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Direct comparison against standalone engines like Kling, Luma, and Runway.</p>
         </a>
 
         <a
@@ -90,12 +90,12 @@ const faqSchema = {
           <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold text-xs mb-3 group-hover:scale-110 transition-transform">
             02
           </div>
-          <div class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-1">Stress Test</div>
+          <div class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-1">Quota Breakdown</div>
           <div class="text-base font-bold text-white group-hover:text-emerald-300 font-display flex items-center justify-between">
-            <span>Is It Really Free?</span>
+            <span>Free Credits & Trial</span>
             <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </div>
-          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Exact trial quotas, watermark rules, and 4 genuinely zero-dollar tools.</p>
+          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Trial credit rules, export specifications, and verified account limits.</p>
         </a>
 
         <a
@@ -105,12 +105,12 @@ const faqSchema = {
           <div class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-mono font-bold text-xs mb-3 group-hover:scale-110 transition-transform">
             03
           </div>
-          <div class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider mb-1">Lab Testing</div>
+          <div class="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider mb-1">Architecture Deep Dive</div>
           <div class="text-base font-bold text-white group-hover:text-indigo-300 font-display flex items-center justify-between">
-            <span>Hands-on Review</span>
+            <span>System Review</span>
             <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </div>
-          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Scored on visual fidelity, motion warping, and credit cost-efficiency.</p>
+          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Multi-model routing, prompt alignment, and token economics analyzed.</p>
         </a>
       </div>
     </section>
@@ -118,154 +118,75 @@ const faqSchema = {
     <!-- Key Takeaway -->
     <KeyTakeaway
       pickA="Everygen AI"
-      forScenarioA="all-in-one multi-model prompt testing across varied styles"
-      pickB="Kling AI or Runway Gen-3"
-      forScenarioB="high-motion fidelity, commercial video editing, or daily vertical shorts"
+      forScenarioA="integrated multi-model access (Kling 4.0, Seedance 2.5) with native MCP integration"
+      pickB="Runway Gen-3 or Luma"
+      forScenarioB="dedicated studio tools with custom camera velocity curves"
     />
 
     <!-- 1. What is Everygen AI? (Core Explainer) -->
     <section class="rounded-2xl border border-white/[0.08] bg-dark-900/50 p-7 md:p-9 backdrop-blur-sm">
       <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
         <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-        <span>Platform Architecture</span>
+        <span>Corporate Identity & Ecosystem</span>
       </div>
       <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-4">
-        What is Everygen AI? (The Viewmax Transition)
+        What is Everygen AI? (The Viewmax LLC Evolution)
       </h2>
       <div class="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed">
         <p>
-          <strong class="text-white">Everygen AI</strong> is a browser-based generative video suite that gained traction among digital marketers and video editors in mid-2026. Initially operating as <span class="text-sky-300 font-semibold font-mono">Viewmax AI</span>, the service rebranded to consolidate video generation, image-to-video synthesis, and creative prompt assistance under one dashboard.
+          <strong class="text-white">Everygen AI</strong> is a cutting-edge multimodal generation platform developed by <span class="text-white font-semibold">Viewmax LLC</span>. Originally operating under the domain <span class="text-sky-300 font-mono">Viewmax AI</span>, the suite underwent comprehensive rebranding in late 2026 to reflect its expanded architectural ambition: a unified ecosystem spanning video, image synthesis, and AI agent interoperability.
         </p>
         <p>
-          Unlike dedicated foundational research labs such as OpenAI (Sora) or Runway, Everygen AI operates as a unified aggregation layer. Users enter a prompt once and can switch underlying model backends without purchasing multiple separate API keys. While this provides initial convenience, it also introduces shared credit pools, variable queue wait times, and less granular temporal steering controls.
+          Rather than relying solely on a single proprietary diffusion model, Everygen orchestrates top-tier foundational engines. Creators can deploy state-of-the-art models like <strong class="text-white">Seedance 2.5</strong> (generating continuous 30-second clips at 1080p), <strong class="text-white">Kling 4.0</strong> (supporting advanced reference-image conditioning for up to 30 seconds), <strong class="text-white">MiniMax H3 Max</strong>, and <strong class="text-white">Grok Imagine</strong>.
         </p>
       </div>
     </section>
 
-    <!-- 2. Step-by-Step: How Free Credits Actually Work -->
+    <!-- 2. Technical Capabilities: 30s 1080p & MCP -->
     <section class="rounded-2xl border border-white/[0.08] bg-dark-900/50 p-7 md:p-9 backdrop-blur-sm">
-      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 mb-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-        <span>Account Rules</span>
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-indigo-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+        <span>Key Technical Innovations</span>
       </div>
       <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-6">
-        How Free Credits Work: Step-by-Step
+        Two Critical Differentiators
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm text-slate-300">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm text-slate-300">
         <div class="rounded-xl bg-dark-950/70 p-6 border border-white/[0.06]">
-          <div class="w-9 h-9 rounded-xl bg-sky-400/10 text-sky-400 border border-sky-400/20 font-bold flex items-center justify-center text-sm font-mono mb-4">1</div>
-          <h3 class="font-bold text-white text-base mb-2 font-display">Registration Bonus</h3>
+          <div class="w-9 h-9 rounded-xl bg-sky-400/10 text-sky-400 border border-sky-400/20 font-bold flex items-center justify-center text-sm font-mono mb-4">30s</div>
+          <h3 class="font-bold text-white text-base mb-2 font-display">Long-Form 30-Second 1080p Generation</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            New accounts receive a one-off starter package of trial points. This is typically sufficient for 2 to 4 standard 5-second video clips.
+            While legacy consumer models were historically locked to 4 or 5-second outputs, Everygen\'s integration of Seedance 2.5 and Kling 4.0 delivers native 30-second sequences with temporal consistency and 1080p visual fidelity.
           </p>
         </div>
 
         <div class="rounded-xl bg-dark-950/70 p-6 border border-white/[0.06]">
-          <div class="w-9 h-9 rounded-xl bg-amber-400/10 text-amber-400 border border-amber-400/20 font-bold flex items-center justify-center text-sm font-mono mb-4">2</div>
-          <h3 class="font-bold text-white text-base mb-2 font-display">Queue & Watermark</h3>
+          <div class="w-9 h-9 rounded-xl bg-indigo-400/10 text-indigo-400 border border-indigo-400/20 font-bold flex items-center justify-center text-sm font-mono mb-4">MCP</div>
+          <h3 class="font-bold text-white text-base mb-2 font-display">Model Context Protocol (MCP) Interoperability</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Free tier generations run through public compute queues and embed a distinct watermark on the exported MP4 file.
+            By exposing MCP endpoints, Everygen bridges visual AI with agentic developer environments. Teams can prompt, generate, and orchestrate video workflows directly inside Cursor, Claude, or ChatGPT agents without manual web UI copy-pasting.
           </p>
         </div>
-
-        <div class="rounded-xl bg-dark-950/70 p-6 border border-white/[0.06]">
-          <div class="w-9 h-9 rounded-xl bg-rose-400/10 text-rose-400 border border-rose-400/20 font-bold flex items-center justify-center text-sm font-mono mb-4">3</div>
-          <h3 class="font-bold text-white text-base mb-2 font-display">Credit Depletion</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Unlike platforms that replenish credits daily (such as Kling AI), Everygen requires purchasing a monthly plan once trial tokens expire.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center">
-        <a
-          href="/is-everygen-ai-free/"
-          class="inline-flex items-center text-xs font-mono font-bold text-sky-400 hover:text-sky-300 transition-colors"
-        >
-          <span>Read our complete quota & watermark breakdown</span>
-          <span class="ml-1.5">&rarr;</span>
-        </a>
       </div>
     </section>
 
-    <!-- 3. Pricing Overview (Updated Nov 2026) -->
+    <!-- 3. Dynamic Pricing & Credit Structure -->
     <section class="rounded-2xl border border-white/[0.08] bg-dark-900/50 p-7 md:p-9 backdrop-blur-sm">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
-        <div>
-          <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-            <span>Billing Structure</span>
-          </div>
-          <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display">
-            Everygen AI Pricing Tiers
-          </h2>
-        </div>
-        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/[0.05] border border-white/[0.08] text-slate-300 font-mono text-xs self-start">
-          Updated: November 2026
-        </span>
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+        <span>Account & Pricing Notice</span>
       </div>
+      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-3">
+        Credit Allocations & Official Pricing
+      </h2>
+      <p class="text-sm text-slate-300 leading-relaxed max-w-3xl mb-6">
+        Generation credit costs vary depending on the chosen model engine (e.g. Seedance 2.5 vs Kling 4.0), output length (5s vs 30s), and resolution parameters. Dynamic credit packages and promotional bundles are managed on the official Everygen platform.
+      </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-white/[0.08] bg-dark-950/80 p-6">
-          <h3 class="text-base font-bold text-slate-200 mb-1 font-display">Free Trial</h3>
-          <div class="text-3xl font-black text-white font-mono my-3">$0</div>
-          <p class="text-xs text-slate-400 mb-5 leading-relaxed">For previewing prompt syntax and interface feel.</p>
-          <ul class="text-xs space-y-2.5 text-slate-300">
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2"></span>One-off starter trial tokens</li>
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2"></span>Watermark on exported video</li>
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2"></span>Shared GPU queue tier</li>
-          </ul>
-        </div>
-
-        <div class="rounded-2xl border border-sky-500/40 bg-gradient-to-b from-sky-950/40 via-dark-900 to-dark-950 p-6 relative shadow-glow-sky">
-          <span class="absolute top-4 right-4 text-[10px] font-mono font-extrabold px-2.5 py-0.5 rounded-full bg-sky-400 text-dark-950 uppercase tracking-tight">
-            Creator Pick
-          </span>
-          <h3 class="text-base font-bold text-white mb-1 font-display">Creator Tier</h3>
-          <div class="text-3xl font-black text-sky-300 font-mono my-3">$14.99 <span class="text-xs text-slate-400 font-normal">/ mo</span></div>
-          <p class="text-xs text-slate-400 mb-5 leading-relaxed">Best for active indie publishers and social media creators.</p>
-          <ul class="text-xs space-y-2.5 text-slate-200 font-medium">
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 mr-2"></span>500 monthly render credits</li>
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 mr-2"></span>Zero watermark on downloads</li>
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 mr-2"></span>Commercial licensing rights</li>
-          </ul>
-        </div>
-
-        <div class="rounded-2xl border border-white/[0.08] bg-dark-950/80 p-6">
-          <h3 class="text-base font-bold text-slate-200 mb-1 font-display">Pro Studio</h3>
-          <div class="text-3xl font-black text-white font-mono my-3">$39.99 <span class="text-xs text-slate-400 font-normal">/ mo</span></div>
-          <p class="text-xs text-slate-400 mb-5 leading-relaxed">Built for creative agencies and high-frequency production.</p>
-          <ul class="text-xs space-y-2.5 text-slate-300">
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2"></span>2,000 monthly credits</li>
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2"></span>Priority hardware allocation</li>
-            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2"></span>Parallel rendering streams</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Alternatives Directory Teaser -->
-    <section class="rounded-2xl border border-sky-500/30 bg-gradient-to-r from-dark-900 via-dark-850 to-dark-900 p-8 md:p-10 shadow-2xl relative overflow-hidden">
-      <div class="max-w-2xl relative z-10">
-        <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
-          <span>Next-Gen Alternatives</span>
-        </div>
-        <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-3">
-          Need Higher Motion Fidelity or Zero-Dollar Daily Credits?
-        </h2>
-        <p class="text-sm text-slate-300 leading-relaxed mb-6 font-medium">
-          While Everygen AI is convenient for quick tests, standalone competitors like Kling 1.5, Runway Gen-3 Alpha, and Luma Dream Machine provide specialized camera paths, organic lighting, and daily recurring credits.
+      <div class="rounded-xl bg-dark-950/80 border border-white/[0.06] p-6 text-xs text-slate-400 leading-relaxed">
+        <p>
+          <strong class="text-slate-200">Official Platform Reference:</strong> Users are advised to review the active quota balances in their Everygen account dashboard. Our guides focus on architectural compatibility, comparative feature sets, and workflow optimization.
         </p>
-        <a
-          href="/everygen-ai-alternatives/"
-          class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-gradient-to-r from-cyan-400 to-sky-400 hover:brightness-110 text-dark-950 font-bold text-xs uppercase tracking-wider shadow-glow-cyan transition-all duration-200 transform hover:-translate-y-0.5"
-        >
-          <span>Explore All 10 Tested Alternatives</span>
-          <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </a>
       </div>
     </section>
 
