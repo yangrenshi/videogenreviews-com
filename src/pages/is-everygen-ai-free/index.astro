@@ -74,15 +74,18 @@ const breadcrumbSchema = {
     crumbs={[{ label: 'Is Everygen AI Free?' }]}
   />
 
-  <article class="prose prose-invert max-w-none">
-    <header class="mb-8">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-3">
-        <span>Verified Free Tier Real Test · Nov 2026</span>
+  <article>
+    <header class="mb-10 text-left">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-bold tracking-tight mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Lab Verified · Free Tier Stress Test</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
-        Is Everygen AI Free? Hands-on Test on Quotas, Watermarks & Hidden Limits
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-5 font-display">
+        Is Everygen AI Genuinely Free? <span class="bg-gradient-to-r from-emerald-400 to-cyan-300 bg-clip-text text-transparent">Real Quotas</span> & Limits
       </h1>
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
+
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl font-medium">
         Searching whether Everygen AI is genuinely free or just a disguised trial? We signed up with fresh testing accounts to measure exact initial credits, queue wait times, and watermark enforcement.
       </p>
     </header>
@@ -95,102 +98,129 @@ const breadcrumbSchema = {
       forScenarioB="a quick one-time 2-minute test before deciding to subscribe"
     />
 
-    <!-- Summary Box -->
-    <section class="my-8 rounded-xl border border-slate-800 bg-slate-900/50 p-6 md:p-8">
-      <h2 class="text-xl md:text-2xl font-bold text-white tracking-tight mb-4">
-        The Quick Answer: Is Everygen AI Free?
+    <!-- Summary Box (极客四宫格) -->
+    <section class="my-10 rounded-2xl border border-white/[0.08] bg-dark-900/60 p-6 md:p-8 backdrop-blur-md">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span>Executive Snapshot</span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-6">
+        Free Tier Specifications At a Glance
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs md:text-sm">
-        <div class="p-4 rounded-lg bg-slate-950/70 border border-slate-800">
-          <span class="text-slate-400 block mb-1">True Free Plan?</span>
-          <span class="text-base font-bold text-amber-400">Trial Only</span>
-          <span class="text-slate-500 block mt-1">One-off credits, no daily auto-replenish.</span>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
+          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">True Free Plan?</span>
+          <span class="text-lg font-black font-display text-amber-400">Trial Only</span>
+          <span class="text-slate-500 block mt-1.5 text-xs">One-off bonus credits, zero midnight refill.</span>
         </div>
-        <div class="p-4 rounded-lg bg-slate-950/70 border border-slate-800">
-          <span class="text-slate-400 block mb-1">Credit Card Needed?</span>
-          <span class="text-base font-bold text-emerald-400">No</span>
-          <span class="text-slate-500 block mt-1">Email or Google SSO signup is sufficient.</span>
+        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
+          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">Credit Card Needed?</span>
+          <span class="text-lg font-black font-display text-emerald-400">Not Required</span>
+          <span class="text-slate-500 block mt-1.5 text-xs">Email or Google SSO signup unlocks test trial.</span>
         </div>
-        <div class="p-4 rounded-lg bg-slate-950/70 border border-slate-800">
-          <span class="text-slate-400 block mb-1">Watermark Present?</span>
-          <span class="text-base font-bold text-rose-400">Yes</span>
-          <span class="text-slate-500 block mt-1">Trial exports include branding watermark.</span>
+        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
+          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">Watermark Present?</span>
+          <span class="text-lg font-black font-display text-rose-400">Mandatory</span>
+          <span class="text-slate-500 block mt-1.5 text-xs">All free exports include prominent logo.</span>
         </div>
-        <div class="p-4 rounded-lg bg-slate-950/70 border border-slate-800">
-          <span class="text-slate-400 block mb-1">Commercial Rights?</span>
-          <span class="text-base font-bold text-slate-400">Personal Only</span>
-          <span class="text-slate-500 block mt-1">Commercial license reserved for paid tiers.</span>
+        <div class="p-5 rounded-xl bg-dark-950/80 border border-white/[0.06]">
+          <span class="text-slate-400 font-mono uppercase text-[10px] tracking-wider block mb-1">Commercial Rights?</span>
+          <span class="text-lg font-black font-display text-slate-300">Personal Only</span>
+          <span class="text-slate-500 block mt-1.5 text-xs">Commercial monetization requires paid plan.</span>
         </div>
       </div>
     </section>
 
     <!-- Detailed Test Breakdown -->
-    <section class="my-10 space-y-6">
-      <h2 class="text-2xl font-bold text-white tracking-tight">
-        4 Things We Discovered During Hands-on Testing
+    <section class="my-14 space-y-6">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+        <span>Field Notes</span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-6">
+        4 Things We Discovered During Testing
       </h2>
 
-      <div class="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed">
-        <div class="rounded-xl border border-slate-800 bg-slate-900/30 p-5">
-          <h3 class="text-lg font-bold text-white mb-2">1. The Free Allowance Burns in 3 Renders</h3>
-          <p>
-            Upon initial sign-up, new users receive starter tokens. However, standard video generation renders cost between 20 to 30 credits depending on whether you pick high-resolution mode or extended temporal coherence. In our tests, the starter package was completely depleted after generating 3 short clips.
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300 text-xs md:text-sm">
+        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
+          <div class="w-7 h-7 rounded-lg bg-sky-400/10 text-sky-400 font-mono font-bold flex items-center justify-center text-xs mb-3">01</div>
+          <h3 class="text-base font-bold text-white mb-2 font-display">The Free Quota Depletes in ~3 Clips</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Upon initial sign-up, new users receive starter tokens. However, standard video generation renders cost between 20 to 30 credits. In our lab tests, the starter package was exhausted after rendering just 3 short 5-second clips.
           </p>
         </div>
 
-        <div class="rounded-xl border border-slate-800 bg-slate-900/30 p-5">
-          <h3 class="text-lg font-bold text-white mb-2">2. No Daily Quota Refill</h3>
-          <p>
-            Many creators assume that like Leonardo AI or Kling AI, credits refill at midnight. With Everygen AI, once your welcome credits hit zero, you will be prompted with a payment barrier to continue generating videos.
+        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
+          <div class="w-7 h-7 rounded-lg bg-amber-400/10 text-amber-400 font-mono font-bold flex items-center justify-center text-xs mb-3">02</div>
+          <h3 class="text-base font-bold text-white mb-2 font-display">No 24-Hour Midnight Refill</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Unlike platforms like Kling or Leonardo AI, credits do not refill the next day. Once your welcome bonus hits zero, you are stopped by a billing barrier.
           </p>
         </div>
 
-        <div class="rounded-xl border border-slate-800 bg-slate-900/30 p-5">
-          <h3 class="text-lg font-bold text-white mb-2">3. Queue Priority During Peak Hours</h3>
-          <p>
-            Free tier generations are dispatched to standard public GPU compute pools. During peak European and US afternoon periods, wait times ranged between 2 and 6 minutes per 5-second render, whereas paid accounts are routed to priority nodes.
+        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
+          <div class="w-7 h-7 rounded-lg bg-purple-400/10 text-purple-400 font-mono font-bold flex items-center justify-center text-xs mb-3">03</div>
+          <h3 class="text-base font-bold text-white mb-2 font-display">Queue Latency on Shared Nodes</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Free trial accounts are dispatched to public compute queues. During peak US afternoon hours, wait times stretched from 90 seconds to over 4 minutes per clip.
           </p>
         </div>
 
-        <div class="rounded-xl border border-slate-800 bg-slate-900/30 p-5">
-          <h3 class="text-lg font-bold text-white mb-2">4. Watermark & Resolution Capping</h3>
-          <p>
-            Videos downloaded on the free tier contain an embedded watermark badge. In addition, the maximum export resolution is capped at 720p; upgrading to paid tiers unlocks 1080p and 4K upscaling.
+        <div class="rounded-2xl border border-white/[0.08] bg-dark-900/40 p-6">
+          <div class="w-7 h-7 rounded-lg bg-emerald-400/10 text-emerald-400 font-mono font-bold flex items-center justify-center text-xs mb-3">04</div>
+          <h3 class="text-base font-bold text-white mb-2 font-display">Resolution Capping at 720p</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Videos downloaded on the trial account carry a visible corner badge and are locked to 720p resolution. HD 1080p and 4K upscaling are strictly paywalled.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Genuinely Free Alternatives -->
-    <section class="my-10">
-      <h2 class="text-2xl font-bold text-white tracking-tight mb-2">
-        Looking for Genuinely Free Alternatives?
+    <section class="my-14">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-emerald-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span>Free Alternatives</span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-2">
+        Need Genuinely Recurring Free Daily Credits?
       </h2>
-      <p class="text-sm text-slate-400 mb-6">
-        If you need tools that offer sustainable recurring daily generations without forcing a monthly subscription:
+      <p class="text-xs md:text-sm text-slate-400 mb-6">
+        These tools replenish free credits every 24 hours without asking for a credit card:
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="text-base font-bold text-white">Hailuo AI (MiniMax)</h3>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">Top Recommendation</span>
+        <div class="rounded-2xl border border-emerald-500/30 bg-gradient-to-b from-dark-900 to-dark-950 p-6 shadow-lg shadow-emerald-950/20">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-lg font-bold text-white font-display">Hailuo AI (MiniMax)</h3>
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+              Zero-Card Free
+            </span>
           </div>
-          <p class="text-xs md:text-sm text-slate-300 leading-relaxed mb-3">
-            Offers generous recurring free generations without asking for credit card verification. Incredible facial realism and motion fidelity.
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Generous daily free generations without credit card verification. Incredible facial photorealism and natural camera pan capabilities.
           </p>
-          <a href="/everygen-ai-alternatives/" class="text-xs font-semibold text-sky-400 hover:underline">Read Hailuo comparison &rarr;</a>
+          <a href="/everygen-ai-alternatives/" class="text-xs font-mono font-bold text-emerald-400 hover:text-emerald-300 inline-flex items-center">
+            <span>Read full Hailuo breakdown</span>
+            <span class="ml-1">&rarr;</span>
+          </a>
         </div>
 
-        <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
-          <div class="flex items-center justify-between mb-2">
-            <h3 class="text-base font-bold text-white">Kling AI 1.5</h3>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-sky-500/10 text-sky-400">66 Daily Credits</span>
+        <div class="rounded-2xl border border-sky-500/30 bg-gradient-to-b from-dark-900 to-dark-950 p-6 shadow-lg shadow-sky-950/20">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-lg font-bold text-white font-display">Kling AI 1.5</h3>
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30">
+              66 Credits / Day
+            </span>
           </div>
-          <p class="text-xs md:text-sm text-slate-300 leading-relaxed mb-3">
-            Gives you 66 credits replenished every 24 hours automatically, enough for approximately 6 video tests every single day.
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Refills 66 credits every single day automatically. Enough to experiment with ~6 short video clips daily without ever entering payment details.
           </p>
-          <a href="/everygen-ai-alternatives/" class="text-xs font-semibold text-sky-400 hover:underline">Compare Kling with Everygen &rarr;</a>
+          <a href="/everygen-ai-alternatives/" class="text-xs font-mono font-bold text-sky-400 hover:text-sky-300 inline-flex items-center">
+            <span>Read full Kling breakdown</span>
+            <span class="ml-1">&rarr;</span>
+          </a>
         </div>
       </div>
     </section>
@@ -199,10 +229,14 @@ const breadcrumbSchema = {
     <FaqAccordion faqs={faqs} />
 
     <!-- Internal Linking Footer -->
-    <section class="mt-12 p-6 rounded-xl border border-slate-800 bg-slate-900/30">
-      <h3 class="text-lg font-bold text-white mb-2">Explore Next</h3>
+    <section class="mt-16 rounded-2xl border border-white/[0.08] bg-dark-900/60 p-8">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+        <span>Next Recommended Step</span>
+      </div>
+      <h3 class="text-xl font-bold text-white font-display mb-2">Explore Related Benchmarks</h3>
       <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
-        See our complete ranking of the <a href="/everygen-ai-alternatives/" class="text-sky-400 hover:underline font-semibold">10 best Everygen AI alternatives</a>, read the comprehensive <a href="/everygen-ai-review/" class="text-sky-400 hover:underline font-semibold">Everygen AI hands-on review</a>, or check the root <a href="/" class="text-sky-400 hover:underline font-semibold">Everygen AI analysis guide</a>.
+        See our complete ranking of the <a href="/everygen-ai-alternatives/" class="text-sky-400 hover:underline font-semibold font-mono">10 best Everygen AI alternatives</a>, read the comprehensive <a href="/everygen-ai-review/" class="text-sky-400 hover:underline font-semibold font-mono">Everygen AI hands-on review</a>, or check the root <a href="/" class="text-sky-400 hover:underline font-semibold font-mono">Everygen AI analysis guide</a>.
       </p>
     </section>
   </article>

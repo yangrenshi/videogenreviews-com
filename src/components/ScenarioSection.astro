@@ -3,60 +3,73 @@ interface ScenarioItem {
   title: string;
   recommendedTool: string;
   badge: string;
+  color: 'cyan' | 'indigo' | 'amber' | 'emerald';
   rationale: string;
 }
 
 const scenarios: ScenarioItem[] = [
   {
-    title: 'TikTok & Reels Viral Shorts (9:16 Vertical)',
+    title: 'TikTok & Shorts Viral Creators (9:16 Vertical)',
     recommendedTool: 'Kling AI 1.5',
-    badge: 'Best Physics & Dynamics',
+    badge: 'Native Dynamics',
+    color: 'cyan',
     rationale:
-      'Native vertical aspect ratio support without cropping distortion. Superior human limb handling, dance motion coherence, and rapid turnaround for daily content batching.',
+      'Native vertical resolution with no awkward letterbox cropping. Handles explosive dance movements, liquid splashes, and human anatomy without rubbery warping.',
   },
   {
-    title: 'Performance Marketing & E-Commerce Ads',
+    title: 'Commercial Ads & E-Commerce Product Reels',
     recommendedTool: 'Runway Gen-3 Alpha',
-    badge: 'Pro Camera & Motion Control',
+    badge: 'Director Control',
+    color: 'indigo',
     rationale:
-      'Granular multi-motion brush, keyframing, and custom camera pans allow precise product rotation showcases. Zero random morphing on branded packaging.',
+      'Multi-motion brush and reproducible camera velocities allow exact 360-degree product orbits. Critical for brand consistency and packaging sharpness.',
   },
   {
-    title: 'Cinematic Storytelling & Indie Filmmaking',
+    title: 'Cinematic Storytelling & Indie Film Moodboards',
     recommendedTool: 'Luma Dream Machine 1.6',
-    badge: 'Atmospheric Lighting & Depth',
+    badge: 'Volumetric Depth',
+    color: 'amber',
     rationale:
-      'Rich volumetric lighting, cinematic color palettes, and natural depth-of-field transitions that mimic anamorphic lenses without excessive prompt engineering.',
+      'Anamorphic lens flares, authentic golden-hour volumetric mist, and organic lighting gradients that make scenes look filmed rather than mathematically rendered.',
   },
   {
-    title: 'Strictly 0-Dollar Free Allowance',
+    title: '100% Zero-Dollar Budget Prototyping',
     recommendedTool: 'Hailuo AI (MiniMax)',
-    badge: 'Generous No-Card Credits',
+    badge: 'No-Card Daily Free',
+    color: 'emerald',
     rationale:
-      'Offers high daily complimentary generation credits without asking for credit card verification upfront. Excellent photorealism for testing concepts without burning money.',
+      'Refills generous generation credits daily without requiring credit card registration upfront. Exceptional photorealistic face fidelity right out of the box.',
   },
 ];
 ---
 
-<div class="my-10">
-  <h3 class="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
-    Which AI Video Tool Should You Pick by Use Case?
-  </h3>
-  <p class="text-xs md:text-sm text-slate-400 mb-6">
-    Skip the trial-and-error cycle. Here is our direct recommendation matched to specific production workflows.
-  </p>
+<div class="my-12">
+  <div class="mb-6">
+    <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+      <span>Decision Navigator</span>
+    </div>
+    <h3 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display">
+      Best AI Video Tool by Production Workflow
+    </h3>
+    <p class="text-xs md:text-sm text-slate-400 mt-1">
+      Matched directly to specific format requirements to avoid wasted trial subscriptions.
+    </p>
+  </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {scenarios.map((s) => (
-      <div class="rounded-xl border border-slate-800 bg-slate-900/50 p-5 hover:border-slate-700 transition-colors">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-semibold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+      <div class="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-dark-900/60 p-6 hover:border-white/[0.18] transition-all duration-300 group shadow-lg backdrop-blur-sm">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-white/[0.05] text-slate-300 border border-white/[0.08]">
             {s.badge}
           </span>
-          <span class="text-sm font-bold text-sky-400">{s.recommendedTool}</span>
+          <span class="text-sm font-black font-display text-sky-300 group-hover:text-cyan-300 transition-colors">
+            {s.recommendedTool}
+          </span>
         </div>
-        <h4 class="text-base font-semibold text-slate-100 mb-2">{s.title}</h4>
-        <p class="text-xs md:text-sm text-slate-300 leading-relaxed">{s.rationale}</p>
+        <h4 class="text-base font-bold text-white mb-2 font-display">{s.title}</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">{s.rationale}</p>
       </div>
     ))}
   </div>

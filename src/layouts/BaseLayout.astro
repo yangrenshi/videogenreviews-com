@@ -22,17 +22,15 @@ const siteUrl = 'https://videogenreviews.com';
 const cleanCanonicalPath = canonicalPath.replace(/^\/|\/$/g, '');
 const canonicalUrl = cleanCanonicalPath ? `${siteUrl}/${cleanCanonicalPath}/` : `${siteUrl}/`;
 
-// 全站通用组织与网站结构化数据
 const defaultWebsiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   'name': 'VideoGenReviews',
   'url': siteUrl,
-  'description': 'Independent reviews, direct feature comparisons, and free tier breakdowns of modern AI video generators.',
+  'description': 'Independent benchmarks, side-by-side feature matrix, and real credit costs for generative AI video models.',
 };
 
-const schemasToRender = [];
-schemasToRender.push(defaultWebsiteSchema);
+const schemasToRender = [defaultWebsiteSchema];
 
 if (schema) {
   if (Array.isArray(schema)) {
@@ -44,12 +42,20 @@ if (schema) {
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth antialiased">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- 10 大核心 SEO 元标签 -->
     <title>{title}</title>
@@ -78,10 +84,49 @@ if (schema) {
         <script type="application/ld+json" set:html={JSON.stringify(s)} />
       ))
     }
+
+    <style is:global>
+      /* 全局平滑渲染与暗黑质感网格 */
+      ::selection {
+        background-color: #0284c7;
+        color: #ffffff;
+      }
+
+      /* 细腻滚动条 */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #07090e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e2436;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #272f45;
+      }
+
+      /* 微妙高定网格图案背景 */
+      .bg-grid-pattern {
+        background-size: 40px 40px;
+        background-image: 
+          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      }
+    </style>
   </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-white">
+  <body class="bg-dark-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-sky-500 selection:text-white relative overflow-x-hidden">
+    <!-- 顶部环境光斑与聚光灯效果 (Ambient Glow Aura) -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-sky-500/15 via-indigo-600/10 to-transparent blur-[120px] pointer-events-none -z-10"></div>
+    <div class="fixed top-[20%] right-[-100px] w-[500px] h-[500px] bg-purple-600/5 blur-[140px] pointer-events-none -z-10"></div>
+
+    <!-- 背景微暗几何网格 -->
+    <div class="fixed inset-0 bg-grid-pattern opacity-60 pointer-events-none -z-10"></div>
+
     <Header />
-    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 relative z-0">
       <slot />
     </main>
     <Footer />

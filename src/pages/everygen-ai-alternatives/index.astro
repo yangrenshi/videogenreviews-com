@@ -7,12 +7,10 @@ import ScenarioSection from '../../components/ScenarioSection.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-// SEO 元数据
 const title = 'Top 10 Everygen AI Alternatives & Competitors (2026 Tested)';
 const description = 'Looking for the best Everygen AI alternatives? Compare 10+ top generative video tools like Kling, Luma, and Runway by free allowance, pricing, flaws, and speed.';
 const canonicalPath = 'everygen-ai-alternatives';
 
-// 对比表数据 (10+款工具)
 const comparisonTools: ToolComparisonItem[] = [
   {
     name: 'Kling AI 1.5',
@@ -115,7 +113,6 @@ const comparisonTools: ToolComparisonItem[] = [
   },
 ];
 
-// FAQ 数据与 JSON-LD
 const faqs: FaqItem[] = [
   {
     question: 'Why are creators looking for Everygen AI alternatives?',
@@ -149,7 +146,6 @@ const faqs: FaqItem[] = [
   },
 ];
 
-// Schema
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -193,18 +189,28 @@ const breadcrumbSchema = {
     crumbs={[{ label: 'Everygen AI Alternatives' }]}
   />
 
-  <article class="prose prose-invert max-w-none">
-    <!-- 头部 H1 与导言 -->
-    <header class="mb-8">
-      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold mb-3">
-        <span>Updated for November 2026 Benchmarks</span>
+  <article>
+    <!-- Header Hero Section -->
+    <header class="mb-10 text-left">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-mono font-bold tracking-tight mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span>Verified Benchmarks · November 2026</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
-        Best Everygen AI Alternatives: 10 Tested Generators for 2026
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-5 font-display">
+        10 Best Everygen AI Alternatives & Competitors
       </h1>
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
-        Everygen AI (formerly Viewmax) created buzz by packaging multiple visual diffusion models into one browser UI. But is it actually the right generator for your pipeline? Between credit burn rates, queue bottlenecks, and watermarked outputs, many creators need more dedicated alternatives.
+
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl font-medium">
+        Everygen AI (formerly Viewmax) created buzz by packaging multiple diffusion models into one browser UI. But between token burn opacity, queue bottlenecks, and watermarked outputs, many creators need more dedicated alternatives.
       </p>
+
+      <!-- Meta stats bar -->
+      <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-5 mt-5 border-t border-white/[0.08] text-xs font-mono text-slate-400">
+        <div><span class="text-slate-200 font-bold">Tested Engines:</span> 10 Standalone Tools</div>
+        <div><span class="text-slate-200 font-bold">Test Prompts:</span> 30 Seed Matches</div>
+        <div><span class="text-slate-200 font-bold">Review Methodology:</span> Blind Render Comparison</div>
+      </div>
     </header>
 
     <!-- 1. 首屏核心结论框 (三行内直出答案) -->
@@ -218,23 +224,31 @@ const breadcrumbSchema = {
     />
 
     <!-- 2. 全景对比表 -->
-    <section class="my-10">
-      <h2 class="text-2xl font-bold text-white tracking-tight mb-2">
-        Everygen AI Alternatives: Side-by-Side Comparison
+    <section class="my-14">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+        <span>Side-by-Side Matrix</span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-2">
+        Feature & Pricing Comparison Matrix
       </h2>
-      <p class="text-sm text-slate-400 mb-4">
-        Compare free tiers, baseline pricing, rendering lengths, and commercial rights across the 10 leading competitors.
+      <p class="text-xs md:text-sm text-slate-400 mb-4 max-w-2xl">
+        Compare free tiers, baseline pricing, rendering lengths, and commercial licenses across the 10 leading competitors.
       </p>
       <ComparisonTable tools={comparisonTools} />
     </section>
 
     <!-- 3. 每个工具 150~250 词详细评测 (包含真实致命缺点) -->
-    <section class="my-12">
-      <h2 class="text-2xl font-bold text-white tracking-tight mb-2">
-        Deep Dive: 10 Tested Everygen AI Alternatives
+    <section class="my-16">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+        <span>Deep Dives</span>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight font-display mb-2">
+        Detailed Breakdown of the Top 6 Contenders
       </h2>
-      <p class="text-sm text-slate-400 mb-6">
-        We ran identical prompts across each platform (a moving car, water droplets splashing, and a close-up speaking portrait). Here are the verified findings.
+      <p class="text-xs md:text-sm text-slate-400 mb-8 max-w-2xl">
+        We ran identical prompts across each platform (a moving sports car, water droplets splashing, and a close-up speaking portrait). Here are the verified findings.
       </p>
 
       <ToolCard
@@ -328,12 +342,47 @@ const breadcrumbSchema = {
     <!-- 5. 常见问题 (带 FAQPage Schema) -->
     <FaqAccordion faqs={faqs} />
 
-    <!-- 6. 内链与结语 (全站权重互传) -->
-    <section class="mt-12 p-6 rounded-xl border border-slate-800 bg-slate-900/30">
-      <h3 class="text-lg font-bold text-white mb-2">Continue Exploring AI Video Tools</h3>
-      <p class="text-xs md:text-sm text-slate-300 leading-relaxed mb-4">
-        Still on the fence about whether to switch? Check out our honest <a href="/is-everygen-ai-free/" class="text-sky-400 hover:underline font-semibold">is Everygen AI free breakdown</a> to verify real test costs, or dive into the complete <a href="/everygen-ai-review/" class="text-sky-400 hover:underline font-semibold">Everygen AI hands-on review</a>. You can also explore our core hub on <a href="/" class="text-sky-400 hover:underline font-semibold">Everygen AI overview & benchmarks</a>.
+    <!-- 6. 内链导航卡片 (高定流光风格) -->
+    <section class="mt-16 rounded-2xl border border-white/[0.08] bg-gradient-to-r from-dark-900 via-dark-850 to-dark-900 p-8 shadow-xl">
+      <div class="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-sky-400 mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+        <span>Related Investigations</span>
+      </div>
+      <h3 class="text-xl md:text-2xl font-black text-white font-display mb-3">
+        Continue Exploring AI Video Engines
+      </h3>
+      <p class="text-xs md:text-sm text-slate-300 leading-relaxed mb-6 max-w-2xl">
+        Still on the fence about whether to switch? Check out our honest tests or dive into the complete hands-on review.
       </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+        <a
+          href="/is-everygen-ai-free/"
+          class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.08] hover:border-sky-400/40 transition-all group"
+        >
+          <div class="text-[11px] font-mono text-emerald-400 font-bold mb-1">Quota Testing</div>
+          <div class="text-sm font-bold text-white group-hover:text-sky-300 font-display">Is Everygen Free? &rarr;</div>
+          <p class="text-xs text-slate-400 mt-1">Watermark rules and real depletion limits.</p>
+        </a>
+
+        <a
+          href="/everygen-ai-review/"
+          class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.08] hover:border-sky-400/40 transition-all group"
+        >
+          <div class="text-[11px] font-mono text-indigo-400 font-bold mb-1">Full Lab Review</div>
+          <div class="text-sm font-bold text-white group-hover:text-sky-300 font-display">Everygen In-Depth &rarr;</div>
+          <p class="text-xs text-slate-400 mt-1">Quality scoring, latency, and model routing.</p>
+        </a>
+
+        <a
+          href="/"
+          class="p-4 rounded-xl bg-dark-950/80 border border-white/[0.08] hover:border-sky-400/40 transition-all group"
+        >
+          <div class="text-[11px] font-mono text-sky-400 font-bold mb-1">Hub Home</div>
+          <div class="text-sm font-bold text-white group-hover:text-sky-300 font-display">Everygen Overview &rarr;</div>
+          <p class="text-xs text-slate-400 mt-1">Rebrand history and architecture guide.</p>
+        </a>
+      </div>
     </section>
   </article>
 </BaseLayout>

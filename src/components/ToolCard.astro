@@ -28,70 +28,103 @@ const {
 } = Astro.props;
 ---
 
-<div class="my-8 rounded-xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 hover:border-slate-700 transition-all shadow-md">
-  <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5 border-b border-slate-800/80 pb-5">
-    <div>
-      <div class="flex items-center space-x-3 mb-1">
-        <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-800 text-sky-400 font-bold text-xs border border-slate-700">
+<div class="my-10 relative overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b from-dark-900/90 via-dark-850/80 to-dark-950/90 p-6 md:p-8 hover:border-sky-500/30 hover:shadow-2xl hover:shadow-sky-500/5 transition-all duration-300">
+  <!-- 头部信息 -->
+  <div class="flex flex-col md:flex-row md:items-start justify-between gap-5 border-b border-white/[0.08] pb-6 mb-6">
+    <div class="space-y-2">
+      <div class="flex flex-wrap items-center gap-2.5">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-gradient-to-br from-sky-400/20 to-indigo-500/20 border border-sky-400/40 text-sky-300 font-mono font-black text-sm shadow-sm">
           #{rank}
         </span>
-        <h3 class="text-xl md:text-2xl font-bold text-white tracking-tight">{name}</h3>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight font-display">
+          {name}
+        </h3>
         {badge && (
-          <span class="px-2 py-0.5 rounded text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 tracking-tight">
             {badge}
           </span>
         )}
       </div>
-      <p class="text-xs md:text-sm text-slate-400">{tagline}</p>
+      <p class="text-xs md:text-sm text-slate-400 font-medium leading-relaxed max-w-xl">
+        {tagline}
+      </p>
     </div>
 
-    <div class="flex items-center space-x-4">
-      <div class="text-right">
-        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Score</div>
-        <div class="text-lg font-bold text-emerald-400">{rating} <span class="text-xs text-slate-500">/ 5.0</span></div>
+    <!-- 评分与官网 CTA -->
+    <div class="flex items-center space-x-4 shrink-0">
+      <div class="rounded-xl bg-dark-950/90 border border-white/[0.08] px-4 py-2 text-center min-w-[90px]">
+        <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold">Score</div>
+        <div class="text-xl font-black font-display text-emerald-400 flex items-center justify-center space-x-1">
+          <span>{rating}</span>
+          <span class="text-xs text-slate-500 font-normal">/5</span>
+        </div>
       </div>
       <a
         href={visitUrl}
         rel="nofollow noopener noreferrer"
         target="_blank"
-        class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition-colors shadow-sm"
+        class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-300 hover:to-blue-400 text-dark-950 font-bold text-xs shadow-glow-sky hover:shadow-sky-400/30 transition-all duration-200 transform hover:-translate-y-0.5"
       >
-        Visit Official Site &rarr;
+        <span>Try Official Site</span>
+        <svg class="w-3.5 h-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
       </a>
     </div>
   </div>
 
-  <div class="space-y-4 text-sm leading-relaxed text-slate-300">
-    <div>
-      <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Why It Earned a Spot</h4>
-      <p class="text-slate-300">{whyChosen}</p>
+  <!-- 规格四宫格 -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+    <div class="rounded-xl bg-dark-950/60 p-4 border border-white/[0.06]">
+      <div class="flex items-center space-x-1.5 text-[11px] font-mono uppercase tracking-wider text-slate-400 mb-1">
+        <svg class="w-3.5 h-3.5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Free Allowance & Quota</span>
+      </div>
+      <div class="text-xs font-mono font-semibold text-slate-200">{freeTierDetails}</div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-2">
-      <div class="rounded-lg bg-slate-950/60 p-3.5 border border-slate-800">
-        <span class="text-xs font-semibold text-slate-400 block mb-1">Free Allowance</span>
-        <span class="text-xs font-mono text-slate-200">{freeTierDetails}</span>
+    <div class="rounded-xl bg-dark-950/60 p-4 border border-white/[0.06]">
+      <div class="flex items-center space-x-1.5 text-[11px] font-mono uppercase tracking-wider text-slate-400 mb-1">
+        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+        </svg>
+        <span>Paid Baseline Cost</span>
       </div>
-      <div class="rounded-lg bg-slate-950/60 p-3.5 border border-slate-800">
-        <span class="text-xs font-semibold text-slate-400 block mb-1">Paid Starts At</span>
-        <span class="text-xs font-semibold text-slate-200">{pricingStarts}</span>
-      </div>
+      <div class="text-xs font-mono font-semibold text-slate-200">{pricingStarts}</div>
+    </div>
+  </div>
+
+  <!-- 为什么入选与适合人群 -->
+  <div class="space-y-4 text-xs md:text-sm leading-relaxed text-slate-300">
+    <div class="rounded-xl bg-dark-850/50 p-4 border border-white/[0.04]">
+      <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400 mb-1.5 flex items-center">
+        <span>Why It Made The Cut</span>
+      </h4>
+      <p class="text-slate-200">{whyChosen}</p>
     </div>
 
     <div>
-      <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Best Suited For</h4>
+      <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Target Production Workflow</h4>
       <p class="text-slate-300">{idealFor}</p>
     </div>
 
-    <!-- 核心差异化：真实致命缺点警示 -->
-    <div class="rounded-lg bg-rose-950/20 border border-rose-900/40 p-4">
-      <div class="flex items-start space-x-2.5">
-        <svg class="w-4 h-4 text-rose-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-        </svg>
+    <!-- 真实致命缺点警示盒 (The Uncensored Flaw) -->
+    <div class="relative overflow-hidden rounded-xl bg-rose-950/20 border border-rose-500/30 p-4 md:p-5 mt-4">
+      <div class="flex items-start space-x-3">
+        <div class="w-6 h-6 rounded-lg bg-rose-500/20 border border-rose-400/40 flex items-center justify-center text-rose-400 shrink-0 mt-0.5">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-rose-400 block">The Uncensored Flaw</span>
-          <p class="text-xs md:text-sm text-rose-200/90 mt-0.5 leading-relaxed font-medium">{biggestFlaw}</p>
+          <span class="text-[11px] font-mono font-bold uppercase tracking-widest text-rose-400 block mb-1">
+            The Uncensored Flaw
+          </span>
+          <p class="text-xs md:text-sm text-rose-200/90 font-medium leading-relaxed">
+            {biggestFlaw}
+          </p>
         </div>
       </div>
     </div>

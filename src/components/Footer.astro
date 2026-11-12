@@ -2,46 +2,71 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t border-slate-800/80 bg-slate-950 mt-16 text-slate-400 text-xs">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-      <div class="md:col-span-2 space-y-3">
-        <div class="flex items-center space-x-2">
-          <div class="w-6 h-6 rounded bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs">
-            V
+<footer class="border-t border-white/[0.08] bg-dark-950 mt-20 text-slate-400 text-xs">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+      <div class="md:col-span-2 space-y-3.5">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-400 to-indigo-500 p-[1px]">
+            <div class="w-full h-full bg-dark-900 rounded-[7px] flex items-center justify-center font-black text-sky-400 text-xs">
+              V
+            </div>
           </div>
-          <span class="text-sm font-semibold text-slate-200">VideoGenReviews</span>
+          <span class="text-base font-black text-white font-display tracking-tight">
+            VideoGen<span class="text-sky-400">Reviews</span>
+          </span>
         </div>
-        <p class="text-slate-400 max-w-sm leading-relaxed">
-          Unbiased benchmark data, real generation latency tests, and side-by-side free tier comparisons across leading generative AI video engines.
+        <p class="text-slate-400 max-w-sm leading-relaxed text-xs">
+          Independent benchmark lab testing latency, motion coherence, token burn rates, and free tier quotas across cutting-edge AI video generation engines.
         </p>
+        <div class="flex items-center space-x-2 text-[11px] font-mono text-slate-400 pt-1">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Unbiased Testing · Zero Paid Placements</span>
+        </div>
       </div>
 
       <div>
-        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-3">Quick Reviews</h4>
-        <ul class="space-y-2">
-          <li><a href="/everygen-ai-alternatives/" class="hover:text-sky-400 transition-colors">Everygen AI Alternatives</a></li>
-          <li><a href="/everygen-ai-review/" class="hover:text-sky-400 transition-colors">Everygen In-Depth Review</a></li>
-          <li><a href="/is-everygen-ai-free/" class="hover:text-sky-400 transition-colors">Is Everygen Free?</a></li>
+        <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">
+          Core Comparisons
+        </h4>
+        <ul class="space-y-2.5 text-xs">
+          <li>
+            <a href="/everygen-ai-alternatives/" class="hover:text-sky-400 transition-colors">
+              Everygen AI Alternatives
+            </a>
+          </li>
+          <li>
+            <a href="/everygen-ai-review/" class="hover:text-sky-400 transition-colors">
+              Everygen Hands-on Review
+            </a>
+          </li>
+          <li>
+            <a href="/is-everygen-ai-free/" class="hover:text-sky-400 transition-colors">
+              Is Everygen Really Free?
+            </a>
+          </li>
         </ul>
       </div>
 
       <div>
-        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-3">Editorial Policy</h4>
-        <ul class="space-y-2">
-          <li><span class="text-slate-400">Strict Independent Testing</span></li>
-          <li><span class="text-slate-400">Zero Sponsored Rankings</span></li>
-          <li><span class="text-slate-400">Real Failure-Case Logs</span></li>
+        <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">
+          Testing Methodology
+        </h4>
+        <ul class="space-y-2.5 text-xs text-slate-400">
+          <li>&bull; Identical Seed & Prompt Testing</li>
+          <li>&bull; Full Watermark Verification</li>
+          <li>&bull; Actual Hardware Queue Delays</li>
+          <li>&bull; Uncensored Flaw Documentation</li>
         </ul>
       </div>
     </div>
 
-    <!-- 核心合规免责声明与独立声明 -->
-    <div class="border-t border-slate-800/60 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-500 text-center md:text-left leading-relaxed">
-        <strong>Disclaimer:</strong> videogenreviews.com is an independent review site, not affiliated with any listed product. Product names, logos, and brands are property of their respective owners.
+    <!-- 独立声明与合规免责声明 -->
+    <div class="border-t border-white/[0.06] pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 leading-relaxed">
+      <p class="text-center md:text-left max-w-2xl">
+        <strong class="text-slate-400 font-semibold">Editorial Independence:</strong> videogenreviews.com is an independent review site, not affiliated with any listed product. All product names, logos, and registered trademarks belong to their respective owners. We may earn an affiliate commission when you purchase through links on our site.
       </p>
-      <p class="text-slate-500 shrink-0">
+      <p class="shrink-0 text-slate-400 font-mono">
         &copy; {currentYear} VideoGenReviews. All rights reserved.
       </p>
     </div>

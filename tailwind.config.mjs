@@ -3,16 +3,34 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+      },
       colors: {
-        brand: {
-          50: '#f0f7ff',
-          100: '#e0effe',
-          200: '#bae0fd',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          900: '#1e3a8a',
+        dark: {
+          950: '#07090e',
+          900: '#0c0f17',
+          850: '#111520',
+          800: '#171c2b',
+          750: '#1e2436',
+          700: '#272f45',
         },
+        cyan: {
+          400: '#22d3ee',
+          500: '#06b6d4',
+          950: '#083344',
+        },
+      },
+      boxShadow: {
+        'glow-cyan': '0 0 25px -5px rgba(34, 211, 238, 0.25)',
+        'glow-sky': '0 0 30px -5px rgba(56, 189, 248, 0.25)',
+        'glow-violet': '0 0 30px -5px rgba(129, 140, 248, 0.25)',
+        'inner-light': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.08)',
+      },
+      animation: {
+        'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },
