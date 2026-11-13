@@ -3,9 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { SHARED_FAQ_ANSWERS, BUILD_DATE_ISO } from '../../data/quotas';
+import { SHARED_FAQ_ANSWERS, EVERYGEN_ENGINES, BUILD_DATE_ISO } from '../../data/quotas';
 
-const title = 'Is Everygen AI Free? 2026 Trial Quota, Watermark & Limits Guide';
+const title = 'Is Everygen AI Free? 2026 Trial Quota, Watermarks & Limits Guide';
 const description = 'Is Everygen AI free to use? Official account breakdown on starter trial credits, watermark policies, 30s 1080p export limits, and free alternatives.';
 const canonicalPath = 'is-everygen-ai-free';
 
@@ -156,7 +156,7 @@ const articleSchema = {
         <div class="space-y-1.5">
           <h3 class="font-bold text-ink-900">1. Multi-Engine Token Variations</h3>
           <p class="text-ink-700 leading-relaxed text-xs sm:text-sm">
-            Because Everygen routes prompts to different foundational engines (such as Seedance 2.5, Kling 4.0, or MiniMax), token consumption varies dynamically based on model complexity and desired duration (5s vs 30s).
+            Because Everygen routes prompts across 5 foundational engines ({EVERYGEN_ENGINES.list}), token consumption varies dynamically based on model complexity and desired duration (5s vs 30s).
           </p>
         </div>
 

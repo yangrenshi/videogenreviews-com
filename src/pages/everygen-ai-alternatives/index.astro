@@ -5,7 +5,7 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { TOOL_QUOTAS, SHARED_FAQ_ANSWERS, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
+import { TOOL_QUOTAS, SHARED_FAQ_ANSWERS, EVERYGEN_ENGINES, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
 
 const title = '10 Best Everygen AI Alternatives for 2026';
 const description = 'Compare the top 10 Everygen AI alternatives. Based on published model specs, 1080p stability, and credit pricing across leading generative engines.';
@@ -16,7 +16,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'Everygen AI',
     badge: 'Baseline',
-    bestFor: 'Multi-engine routing (Kling 4.0, Seedance 2.5) + unified MCP/credits',
+    bestFor: EVERYGEN_ENGINES.routingShort,
     freeTier: TOOL_QUOTAS.everygen.freeTierSummary,
     startingPrice: 'From $9 / mo ($108/yr annual; ~$24/mo monthly)',
   },
@@ -106,7 +106,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Why do creators look for Everygen AI alternatives?',
     answer:
-      'Everygen AI serves as a multi-model aggregator routing prompts to backends like Kling 4.0, Seedance 2.5, and MiniMax H3 Max under a unified credit and MCP layer. Creators compare it with standalone tools to decide between centralized credit pooling versus direct platform perks (such as Kling\'s daily recurring free credits or Runway\'s precision motion brush).',
+      `Everygen AI serves as a multi-model aggregator routing prompts across 5 foundational engines—${EVERYGEN_ENGINES.list}—under a unified credit and MCP layer. Creators compare it with standalone tools to decide between centralized credit pooling versus direct platform perks (such as Kling's daily recurring free credits or Runway's precision motion brush).`,
   },
   {
     question: 'Which alternative offers the most generous recurring free credits?',

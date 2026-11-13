@@ -75,6 +75,11 @@ export const TOOL_QUOTAS = {
   },
 } as const;
 
+export const EVERYGEN_ENGINES = {
+  list: 'Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, and Gemini Omni 1.1 Flash',
+  routingShort: 'Multi-engine routing (5 engines incl. Kling 4.0, Seedance 2.5, Gemini Omni 1.1 Flash) + unified MCP/credits',
+} as const;
+
 export const SHARED_FAQ_ANSWERS = {
   recurringFreeCredits:
     'Kling AI 4.0 (66 daily recurring credits, ~2 clips/day), PixVerse V6 (30 daily credits plus 60 signup bonus at 540p), and MiniMax H3 Max (daily recurring browser allowance) all replenish free credits without requiring a credit card upfront.',
