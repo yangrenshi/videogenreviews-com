@@ -28,7 +28,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Does Everygen AI have a free plan?',
     answer:
-      'Everygen AI does not offer an ongoing permanent free subscription tier. Newly registered accounts receive an initial allocation of 10 promotional credits upon signup, which is below the ~11 credits a single standard video render consumes, so active video creation begins with the Starter tier from $9/mo.',
+      'Everygen AI does not offer an ongoing permanent free subscription tier. Newly registered accounts receive an initial allocation of 10 promotional credits upon signup, which is below the ~11 credits required for an entry-level fast 5s render (Seedance 2 Fast; higher-quality Standard runs consume ~16.4–19.2 credits per clip), so active video creation begins with the Starter tier from $9/mo.',
   },
 ];
 
@@ -103,7 +103,7 @@ const breadcrumbSchema = {
       </h1>
 
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
-        A verified breakdown of official Everygen AI subscription plans by Viewmax LLC: comparing Starter ($9/mo), Pro ($19/mo), and Creator ($49/mo), compute token yields, and commercial usage rights.
+        A verified breakdown of official Everygen AI subscription plans by Viewmax LLC: comparing Starter ($9/mo), Pro ($19/mo), and Creator ($49/mo), compute credit yields, and commercial usage rights.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
@@ -248,7 +248,7 @@ const breadcrumbSchema = {
             Credit Expiration & Top-Up Packs
           </h3>
           <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
-            Monthly plan credits reset at the start of each billing cycle and do not roll over. However, users who purchase standalone credit refill packs enjoy a <strong>90-day validity window</strong> to consume their tokens across supported models.
+            Monthly plan credits reset at the start of each billing cycle and do not roll over. However, users who purchase standalone credit refill packs enjoy a <strong>90-day validity window</strong> to consume their credits across supported models.
           </p>
         </div>
       </div>
@@ -276,11 +276,18 @@ const breadcrumbSchema = {
           </thead>
           <tbody class="divide-y divide-paper-300 bg-white text-ink-700">
             <tr>
-              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2 / 2 Fast</td>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2 Fast</td>
               <td class="px-3 py-3.5">5 seconds</td>
-              <td class="px-3 py-3.5 text-brand-blue font-medium">~18 clips (Fast)</td>
-              <td class="px-3 py-3.5 text-brand-blue font-medium">~26 clips (Pro)</td>
-              <td class="px-3 py-3.5 pr-4 text-brand-blue font-medium">~61 clips (Creator)</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">~18 clips (~11.1 credits/clip)</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">~45 clips (est.)</td>
+              <td class="px-3 py-3.5 pr-4 text-brand-blue font-medium">~90 clips (est.)</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2 (Standard)</td>
+              <td class="px-3 py-3.5">5 seconds</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">~10 clips (est.)</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">~26 clips (~19.2 credits/clip)</td>
+              <td class="px-3 py-3.5 pr-4 text-brand-blue font-medium">~61 clips (~16.4 credits/clip)</td>
             </tr>
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2.5 (1080p)</td>
@@ -308,7 +315,7 @@ const breadcrumbSchema = {
       </div>
 
       <p class="text-xs text-ink-500 mt-2 leading-relaxed">
-        * Note: Yield figures for Seedance 2 Fast (18 clips on Starter) and Seedance 2 (26 clips on Pro, 61 clips on Creator) reflect published official Everygen tier allocations (first-month Pro and Creator bonuses double initial yield to ~52 and ~122 clips respectively). Long-form continuous 30-second generations are estimated based on token duration multipliers. Kling AI standalone accounts replenish 66 daily credits under Kling's native platform economy (~30–35 credits per 5s generation), which cannot be directly converted to Everygen account credits.
+        * Note: Yield figures for Seedance 2 Fast (18 clips on Starter, ~11.1 credits/clip) and Seedance 2 Standard (26 clips on Pro at ~19.2 credits/clip; 61 clips on Creator at ~16.4 credits/clip) reflect published official Everygen tier allocations—higher-tier Creator plans include an official ~15% per-clip volume discount. First-month Pro and Creator bonuses double initial monthly yields. Long-form continuous 30-second generations are estimated based on credit duration multipliers. Kling AI standalone accounts replenish 66 daily credits under Kling's native platform economy (~30–35 credits per 5s generation), which cannot be directly converted to Everygen account credits.
       </p>
     </section>
 

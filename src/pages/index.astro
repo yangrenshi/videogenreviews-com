@@ -17,7 +17,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Does Everygen AI support MCP (Model Context Protocol)?',
     answer:
-      'Yes. Everygen officially supports the Model Context Protocol (MCP) for agentic developer workflows across Claude Desktop, ChatGPT, and Cursor. As detailed in the official setup documentation (everygen.ai/mcp/setup), connections are authenticated via OAuth, requiring users to explicitly confirm token consumption prior to each video generation dispatch.',
+      'Yes. Everygen officially supports the Model Context Protocol (MCP) for agentic developer workflows across Claude Desktop, ChatGPT, and Cursor. As detailed in the official setup documentation (everygen.ai/mcp/setup), connections are authenticated via OAuth, requiring users to explicitly confirm credit consumption prior to each video generation dispatch.',
   },
   {
     question: 'What is the maximum continuous video duration on Everygen AI?',
@@ -272,7 +272,7 @@ const articleSchema = {
           </p>
         </div>
         <div class="p-4 rounded-lg border border-paper-300 bg-paper-100 space-y-1.5">
-          <span class="font-bold text-ink-900 block">3. Token Guardrails</span>
+          <span class="font-bold text-ink-900 block">3. Credit Guardrails</span>
           <p class="text-ink-700 leading-relaxed">
             The MCP server requires explicit user approval before executing generations, displaying estimated credit burn prior to render.
           </p>
@@ -280,13 +280,13 @@ const articleSchema = {
       </div>
     </section>
 
-    <!-- 5. Compute Token Economics & Pricing Strategy -->
+    <!-- 5. Compute Credit Economics & Pricing Strategy -->
     <section class="space-y-4 pt-6 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
-        Compute Token Economics & Billing Structure
+        Compute Credit Economics &amp; Billing Structure
       </h2>
       <p class="text-sm text-ink-700 leading-relaxed">
-        Because Everygen orchestrates third-party diffusion clusters, credit burn rates are dynamic rather than flat-rate. A 5-second 720p draft render consumes significantly fewer compute tokens than a full 30-second 1080p high-fidelity generation conditioned on multiple reference images.
+        Because Everygen orchestrates third-party diffusion clusters, credit burn rates are dynamic rather than flat-rate. A 5-second 720p draft render consumes significantly fewer compute credits than a full 30-second 1080p high-fidelity generation conditioned on multiple reference images.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
         <div class="p-4 rounded-md border border-paper-300 bg-white space-y-1">

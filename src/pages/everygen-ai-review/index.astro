@@ -3,17 +3,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
+import { EVERYGEN_ENGINES, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
 
 const title = 'Everygen AI Review (2026): Performance, MCP & Models Analyzed';
-const description = 'In-depth architectural review of Everygen AI (Viewmax LLC). We analyze multi-engine routing (Seedance 2.5, Kling 4.0), 30s 1080p rendering, and MCP support.';
+const description = 'In-depth architectural review of Everygen AI (Viewmax LLC). We analyze 5 integrated engines (Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Gemini Omni 1.1 Flash) & MCP.';
 const canonicalPath = 'everygen-ai-review';
 
 const faqs: FaqItem[] = [
   {
     question: 'Is Everygen AI suitable for professional video workflows?',
     answer:
-      'Everygen AI is especially powerful for teams that value multi-engine versatility without maintaining separate API accounts. Its support for 30-second 1080p renders via Seedance 2.5 and native MCP client interoperability provides unique integration advantages for developer and content pipelines.',
+      'Everygen AI is especially powerful for teams that value multi-engine versatility without maintaining separate platform subscriptions. Its support for 30-second 1080p renders via Seedance 2.5 and native MCP client interoperability provides unique integration advantages for developer and content pipelines.',
   },
   {
     question: 'How does Everygen AI handle MCP (Model Context Protocol)?',
@@ -53,7 +53,7 @@ const reviewSchema = {
     url: 'https://videogenreviews.com',
   },
   reviewBody:
-    'Everygen AI by Viewmax LLC delivers strong aggregation capabilities across foundational engines like Seedance 2.5 and Kling 4.0, highlighted by native MCP agent interoperability and 30-second 1080p generation.',
+    `Everygen AI by Viewmax LLC delivers strong aggregation capabilities across 5 foundational engines (${EVERYGEN_ENGINES.list}), highlighted by native MCP agent interoperability and 30-second 1080p generation.`,
   datePublished: '2026-11-12',
   dateModified: BUILD_DATE_ISO,
 };
@@ -110,7 +110,7 @@ const breadcrumbSchema = {
       </h1>
 
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
-        An architectural assessment of Everygen AI by Viewmax LLC: examining multi-engine routing across Kling 4.0 and Seedance 2.5, long-form 30-second 1080p stability, and native MCP developer protocol support.
+        An architectural assessment of Everygen AI by Viewmax LLC: examining multi-engine routing across 5 foundational engines ({EVERYGEN_ENGINES.list}), long-form 30-second 1080p stability, and native MCP developer protocol support.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
@@ -120,7 +120,7 @@ const breadcrumbSchema = {
 
     <KeyTakeaway
       pickA="Everygen AI"
-      forScenarioA="teams requiring multi-model flexibility (Kling 4.0, Seedance 2.5) with direct MCP developer integration"
+      forScenarioA={`teams requiring multi-model flexibility across 5 engines (${EVERYGEN_ENGINES.list}) with direct MCP developer integration`}
       pickB="Runway Gen-4.5 or Luma Ray 3.2"
       forScenarioB="commercial filmmakers demanding director camera velocity controls"
     />
