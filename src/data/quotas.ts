@@ -17,8 +17,8 @@ export const TOOL_QUOTAS = {
     freePagePrice: 'Free (No card required)',
   },
   seedance: {
-    freeTierSummary: 'Promotional trial (~10 credits; requires Everygen plan)',
-    freeTierCard: 'Promotional trial (~10 credits on signup; requires Everygen plan for renders)',
+    freeTierSummary: 'Promotional trial (~10 credits; below render threshold)',
+    freeTierCard: 'Promotional trial (~10 credits on signup; below render threshold)',
     startingPrice: 'Pay-as-you-go (via Everygen)',
   },
   minimax: {
