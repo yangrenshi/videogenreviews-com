@@ -44,11 +44,11 @@ const atAGlanceTools: ToolComparisonItem[] = [
     startingPrice: '$10 / mo',
   },
   {
-    name: 'PixVerse V3.5',
+    name: 'PixVerse V6',
     badge: 'Speed & Anime',
     score: '8.2',
-    bestFor: 'Stylized anime motion, fast rendering latency & daily bonuses',
-    freeTier: '70 daily check-in credits',
+    bestFor: 'Stylized anime motion, fast rendering latency, native audio & daily bonuses',
+    freeTier: '60 initial + 30 daily credits',
     startingPrice: '$8 / mo',
   },
   {
@@ -62,7 +62,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'OpenArt Video',
     badge: 'Canvas Studio',
-    score: '7.7',
+    score: '7.9',
     bestFor: 'Multimodal storyboard generation & multi-model style blending',
     freeTier: 'No free plan (Starts at $14/mo)',
     startingPrice: '$14 / mo ($13/mo annual)',
@@ -78,7 +78,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'Kaiber AI',
     badge: 'Stylized Motion',
-    score: '7.0',
+    score: '7.3',
     bestFor: 'Music videos, painterly audioreactive loops & animation keyframes',
     freeTier: 'Free trial allowance',
     startingPrice: '$5 / mo',
@@ -205,7 +205,7 @@ const breadcrumbSchema = {
     <KeyTakeaway
       pickA="Kling AI 4.0"
       forScenarioA="natural physical movements, daily free credits, and reference image conditioning"
-      pickB="PixVerse V3.5 & OpenArt"
+      pickB="PixVerse V6 & OpenArt"
       forScenarioB="fast creative storyboarding, anime aesthetics, and versatile canvas generation"
       pickC="MiniMax H3 Max"
       forScenarioC="zero-dollar recurring daily credits with photorealistic facial anatomy"
@@ -323,11 +323,11 @@ const breadcrumbSchema = {
         screenshotCaption="MiniMax H3 Max clean prompt input interface with real-time generation options and intuitive camera settings."
       />
 
-      <!-- 4. PixVerse V3.5 (8.2 / 10) -->
+      <!-- 4. PixVerse V6 (8.2 / 10) -->
       <ToolCard
-        name="PixVerse V3.5"
-        bestForTitle="Fastest Everygen alternative for stylized anime and rapid rendering throughput"
-        tagline="Ultra-fast generation cycles, specialized stylized anime rendering, and responsive multi-shot controls."
+        name="PixVerse V6"
+        bestForTitle="Fastest Everygen alternative for stylized anime, native audio and rapid rendering throughput"
+        tagline="Next-gen V6 architecture featuring 15s 1080p generation, 20+ cinematic camera controls, and native audio."
         totalScore="8.2"
         metrics={[
           { label: 'Prompt Adherence', score: 8.6 },
@@ -336,21 +336,21 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.2 },
           { label: 'Value / Pricing', score: 7.3 },
         ]}
-        whyChosen="PixVerse V3.5 has emerged as one of the fastest and most flexible generative video engines on the market. It excels particularly at stylized, cinematic, and Japanese anime-style visual aesthetics, rendering short 4-second to 8-second scenes in a fraction of the time required by heavier diffusion pipelines."
+        whyChosen="PixVerse V6 (anchored by its C1 and R2 model series) marks a significant generational leap: offering up to 15-second continuous 1080p rendering, native audio generation, and over 20 specialized cinematic camera controls. It maintains unmatched visual fidelity in anime and stylized cinematography while significantly cutting generation latency."
         pros={[
-          'Rapid rendering speeds with low queue wait times',
-          'Top-tier stylistic fidelity for anime, cyberpunk, and artistic scenes',
-          'Generous daily login credits and competitive entry-level pricing',
+          'Up to 15-second 1080p outputs with native audio and 20+ cinematic camera controls',
+          'Top-tier stylistic fidelity for anime, cyberpunk, and dynamic action shorts',
+          'Free Basic tier providing 60 initial credits and 30 daily recurring credits',
         ]}
         cons={[
-          'Complex multi-character interactions can exhibit hand and limb morphing',
-          'Audio sound effect generation is currently in experimental preview',
+          'Basic free tier renders are restricted to 540p resolution and include watermarks',
+          'Clean 1080p watermark-free exports require a paid plan upgrade',
         ]}
-        freeTier="Daily login bonus credits with standard watermark"
+        freeTier="60 initial + 30 daily recurring credits (540p; watermarked)"
         pricing="$8.00 / mo (Basic plan)"
         visitUrl="/go/pixverse/"
         screenshotUrl="/images/pixverse.webp"
-        screenshotCaption="PixVerse V3.5 creative studio console displaying video generation settings, motion styles, and aspect ratio controls."
+        screenshotCaption="PixVerse V6 creative studio console displaying video generation settings, motion styles, and aspect ratio controls."
       />
 
       <!-- 5. Runway Gen-4.5 (8.0 / 10) -->

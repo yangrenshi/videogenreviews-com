@@ -7,7 +7,7 @@ import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro'
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const title = 'Best AI Video Generators of 2026: 5 Models Compared';
-const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, MiniMax H3 Max, PixVerse V3.5, and Runway Gen-4.5 on physics, control, and credit cost.';
+const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, MiniMax H3 Max, PixVerse V6, and Runway Gen-4.5 on physics, control, and credit cost.';
 const canonicalPath = 'best-ai-video-generator';
 
 const pillarTools: ToolComparisonItem[] = [
@@ -36,11 +36,11 @@ const pillarTools: ToolComparisonItem[] = [
     startingPrice: '$10 / mo',
   },
   {
-    name: 'PixVerse V3.5',
+    name: 'PixVerse V6',
     badge: 'Best for Anime',
     score: '8.2',
     bestFor: 'Stylized anime, fast rendering speeds & vibrant color grading',
-    freeTier: '70 daily check-in credits',
+    freeTier: '60 initial + 30 daily credits',
     startingPrice: '$8 / mo',
   },
   {
@@ -268,14 +268,14 @@ const breadcrumbSchema = {
         pricing="$10.00 / mo (Pro subscription)"
         visitUrl="/go/hailuo/"
         screenshotUrl="/images/hailuo.webp"
-        screenshotCaption="MiniMax Hailuo clean prompt input interface with real-time generation options and intuitive camera settings."
+        screenshotCaption="MiniMax H3 Max clean prompt input interface with real-time generation options and intuitive camera settings."
       />
 
-      <!-- 4. PixVerse V3.5 (8.2 / 10) -->
+      <!-- 4. PixVerse V6 (8.2 / 10) -->
       <ToolCard
-        name="PixVerse V3.5"
-        bestForTitle="Best AI video generator for anime aesthetics and fast stylized rendering"
-        tagline="High-speed diffusion rendering with vibrant color grading and daily login bonuses."
+        name="PixVerse V6"
+        bestForTitle="Best AI video generator for anime aesthetics, native audio, and 15s 1080p rendering"
+        tagline="Next-gen V6 diffusion architecture with 20+ cinematic camera controls and daily recurring credits."
         totalScore="8.2"
         metrics={[
           { label: 'Prompt Adherence', score: 8.6 },
@@ -284,21 +284,21 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.2 },
           { label: 'Value / Pricing', score: 7.3 },
         ]}
-        whyChosen="PixVerse V3.5 is the premier choice for creators working in anime, gaming concept art, and vibrant stylized cinematography. It renders significantly faster than heavyweight realism models while maintaining sharp line work and saturated color balance."
+        whyChosen="PixVerse V6 (alongside its specialized C1 and R2 model series) brings major upgrades: up to 15-second continuous 1080p rendering, native audio generation, and 20+ specialized cinematic camera controls. While maintaining its historic dominance in anime and stylized cinematography, V6 delivers markedly improved motion coherence over previous iterations."
         pros={[
-          'Exceptional color vibrancy and stylized anime rendering',
-          'Fast GPU queue dispatch with low generation latency',
-          'Daily login bonus points replenish active balances',
+          'Up to 15-second 1080p generation with native audio and 20+ cinematic camera tools',
+          'Fast GPU queue dispatch with stylized anime and illustrative excellence',
+          'Free Basic plan offering 60 initial credits and 30 daily recurring credits',
         ]}
         cons={[
-          'Less suited for documentary-style raw photorealism',
-          'Character hand gestures occasionally degrade during fast spins',
+          'Basic plan exports are capped at 540p resolution and carry a watermark',
+          'Advanced unwatermarked 1080p outputs require paid subscription upgrades',
         ]}
-        freeTier="Daily login bonus credits with standard watermark"
+        freeTier="60 initial + 30 daily recurring credits (540p; watermarked)"
         pricing="$8.00 / mo (Basic subscription)"
         visitUrl="/go/pixverse/"
         screenshotUrl="/images/pixverse.webp"
-        screenshotCaption="PixVerse V3.5 studio creation interface showing daily credit workflow."
+        screenshotCaption="PixVerse V6 studio creation interface showing model selection and camera controls."
       />
 
       <!-- 5. Runway Gen-4.5 (8.0 / 10) -->
