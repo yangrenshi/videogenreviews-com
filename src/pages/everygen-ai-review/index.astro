@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { BUILD_DATE_ISO } from '../../data/quotas';
 
 const title = 'Everygen AI Review (2026): Performance, MCP & Models Analyzed';
 const description = 'In-depth architectural review of Everygen AI (Viewmax LLC). We analyze multi-engine routing (Seedance 2.5, Kling 4.0), 30s 1080p rendering, and MCP support.';
@@ -46,10 +47,15 @@ const reviewSchema = {
     name: 'David Chen',
     url: 'https://videogenreviews.com/author/david-chen/',
   },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
   reviewBody:
     'Everygen AI by Viewmax LLC delivers strong aggregation capabilities across foundational engines like Seedance 2.5 and Kling 4.0, highlighted by native MCP agent interoperability and 30-second 1080p generation.',
   datePublished: '2026-11-12',
-  dateModified: '2026-11-13',
+  dateModified: BUILD_DATE_ISO,
 };
 
 const faqSchema = {

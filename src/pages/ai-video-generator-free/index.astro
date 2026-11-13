@@ -5,7 +5,7 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { TOOL_QUOTAS, SHARED_FAQ_ANSWERS } from '../../data/quotas';
+import { TOOL_QUOTAS, SHARED_FAQ_ANSWERS, BUILD_DATE_ISO } from '../../data/quotas';
 
 const title = 'Best Free AI Video Generators (2026): Daily Credits & No Card Needed';
 const description = 'Compare the best free AI video generators in 2026. Review genuinely free tools like Kling AI (66 daily credits), MiniMax H3 Max, PixVerse V6, and Pika 2.2 without credit cards.';
@@ -92,7 +92,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-13',
-  dateModified: '2026-11-13',
+  dateModified: BUILD_DATE_ISO,
 };
 
 const breadcrumbSchema = {

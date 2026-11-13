@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { BUILD_DATE_ISO } from '../../data/quotas';
 
 const title = 'Everygen AI Pricing (2026): Starter $9, Pro $19 & Plans Compared';
 const description = 'Official Everygen AI pricing breakdown. Compare Starter ($9/mo, 200 credits), Pro ($19/mo, 500 credits), and Creator ($49/mo), plus model generation costs.';
@@ -60,7 +61,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-12',
-  dateModified: '2026-11-13',
+  dateModified: BUILD_DATE_ISO,
 };
 
 const breadcrumbSchema = {
@@ -115,6 +116,8 @@ const breadcrumbSchema = {
       forScenarioA="best value tier with 500 credits + 500 first-month bonus, supporting ~26 Seedance 2 video generations"
       pickB="Starter Plan (From $9/mo)"
       forScenarioB="entry tier for creators testing Seedance and Kling with 200 monthly credits"
+      pickC="Creator Plan ($49/mo)"
+      forScenarioC="high-volume studio pipelines requiring 1,000 monthly credits + 1,000 bonus credits in month 1"
     />
 
     <!-- Official Pricing Tiers Table (3 档真实价格) -->
@@ -279,8 +282,8 @@ const breadcrumbSchema = {
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2.5 (1080p)</td>
               <td class="px-3 py-3.5">30 seconds continuous</td>
-              <td class="px-3 py-3.5 font-medium">~4 to 6 long takes (est.)</td>
-              <td class="px-3 py-3.5 pr-4 font-medium">~12 to 15 long takes (est.)</td>
+              <td class="px-3 py-3.5 font-medium">~2 to 3 long takes (est.)</td>
+              <td class="px-3 py-3.5 pr-4 font-medium">~6 to 8 long takes (est.)</td>
             </tr>
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Kling AI 4.0 / 3.0</td>

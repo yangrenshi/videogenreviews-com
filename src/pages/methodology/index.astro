@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { BUILD_DATE_ISO } from '../../data/quotas';
 
 const title = 'Evaluation Methodology & Scoring Framework | VideoGen Reviews';
 const description = 'How VideoGen Reviews evaluates generative AI video tools. Detailed breakdown of our 5 architectural criteria, 10-point scoring weights, and editorial standards.';
@@ -22,7 +23,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-12',
-  dateModified: '2026-11-12',
+  dateModified: BUILD_DATE_ISO,
 };
 
 const breadcrumbSchema = {

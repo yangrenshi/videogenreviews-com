@@ -4,6 +4,8 @@
  * 杜绝跨页面手动维护导致的口径不一致问题。
  */
 
+export const BUILD_DATE_ISO = new Date().toISOString().split('T')[0];
+
 export const TOOL_QUOTAS = {
   everygen: {
     freeTierSummary: 'Promotional trial (~10 credits; below render threshold)',
@@ -19,7 +21,7 @@ export const TOOL_QUOTAS = {
   seedance: {
     freeTierSummary: 'Promotional trial (~10 credits; below render threshold)',
     freeTierCard: 'Promotional trial (~10 credits on signup; below render threshold)',
-    startingPrice: 'Pay-as-you-go (via Everygen)',
+    startingPrice: 'Subscription via Everygen ($9/mo+)',
   },
   minimax: {
     freeTierSummary: 'Daily recurring allowance points (No card required)',

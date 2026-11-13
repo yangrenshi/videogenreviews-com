@@ -5,7 +5,7 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { TOOL_QUOTAS } from '../../data/quotas';
+import { TOOL_QUOTAS, BUILD_DATE_ISO } from '../../data/quotas';
 
 const title = 'Best AI Video Generators of 2026: 5 Models Compared';
 const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, MiniMax H3 Max, PixVerse V6, and Runway Gen-4.5 on physics, control, and credit cost.';
@@ -26,7 +26,7 @@ const pillarTools: ToolComparisonItem[] = [
     score: '8.5',
     bestFor: 'Continuous 30-second sequences at native 1080p resolution',
     freeTier: TOOL_QUOTAS.seedance.freeTierSummary,
-    startingPrice: 'Pay-as-you-go',
+    startingPrice: TOOL_QUOTAS.seedance.startingPrice,
   },
   {
     name: 'MiniMax H3 Max',
@@ -101,7 +101,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-13',
-  dateModified: '2026-11-13',
+  dateModified: BUILD_DATE_ISO,
 };
 
 const breadcrumbSchema = {
@@ -240,8 +240,8 @@ const breadcrumbSchema = {
           'Requires highly descriptive text prompts for sustained sequences',
           'Higher token consumption per render compared to short 5s clips',
         ]}
-        freeTier="Promotional trial (~10 credits on signup; requires Everygen plan for renders)"
-        pricing="Pay-as-you-go / Subscription tiers via Everygen AI"
+        freeTier={TOOL_QUOTAS.seedance.freeTierCard}
+        pricing={TOOL_QUOTAS.seedance.startingPrice}
         visitUrl="/go/everygen/"
         buttonLabel="Try Seedance via Everygen"
       />
