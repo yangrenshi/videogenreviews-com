@@ -65,8 +65,8 @@ const atAGlanceTools: ToolComparisonItem[] = [
     name: 'Luma Ray 3.2',
     badge: 'Cinematic',
     bestFor: 'Volumetric lighting, golden-hour lens flares & movie-style dolly',
-    freeTier: '30 renders / month',
-    startingPrice: '$9.99 / mo',
+    freeTier: 'Credit-based tier (From $30/mo)',
+    startingPrice: 'From $30 / mo ($24/mo annual)',
   },
   {
     name: 'Kaiber AI',
@@ -79,8 +79,8 @@ const atAGlanceTools: ToolComparisonItem[] = [
     name: 'Pika 2.2',
     badge: 'VFX Presets',
     bestFor: 'Viral social media memes, squish, melt, and explosion physics',
-    freeTier: '30 daily refill points',
-    startingPrice: '$8 / mo',
+    freeTier: 'Initial trial (No watermark)',
+    startingPrice: '$10 / mo ($8/mo annual)',
   },
   {
     name: 'Viggle AI',
@@ -224,7 +224,7 @@ const breadcrumbSchema = {
       <!-- 1. Kling AI 4.0 (8.8 / 10) -->
       <ToolCard
         name="Kling AI 4.0"
-        bestForTitle="Best AI video generator for realistic human motion and physics"
+        bestForTitle="Top-rated Everygen alternative for realistic human biomechanics and daily free generations"
         tagline="Advanced diffusion physics with reference-image conditioning and up to 30-second generations."
         totalScore="8.8"
         metrics={[
@@ -254,7 +254,7 @@ const breadcrumbSchema = {
       <!-- 2. Seedance 2.5 (8.5 / 10) -->
       <ToolCard
         name="Seedance 2.5"
-        bestForTitle="Best AI video generator for sustained 30-second continuous scenes"
+        bestForTitle="Best native 30-second continuous alternative (built into Everygen backends)"
         tagline="Continuous 30-second sequences at native 1080p resolution with minimal temporal drift."
         totalScore="8.5"
         metrics={[
@@ -282,7 +282,7 @@ const breadcrumbSchema = {
       <!-- 3. MiniMax Hailuo H3 (8.3 / 10) -->
       <ToolCard
         name="MiniMax Hailuo H3"
-        bestForTitle="Best AI video generator for photorealistic faces and free daily use"
+        bestForTitle="Best free Everygen alternative for photorealistic faces and skin micro-textures"
         tagline="Ultra-crisp human faces and buttery-smooth camera pans without synthetic plastic sheen."
         totalScore="8.3"
         metrics={[
@@ -312,7 +312,7 @@ const breadcrumbSchema = {
       <!-- 4. PixVerse V3.5 (8.2 / 10) -->
       <ToolCard
         name="PixVerse V3.5"
-        bestForTitle="Best AI video generator for speed, anime aesthetics, and high throughput"
+        bestForTitle="Fastest Everygen alternative for stylized anime and rapid rendering throughput"
         tagline="Ultra-fast generation cycles, specialized stylized anime rendering, and responsive multi-shot controls."
         totalScore="8.2"
         metrics={[
@@ -342,7 +342,7 @@ const breadcrumbSchema = {
       <!-- 5. Runway Gen-4.5 (8.0 / 10) -->
       <ToolCard
         name="Runway Gen-4.5"
-        bestForTitle="Best AI video generator for director-level camera controls"
+        bestForTitle="Best studio Everygen alternative for director-level motion brush and camera velocity curves"
         tagline="Hollywood-grade camera orbits, custom velocity curves, and multi-motion brush controls."
         totalScore="8.0"
         metrics={[
@@ -370,7 +370,7 @@ const breadcrumbSchema = {
       <!-- 6. OpenArt Video (7.9 / 10) -->
       <ToolCard
         name="OpenArt Video"
-        bestForTitle="Best AI video generator for all-in-one canvas storyboarding"
+        bestForTitle="Best all-in-one canvas Everygen alternative for multi-model storyboarding and style blending"
         tagline="Unified creative workspace connecting multi-model image generation with seamless motion extension."
         totalScore="7.9"
         metrics={[
@@ -399,7 +399,7 @@ const breadcrumbSchema = {
       <!-- 7. Luma Ray 3.2 (7.4 / 10) -->
       <ToolCard
         name="Luma Ray 3.2"
-        bestForTitle="Best AI video generator for cinematic atmosphere and lighting"
+        bestForTitle="Best cinematic Everygen alternative for volumetric lighting and spatial camera dolly"
         tagline="Volumetric depth-of-field, realistic golden-hour lens flares, and natural perspective shifts."
         totalScore="7.4"
         metrics={[
@@ -413,21 +413,22 @@ const breadcrumbSchema = {
         pros={[
           'Rich volumetric lighting and cinematic depth-of-field',
           'Camera zooms and dolly movements feel naturally captured',
-          '30 free generations per month on basic tier',
+          'High throughput compute cluster on commercial tiers',
         ]}
         cons={[
+          'No ongoing permanent free tier — platform entry begins on Plus plan ($30/mo)',
           'Background crowds in complex scenes can exhibit morphing artifacts over time',
           'Output duration is typically limited to 5 seconds per generation',
         ]}
-        freeTier="30 generations per month with watermark"
-        pricing="$9.99 / mo (Lite plan)"
+        freeTier="Credit-based access (No permanent free tier)"
+        pricing="From $30.00 / mo (Plus plan; $24/mo billed annually)"
         visitUrl="/go/luma/"
       />
 
       <!-- 8. Kaiber AI (7.3 / 10) -->
       <ToolCard
         name="Kaiber AI"
-        bestForTitle="Best AI video generator for stylized music videos and artistic loops"
+        bestForTitle="Best artistic Everygen alternative for audioreactive music videos and painterly loops"
         tagline="Audioreactive keyframing, painterly frame morphing, and stylized visual storytelling."
         totalScore="7.3"
         metrics={[
@@ -455,7 +456,7 @@ const breadcrumbSchema = {
       <!-- 9. Pika 2.2 (6.7 / 10) -->
       <ToolCard
         name="Pika 2.2"
-        bestForTitle="Best AI video generator for viral visual physics and meme effects"
+        bestForTitle="Best creative physics Everygen alternative for viral squish and melt meme effects"
         tagline="Pikaffects physics engine with squish, explode, melt, and slice dynamic presets."
         totalScore="6.7"
         metrics={[
@@ -465,25 +466,26 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 7.1 },
           { label: 'Value / Pricing', score: 6.2 },
         ]}
-        whyChosen="Pika carved a distinct niche with creative physics transformations. If your goal is to make objects melt, inflate like balloons, or squish dynamically for social media memes, Pika provides these effects in single-click presets."
+        whyChosen="Pika carved a distinct niche with creative physics transformations. If your goal is to make objects melt, inflate like balloons, or squish dynamically for social media memes, Pika provides these effects in single-click presets with clean watermark-free exports."
         pros={[
           'Fun, viral Pikaffects presets for social entertainment content',
+          'Watermark-free downloads on free starter exports',
           'Intuitive and friendly user interface',
-          'Daily credit replenishment on standard free accounts',
         ]}
         cons={[
+          'No automatic daily credit refills (relies on credit packs or subscription)',
           'Human photorealism and anatomy consistency fall far behind Kling and Hailuo',
           'Fast turns can introduce noticeable visual warping',
         ]}
-        freeTier="30 daily refill credits with watermark"
-        pricing="$8.00 / mo (Standard tier)"
+        freeTier="Initial starter credits (No watermark; credit pack model)"
+        pricing="$10.00 / mo ($8/mo billed annually for Starter)"
         visitUrl="/go/pika/"
       />
 
       <!-- 10. Viggle AI (6.4 / 10) -->
       <ToolCard
         name="Viggle AI"
-        bestForTitle="Best AI video generator for character body rigging and dance motion"
+        bestForTitle="Best viral Everygen alternative for character motion rigging and dance choreography"
         tagline="Controllable character replacement engine that maps any custom avatar onto reference choreography."
         totalScore="6.4"
         metrics={[
