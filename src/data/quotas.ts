@@ -31,16 +31,16 @@ export const TOOL_QUOTAS = {
     startingPrice: 'Subscription via Everygen ($9/mo+)',
   },
   minimax: {
-    freeTierSummary: 'Daily recurring allowance points (No card required)',
-    freeTierCard: 'Daily recurring allowance points (zero card upfront; watermarked)',
-    startingPrice: '$10 / mo',
-    pricingCard: 'Free plan available; Pro tier from $10.00 / mo',
+    freeTierSummary: 'One-time free trial credits (No card required)',
+    freeTierCard: 'One-time free trial credits on signup (Hailuo models; zero card upfront)',
+    startingPrice: '$14.99 / mo ($8.40/mo annual)',
+    pricingCard: 'Free plan available; Standard tier from $14.99 / mo ($8.40/mo annual)',
     freePagePrice: 'Free (No card required)',
   },
   pixverse: {
     freeTierSummary: '30 daily credits (+60 signup bonus; 540p)',
     freeTierCard: '30 daily recurring credits (+60 one-time signup bonus; 540p; watermarked)',
-    startingPrice: '$8 / mo',
+    startingPrice: '$10 / mo ($1 3-day trial)',
     freePagePrice: 'Free (No card required)',
   },
   runway: {
@@ -61,7 +61,7 @@ export const TOOL_QUOTAS = {
   kaiber: {
     freeTierSummary: 'Free trial allowance',
     freeTierCard: 'Initial free trial credits upon onboarding',
-    startingPrice: '$5 / mo',
+    startingPrice: '$10 / mo',
   },
   pika: {
     freeTierSummary: 'Starter trial credits (No watermark; credit packs)',
@@ -83,7 +83,7 @@ export const EVERYGEN_ENGINES = {
 
 export const SHARED_FAQ_ANSWERS = {
   recurringFreeCredits:
-    'Kling AI 4.0 (66 daily recurring credits, ~2 clips/day), PixVerse V6 (30 daily credits plus 60 signup bonus at 540p), and MiniMax H3 Max (daily recurring browser allowance) all replenish free credits without requiring a credit card upfront.',
+    'Kling AI 4.0 (66 daily recurring credits, ~2 clips/day) and PixVerse V6 (30 daily credits plus 60 signup bonus at 540p) replenish free credits daily without requiring a credit card upfront, while MiniMax Hailuo H3 offers one-time free trial credits upon signup.',
   everygen10CreditsLimit:
-    'Yes, with strict functional limits. New accounts receive 10 promotional signup credits, but based on Everygen\'s credit consumption model, 10 credits is below the ~11 credits a single standard video render consumes, so an active subscription or credit pack is required to generate outputs.',
+    'Yes, with strict functional limits. New accounts receive 10 promotional signup credits, but based on Everygen\'s credit consumption model, 10 credits is below the ~11 credits an entry-level fast 5s render (Seedance 2 Fast) consumes, so an active subscription or credit pack is required to generate outputs.',
 } as const;
