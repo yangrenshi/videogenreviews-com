@@ -5,6 +5,7 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { TOOL_QUOTAS } from '../../data/quotas';
 
 const title = 'Best AI Video Generators of 2026: 5 Models Compared';
 const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, MiniMax H3 Max, PixVerse V6, and Runway Gen-4.5 on physics, control, and credit cost.';
@@ -16,15 +17,15 @@ const pillarTools: ToolComparisonItem[] = [
     badge: 'Overall #1',
     score: '8.8',
     bestFor: 'Realistic human biomechanics, gravity, and athletic motion',
-    freeTier: '66 daily recurring credits',
-    startingPrice: '$10 / mo',
+    freeTier: TOOL_QUOTAS.kling.freeTierSummary,
+    startingPrice: TOOL_QUOTAS.kling.startingPrice,
   },
   {
     name: 'Seedance 2.5',
     badge: 'Best 30s Takes',
     score: '8.5',
     bestFor: 'Continuous 30-second sequences at native 1080p resolution',
-    freeTier: 'Promotional trial (~10 credits; requires Everygen plan)',
+    freeTier: TOOL_QUOTAS.seedance.freeTierSummary,
     startingPrice: 'Pay-as-you-go',
   },
   {
@@ -32,24 +33,24 @@ const pillarTools: ToolComparisonItem[] = [
     badge: 'Best Free Tier',
     score: '8.3',
     bestFor: 'Photorealistic human skin, micro-expressions & daily free use',
-    freeTier: '~30 daily points (~3 clips)',
-    startingPrice: '$10 / mo',
+    freeTier: TOOL_QUOTAS.minimax.freeTierSummary,
+    startingPrice: TOOL_QUOTAS.minimax.startingPrice,
   },
   {
     name: 'PixVerse V6',
     badge: 'Best for Anime',
     score: '8.2',
     bestFor: 'Stylized anime, fast rendering speeds & vibrant color grading',
-    freeTier: '30 daily credits (+60 signup bonus)',
-    startingPrice: '$8 / mo',
+    freeTier: TOOL_QUOTAS.pixverse.freeTierSummary,
+    startingPrice: TOOL_QUOTAS.pixverse.startingPrice,
   },
   {
     name: 'Runway Gen-4.5',
     badge: 'Best VFX Control',
     score: '8.0',
     bestFor: 'Hollywood camera velocity curves, multi-motion brush & studio VFX',
-    freeTier: '125 one-time credits (~10s)',
-    startingPrice: '$15 / mo ($12/mo annual)',
+    freeTier: TOOL_QUOTAS.runway.freeTierSummary,
+    startingPrice: TOOL_QUOTAS.runway.startingPrice,
   },
 ];
 
@@ -261,14 +262,14 @@ const breadcrumbSchema = {
         whyChosen="MiniMax H3 Max (operating on MiniMax's Hailuo architecture) is widely regarded as the benchmark for organic facial rendering and native audio synthesis. Skin micro-texture, lighting reflections, and subtle eye micro-expressions appear lifelike rather than CGI-rendered, making it a standout for narrative dialogue and cinematic character shots."
         pros={[
           'Outstanding skin micro-texture and realistic facial micro-expressions',
-          'Generous ~30 daily allowance points without credit card verification',
+          'Daily recurring allowance points without credit card verification',
           'Rapid render speed under standard server loads',
         ]}
         cons={[
           'Lacks manual camera sliders or motion brush tooling',
           'Limited fine-grained steering on fast-moving background elements',
         ]}
-        freeTier="~30 daily allowance points (~3 standard clips daily; zero card upfront)"
+        freeTier={TOOL_QUOTAS.minimax.freeTierCard}
         pricing="$10.00 / mo (Pro subscription)"
         visitUrl="/go/hailuo/"
         screenshotUrl="/images/hailuo.webp"
