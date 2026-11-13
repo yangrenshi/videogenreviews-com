@@ -210,6 +210,9 @@ const breadcrumbSchema = {
         Everygen AI is listed in row 1 as our comparative baseline against 10 dedicated standalone video generation platforms.
       </p>
       <ComparisonTable tools={atAGlanceTools} />
+      <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
+        * Note: Pricing tiers and promotional quotas are monitored and cross-verified against official vendor checkouts as of November 2026. Standalone platforms may update entry rates and promotional allowances periodically.
+      </p>
     </section>
 
     <!-- 深度评测：10 个工具完整覆盖，每个工具采用场景大标题 + 5 维评分条 + Pros/Cons 双列 -->
@@ -254,7 +257,7 @@ const breadcrumbSchema = {
       <!-- 2. Seedance 2.5 (8.5 / 10) -->
       <ToolCard
         name="Seedance 2.5"
-        bestForTitle="Best native 30-second continuous alternative (built into Everygen backends)"
+        bestForTitle="Best Everygen alternative for native 30-second continuous scenes"
         tagline="Continuous 30-second sequences at native 1080p resolution with minimal temporal drift."
         totalScore="8.5"
         metrics={[
@@ -264,19 +267,20 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.4 },
           { label: 'Value / Pricing', score: 8.1 },
         ]}
-        whyChosen="Seedance 2.5 breaks through the traditional 4-second limitation by generating continuous 30-second shots at native 1080p. As one of the core backends integrated inside Everygen AI, it excels at narrative storytelling where scenes must hold visual stability without abrupt camera jump cuts."
+        whyChosen="Seedance 2.5 solves the most persistent frustration in generative video: short 4-second clip limits. While it operates as a core foundational engine integrated within Everygen AI, creators comparing standalone alternatives find its sustained 30-second temporal consistency unmatched for long narrative sequences."
         pros={[
           'Native 30-second continuous duration at full 1080p',
           'Stable camera motion without random scene warping',
-          'Available via Everygen AI with unified API access',
+          'Accessible via Everygen AI unified token plans',
         ]}
         cons={[
           'Requires structured and descriptive prompts for long sequences',
           'Higher compute cost per 30-second render compared to short clips',
         ]}
-        freeTier="Promotional credits via API and partner portals"
-        pricing="Pay-as-you-go credit bundles"
-        visitUrl="/go/seedance/"
+        freeTier="Promotional credits via partner portals"
+        pricing="Accessible via Everygen subscription tiers ($9-$49/mo)"
+        visitUrl="/go/everygen/"
+        buttonLabel="Try Seedance via Everygen"
       />
 
       <!-- 3. MiniMax Hailuo H3 (8.3 / 10) -->

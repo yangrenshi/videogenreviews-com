@@ -18,6 +18,7 @@ interface Props {
   visitUrl: string;
   screenshotUrl?: string;
   screenshotCaption?: string;
+  buttonLabel?: string;
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   visitUrl,
   screenshotUrl,
   screenshotCaption,
+  buttonLabel,
 } = Astro.props;
 
 const numScore = parseFloat(totalScore);
@@ -78,7 +80,7 @@ const numScore = parseFloat(totalScore);
           target="_blank"
           class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-ink-900 hover:bg-brand-blue text-white font-medium text-xs transition-colors shadow-sm"
         >
-          <span>Visit {name}</span>
+          <span>{buttonLabel || `Visit ${name}`}</span>
           <svg class="w-3.5 h-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>

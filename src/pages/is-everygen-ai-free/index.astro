@@ -12,7 +12,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Does Everygen AI offer free credits?',
     answer:
-      'Yes. Everygen AI provides initial trial credits for newly registered accounts so creators can test prompt syntax and sample output quality across supported engines like Kling and Seedance. Full long-form continuous renders and watermark-free exports require credit bundles or subscription tiers.',
+      'Yes, but with strict functional limitations. Everygen allocates 10 promotional credits upon account registration. However, running a full video render task requires more credits than this signup balance, triggering an insufficient credit prompt that directs users to purchase a paid subscription or refill pack.',
   },
   {
     question: 'Does Everygen AI replenish credits every 24 hours?',
@@ -130,9 +130,9 @@ const articleSchema = {
           <span class="text-ink-500 block mt-1 text-xs">Paid plans start from $9/mo (annual billing; ~$24/mo monthly).</span>
         </div>
         <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
-          <span class="text-ink-500 uppercase text-[11px] font-semibold block mb-1">Test Account Allocation</span>
-          <span class="text-base font-bold text-amber-800">10 Credits</span>
-          <span class="text-ink-500 block mt-1 text-xs">Initial trial credits on signup to test UI response.</span>
+          <span class="text-ink-500 uppercase text-[11px] font-semibold block mb-1">Promotional Trial Tokens</span>
+          <span class="text-base font-bold text-amber-800">10 Credits (Limited)</span>
+          <span class="text-ink-500 block mt-1 text-xs">Initial 10 promotional credits upon signup; insufficient for video rendering without plan upgrade.</span>
         </div>
         <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
           <span class="text-ink-500 uppercase text-[11px] font-semibold block mb-1">Trial Watermark?</span>
@@ -162,9 +162,9 @@ const articleSchema = {
         </div>
 
         <div class="space-y-1.5">
-          <h3 class="font-bold text-ink-900">2. One-Time 10 Starter Tokens, Not Daily Resets</h3>
+          <h3 class="font-bold text-ink-900">2. Initial 10 Trial Credits — Insufficient for Video Renders</h3>
           <p class="text-ink-700 leading-relaxed text-xs sm:text-sm">
-            Rather than resetting on a midnight timer, Everygen provides a one-time allocation of 10 promotional starter credits. Once your initial credits are depleted, continuing generations require purchasing top-up credit packs or subscribing to a monthly plan.
+            Upon signing up, new user accounts display an initial allocation of 10 promotional credits (flame icon). However, console tests confirm that submitting any video render task immediately triggers an "insufficient credits" dialog, prompting the user to purchase a subscription or credit pack. These 10 promotional tokens serve as an interface demo balance rather than an entitlement for full video rendering.
           </p>
         </div>
 
