@@ -113,7 +113,7 @@ const breadcrumbSchema = {
 
     <KeyTakeaway
       pickA="Pro Plan ($19/mo)"
-      forScenarioA="best value tier with 500 credits + 500 first-month bonus, supporting ~26 Seedance 2 video generations"
+      forScenarioA="best value tier with 500 credits + 500 first-month bonus, supporting ~26 clips/month (first month ~52 with the 500-credit bonus)"
       pickB="Starter Plan (From $9/mo)"
       forScenarioB="entry tier for creators testing Seedance and Kling with 200 monthly credits"
       pickC="Creator Plan ($49/mo)"
@@ -178,7 +178,7 @@ const breadcrumbSchema = {
               <div class="flex items-center font-bold text-brand-blue">
                 <span>500 credits / mo + 500 bonus (Month 1)</span>
               </div>
-              <div>&bull; Approx. ~26 Seedance 2 clips (at 500 credits standard burn)</div>
+              <div>&bull; Approx. ~26 clips/month (first month ~52 with the 500-credit bonus)</div>
               <div>&bull; Kling 4.0 1080p generation access</div>
               <div>&bull; MCP connector (Claude, ChatGPT, Cursor)</div>
               <div>&bull; High-priority GPU dispatch queue</div>
@@ -269,8 +269,9 @@ const breadcrumbSchema = {
             <tr>
               <th scope="col" class="py-3.5 pl-4 pr-3">Foundational Engine</th>
               <th scope="col" class="px-3 py-3.5">Duration</th>
-              <th scope="col" class="px-3 py-3.5">Estimated Yield (200 Credits / Starter)</th>
-              <th scope="col" class="px-3 py-3.5 pr-4">Estimated Yield (500 Credits / Pro)</th>
+              <th scope="col" class="px-3 py-3.5">200 Credits (Starter)</th>
+              <th scope="col" class="px-3 py-3.5">500 Credits (Pro)</th>
+              <th scope="col" class="px-3 py-3.5 pr-4">1,000 Credits (Creator)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-paper-300 bg-white text-ink-700">
@@ -278,32 +279,36 @@ const breadcrumbSchema = {
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2 / 2 Fast</td>
               <td class="px-3 py-3.5">5 seconds</td>
               <td class="px-3 py-3.5 text-brand-blue font-medium">~18 clips (Fast)</td>
-              <td class="px-3 py-3.5 pr-4 text-brand-blue font-medium">~26 clips (Pro) / ~61 clips (Creator)</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">~26 clips (Pro)</td>
+              <td class="px-3 py-3.5 pr-4 text-brand-blue font-medium">~61 clips (Creator)</td>
             </tr>
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2.5 (1080p)</td>
               <td class="px-3 py-3.5">30 seconds continuous</td>
               <td class="px-3 py-3.5 font-medium">~2 to 3 long takes (est.)</td>
-              <td class="px-3 py-3.5 pr-4 font-medium">~6 to 8 long takes (est.)</td>
+              <td class="px-3 py-3.5 font-medium">~6 to 8 long takes (est.)</td>
+              <td class="px-3 py-3.5 pr-4 font-medium">~12 to 16 long takes (est.)</td>
             </tr>
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Kling AI 4.0 / 3.0</td>
               <td class="px-3 py-3.5">5s - 10s</td>
               <td class="px-3 py-3.5 font-medium">~5 to 7 clips (est.)</td>
-              <td class="px-3 py-3.5 pr-4 font-medium">~14 to 16 clips (est.)</td>
+              <td class="px-3 py-3.5 font-medium">~14 to 16 clips (est.)</td>
+              <td class="px-3 py-3.5 pr-4 font-medium">~28 to 33 clips (est.)</td>
             </tr>
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Nano Banana Pro</td>
               <td class="px-3 py-3.5">Still Frame</td>
               <td class="px-3 py-3.5 font-medium">~50 images</td>
-              <td class="px-3 py-3.5 pr-4 font-medium">~125 images</td>
+              <td class="px-3 py-3.5 font-medium">~125 images</td>
+              <td class="px-3 py-3.5 pr-4 font-medium">~250 images</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p class="text-xs text-ink-500 mt-2 leading-relaxed">
-        * Note: Yield figures for Seedance 2 Fast (18 clips on Starter) and Seedance 2 (26 clips on Pro, 61 clips on Creator) reflect published official Everygen tier allocations. Long-form continuous 30-second generations are estimated based on token duration multipliers. Kling AI standalone accounts replenish 66 daily credits under Kling's native platform economy (~30–35 credits per 5s generation), which cannot be directly converted to Everygen account tokens.
+        * Note: Yield figures for Seedance 2 Fast (18 clips on Starter) and Seedance 2 (26 clips on Pro, 61 clips on Creator) reflect published official Everygen tier allocations (first-month Pro and Creator bonuses double initial yield to ~52 and ~122 clips respectively). Long-form continuous 30-second generations are estimated based on token duration multipliers. Kling AI standalone accounts replenish 66 daily credits under Kling's native platform economy (~30–35 credits per 5s generation), which cannot be directly converted to Everygen account credits.
       </p>
     </section>
 

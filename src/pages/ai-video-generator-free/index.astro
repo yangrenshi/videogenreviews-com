@@ -40,7 +40,7 @@ const freeTools: ToolComparisonItem[] = [
     name: 'Pika 2.2',
     badge: 'Free Memes',
     score: '6.7',
-    bestFor: 'Starter trial tokens for novelty physics effects (Melt, Inflate, Squish)',
+    bestFor: 'Starter trial credits for novelty physics effects (Melt, Inflate, Squish)',
     freeTier: TOOL_QUOTAS.pika.freeTierCard,
     startingPrice: TOOL_QUOTAS.pika.freePagePrice,
   },
@@ -228,10 +228,10 @@ const breadcrumbSchema = {
         cons={[
           'Free tier exports carry a standard corner watermark logo',
           'No advanced camera trajectory steering on free plan',
-          'Clip duration capped at 4-6 seconds per prompt',
+          'Clip duration capped at 6 to 10 seconds per prompt (standard tier)',
         ]}
         freeTier={TOOL_QUOTAS.minimax.freeTierCard}
-        pricing="Free plan available ($10/mo for Pro privileges)"
+        pricing={TOOL_QUOTAS.minimax.pricingCard}
         visitUrl="/go/hailuo/"
         screenshotUrl="/images/hailuo.webp"
         screenshotCaption="MiniMax H3 Max intuitive generation console accessible without credit card friction."

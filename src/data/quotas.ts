@@ -34,6 +34,7 @@ export const TOOL_QUOTAS = {
     freeTierSummary: 'Daily recurring allowance points (No card required)',
     freeTierCard: 'Daily recurring allowance points (zero card upfront; watermarked)',
     startingPrice: '$10 / mo',
+    pricingCard: 'Free plan available; Pro tier from $10.00 / mo',
     freePagePrice: 'Free (No card required)',
   },
   pixverse: {
