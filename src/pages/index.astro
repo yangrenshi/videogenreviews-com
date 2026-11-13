@@ -4,7 +4,7 @@ import KeyTakeaway from '../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../components/FaqAccordion.astro';
 
 const title = 'Everygen AI (Formerly Viewmax): Models, Free Credits & Pricing';
-const description = 'Comprehensive guide to Everygen AI (Viewmax LLC). Explore supported foundational engines (Kling 4.0, Seedance 2.5), MCP agent integration, and credit rules.';
+const description = 'Comprehensive guide to Everygen AI (Viewmax LLC). Explore supported foundational engines (Kling 4.0, Seedance 2.5), developer API integration, and credit rules.';
 const canonicalPath = '';
 
 const faqs: FaqItem[] = [
@@ -14,9 +14,9 @@ const faqs: FaqItem[] = [
       'Everygen AI is an enterprise-ready multimodal generation suite operated by Viewmax LLC. It orchestrates high-tier text-to-video, image-to-video, and image diffusion backends—including Kling 4.0, Seedance 2.5, MiniMax H3 Max, and Grok Imagine—under one centralized platform.',
   },
   {
-    question: 'Does Everygen AI support MCP (Model Context Protocol)?',
+    question: 'Can Everygen AI be integrated programmatically into developer workflows?',
     answer:
-      'Yes. One of Everygen AI\'s standout architectural features is native Model Context Protocol (MCP) support. This allows developers and power users to generate, iterate, and manage video assets directly inside agentic developer tools like Cursor, Claude Desktop, and ChatGPT without context switching.',
+      'Yes. Everygen AI provides a consolidated API layer across integrated video diffusion backends. This enables technical creators and automated pipelines to dispatch prompts, control resolution and duration, and receive render callbacks programmatically under a unified token billing system.',
   },
   {
     question: 'What is the maximum continuous video duration on Everygen AI?',
@@ -31,7 +31,7 @@ const faqs: FaqItem[] = [
   {
     question: 'How does Everygen AI compare to standalone tools like Runway or Kling?',
     answer:
-      'Everygen AI acts as an aggregation and developer orchestration layer. If you need unified billing across multiple frontier models and programmatic agent access via MCP, Everygen offers substantial efficiency. If you require specialized UI tools like Runway\'s multi-motion brush or Kling\'s daily recurring free tier, standalone access may be preferable.',
+      'Everygen AI acts as an aggregation and orchestration layer. If you need unified billing across multiple frontier models and programmatic pipeline access, Everygen offers substantial convenience. If you require specialized UI tools like Runway\'s multi-motion brush or Kling\'s daily recurring free tier, standalone access may be preferable.',
   },
 ];
 
@@ -86,7 +86,7 @@ const articleSchema = {
       </h1>
 
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
-        An editorial breakdown of Everygen AI by Viewmax LLC: examining supported foundational engines (Kling 4.0, Seedance 2.5, MiniMax H3 Max), 30-second 1080p rendering, and native Model Context Protocol (MCP) client interoperability.
+        An editorial breakdown of Everygen AI by Viewmax LLC: examining supported foundational engines (Kling 4.0, Seedance 2.5, MiniMax H3 Max), 30-second 1080p rendering, and developer pipeline interoperability.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
@@ -233,42 +233,40 @@ const articleSchema = {
         </div>
 
         <div class="rounded-lg border border-paper-300 bg-paper-100 p-5 space-y-2">
-          <h3 class="text-base font-bold text-ink-900">2. Model Context Protocol (MCP) Integration</h3>
+          <h3 class="text-base font-bold text-ink-900">2. Unified Multi-Model Aggregation Architecture</h3>
           <p class="text-sm text-ink-700 leading-relaxed">
-            Everygen natively implements Anthropic\'s open Model Context Protocol. By exposing generation tools as native MCP endpoints, developers and digital artists can synthesize, inspect, and iterate visual clips directly within coding agents like Cursor, Windsurf, or Claude Desktop without leaving their IDE.
+            Rather than locking creators into a single proprietary model weight, Everygen functions as an aggregation pipeline. Users orchestrate prompts, aspect ratios, and resolution parameters across disparate generative engines (Seedance 2.5, Kling 4.0, MiniMax) through a single subscription and credit pool.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- 4. Developer Guide: Setting up Everygen via MCP -->
+    <!-- 4. Developer Pipeline: Programmatic Generation Architecture -->
     <section class="space-y-4 pt-6 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
-        Configuring Everygen via Model Context Protocol (MCP)
+        Programmatic Video Generation Pipeline Architecture
       </h2>
       <p class="text-sm text-ink-700 leading-relaxed">
-        For technical teams integrating generative video into programmatic pipelines, Everygen can be attached as a standard JSON-RPC MCP server. Below is an architectural configuration template for Cursor or Claude Desktop:
+        For technical creators and automated production pipelines integrating generative video into programmatic workflows, Everygen standardizes request payloads across disparate video diffusion engines. Below is an architectural REST implementation illustrating prompt dispatch and model parameter routing:
       </p>
 
       <div class="rounded-lg bg-ink-900 text-gray-100 p-5 font-mono text-xs overflow-x-auto leading-relaxed shadow-sm">
-        <pre><code>{`{
-  "mcpServers": {
-    "everygen-video": {
-      "command": "npx",
-      "args": ["-y", "@everygen/mcp-server"],
-      "env": {
-        "EVERYGEN_API_KEY": "your_api_token_here",
-        "DEFAULT_ENGINE": "seedance-2.5",
-        "DEFAULT_RESOLUTION": "1080p",
-        "DEFAULT_DURATION": "30s"
-      }
-    }
-  }
-}`}</code></pre>
+        <pre><code>{`# Unified Video Generation Request
+curl -X POST "https://api.everygen.ai/v1/video/generations" \\
+  -H "Authorization: Bearer $EVERYGEN_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "engine": "seedance-2.5",
+    "prompt": "Cinematic aerial tracking shot of futuristic harbor at dusk, 4k",
+    "duration_seconds": 30,
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "seed": 42
+  }'`}</code></pre>
       </div>
 
       <p class="text-xs text-ink-500 leading-relaxed">
-        Once connected, conversational prompts such as <em>"Generate an 8-second 1080p tracking camera shot of a futuristic cyberpunk port using Kling 4.0"</em> execute directly within your agentic environment, streaming preview artifacts back to your workspace.
+        Responses return a task token and webhook callback URL, allowing automated rendering jobs to poll status asynchronously or ingest completed MP4 streams directly into rendering pipelines.
       </p>
     </section>
 
@@ -306,7 +304,7 @@ const articleSchema = {
       </h2>
       <div class="space-y-3 text-sm text-ink-800 leading-relaxed">
         <p>
-          If your creative process relies on testing multiple model architectures simultaneously or orchestrating video tasks via autonomous developer agents (MCP), Everygen AI provides substantial consolidation benefits over juggling multiple individual vendor subscriptions.
+          If your creative process relies on testing multiple model architectures simultaneously or orchestrating video tasks via automated programmatic pipelines, Everygen AI provides substantial consolidation benefits over juggling multiple individual vendor subscriptions.
         </p>
         <p>
           However, creators requiring specialized graphical post-production tools—such as Runway\'s granular multi-motion brush or dedicated timeline video editors—may achieve higher precision within standalone creative environments. For an exhaustive breakdown of alternative options, explore our <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Best Everygen AI Alternatives for 2026</a>.
