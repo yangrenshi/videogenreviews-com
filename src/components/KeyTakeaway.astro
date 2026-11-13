@@ -6,9 +6,24 @@ interface Props {
   forScenarioB: string;
   pickC?: string;
   forScenarioC?: string;
+  pickD?: string;
+  forScenarioD?: string;
+  pickE?: string;
+  forScenarioE?: string;
 }
 
-const { pickA, forScenarioA, pickB, forScenarioB, pickC, forScenarioC } = Astro.props;
+const {
+  pickA,
+  forScenarioA,
+  pickB,
+  forScenarioB,
+  pickC,
+  forScenarioC,
+  pickD,
+  forScenarioD,
+  pickE,
+  forScenarioE,
+} = Astro.props;
 ---
 
 <div class="my-8 rounded-lg border border-slate-200 bg-paper-100 p-5 sm:p-6 border-l-4 border-l-brand-blue">
@@ -29,6 +44,16 @@ const { pickA, forScenarioA, pickB, forScenarioB, pickC, forScenarioC } = Astro.
     {pickC && forScenarioC && (
       <p>
         &bull; <strong>For {forScenarioC}:</strong> Go with <span class="text-brand-blue font-bold">{pickC}</span>.
+      </p>
+    )}
+    {pickD && forScenarioD && (
+      <p>
+        &bull; <strong>If you focus on {forScenarioD}:</strong> Select <span class="text-brand-blue font-bold">{pickD}</span>.
+      </p>
+    )}
+    {pickE && forScenarioE && (
+      <p>
+        &bull; <strong>For {forScenarioE}:</strong> Rely on <span class="text-brand-blue font-bold">{pickE}</span>.
       </p>
     )}
   </div>

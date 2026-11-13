@@ -41,7 +41,7 @@ const freeTools: ToolComparisonItem[] = [
     score: '6.7',
     bestFor: 'Starter trial tokens for novelty physics effects (Melt, Inflate, Squish)',
     freeTier: '30 one-time starter credits (~1-2 clips; non-recurring)',
-    startingPrice: 'Credit pack model ($8/mo annual)',
+    startingPrice: '$10 / mo ($8/mo annual; credit packs)',
   },
 ];
 
@@ -54,7 +54,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Can I download free AI-generated videos without watermarks?',
     answer:
-      'Most platforms attach a modest watermark logo to free-tier exports. To obtain pristine unwatermarked video files suitable for client broadcast, upgrading to an entry-level tier ($8-$10/mo) is typically required.',
+      'Almost all platforms (including Kling, MiniMax, and PixVerse) attach a corner watermark to free-tier exports. Certain tools like Pika allow watermark-free trial downloads on initial starter credits, but ongoing unwatermarked video production requires upgrading to an entry-level tier ($8-$10/mo) or purchasing credit packs.',
   },
   {
     question: 'How do fake free AI video trials trap users?',
@@ -149,6 +149,8 @@ const breadcrumbSchema = {
       forScenarioB="clean zero-dollar daily browser generations with ultra-photorealistic human anatomy and native audio"
       pickC="PixVerse V6 (Best Anime & Speed)"
       forScenarioC="fast rendering cycles with 30 daily recurring credits (~1 clip/day) plus 60 one-time signup credits"
+      pickD="Pika 2.2 (Best Creative Effects)"
+      forScenarioD="novelty meme physics (Melt, Squish, Inflate) and watermark-free initial trial outputs"
     />
 
     <!-- Free Tools Table -->
@@ -160,6 +162,9 @@ const breadcrumbSchema = {
         All tools listed below can be tested immediately without submitting billing information.
       </p>
       <ComparisonTable tools={freeTools} />
+      <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
+        * Pricing & allowance notes: Pika and standard credit pack tiers cross-verified against official schedules (November 2026). Kling, MiniMax, and PixVerse reflect published entry tiers, subject to dynamic account onboarding and regional promotion updates.
+      </p>
     </section>
 
     <!-- Top Free Tools Deep-Dive -->
@@ -218,9 +223,10 @@ const breadcrumbSchema = {
         pros={[
           'Instant web generation with zero payment details required',
           'Industry-best natural skin pores and realistic eye movements',
-          'Unobtrusive corner watermark on free exports',
+          'Responsive prompt interpretation and fast standard queue turnaround',
         ]}
         cons={[
+          'Free tier exports carry a standard corner watermark logo',
           'No advanced camera trajectory steering on free plan',
           'Clip duration capped at 4-6 seconds per prompt',
         ]}
@@ -281,11 +287,12 @@ const breadcrumbSchema = {
           'Accessible web interface with zero onboarding friction',
         ]}
         cons={[
+          'Watermark-free exports apply to initial starter credits only; continuous generation requires credit packs',
           'No automatic daily credit refills (relies on credit packs or subscription)',
           'Lower photorealistic fidelity compared to Kling or MiniMax',
         ]}
         freeTier="30 one-time starter credits (~1-2 clips; non-recurring)"
-        pricing="Credit pack top-ups or $10/mo ($8/mo billed annually)"
+        pricing="$10.00 / mo ($8/mo billed annually for Starter; credit packs available)"
         visitUrl="/go/pika/"
       />
     </div>
