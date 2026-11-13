@@ -207,11 +207,11 @@ const breadcrumbSchema = {
           'Native vertical 9:16 aspect ratio support for social shorts',
         ]}
         cons={[
-          'Generation queues can take 8+ minutes on standard tiers during peak hours',
+          'Free-tier rendering queues slow down during peak evening traffic',
           'Strict moderation filtering occasionally rejects benign stylized prompts',
         ]}
         freeTier="66 daily replenishable credits (~2 clips daily)"
-        pricing="$10.00 / mo (Standard tier)"
+        pricing={TOOL_QUOTAS.kling.pricingCard}
         visitUrl="/go/kling/"
         screenshotUrl="/images/kling-ui.webp"
         screenshotCaption="Kling AI 4.0 generation workspace showing prompt input console, duration parameters, and multi-model configuration controls."
@@ -234,7 +234,7 @@ const breadcrumbSchema = {
         pros={[
           'Native 30-second continuous generations without scene resets',
           'Stable architectural perspective and subject geometry',
-          'Consolidated enterprise access via Everygen AI and API backends',
+          'Consolidated enterprise access via Everygen AI and hosted MCP connectors',
         ]}
         cons={[
           'Requires highly descriptive text prompts for sustained sequences',

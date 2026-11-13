@@ -4,7 +4,13 @@
  * 杜绝跨页面手动维护导致的口径不一致问题。
  */
 
-export const BUILD_DATE_ISO = new Date().toISOString().split('T')[0];
+const _now = new Date();
+export const BUILD_DATE_ISO = _now.toISOString().split('T')[0];
+export const BUILD_DATE_DISPLAY = _now.toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+});
 
 export const TOOL_QUOTAS = {
   everygen: {
@@ -16,6 +22,7 @@ export const TOOL_QUOTAS = {
     freeTierSummary: '66 daily recurring credits (~2 clips/day)',
     freeTierCard: '66 daily replenishable credits (~2 clips daily; 30-35 credits each)',
     startingPrice: '$10 / mo',
+    pricingCard: 'Free plan available; Standard tier from $10.00 / mo (watermark-free & priority queue)',
     freePagePrice: 'Free (No card required)',
   },
   seedance: {

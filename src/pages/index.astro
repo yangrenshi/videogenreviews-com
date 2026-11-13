@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import KeyTakeaway from '../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../components/FaqAccordion.astro';
-import { BUILD_DATE_ISO } from '../data/quotas';
+import { BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../data/quotas';
 
 const title = 'Everygen AI (Formerly Viewmax): Models, Free Credits & Pricing';
 const description = 'Comprehensive guide to Everygen AI (Viewmax LLC). Explore supported foundational engines (Kling 4.0, Seedance 2.5), official MCP agent integration, and credit rules.';
@@ -91,7 +91,7 @@ const articleSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {BUILD_DATE_DISPLAY} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
@@ -158,7 +158,7 @@ const articleSchema = {
           <strong>Everygen AI</strong> is an enterprise multimodal synthesis hub developed and operated by <strong>Viewmax LLC</strong>. Originally launched under the product identity <em>Viewmax AI</em>, the suite was formally rebranded to Everygen to signify its technical departure from single-model wrappers toward a high-throughput, multi-engine orchestration architecture.
         </p>
         <p>
-          In the rapidly fragmenting landscape of artificial visual intelligence, creative studios face significant operational overhead managing disconnected subscription tiers, disparate billing APIs, and divergent prompting conventions across multiple vendors. Everygen AI addresses this fragmentation by consolidating leading generative video and visual diffusion backends into a single coordinated console and standardized API gateway.
+          In the rapidly fragmenting landscape of artificial visual intelligence, creative studios face significant operational overhead managing disconnected subscription tiers, disparate billing APIs, and divergent prompting conventions across multiple vendors. Everygen AI addresses this fragmentation by consolidating leading generative video and visual diffusion backends into a single coordinated console and hosted MCP gateway.
         </p>
         <p>
           Rather than training an isolated proprietary foundation model from scratch, Everygen acts as an intelligent inference broker. It routes generative user requests to specialized state-of-the-art weights based on user intent—allocating complex physical human choreographies to <strong>Kling 4.0</strong> (and Kling 3.0 Pro/Turbo via MCP), continuous sustained narrative shots to <strong>Seedance 2.5</strong>, organic human facial portraits with native audio to <strong>MiniMax H3 Max</strong>, expressive sound-synchronized clips to <strong>Grok Imagine</strong>, and rapid generative video workflows to <strong>Gemini Omni 1.1 Flash</strong>.
@@ -243,7 +243,7 @@ const articleSchema = {
         <div class="rounded-lg border border-paper-300 bg-paper-100 p-5 space-y-2">
           <h3 class="text-base font-bold text-ink-900">2. Native Model Context Protocol (MCP) Support</h3>
           <p class="text-sm text-ink-700 leading-relaxed">
-            Everygen natively implements Anthropic\'s open Model Context Protocol. Rather than switching between fragmented browser consoles, developers connect their account to IDE agents like Cursor, Windsurf, or Claude Desktop to generate and iterate video assets within their native coding workflow.
+            Everygen natively implements Anthropic's open Model Context Protocol. Rather than switching between fragmented browser consoles, developers connect their account to IDE agents like Cursor, Windsurf, or Claude Desktop to generate and iterate video assets within their native coding workflow.
           </p>
         </div>
       </div>
@@ -317,7 +317,7 @@ const articleSchema = {
           If your creative process relies on testing multiple model architectures simultaneously or orchestrating video tasks via official developer MCP agents, Everygen AI provides substantial consolidation benefits over juggling multiple individual vendor subscriptions.
         </p>
         <p>
-          However, creators requiring specialized graphical post-production tools—such as Runway\'s granular multi-motion brush or dedicated timeline video editors—may achieve higher precision within standalone creative environments. For an exhaustive breakdown of alternative options, explore our <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Best Everygen AI Alternatives for 2026</a>.
+          However, creators requiring specialized graphical post-production tools—such as Runway's granular multi-motion brush or dedicated timeline video editors—may achieve higher precision within standalone creative environments. For an exhaustive breakdown of alternative options, explore our <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Best Everygen AI Alternatives for 2026</a>.
         </p>
       </div>
     </section>

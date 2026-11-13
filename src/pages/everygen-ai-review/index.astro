@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { BUILD_DATE_ISO } from '../../data/quotas';
+import { BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
 
 const title = 'Everygen AI Review (2026): Performance, MCP & Models Analyzed';
 const description = 'In-depth architectural review of Everygen AI (Viewmax LLC). We analyze multi-engine routing (Seedance 2.5, Kling 4.0), 30s 1080p rendering, and MCP support.';
@@ -114,7 +114,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {BUILD_DATE_DISPLAY} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
