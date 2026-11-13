@@ -11,7 +11,7 @@ const faqs: FaqItem[] = [
   {
     question: 'What is Everygen AI?',
     answer:
-      'Everygen AI is an enterprise-ready multimodal generation suite operated by Viewmax LLC. It orchestrates high-tier text-to-video, image-to-video, and image diffusion backends—including Kling 4.0, Seedance 2.5, MiniMax Hailuo H3, and Grok Imagine—under one centralized platform.',
+      'Everygen AI is an enterprise-ready multimodal generation suite operated by Viewmax LLC. It orchestrates high-tier video generation and multimodal diffusion backends—including Kling 4.0, Seedance 2.5, MiniMax H3 Max, Grok Imagine, and Gemini Omni 1.1 Flash—under one centralized platform.',
   },
   {
     question: 'Does Everygen AI support MCP (Model Context Protocol)?',
@@ -86,7 +86,7 @@ const articleSchema = {
       </h1>
 
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
-        An editorial breakdown of Everygen AI by Viewmax LLC: examining supported foundational engines (Kling 4.0, Seedance 2.5, MiniMax Hailuo H3), 30-second 1080p rendering, and official Model Context Protocol (MCP) agent interoperability.
+        An editorial breakdown of Everygen AI by Viewmax LLC: examining supported foundational engines (Kling 4.0, Seedance 2.5, MiniMax H3 Max, Grok Imagine, Gemini Omni 1.1 Flash), 30-second 1080p rendering, and official Model Context Protocol (MCP) agent interoperability.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
@@ -160,7 +160,7 @@ const articleSchema = {
           In the rapidly fragmenting landscape of artificial visual intelligence, creative studios face significant operational overhead managing disconnected subscription tiers, disparate billing APIs, and divergent prompting conventions across multiple vendors. Everygen AI addresses this fragmentation by consolidating leading generative video and visual diffusion backends into a single coordinated console and standardized API gateway.
         </p>
         <p>
-          Rather than training an isolated proprietary foundation model from scratch, Everygen acts as an intelligent inference broker. It routes generative user requests to specialized state-of-the-art weights based on user intent—allocating complex physical human choreographies to <strong>Kling 4.0</strong>, continuous sustained narrative shots to <strong>Seedance 2.5</strong>, organic human facial portraits to <strong>MiniMax Hailuo H3</strong>, and rapid conceptual stills to <strong>Grok Imagine</strong>.
+          Rather than training an isolated proprietary foundation model from scratch, Everygen acts as an intelligent inference broker. It routes generative user requests to specialized state-of-the-art weights based on user intent—allocating complex physical human choreographies to <strong>Kling 4.0</strong> (and Kling 3.0 Pro/Turbo via MCP), continuous sustained narrative shots to <strong>Seedance 2.5</strong>, organic human facial portraits with native audio to <strong>MiniMax H3 Max</strong>, expressive sound-synchronized clips to <strong>Grok Imagine</strong>, and rapid generative video workflows to <strong>Gemini Omni 1.1 Flash</strong>.
         </p>
       </div>
     </section>
@@ -171,7 +171,7 @@ const articleSchema = {
         Everygen Integrated Engine Capabilities Matrix
       </h2>
       <p class="text-sm text-ink-700 leading-relaxed">
-        Everygen orchestrates four principal foundational engines. The following matrix details native durations, maximum resolutions, image-anchoring constraints, and primary optimal use-cases.
+        Everygen orchestrates five principal foundational video engines. The following matrix details native durations, maximum resolutions, audio/character anchoring constraints, and primary optimal use-cases.
       </p>
 
       <div class="overflow-x-auto rounded-lg border border-paper-300 mt-4">
@@ -181,7 +181,7 @@ const articleSchema = {
               <th scope="col" class="py-3.5 pl-4 pr-3">Model Engine</th>
               <th scope="col" class="px-3 py-3.5">Max Duration</th>
               <th scope="col" class="px-3 py-3.5">Resolution</th>
-              <th scope="col" class="px-3 py-3.5">Character Reference</th>
+              <th scope="col" class="px-3 py-3.5">Key Capability</th>
               <th scope="col" class="px-3 py-3.5 pr-4">Primary Strength</th>
             </tr>
           </thead>
@@ -201,18 +201,25 @@ const articleSchema = {
               <td class="px-3 py-3.5 pr-4">Complex biomechanics, athletic physics & liquid flow</td>
             </tr>
             <tr>
-              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">MiniMax Hailuo H3</td>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">MiniMax H3 Max</td>
               <td class="px-3 py-3.5">6 to 10 seconds</td>
               <td class="px-3 py-3.5">1080p FHD</td>
-              <td class="px-3 py-3.5">Single reference image</td>
+              <td class="px-3 py-3.5">Native audio & facial lock</td>
               <td class="px-3 py-3.5 pr-4">Photorealistic facial anatomy, skin pores & natural eyes</td>
             </tr>
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Grok Imagine</td>
-              <td class="px-3 py-3.5">High-speed stills</td>
-              <td class="px-3 py-3.5">Up to 4K Upscale</td>
-              <td class="px-3 py-3.5">Style reference embedding</td>
-              <td class="px-3 py-3.5 pr-4">Rapid conceptual storyboarding and unconstrained ideation</td>
+              <td class="px-3 py-3.5">Short clips</td>
+              <td class="px-3 py-3.5">1080p FHD</td>
+              <td class="px-3 py-3.5">Synchronized sound</td>
+              <td class="px-3 py-3.5 pr-4">Short video clips generated with native synchronized audio</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Gemini Omni 1.1 Flash</td>
+              <td class="px-3 py-3.5">Multi-scene clips</td>
+              <td class="px-3 py-3.5">1080p FHD</td>
+              <td class="px-3 py-3.5">Multimodal editing</td>
+              <td class="px-3 py-3.5 pr-4">High-speed multimodal video generation and instruction-guided editing</td>
             </tr>
           </tbody>
         </table>

@@ -7,13 +7,14 @@ import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro'
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const title = 'Best AI Video Generators of 2026: 5 Models Compared';
-const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, Hailuo H3, PixVerse V3.5, and Runway Gen-4.5 on physics, control, and credit cost.';
+const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, MiniMax H3 Max, PixVerse V3.5, and Runway Gen-4.5 on physics, control, and credit cost.';
 const canonicalPath = 'best-ai-video-generator';
 
 const pillarTools: ToolComparisonItem[] = [
   {
     name: 'Kling AI 4.0',
     badge: 'Overall #1',
+    score: '8.8',
     bestFor: 'Realistic human biomechanics, gravity, and athletic motion',
     freeTier: '66 daily recurring credits',
     startingPrice: '$10 / mo',
@@ -21,30 +22,34 @@ const pillarTools: ToolComparisonItem[] = [
   {
     name: 'Seedance 2.5',
     badge: 'Best 30s Takes',
+    score: '8.5',
     bestFor: 'Continuous 30-second sequences at native 1080p resolution',
     freeTier: 'Promotional trial credits',
     startingPrice: 'Pay-as-you-go',
   },
   {
-    name: 'MiniMax Hailuo H3',
+    name: 'MiniMax H3 Max',
     badge: 'Best Free Tier',
+    score: '8.3',
     bestFor: 'Photorealistic human skin, micro-expressions & daily free use',
-    freeTier: 'Daily free allowances',
+    freeTier: '~30 daily points (~3 clips)',
     startingPrice: '$10 / mo',
-  },
-  {
-    name: 'Runway Gen-4.5',
-    badge: 'Best VFX Control',
-    bestFor: 'Hollywood camera velocity curves, multi-motion brush & studio VFX',
-    freeTier: '125 one-time credits (~10s)',
-    startingPrice: '$15 / mo ($12/mo annual)',
   },
   {
     name: 'PixVerse V3.5',
     badge: 'Best for Anime',
+    score: '8.2',
     bestFor: 'Stylized anime, fast rendering speeds & vibrant color grading',
-    freeTier: 'Daily login bonus',
+    freeTier: '70 daily check-in credits',
     startingPrice: '$8 / mo',
+  },
+  {
+    name: 'Runway Gen-4.5',
+    badge: 'Best VFX Control',
+    score: '8.0',
+    bestFor: 'Hollywood camera velocity curves, multi-motion brush & studio VFX',
+    freeTier: '125 one-time credits (~10s)',
+    startingPrice: '$15 / mo ($12/mo annual)',
   },
 ];
 
@@ -62,7 +67,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Which tool has the highest quality human faces?',
     answer:
-      'MiniMax Hailuo H3 leads the industry in organic human facial rendering, delivering authentic skin pores and subtle eye micro-expressions without an artificial plastic sheen.',
+      'MiniMax H3 Max leads the industry in organic human facial rendering, delivering authentic skin pores and subtle eye micro-expressions without an artificial plastic sheen.',
   },
 ];
 
@@ -236,11 +241,11 @@ const breadcrumbSchema = {
         buttonLabel="Try Seedance via Everygen"
       />
 
-      <!-- 3. MiniMax Hailuo H3 (8.3 / 10) -->
+      <!-- 3. MiniMax H3 Max (8.3 / 10) -->
       <ToolCard
-        name="MiniMax Hailuo H3"
+        name="MiniMax H3 Max"
         bestForTitle="Best AI video generator for photorealistic faces and free daily use"
-        tagline="Ultra-crisp human faces and buttery-smooth camera pans without synthetic plastic sheen."
+        tagline="Ultra-crisp human faces, native synchronized audio, and smooth camera pans."
         totalScore="8.3"
         metrics={[
           { label: 'Prompt Adherence', score: 8.0 },
@@ -249,17 +254,17 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.1 },
           { label: 'Value / Pricing', score: 8.5 },
         ]}
-        whyChosen="Developed by MiniMax, Hailuo is widely regarded as the benchmark for organic facial rendering. Skin micro-texture, lighting reflections, and subtle eye micro-expressions appear lifelike rather than CGI-rendered, making it a standout for narrative dialogue and cinematic character shots."
+        whyChosen="MiniMax H3 Max (operating on MiniMax's Hailuo architecture) is widely regarded as the benchmark for organic facial rendering and native audio synthesis. Skin micro-texture, lighting reflections, and subtle eye micro-expressions appear lifelike rather than CGI-rendered, making it a standout for narrative dialogue and cinematic character shots."
         pros={[
           'Outstanding skin micro-texture and realistic facial micro-expressions',
-          'Generous daily free generations without credit card verification',
+          'Generous ~30 daily allowance points without credit card verification',
           'Rapid render speed under standard server loads',
         ]}
         cons={[
           'Lacks manual camera sliders or motion brush tooling',
           'Limited fine-grained steering on fast-moving background elements',
         ]}
-        freeTier="Daily replenishing allowance without payment details"
+        freeTier="~30 daily allowance points (~3 standard clips daily; zero card upfront)"
         pricing="$10.00 / mo (Pro subscription)"
         visitUrl="/go/hailuo/"
         screenshotUrl="/images/hailuo.webp"

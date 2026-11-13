@@ -14,30 +14,34 @@ const freeTools: ToolComparisonItem[] = [
   {
     name: 'Kling AI 4.0',
     badge: 'Best Daily Reset',
+    score: '8.8',
     bestFor: 'Daily recurring free video generations without credit card verification',
     freeTier: '66 daily recurring credits (~2 clips daily; 30-35 credits each)',
     startingPrice: 'Free (No card required)',
   },
   {
-    name: 'MiniMax Hailuo H3',
+    name: 'MiniMax H3 Max',
     badge: 'Best Face Realism',
-    bestFor: 'Daily free generations with hyperrealistic facial anatomy',
-    freeTier: 'Daily free allowances',
+    score: '8.3',
+    bestFor: 'Daily free generations with hyperrealistic facial anatomy & native audio',
+    freeTier: '~30 daily points (~3 standard clips daily)',
     startingPrice: 'Free (No card required)',
   },
   {
     name: 'PixVerse V3.5',
     badge: 'Fastest Free',
+    score: '8.2',
     bestFor: 'Daily login bonus credits for anime and stylized video clips',
-    freeTier: 'Daily login bonus',
+    freeTier: '70 daily check-in credits (~2-3 clips daily)',
     startingPrice: 'Free (No card required)',
   },
   {
     name: 'Pika 2.2',
     badge: 'Free Memes',
+    score: '6.7',
     bestFor: 'Starter trial tokens for novelty physics effects (Melt, Inflate, Squish)',
-    freeTier: 'Initial trial credits (Zero watermark)',
-    startingPrice: 'Free ($10/mo monthly, $8/mo annual)',
+    freeTier: '30 one-time starter credits (~1-2 clips; non-recurring)',
+    startingPrice: 'Credit pack model ($8/mo annual)',
   },
 ];
 
@@ -45,7 +49,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Are there completely free AI video generators without credit cards?',
     answer:
-      'Yes. Both Kling AI and MiniMax Hailuo allow you to sign up via standard Google or email authentication without entering credit card details. Kling replenishes 66 credits every midnight, while Hailuo offers daily free generations directly from your browser.',
+      'Yes. Both Kling AI and MiniMax H3 Max allow you to sign up via standard Google or email authentication without entering credit card details. Kling replenishes 66 credits every midnight, while MiniMax offers daily free allowances (~30 points) directly from your browser.',
   },
   {
     question: 'Can I download free AI-generated videos without watermarks?',
@@ -141,10 +145,10 @@ const breadcrumbSchema = {
     <KeyTakeaway
       pickA="Kling AI 4.0 (Best Daily Reset)"
       forScenarioA="refilling 66 free credits automatically every single midnight without entering a credit card"
-      pickB="MiniMax Hailuo H3 (Best Facial Realism)"
-      forScenarioB="clean zero-dollar daily browser generations with ultra-photorealistic human anatomy"
+      pickB="MiniMax H3 Max (Best Facial Realism)"
+      forScenarioB="clean zero-dollar daily browser generations with ultra-photorealistic human anatomy and native audio"
       pickC="PixVerse V3.5 (Best Anime & Speed)"
-      forScenarioC="fast rendering cycles with daily login bonus points"
+      forScenarioC="fast rendering cycles with 70 daily login check-in points"
     />
 
     <!-- Free Tools Table -->
@@ -197,11 +201,11 @@ const breadcrumbSchema = {
         screenshotCaption="Kling AI 4.0 workspace demonstrating free-tier generation parameters and prompt controls."
       />
 
-      <!-- 2. MiniMax Hailuo H3 -->
+      <!-- 2. MiniMax H3 Max -->
       <ToolCard
-        name="MiniMax Hailuo H3"
-        bestForTitle="Best free generator for organic human portraits and zero plastic gloss"
-        tagline="Generous daily browser allowances with industry-leading facial photorealism."
+        name="MiniMax H3 Max"
+        bestForTitle="Best free generator for organic human portraits, native audio and zero plastic gloss"
+        tagline="Generous daily browser allowances (~30 points) with industry-leading facial photorealism."
         totalScore="8.3"
         metrics={[
           { label: 'Prompt Adherence', score: 8.0 },
@@ -210,7 +214,7 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.1 },
           { label: 'Value / Pricing', score: 8.5 },
         ]}
-        whyChosen="MiniMax Hailuo distinguishes itself by eliminating paywall hurdles on first signup. Free users can test realistic portrait prompts directly in the web UI without credit card friction, benefiting from top-tier facial texture and natural lighting."
+        whyChosen="MiniMax H3 Max (powered by MiniMax's Hailuo engine) distinguishes itself by eliminating paywall hurdles on first signup. Free users can test realistic portrait prompts and native synchronized sound directly in the web UI without credit card friction, benefiting from top-tier facial texture and natural lighting."
         pros={[
           'Instant web generation with zero payment details required',
           'Industry-best natural skin pores and realistic eye movements',
@@ -220,18 +224,18 @@ const breadcrumbSchema = {
           'No advanced camera trajectory steering on free plan',
           'Clip duration capped at 4-6 seconds per prompt',
         ]}
-        freeTier="Daily free generations without payment details"
+        freeTier="~30 daily allowance points (~3 standard clips daily)"
         pricing="Free plan available ($10/mo for Pro privileges)"
         visitUrl="/go/hailuo/"
         screenshotUrl="/images/hailuo.webp"
-        screenshotCaption="MiniMax Hailuo intuitive generation console accessible without credit card friction."
+        screenshotCaption="MiniMax H3 Max intuitive generation console accessible without credit card friction."
       />
 
       <!-- 3. PixVerse V3.5 -->
       <ToolCard
         name="PixVerse V3.5"
         bestForTitle="Best free generator for rapid stylized anime and action shorts"
-        tagline="Daily login rewards fueling fast-render stylized visual workflows."
+        tagline="Daily login rewards (70 check-in credits) fueling fast-render stylized visual workflows."
         totalScore="8.2"
         metrics={[
           { label: 'Prompt Adherence', score: 8.6 },
@@ -240,9 +244,9 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.2 },
           { label: 'Value / Pricing', score: 7.3 },
         ]}
-        whyChosen="PixVerse rewards active users with daily login credits. For creators producing anime, stylized gaming shorts, or cyberpunk concept B-roll, PixVerse offers swift generation latencies and vibrant color grading on its free tier."
+        whyChosen="PixVerse rewards active creators with 70 daily check-in credits. For creators producing anime, stylized gaming shorts, or cyberpunk concept B-roll, PixVerse offers swift generation latencies and vibrant color grading on its free tier, yielding ~2-3 short clips daily."
         pros={[
-          'Daily login bonus points replenish active balances',
+          '70 daily check-in credits replenish active balances (~2-3 clips)',
           'Superior visual aesthetics for anime and illustrative styles',
           'Low wait times on generation queues',
         ]}
@@ -250,7 +254,7 @@ const breadcrumbSchema = {
           'Occasional hand warping during complex multi-subject interactions',
           'Audio sound effects feature is currently in preview',
         ]}
-        freeTier="Daily login bonus credits with standard watermark"
+        freeTier="70 daily check-in credits (~2-3 clips daily; standard watermark)"
         pricing="Free plan available ($8/mo for Basic subscription)"
         visitUrl="/go/pixverse/"
         screenshotUrl="/images/pixverse.webp"
@@ -270,7 +274,7 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 7.1 },
           { label: 'Value / Pricing', score: 6.2 },
         ]}
-        whyChosen="Pika 2.2 features creative physics presets (Melt, Inflate, Squish, Explode) tailored for viral meme animations. Unlike many competitors that heavily stamp exports, Pika's Free tier provides watermark-free downloads, though continuous generations require credit packs or Starter plans once initial credits expire."
+        whyChosen="Pika 2.2 features creative physics presets (Melt, Inflate, Squish, Explode) tailored for viral meme animations. Unlike many competitors that stamp watermarks, Pika's Free tier provides watermark-free downloads on initial starter credits (~30 credits). However, unlike Kling or PixVerse, Pika operates on a credit pack model without automatic daily refills."
         pros={[
           'Watermark-free downloads on free trial exports',
           'Unique creative physics effects (Squish, Melt, Inflate, Crush)',
@@ -278,10 +282,10 @@ const breadcrumbSchema = {
         ]}
         cons={[
           'No automatic daily credit refills (relies on credit packs or subscription)',
-          'Lower photorealistic fidelity compared to Kling or Hailuo',
+          'Lower photorealistic fidelity compared to Kling or MiniMax',
         ]}
-        freeTier="Initial starter credits (No watermark; credit pack model)"
-        pricing="Free tier ($10/mo monthly, $8/mo billed annually for Starter)"
+        freeTier="30 one-time starter credits (~1-2 clips; non-recurring)"
+        pricing="Credit pack top-ups or $10/mo ($8/mo billed annually)"
         visitUrl="/go/pika/"
       />
     </div>

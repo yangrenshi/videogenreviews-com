@@ -13,6 +13,7 @@ interface Props {
 }
 
 const { tools } = Astro.props;
+const showScore = tools.some((t) => !!t.score);
 ---
 
 <div class="my-8 overflow-x-auto">
@@ -20,6 +21,7 @@ const { tools } = Astro.props;
     <thead>
       <tr class="border-b-2 border-ink-900 bg-white text-ink-900 font-semibold text-xs uppercase tracking-wider">
         <th class="py-3 px-3 min-w-[140px]">Tool</th>
+        {showScore && <th class="py-3 px-3 min-w-[90px]">Rating</th>}
         <th class="py-3 px-3 min-w-[220px]">Best For</th>
         <th class="py-3 px-3 min-w-[150px]">Free Tier</th>
         <th class="py-3 px-3 min-w-[110px]">Price</th>
@@ -38,6 +40,17 @@ const { tools } = Astro.props;
               )}
             </div>
           </td>
+          {showScore && (
+            <td class="py-3.5 px-3 text-ink-900 font-bold text-xs">
+              {t.score ? (
+                <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold">
+                  {t.score} / 10
+                </span>
+              ) : (
+                <span class="text-ink-400 font-normal">—</span>
+              )}
+            </td>
+          )}
           <td class="py-3.5 px-3 text-ink-700 leading-snug">
             {t.bestFor}
           </td>

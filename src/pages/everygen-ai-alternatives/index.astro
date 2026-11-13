@@ -16,12 +16,13 @@ const atAGlanceTools: ToolComparisonItem[] = [
     name: 'Everygen AI',
     badge: 'Baseline',
     bestFor: 'Multi-engine routing (Kling 4.0, Seedance 2.5) + unified API/credits',
-    freeTier: 'Trial credits on signup',
+    freeTier: '10 demo tokens (paid renders)',
     startingPrice: 'From $9 / mo ($108/yr annual; ~$24/mo monthly)',
   },
   {
     name: 'Kling AI 4.0',
     badge: 'Top Pick',
+    score: '8.8',
     bestFor: 'Realistic human movement, sports action & character reference lock',
     freeTier: '66 daily recurring credits (~2 clips)',
     startingPrice: '$10 / mo',
@@ -29,27 +30,31 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'Seedance 2.5',
     badge: '30s Native',
+    score: '8.5',
     bestFor: 'Continuous 30-second shots with high temporal mass preservation',
-    freeTier: 'Promotional API credits',
+    freeTier: 'Promotional trial credits',
     startingPrice: 'Pay-as-you-go',
   },
   {
-    name: 'MiniMax Hailuo H3',
+    name: 'MiniMax H3 Max',
     badge: 'Best Free',
-    bestFor: 'Photorealistic human skin textures & daily zero-dollar credits',
-    freeTier: 'Daily free refills',
+    score: '8.3',
+    bestFor: 'Photorealistic human skin textures, native audio & daily free use',
+    freeTier: '~30 daily points (~3 clips)',
     startingPrice: '$10 / mo',
   },
   {
     name: 'PixVerse V3.5',
     badge: 'Speed & Anime',
+    score: '8.2',
     bestFor: 'Stylized anime motion, fast rendering latency & daily bonuses',
-    freeTier: 'Daily login bonus',
+    freeTier: '70 daily check-in credits',
     startingPrice: '$8 / mo',
   },
   {
     name: 'Runway Gen-4.5',
     badge: 'Director Grade',
+    score: '8.0',
     bestFor: 'Multi-motion brush, custom camera velocity curves & studio VFX',
     freeTier: '125 one-time credits (~10s)',
     startingPrice: '$15 / mo ($12/mo annual)',
@@ -57,6 +62,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'OpenArt Video',
     badge: 'Canvas Studio',
+    score: '7.7',
     bestFor: 'Multimodal storyboard generation & multi-model style blending',
     freeTier: 'No free plan (Starts at $14/mo)',
     startingPrice: '$14 / mo ($13/mo annual)',
@@ -64,6 +70,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'Luma Ray 3.2',
     badge: 'Cinematic',
+    score: '7.4',
     bestFor: 'Volumetric lighting, golden-hour lens flares & movie-style dolly',
     freeTier: 'Credit-based tier (From $30/mo)',
     startingPrice: 'From $30 / mo ($24/mo annual)',
@@ -71,6 +78,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'Kaiber AI',
     badge: 'Stylized Motion',
+    score: '7.0',
     bestFor: 'Music videos, painterly audioreactive loops & animation keyframes',
     freeTier: 'Free trial allowance',
     startingPrice: '$5 / mo',
@@ -78,16 +86,18 @@ const atAGlanceTools: ToolComparisonItem[] = [
   {
     name: 'Pika 2.2',
     badge: 'VFX Presets',
+    score: '6.7',
     bestFor: 'Viral social media memes, squish, melt, and explosion physics',
-    freeTier: 'Initial trial (No watermark)',
+    freeTier: '30 starter credits (No watermark)',
     startingPrice: '$10 / mo ($8/mo annual)',
   },
   {
     name: 'Viggle AI',
     badge: 'Motion Rig',
+    score: '6.4',
     bestFor: 'Replacing video characters with custom 2D/3D avatars & viral memes',
-    freeTier: '100 starter credits',
-    startingPrice: '$9.99 / mo',
+    freeTier: '5 daily credits (Watermarked)',
+    startingPrice: '$7.99 / mo ($6.39/mo annual)',
   },
 ];
 
@@ -95,12 +105,12 @@ const faqs: FaqItem[] = [
   {
     question: 'Why do creators look for Everygen AI alternatives?',
     answer:
-      'Everygen AI serves as a multi-model aggregator routing prompts to backends like Kling 4.0 and Seedance 2.5 under a unified credit and API layer. Creators compare it with standalone tools to decide between centralized credit pooling versus direct platform perks (such as Kling\'s daily recurring free credits or Runway\'s precision motion brush).',
+      'Everygen AI serves as a multi-model aggregator routing prompts to backends like Kling 4.0, Seedance 2.5, and MiniMax H3 Max under a unified credit and API layer. Creators compare it with standalone tools to decide between centralized credit pooling versus direct platform perks (such as Kling\'s daily recurring free credits or Runway\'s precision motion brush).',
   },
   {
     question: 'Which alternative offers the most generous recurring free credits?',
     answer:
-      'Kling AI and MiniMax Hailuo provide the most generous recurring free credits without asking for upfront credit card verification. Kling replenishes 66 credits every single day (~2 short video clips daily), while Hailuo provides daily free generations upon login.',
+      'Kling AI and MiniMax H3 Max provide the most generous recurring free credits without asking for upfront credit card verification. Kling replenishes 66 credits every single day (~2 short video clips daily), while MiniMax provides daily free allowance points (~30 points daily).',
   },
   {
     question: 'Which tools offer commercial rights on generated outputs?',
@@ -197,7 +207,7 @@ const breadcrumbSchema = {
       forScenarioA="natural physical movements, daily free credits, and reference image conditioning"
       pickB="PixVerse V3.5 & OpenArt"
       forScenarioB="fast creative storyboarding, anime aesthetics, and versatile canvas generation"
-      pickC="MiniMax Hailuo H3"
+      pickC="MiniMax H3 Max"
       forScenarioC="zero-dollar recurring daily credits with photorealistic facial anatomy"
     />
 
@@ -283,11 +293,11 @@ const breadcrumbSchema = {
         buttonLabel="Try Seedance via Everygen"
       />
 
-      <!-- 3. MiniMax Hailuo H3 (8.3 / 10) -->
+      <!-- 3. MiniMax H3 Max (8.3 / 10) -->
       <ToolCard
-        name="MiniMax Hailuo H3"
-        bestForTitle="Best free Everygen alternative for photorealistic faces and skin micro-textures"
-        tagline="Ultra-crisp human faces and buttery-smooth camera pans without synthetic plastic sheen."
+        name="MiniMax H3 Max"
+        bestForTitle="Best free Everygen alternative for photorealistic faces, native audio and skin micro-textures"
+        tagline="Ultra-crisp human faces, native synchronized audio, and smooth camera pans."
         totalScore="8.3"
         metrics={[
           { label: 'Prompt Adherence', score: 8.0 },
@@ -296,21 +306,21 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.1 },
           { label: 'Value / Pricing', score: 8.5 },
         ]}
-        whyChosen="Developed by MiniMax, Hailuo is widely regarded as one of the best generators for human faces. Skin texture, lighting reflections, and subtle facial micro-expressions look natural rather than AI-generated, making it a standout choice for creators on a zero-dollar budget."
+        whyChosen="MiniMax H3 Max (operating on MiniMax's Hailuo engine) is widely regarded as one of the best generators for human faces and native synchronized speech. Skin texture, lighting reflections, and subtle facial micro-expressions look natural rather than AI-generated, making it a standout choice for creators on a zero-dollar budget."
         pros={[
           'Outstanding skin texture and realistic facial micro-expressions',
-          'Generous daily free generations without credit card verification',
+          'Generous ~30 daily allowance points (~3 clips daily) without credit card verification',
           'Rapid render speed under standard server loads',
         ]}
         cons={[
           'Lacks manual camera sliders or motion brush tooling',
           'Limited fine-grained steering on fast-moving background elements',
         ]}
-        freeTier="Daily replenishing allowance without payment details"
+        freeTier="~30 daily allowance points (~3 standard clips daily)"
         pricing="$10.00 / mo (Pro subscription)"
         visitUrl="/go/hailuo/"
         screenshotUrl="/images/hailuo.webp"
-        screenshotCaption="MiniMax Hailuo clean prompt input interface with real-time generation options and intuitive camera settings."
+        screenshotCaption="MiniMax H3 Max clean prompt input interface with real-time generation options and intuitive camera settings."
       />
 
       <!-- 4. PixVerse V3.5 (8.2 / 10) -->
@@ -509,8 +519,8 @@ const breadcrumbSchema = {
           'Specialized strictly in character motion — cannot generate landscapes, environments, or cinematic B-roll',
           'Background blending frequently requires manual post-production alpha cleanup',
         ]}
-        freeTier="100 free starter credits upon joining"
-        pricing="$9.99 / mo (Pro creator plan)"
+        freeTier="5 daily recurring credits (Watermarked; refreshes daily)"
+        pricing="$7.99 / mo ($6.39/mo billed annually; regular was $9.99)"
         visitUrl="/go/viggle/"
       />
     </div>
