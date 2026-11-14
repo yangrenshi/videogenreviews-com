@@ -22,7 +22,6 @@ export default defineConfig({
         ) {
           item.lastmod = '2026-11-12';
         } else if (
-          url.endsWith('/methodology/') ||
           url.endsWith('/author/david-chen/') ||
           url.endsWith('/viewmax-ai/')
         ) {
