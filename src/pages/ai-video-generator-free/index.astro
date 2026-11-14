@@ -163,7 +163,7 @@ const breadcrumbSchema = {
       </p>
       <ComparisonTable tools={freeTools} />
       <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
-        * Pricing & allowance notes: Pika and standard credit pack tiers cross-verified against official schedules (November 2026). Kling, MiniMax, and PixVerse allowances are subject to dynamic account onboarding and regional promotion updates (verified November 2026).
+        * Pricing & allowance notes: Pika and standard credit pack tiers cross-verified against official schedules (November 2026). Kling, MiniMax, and PixVerse reflect published entry tiers as of November 2026, subject to regional promotion changes.
       </p>
     </section>
 
@@ -209,7 +209,7 @@ const breadcrumbSchema = {
       <!-- 2. MiniMax H3 Max -->
       <ToolCard
         name="MiniMax H3 Max"
-        bestForTitle="Best free generator for organic human portraits, native audio and zero plastic gloss"
+        bestForTitle="Best free-to-try generator for organic human portraits, native audio and zero plastic gloss"
         tagline="One-time free trial credits on signup with industry-leading facial photorealism."
         totalScore="8.3"
         metrics={[
@@ -261,7 +261,7 @@ const breadcrumbSchema = {
           'Pristine 1080p watermark-free downloads require paid plan upgrades',
         ]}
         freeTier="30 daily recurring credits (+60 one-time signup bonus; 540p; watermarked)"
-        pricing="Free plan available (Starter $10/mo; $1 3-day trial)"
+        pricing={TOOL_QUOTAS.pixverse.pricingCard}
         visitUrl="/go/pixverse/"
         screenshotUrl="/images/pixverse.webp"
         screenshotCaption="PixVerse V6 studio creation interface showing daily credit workflow."
@@ -270,7 +270,7 @@ const breadcrumbSchema = {
       <!-- 4. Pika 2.2 -->
       <ToolCard
         name="Pika 2.2"
-        bestForTitle="Best free tool for creative meme effects and squish physics"
+        bestForTitle="Best free-to-try tool for creative meme effects and squish physics"
         tagline="Novelty visual physics tools with watermark-free trial exports."
         totalScore="6.7"
         metrics={[

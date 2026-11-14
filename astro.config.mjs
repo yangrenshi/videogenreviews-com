@@ -27,6 +27,13 @@ export default defineConfig({
           url.endsWith('/viewmax-ai/')
         ) {
           item.lastmod = '2026-11-13';
+        } else if (
+          url.endsWith('/everygen-ai-pricing/') ||
+          url.endsWith('/everygen-ai-alternatives/') ||
+          url.endsWith('/best-ai-video-generator/') ||
+          url.endsWith('/ai-video-generator-free/')
+        ) {
+          item.lastmod = '2026-11-15';
         } else {
           item.lastmod = '2026-11-14';
         }

@@ -38,7 +38,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   },
   {
     name: 'MiniMax H3 Max',
-    badge: 'Best Free',
+    badge: 'Best One-Time Trial',
     score: '8.3',
     bestFor: 'Photorealistic human skin textures, native audio & portrait realism',
     freeTier: TOOL_QUOTAS.minimax.freeTierSummary,
@@ -221,7 +221,7 @@ const breadcrumbSchema = {
       </p>
       <ComparisonTable tools={atAGlanceTools} />
       <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
-        * Pricing audit notes: Everygen AI, Runway, OpenArt, Pika, Viggle, and Luma schedules directly cross-verified against official published documentation (November 2026). Kling, MiniMax, PixVerse, and Kaiber figures are subject to dynamic account onboarding and regional promotions (verified November 2026). Seedance 2.5 is accessed and billed through Everygen AI subscription tiers.
+        * Pricing audit notes: Everygen AI, Runway, OpenArt, Pika, Viggle, and Luma schedules directly cross-verified against official published documentation (November 2026). Kling, MiniMax, PixVerse, and Kaiber reflect published entry tiers as of November 2026, subject to regional promotion changes. Seedance 2.5 is accessed and billed through Everygen AI subscription tiers.
       </p>
     </section>
 
@@ -296,7 +296,7 @@ const breadcrumbSchema = {
       <!-- 3. MiniMax H3 Max (8.3 / 10) -->
       <ToolCard
         name="MiniMax H3 Max"
-        bestForTitle="Best free Everygen alternative for photorealistic faces, native audio and skin micro-textures"
+        bestForTitle="Best free-to-try Everygen alternative for photorealistic faces"
         tagline="Ultra-crisp human faces, native synchronized audio, and smooth camera pans."
         totalScore="8.3"
         metrics={[
@@ -306,7 +306,7 @@ const breadcrumbSchema = {
           { label: 'Motion Quality', score: 8.1 },
           { label: 'Value / Pricing', score: 8.5 },
         ]}
-        whyChosen="MiniMax H3 Max (operating on MiniMax's Hailuo engine) is widely regarded as one of the best generators for human faces and native synchronized speech. Skin texture, lighting reflections, and subtle facial micro-expressions look natural rather than AI-generated, making it a standout choice for creators on a zero-dollar budget."
+        whyChosen="MiniMax H3 Max (operating on MiniMax's Hailuo engine) is widely regarded as one of the best generators for human faces and native synchronized speech. Skin texture, lighting reflections, and subtle facial micro-expressions look natural rather than AI-generated, making it a standout choice for creators testing with a zero-card signup trial."
         pros={[
           'Outstanding skin texture and realistic facial micro-expressions',
           'One-time free trial credits on signup without credit card verification',
@@ -347,7 +347,7 @@ const breadcrumbSchema = {
           'Clean 1080p watermark-free exports require a paid plan upgrade',
         ]}
         freeTier="30 daily recurring credits (+60 one-time signup bonus; 540p; watermarked)"
-        pricing="Free plan available; Starter from $10 / mo ($1 3-day trial)"
+        pricing={TOOL_QUOTAS.pixverse.pricingCard}
         visitUrl="/go/pixverse/"
         screenshotUrl="/images/pixverse.webp"
         screenshotCaption="PixVerse V6 creative studio console displaying video generation settings, motion styles, and aspect ratio controls."
@@ -463,7 +463,7 @@ const breadcrumbSchema = {
           'Camera perspective can shift during extreme style transformations',
         ]}
         freeTier="Initial free trial credits upon onboarding"
-        pricing="$5.00 / mo (Explorer plan)"
+        pricing={TOOL_QUOTAS.kaiber.pricingCard}
         visitUrl="/go/kaiber/"
       />
 

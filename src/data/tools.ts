@@ -25,6 +25,8 @@ export interface ToolSpec {
   freePagePrice?: string;
   startingPrice: string;
   pricingCard?: string;
+  pricingSourceUrl?: string;
+  pricingScreenshotUrl?: string;
   duration: ToolDurationSpec;
   maxDuration: string;
 }
@@ -71,6 +73,8 @@ export const TOOLS_DATA = {
     startingPrice: '$10 / mo',
     pricingCard: 'Free plan available; Standard tier from $10.00 / mo (watermark-free & priority queue)',
     freePagePrice: 'Free (No card required)',
+    pricingSourceUrl: 'https://kling.ai/app/membership/membership-plan?r=26',
+    pricingScreenshotUrl: '/images/pricing/kling-pricing.png',
     duration: {
       perGeneration: '5–10s',
       platformComposed: 'up to 30s',
@@ -114,6 +118,8 @@ export const TOOLS_DATA = {
     startingPrice: '$14.99 / mo (est. $8.40/mo annual)',
     pricingCard: 'No free plan (one-time signup trial only); Standard tier from $14.99 / mo (est. $8.40/mo annual)',
     freePagePrice: 'Free (No card required)',
+    pricingSourceUrl: 'https://hailuoai.video/zh-Intl/subscribe',
+    pricingScreenshotUrl: '/images/pricing/hailuo-pricing.png',
     duration: {
       perGeneration: '6 to 10 seconds',
       display: '6 to 10 seconds',
@@ -133,9 +139,11 @@ export const TOOLS_DATA = {
     ],
     freeTierSummary: '30 daily credits (+60 signup bonus; 540p)',
     freeTierCard: '30 daily recurring credits (+60 one-time signup bonus; 540p; watermarked)',
-    startingPrice: '$10 / mo ($1 3-day trial)',
-    pricingCard: 'Free plan available; Starter from $10 / mo ($1 3-day trial)',
+    startingPrice: '$10 / mo',
+    pricingCard: 'Free plan available (Starter $10/mo)',
     freePagePrice: 'Free (No card required)',
+    pricingSourceUrl: 'https://www.pixara.ai/pricing',
+    pricingScreenshotUrl: '/images/pricing/pixverse-pricing.png',
     duration: {
       native: '15s',
       display: '15 seconds continuous (1080p)',
@@ -215,6 +223,9 @@ export const TOOLS_DATA = {
     freeTierSummary: 'Free trial allowance',
     freeTierCard: 'Initial free trial credits upon onboarding',
     startingPrice: '$10 / mo',
+    pricingCard: '$10.00 / mo (Starter plan; 500 credits/mo)',
+    pricingSourceUrl: 'https://kaiber.ai/pricing',
+    pricingScreenshotUrl: '/images/pricing/kaiber-pricing.png',
     duration: {
       display: 'Audio-synced variable length',
     },
