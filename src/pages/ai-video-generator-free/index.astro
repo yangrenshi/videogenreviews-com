@@ -163,7 +163,7 @@ const breadcrumbSchema = {
       </p>
       <ComparisonTable tools={freeTools} />
       <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
-        * Pricing &amp; allowance notes: Pika and standard credit pack tiers cross-verified against official schedules (November 2026). Kling ($10/mo Standard, 660 credits/mo via <a href="https://kling.ai/app/membership/membership-plan?r=26" target="_blank" rel="nofollow noopener noreferrer" class="underline">kling.ai</a> &middot; <a href="/images/pricing/kling-pricing.png" target="_blank" class="underline">pricing screenshot</a>), MiniMax Hailuo ($14.99/mo Standard or $8.40/mo annual at $100.80/yr, 1,000 shells/mo via <a href="https://hailuoai.video/zh-Intl/subscribe" target="_blank" rel="nofollow noopener noreferrer" class="underline">hailuoai.video</a> &middot; <a href="/images/pricing/hailuo-pricing.png" target="_blank" class="underline">pricing screenshot</a>), and PixVerse ($10/mo Starter, 4,000 credits/mo via <a href="https://www.pixara.ai/pricing" target="_blank" rel="nofollow noopener noreferrer" class="underline">pixara.ai/pricing</a> &middot; <a href="/images/pricing/pixverse-pricing.png" target="_blank" class="underline">pricing screenshot</a>) reflect published entry tiers as of November 2026, subject to regional promotion changes.
+        * Pricing &amp; allowance notes: Pika paid tiers start at $10/mo. Kling Standard $10/mo (660 monthly credits; unlocks watermark-free exports and priority queue, on top of the 66-credit daily allowance via <a href="https://kling.ai/app/membership/membership-plan?r=26" target="_blank" rel="nofollow noopener noreferrer" class="underline">kling.ai</a> &middot; <a href="/images/pricing/kling-pricing.png" target="_blank" class="underline">pricing screenshot</a>), MiniMax Hailuo ($14.99/mo Standard or $8.40/mo billed annually at $100.80/yr &mdash; 44% off, 1,000 shells/mo via <a href="https://hailuoai.video/subscribe" target="_blank" rel="nofollow noopener noreferrer" class="underline">hailuoai.video</a> &middot; <a href="/images/pricing/hailuo-pricing.png" target="_blank" class="underline">pricing screenshot</a>), and PixVerse (free Basic plan; see <a href="https://pixverse.ai/" target="_blank" rel="nofollow noopener noreferrer" class="underline">pixverse.ai</a> for current paid tiers) reflect published entry tiers as of November 2026, subject to regional promotion changes.
       </p>
     </section>
 
@@ -292,7 +292,7 @@ const breadcrumbSchema = {
           'Lower photorealistic fidelity compared to Kling or MiniMax',
         ]}
         freeTier="Starter trial credits (credit pack model; no daily refill)"
-        pricing="$10.00 / mo ($8/mo billed annually for Starter; credit packs available)"
+        pricing={TOOL_QUOTAS.pika.startingPrice}
         visitUrl="/go/pika/"
       />
     </div>
