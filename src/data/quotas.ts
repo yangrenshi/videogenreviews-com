@@ -18,8 +18,13 @@ export const PAGE_DATES = {
   alternatives: { iso: '2026-11-14', display: 'November 14, 2026' },
   best: { iso: '2026-11-14', display: 'November 14, 2026' },
   free: { iso: '2026-11-14', display: 'November 14, 2026' },
-  viewmax: { iso: '2026-11-14', display: 'November 14, 2026' },
+  viewmax: { iso: '2026-11-13', display: 'November 13, 2026' },
   methodology: { iso: '2026-11-13', display: 'November 13, 2026' },
+  authorDavidChen: { iso: '2026-11-13', display: 'November 13, 2026' },
+  about: { iso: '2026-11-12', display: 'November 12, 2026' },
+  contact: { iso: '2026-11-12', display: 'November 12, 2026' },
+  privacyPolicy: { iso: '2026-11-12', display: 'November 12, 2026' },
+  affiliateDisclosure: { iso: '2026-11-12', display: 'November 12, 2026' },
 } as const;
 
 export const BUILD_DATE_ISO = PAGE_DATES.home.iso;

@@ -5,7 +5,7 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { TOOL_QUOTAS, TOOLS_DATA, SHARED_FAQ_ANSWERS, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
+import { TOOL_QUOTAS, TOOLS_DATA, SHARED_FAQ_ANSWERS, PAGE_DATES } from '../../data/quotas';
 
 const title = 'Best Free AI Video Generators (2026): Daily Credits & No Card Needed';
 const description = 'Compare the best free AI video generators in 2026: Kling AI (66 daily credits), PixVerse V6 (30 daily), plus one-time zero-card trial tools like MiniMax H3 Max and Pika 2.2.';
@@ -92,7 +92,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-13',
-  dateModified: BUILD_DATE_ISO,
+  dateModified: PAGE_DATES.free.iso,
 };
 
 const breadcrumbSchema = {
@@ -138,7 +138,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated {BUILD_DATE_DISPLAY} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {PAGE_DATES.free.display} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
@@ -156,21 +156,21 @@ const breadcrumbSchema = {
     <!-- Free Tools Table -->
     <section class="my-10">
       <h2 class="text-xl sm:text-2xl font-bold text-ink-900 tracking-tight mb-1">
-        Genuinely free AI video generators compared
+        Free AI Video Generators Compared: Daily Credits vs One-Time Trials
       </h2>
       <p class="text-xs sm:text-sm text-ink-600 mb-4">
         All tools listed below can be tested immediately without submitting billing information.
       </p>
       <ComparisonTable tools={freeTools} />
       <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
-        * Pricing & allowance notes: Pika and standard credit pack tiers cross-verified against official schedules (November 2026). Kling, MiniMax, and PixVerse reflect published entry tiers, subject to dynamic account onboarding and regional promotion updates.
+        * Pricing & allowance notes: Pika and standard credit pack tiers cross-verified against official schedules (November 2026). Kling, MiniMax, and PixVerse allowances are subject to dynamic account onboarding and regional promotion updates (verified November 2026).
       </p>
     </section>
 
     <!-- Top Free Tools Deep-Dive -->
     <div class="space-y-4 my-12">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-ink-900 tracking-tight mb-2">
-        Top 4 free platforms evaluated
+        Top 4 zero-card platforms evaluated
       </h2>
       <p class="text-sm text-ink-600 mb-8">
         Detailed breakdown of daily recurring and one-time signup trial allowances, watermark restrictions, and renewal mechanics.

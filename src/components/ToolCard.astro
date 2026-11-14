@@ -41,7 +41,7 @@ const {
 const numScore = parseFloat(totalScore);
 ---
 
-<section class="border-t border-paper-300 pt-10 pb-8 space-y-6">
+<section id={name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')} class="border-t border-paper-300 pt-10 pb-8 space-y-6">
   <!-- Zapier 风格场景大标题 -->
   <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
     <div>

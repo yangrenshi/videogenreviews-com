@@ -5,7 +5,7 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { TOOL_QUOTAS, TOOLS_DATA, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
+import { TOOL_QUOTAS, TOOLS_DATA, PAGE_DATES } from '../../data/quotas';
 
 const title = 'Best AI Video Generators of 2026: 5 Models Compared';
 const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, MiniMax H3 Max, PixVerse V6, and Runway Gen-4.5 on physics, control, and credit cost.';
@@ -101,7 +101,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-13',
-  dateModified: BUILD_DATE_ISO,
+  dateModified: PAGE_DATES.best.iso,
 };
 
 const breadcrumbSchema = {
@@ -147,7 +147,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated {BUILD_DATE_DISPLAY} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {PAGE_DATES.best.display} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
@@ -174,7 +174,7 @@ const breadcrumbSchema = {
       </p>
       <ComparisonTable tools={pillarTools} />
       <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
-        * Pricing audit notes: Runway schedule directly cross-verified against official published documentation (November 2026). Kling, MiniMax H3 Max, and PixVerse V6 reflect published standard entry tiers, subject to dynamic onboarding promotions. Seedance 2.5 is accessed and billed through Everygen AI subscription tiers.
+        * Pricing audit notes: Runway schedule directly cross-verified against official published documentation (November 2026). Kling, MiniMax H3 Max, and PixVerse V6 figures are subject to dynamic onboarding promotions and regional tier updates (verified November 2026). Seedance 2.5 is accessed and billed through Everygen AI subscription tiers.
       </p>
     </section>
 
