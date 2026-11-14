@@ -243,8 +243,8 @@ export const TOOLS_DATA = {
     ],
     freeTierSummary: 'Starter trial credits (No watermark; credit packs)',
     freeTierCard: 'Starter trial credits (credit pack model; no daily refill)',
-    startingPrice: '$10 / mo (credit packs available)',
-    freePagePrice: 'Free (Trial allowance) · paid from $10/mo',
+    startingPrice: '$10 / mo ($8/mo billed annually; credit packs available)',
+    freePagePrice: 'Free (Trial allowance) · paid from $10/mo ($8/mo annual)',
     duration: {
       perGeneration: '5s',
       display: '5 seconds',
