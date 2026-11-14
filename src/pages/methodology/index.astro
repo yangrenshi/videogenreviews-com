@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
+import { PAGE_DATES } from '../../data/quotas';
 
 const title = 'Evaluation Methodology & Scoring Framework | VideoGen Reviews';
 const description = 'How VideoGen Reviews evaluates generative AI video tools. Detailed breakdown of our 5 architectural criteria, 10-point scoring weights, and editorial standards.';
@@ -23,7 +23,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-12',
-  dateModified: BUILD_DATE_ISO,
+  dateModified: PAGE_DATES.methodology.iso,
 };
 
 const breadcrumbSchema = {
@@ -69,7 +69,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated {BUILD_DATE_DISPLAY} &bull; Published by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {PAGE_DATES.methodology.display} &bull; Published by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 

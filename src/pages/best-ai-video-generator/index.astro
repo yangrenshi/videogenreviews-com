@@ -63,7 +63,7 @@ const faqs: FaqItem[] = [
   {
     question: 'Can AI video generators produce videos longer than 10 seconds?',
     answer:
-      'Yes. Frontier diffusion engines such as Seedance 2.5 and Kling 4.0 natively generate continuous 30-second sequences at 1080p resolution without abrupt jump cuts or temporal mass loss.',
+      'Yes. Seedance 2.5 natively generates continuous 30-second sequences at 1080p resolution without abrupt jump cuts or temporal mass loss, while Kling 4.0 renders 5–10s clips per generation that can be composed up to 30 seconds in platform workflows.',
   },
   {
     question: 'Which tool has the highest quality human faces?',
@@ -191,7 +191,7 @@ const breadcrumbSchema = {
       <ToolCard
         name="Kling AI 4.0"
         bestForTitle="Best AI video generator for realistic human motion and physics"
-        tagline="Advanced diffusion physics with reference-image conditioning and up to 30-second generations."
+        tagline="Advanced diffusion physics with reference-image conditioning (5–10s per generation; platform composes up to 30s)."
         totalScore="8.9"
         metrics={[
           { label: 'Prompt Adherence', score: 9.2 },

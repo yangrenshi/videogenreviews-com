@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import KeyTakeaway from '../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../components/FaqAccordion.astro';
-import { BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../data/quotas';
+import { TOOLS_DATA, PAGE_DATES } from '../data/quotas';
 
 const title = 'Everygen AI (Formerly Viewmax): Models, Free Credits & Pricing';
 const description = 'Comprehensive guide to Everygen AI (Viewmax LLC). Explore 5 engines (Kling 4.0, Seedance 2.5, MiniMax H3 Max, Grok Imagine, Gemini Omni 1.1 Flash) & MCP.';
@@ -22,7 +22,7 @@ const faqs: FaqItem[] = [
   {
     question: 'What is the maximum continuous video duration on Everygen AI?',
     answer:
-      'Unlike first-generation generators capped at 4 or 5 seconds, Everygen supports up to 30-second generations at 1080p resolution on modern integrated engines such as Seedance 2.5 and Kling 4.0 with reference image conditioning.',
+      'Unlike first-generation generators capped at 4 or 5 seconds, Everygen supports native 30-second continuous generations at 1080p resolution on Seedance 2.5, while Kling 4.0 renders 5–10s clips per generation that can be composed up to 30 seconds on the platform with reference image conditioning.',
   },
   {
     question: 'How do free credits and trial quotas work on Everygen AI?',
@@ -65,7 +65,7 @@ const articleSchema = {
     url: 'https://videogenreviews.com',
   },
   datePublished: '2026-11-12',
-  dateModified: BUILD_DATE_ISO,
+  dateModified: PAGE_DATES.home.iso,
 };
 ---
 
@@ -91,7 +91,7 @@ const articleSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated {BUILD_DATE_DISPLAY} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {PAGE_DATES.home.display} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
@@ -189,14 +189,14 @@ const articleSchema = {
           <tbody class="divide-y divide-paper-300 bg-white text-ink-700">
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Seedance 2.5</td>
-              <td class="px-3 py-3.5 text-brand-blue font-medium">30 seconds</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">{TOOLS_DATA.seedance.duration.display}</td>
               <td class="px-3 py-3.5">1080p FHD</td>
               <td class="px-3 py-3.5">Dual-frame keyframing</td>
               <td class="px-3 py-3.5 pr-4">Long-form continuous sequences without scene drift</td>
             </tr>
             <tr>
               <td class="py-3.5 pl-4 pr-3 font-semibold text-ink-900">Kling AI 4.0</td>
-              <td class="px-3 py-3.5 text-brand-blue font-medium">30 seconds</td>
+              <td class="px-3 py-3.5 text-brand-blue font-medium">{TOOLS_DATA.kling.duration.display}</td>
               <td class="px-3 py-3.5">1080p FHD</td>
               <td class="px-3 py-3.5">Multi-angle facial lock</td>
               <td class="px-3 py-3.5 pr-4">Complex biomechanics, athletic physics & liquid flow</td>
@@ -236,7 +236,7 @@ const articleSchema = {
         <div class="rounded-lg border border-paper-300 bg-paper-100 p-5 space-y-2">
           <h3 class="text-base font-bold text-ink-900">1. Long-Form 30-Second 1080p Generation</h3>
           <p class="text-sm text-ink-700 leading-relaxed">
-            While consumer video diffusion tools historically restricted clip outputs to brief 4 or 5-second bursts, Everygen leverages continuous temporal sequence synthesis through Seedance 2.5 and Kling 4.0. Characters maintain anatomical proportions, cloth simulation physics remain coherent, and background geometry remains anchored across full 30-second takes.
+            While consumer video diffusion tools historically restricted clip outputs to brief 4 or 5-second bursts, Everygen delivers native 30-second continuous temporal synthesis through Seedance 2.5, alongside 5–10s high-physics Kling 4.0 generations composable up to 30 seconds. Characters maintain anatomical proportions, cloth simulation physics remain coherent, and background geometry remains anchored across full 30-second takes.
           </p>
         </div>
 
