@@ -33,8 +33,8 @@ export const TOOL_QUOTAS = {
   minimax: {
     freeTierSummary: 'One-time free trial credits (No card required)',
     freeTierCard: 'One-time free trial credits on signup (Hailuo models; zero card upfront)',
-    startingPrice: '$14.99 / mo ($8.40/mo annual)',
-    pricingCard: 'Free plan available; Standard tier from $14.99 / mo ($8.40/mo annual)',
+    startingPrice: '$14.99 / mo (est. $8.40/mo annual)',
+    pricingCard: 'Free plan available; Standard tier from $14.99 / mo (est. $8.40/mo annual)',
     freePagePrice: 'Free (No card required)',
   },
   pixverse: {
@@ -56,7 +56,7 @@ export const TOOL_QUOTAS = {
   luma: {
     freeTierSummary: 'No free tier (paid from $30/mo)',
     freeTierCard: 'No free tier (paid from $30/mo)',
-    startingPrice: 'From $30 / mo ($24/mo annual)',
+    startingPrice: 'From $30 / mo (est. $24/mo annual)',
   },
   kaiber: {
     freeTierSummary: 'Free trial allowance',
@@ -72,7 +72,7 @@ export const TOOL_QUOTAS = {
   viggle: {
     freeTierSummary: '5 daily credits (Watermarked)',
     freeTierCard: '5 daily free credits (Watermarked)',
-    startingPrice: '$7.99 / mo ($6.39/mo annual)',
+    startingPrice: '$7.99 / mo (est. $6.39/mo annual)',
   },
 } as const;
 
