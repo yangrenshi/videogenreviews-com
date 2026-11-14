@@ -5,7 +5,7 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { TOOL_QUOTAS, BUILD_DATE_ISO } from '../../data/quotas';
+import { TOOL_QUOTAS, TOOLS_DATA, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
 
 const title = 'Best AI Video Generators of 2026: 5 Models Compared';
 const description = 'Compare the top 5 AI video generators in 2026. Side-by-side evaluation of Kling 4.0, Seedance 2.5, MiniMax H3 Max, PixVerse V6, and Runway Gen-4.5 on physics, control, and credit cost.';
@@ -15,7 +15,7 @@ const pillarTools: ToolComparisonItem[] = [
   {
     name: 'Kling AI 4.0',
     badge: 'Overall #1',
-    score: '8.9',
+    score: TOOLS_DATA.kling.totalScore,
     bestFor: 'Realistic human biomechanics, gravity, and athletic motion',
     freeTier: TOOL_QUOTAS.kling.freeTierSummary,
     startingPrice: TOOL_QUOTAS.kling.startingPrice,
@@ -23,15 +23,15 @@ const pillarTools: ToolComparisonItem[] = [
   {
     name: 'Seedance 2.5',
     badge: 'Best 30s Takes',
-    score: '8.5',
+    score: TOOLS_DATA.seedance.totalScore,
     bestFor: 'Continuous 30-second sequences at native 1080p resolution',
     freeTier: TOOL_QUOTAS.seedance.freeTierSummary,
     startingPrice: TOOL_QUOTAS.seedance.startingPrice,
   },
   {
     name: 'MiniMax H3 Max',
-    badge: 'Best Free Tier',
-    score: '8.3',
+    badge: 'Best One-Time Trial',
+    score: TOOLS_DATA.minimax.totalScore,
     bestFor: 'Photorealistic human skin, micro-expressions & native audio',
     freeTier: TOOL_QUOTAS.minimax.freeTierSummary,
     startingPrice: TOOL_QUOTAS.minimax.startingPrice,
@@ -39,7 +39,7 @@ const pillarTools: ToolComparisonItem[] = [
   {
     name: 'PixVerse V6',
     badge: 'Best for Anime',
-    score: '8.2',
+    score: TOOLS_DATA.pixverse.totalScore,
     bestFor: 'Stylized anime, fast rendering speeds & vibrant color grading',
     freeTier: TOOL_QUOTAS.pixverse.freeTierSummary,
     startingPrice: TOOL_QUOTAS.pixverse.startingPrice,
@@ -47,7 +47,7 @@ const pillarTools: ToolComparisonItem[] = [
   {
     name: 'Runway Gen-4.5',
     badge: 'Best VFX Control',
-    score: '8.0',
+    score: TOOLS_DATA.runway.totalScore,
     bestFor: 'Hollywood camera velocity curves, multi-motion brush & studio VFX',
     freeTier: TOOL_QUOTAS.runway.freeTierSummary,
     startingPrice: TOOL_QUOTAS.runway.startingPrice,
@@ -147,7 +147,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 13, 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {BUILD_DATE_DISPLAY} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 

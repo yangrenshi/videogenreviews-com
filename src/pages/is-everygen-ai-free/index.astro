@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { SHARED_FAQ_ANSWERS, EVERYGEN_ENGINES, BUILD_DATE_ISO } from '../../data/quotas';
+import { SHARED_FAQ_ANSWERS, EVERYGEN_ENGINES, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
 
 const title = 'Is Everygen AI Free? 2026 Trial Quota, Watermarks & Limits Guide';
 const description = 'Is Everygen AI free to use? Official account breakdown on starter trial credits, watermark policies, 30s 1080p export limits, and free alternatives.';
@@ -104,7 +104,7 @@ const articleSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 13, 2026 &bull; Verified against official account policies, credit consumption models & published pricing schedules &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a>
+        Updated {BUILD_DATE_DISPLAY} &bull; Verified against official account policies, credit consumption models & published pricing schedules &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a>
       </div>
     </header>
 
@@ -112,8 +112,7 @@ const articleSchema = {
     <KeyTakeaway
       pickA="Starter Plan (From $9/mo billed annually; ~$24/mo monthly)"
       forScenarioA="commercial monetization rights and continuous 30-second generations"
-      pickB="Kling AI 4.0, PixVerse V6, or MiniMax H3 Max"
-      forScenarioB="Choose Kling AI 4.0 or PixVerse V6 for recurring daily credits, or MiniMax H3 Max for a one-time zero-card trial"
+      customRowB="<strong>If you prioritize recurring daily free credits:</strong> Choose <span class=&quot;text-brand-blue font-bold&quot;>Kling AI 4.0</span> or <span class=&quot;text-brand-blue font-bold&quot;>PixVerse V6</span>. If you'd rather test without a card: <span class=&quot;text-brand-blue font-bold&quot;>MiniMax H3 Max</span> offers one-time signup trial credits."
     />
 
     <!-- Summary Specifications Table -->

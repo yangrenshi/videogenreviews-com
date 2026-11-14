@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { EVERYGEN_ENGINES, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
+import { EVERYGEN_ENGINES, EVERYGEN_MCP_CLIENTS, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
 
 const title = 'Everygen AI Review (2026): Performance, MCP & Models Analyzed';
 const description = 'In-depth architectural review of Everygen AI (Viewmax LLC). We analyze 5 integrated engines (Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Gemini Omni 1.1 Flash) & MCP.';
@@ -18,7 +18,7 @@ const faqs: FaqItem[] = [
   {
     question: 'How does Everygen AI handle MCP (Model Context Protocol)?',
     answer:
-      'Everygen provides native MCP server endpoints. This enables agentic workflows in IDEs and environments like Cursor, Claude Desktop, and ChatGPT to trigger and manage video generation programmatically.',
+      `Everygen provides native MCP server endpoints. This enables agentic workflows in IDEs and environments like ${EVERYGEN_MCP_CLIENTS.list} to trigger and manage video generation programmatically.`,
   },
   {
     question: 'Who owns and operates Everygen AI?',
@@ -220,7 +220,7 @@ const breadcrumbSchema = {
           </li>
           <li class="flex items-start">
             <span class="text-emerald-600 font-bold mr-2">&bull;</span>
-            <span><strong>Native MCP Support</strong>: Directly trigger video generation from agentic environments (Cursor, Claude, ChatGPT).</span>
+            <span><strong>Native MCP Support</strong>: Directly trigger video generation from agentic environments ({EVERYGEN_MCP_CLIENTS.shortTag}).</span>
           </li>
           <li class="flex items-start">
             <span class="text-emerald-600 font-bold mr-2">&bull;</span>
@@ -257,7 +257,7 @@ const breadcrumbSchema = {
     <section class="space-y-4 pt-4 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">The Bottom Line</h2>
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
-        Everygen AI by Viewmax LLC represents an evolution from simple UI wrappers to an integrated multimodal infrastructure suite. With support for Kling 4.0, Seedance 2.5, 30-second clips, and MCP protocol integration, it provides compelling utility for agile production teams.
+        Everygen AI by Viewmax LLC represents an evolution from simple UI wrappers to an integrated multimodal infrastructure suite. With support for {EVERYGEN_ENGINES.list}, 30-second clips, and MCP protocol integration, it provides compelling utility for agile production teams.
       </p>
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
         If you want to compare its multi-engine ecosystem against individual standalone platforms, review our <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 top Everygen AI alternatives</a> or check the <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">trial credit breakdown</a>.

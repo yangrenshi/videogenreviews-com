@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyTakeaway from '../../components/KeyTakeaway.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { BUILD_DATE_ISO } from '../../data/quotas';
+import { BUILD_DATE_ISO, BUILD_DATE_DISPLAY, EVERYGEN_MCP_CLIENTS } from '../../data/quotas';
 
 const title = 'Everygen AI Pricing (2026): Starter $9, Pro $19 & Plans Compared';
 const description = 'Official Everygen AI pricing breakdown. Compare Starter ($9/mo, 200 credits), Pro ($19/mo, 500 credits), and Creator ($49/mo), plus model generation costs.';
@@ -107,7 +107,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 13, 2026 &bull; Verified against official everygen.ai/pricing &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a>
+        Updated {BUILD_DATE_DISPLAY} &bull; Verified against official everygen.ai/pricing &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a>
       </div>
     </header>
 
@@ -147,7 +147,7 @@ const breadcrumbSchema = {
               </div>
               <div>&bull; Approx. ~18 Seedance 2 Fast clips</div>
               <div>&bull; Approx. ~50 Nano Banana Pro images</div>
-              <div>&bull; MCP connector (Claude Desktop, ChatGPT, Cursor, Windsurf)</div>
+              <div>&bull; MCP connector ({EVERYGEN_MCP_CLIENTS.shortTag})</div>
               <div>&bull; Commercial monetization rights</div>
             </div>
           </div>
@@ -180,7 +180,7 @@ const breadcrumbSchema = {
               </div>
               <div>&bull; Approx. ~26 clips/month (first month ~52 with the 500-credit bonus)</div>
               <div>&bull; Kling 4.0 1080p generation access</div>
-              <div>&bull; MCP connector (Claude Desktop, ChatGPT, Cursor, Windsurf)</div>
+              <div>&bull; MCP connector ({EVERYGEN_MCP_CLIENTS.shortTag})</div>
               <div>&bull; High-priority GPU dispatch queue</div>
               <div>&bull; Full commercial license (zero restrictions)</div>
             </div>
@@ -212,7 +212,7 @@ const breadcrumbSchema = {
               <div>&bull; Approx. ~61 Seedance 2 clips (official volume tier rate)</div>
               <div>&bull; Maximum priority GPU cluster access</div>
               <div>&bull; Full 30-second continuous 1080p generation</div>
-              <div>&bull; MCP connector (Claude Desktop, ChatGPT, Cursor, Windsurf)</div>
+              <div>&bull; MCP connector ({EVERYGEN_MCP_CLIENTS.shortTag})</div>
               <div>&bull; Dedicated customer support queue</div>
             </div>
           </div>

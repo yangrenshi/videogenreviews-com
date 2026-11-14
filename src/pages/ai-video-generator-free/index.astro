@@ -5,17 +5,17 @@ import ComparisonTable, { type ToolComparisonItem } from '../../components/Compa
 import ToolCard from '../../components/ToolCard.astro';
 import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { TOOL_QUOTAS, SHARED_FAQ_ANSWERS, BUILD_DATE_ISO } from '../../data/quotas';
+import { TOOL_QUOTAS, TOOLS_DATA, SHARED_FAQ_ANSWERS, BUILD_DATE_ISO, BUILD_DATE_DISPLAY } from '../../data/quotas';
 
 const title = 'Best Free AI Video Generators (2026): Daily Credits & No Card Needed';
-const description = 'Compare the best free AI video generators in 2026. Review genuinely free tools like Kling AI (66 daily credits), MiniMax H3 Max, PixVerse V6, and Pika 2.2 without credit cards.';
+const description = 'Compare the best free AI video generators in 2026: Kling AI (66 daily credits), PixVerse V6 (30 daily), plus one-time zero-card trial tools like MiniMax H3 Max and Pika 2.2.';
 const canonicalPath = 'ai-video-generator-free';
 
 const freeTools: ToolComparisonItem[] = [
   {
     name: 'Kling AI 4.0',
     badge: 'Best Daily Reset',
-    score: '8.9',
+    score: TOOLS_DATA.kling.totalScore,
     bestFor: 'Daily recurring free video generations without credit card verification',
     freeTier: TOOL_QUOTAS.kling.freeTierCard,
     startingPrice: TOOL_QUOTAS.kling.freePagePrice,
@@ -23,7 +23,7 @@ const freeTools: ToolComparisonItem[] = [
   {
     name: 'MiniMax H3 Max',
     badge: 'Best Face Realism',
-    score: '8.3',
+    score: TOOLS_DATA.minimax.totalScore,
     bestFor: 'One-time trial generations with hyperrealistic facial anatomy & native audio',
     freeTier: TOOL_QUOTAS.minimax.freeTierSummary,
     startingPrice: TOOL_QUOTAS.minimax.freePagePrice,
@@ -31,7 +31,7 @@ const freeTools: ToolComparisonItem[] = [
   {
     name: 'PixVerse V6',
     badge: 'Fastest Free',
-    score: '8.2',
+    score: TOOLS_DATA.pixverse.totalScore,
     bestFor: 'Daily recurring credits for anime, stylized clips & native sound',
     freeTier: TOOL_QUOTAS.pixverse.freeTierCard,
     startingPrice: TOOL_QUOTAS.pixverse.freePagePrice,
@@ -39,7 +39,7 @@ const freeTools: ToolComparisonItem[] = [
   {
     name: 'Pika 2.2',
     badge: 'Free Memes',
-    score: '6.7',
+    score: TOOLS_DATA.pika.totalScore,
     bestFor: 'Starter trial credits for novelty physics effects (Melt, Inflate, Squish)',
     freeTier: TOOL_QUOTAS.pika.freeTierCard,
     startingPrice: TOOL_QUOTAS.pika.freePagePrice,
@@ -138,7 +138,7 @@ const breadcrumbSchema = {
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated November 13, 2026 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {BUILD_DATE_DISPLAY} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
@@ -146,7 +146,7 @@ const breadcrumbSchema = {
       pickA="Kling AI 4.0 (Best Daily Reset)"
       forScenarioA="refilling 66 free credits automatically every 24 hours without entering a credit card"
       pickB="MiniMax H3 Max (Best Facial Realism)"
-      forScenarioB="clean zero-dollar daily browser generations with ultra-photorealistic human anatomy and native audio"
+      forScenarioB="ultra-photorealistic human anatomy, native audio and a one-time zero-card trial"
       pickC="PixVerse V6 (Best Anime & Speed)"
       forScenarioC="fast rendering cycles with 30 daily recurring credits (~1 clip/day) plus 60 one-time signup credits"
       pickD="Pika 2.2 (Best Creative Effects)"

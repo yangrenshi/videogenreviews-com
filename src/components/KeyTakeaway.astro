@@ -2,8 +2,9 @@
 interface Props {
   pickA: string;
   forScenarioA: string;
-  pickB: string;
-  forScenarioB: string;
+  pickB?: string;
+  forScenarioB?: string;
+  customRowB?: string;
   pickC?: string;
   forScenarioC?: string;
   pickD?: string;
@@ -17,6 +18,7 @@ const {
   forScenarioA,
   pickB,
   forScenarioB,
+  customRowB,
   pickC,
   forScenarioC,
   pickD,
@@ -38,9 +40,13 @@ const {
     <p>
       &bull; <strong>If you need {forScenarioA}:</strong> Pick <span class="text-brand-blue font-bold">{pickA}</span>.
     </p>
-    <p>
-      &bull; <strong>If you prioritize {forScenarioB}:</strong> Choose <span class="text-brand-blue font-bold">{pickB}</span>.
-    </p>
+    {customRowB ? (
+      <p set:html={`&bull; ${customRowB}`} />
+    ) : (
+      <p>
+        &bull; <strong>If you prioritize {forScenarioB}:</strong> Choose <span class="text-brand-blue font-bold">{pickB}</span>.
+      </p>
+    )}
     {pickC && forScenarioC && (
       <p>
         &bull; <strong>For {forScenarioC}:</strong> Go with <span class="text-brand-blue font-bold">{pickC}</span>.
