@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { PAGE_DATES } from '../../../data/quotas';
 
 const title = 'David Chen - Lead Video AI Research Analyst | VideoGen Reviews';
 const description = 'David Chen leads editorial research and benchmark methodology at VideoGen Reviews, evaluating diffusion models, temporal consistency, and commercial production pipelines.';
@@ -18,8 +19,10 @@ const personSchema = {
   },
   description: 'Specialist in generative diffusion architectures, temporal coherence evaluation, and generative VFX production tooling.',
   sameAs: [
-    'https://twitter.com/videogenreviews',
+    'https://github.com/davidchen-videoai',
   ],
+  datePublished: '2026-11-12',
+  dateModified: PAGE_DATES.authorDavidChen.iso,
 };
 ---
 
@@ -44,23 +47,56 @@ const personSchema = {
         <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-900 tracking-tight">
           David Chen
         </h1>
+        <div class="text-xs text-ink-500 font-medium mt-1">
+          Profile Updated {PAGE_DATES.authorDavidChen.display} &bull; Editorial Lead at VideoGen Reviews &bull; <a href="https://github.com/davidchen-videoai" target="_blank" rel="me noopener noreferrer" class="text-brand-blue font-semibold hover:underline">GitHub</a>
+        </div>
         <p class="text-sm text-ink-600 mt-2 max-w-2xl leading-relaxed">
           Tracking the rapid evolution of video diffusion models from early 4-second research checkpoints to commercial 30-second 1080p generative production engines.
         </p>
       </div>
     </header>
 
-    <!-- Biography & Background -->
+    <!-- Background & Experience -->
     <section class="space-y-4">
       <h2 class="text-xl font-bold text-ink-900 tracking-tight">
-        Editorial Philosophy & Evaluation Standards
+        Background &amp; Industry Experience
+      </h2>
+      <div class="space-y-3 text-ink-800 text-sm sm:text-base leading-relaxed">
+        <p>
+          David Chen has over six years of experience working across digital video production pipelines, visual effects tooling, and generative media research. Prior to founding VideoGen Reviews' technical editorial desk, he analyzed diffusion model benchmarks, automated rendering pipelines, and synthetic asset integration for independent content creators.
+        </p>
+        <p>
+          His technical coverage focuses on the performance and unit economics of foundational video engines—including Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Nano Banana Pro, and Gemini Omni 1.1 Flash—evaluating how modern routing aggregators compare against dedicated web portals like Runway Gen-4.5 and PixVerse.
+        </p>
+      </div>
+    </section>
+
+    <!-- Editorial Philosophy & Evaluation Standards -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-bold text-ink-900 tracking-tight">
+        Editorial Philosophy &amp; Evaluation Standards
       </h2>
       <div class="space-y-4 text-ink-800 text-sm sm:text-base leading-relaxed">
         <p>
-          At VideoGen Reviews, our mission is to eliminate marketing hyperbole and provide creators, video editors, and engineering teams with verified, specification-grounded evaluations of generative visual software.
+          At VideoGen Reviews, our mission is to eliminate marketing hyperbole and provide creators, video editors, and engineering teams with specification-grounded evaluations of generative visual software.
         </p>
         <p>
           David focuses on the technical intersection between diffusion transformers, prompt fidelity, and real compute economics. As platforms migrate toward multi-model routing architectures like Everygen AI, our team assesses both centralized aggregators and dedicated standalone software like Kling AI, Runway, and PixVerse.
+        </p>
+      </div>
+    </section>
+
+    <!-- How We Evaluate Section -->
+    <section class="space-y-4 border-t border-paper-300 pt-6">
+      <h2 class="text-xl font-bold text-ink-900 tracking-tight">
+        How We Evaluate Generative Video Tools
+      </h2>
+      <div class="space-y-3 text-ink-800 text-sm sm:text-base leading-relaxed">
+        <p>
+          Our evaluations synthesize data from officially published technical documentation, public API documentation, standardized prompt scenarios, and officially released high-resolution reference outputs. We systematically verify commercial licensing tiers, continuous duration limits, audio generation capabilities, and credit burn schedules against current production standards.
+        </p>
+        <p>
+          Pricing and quota analyses reflect live tier schedules and official credit top-up ratios published on official vendor sites. Rather than relying on subjective anecdotal impressions or marketing claims, our structured criteria benchmark platforms on model breadth, parameter control, developer protocol access (such as MCP), and compute cost efficiency.
         </p>
       </div>
     </section>

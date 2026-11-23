@@ -21,7 +21,7 @@ const pillarTools: ToolComparisonItem[] = [
     startingPrice: TOOL_QUOTAS.kling.startingPrice,
   },
   {
-    name: 'Seedance 2.5',
+    name: 'Seedance 2.5 (Model · via Everygen)',
     badge: 'Best 30s Takes',
     score: TOOLS_DATA.seedance.totalScore,
     bestFor: 'Continuous 30-second sequences at native 1080p resolution',
@@ -29,7 +29,7 @@ const pillarTools: ToolComparisonItem[] = [
     startingPrice: TOOL_QUOTAS.seedance.startingPrice,
   },
   {
-    name: 'MiniMax H3 Max',
+    name: 'MiniMax H3 Max (Model · also standalone at Hailuo AI)',
     badge: 'Best One-Time Trial',
     score: TOOLS_DATA.minimax.totalScore,
     bestFor: 'Photorealistic human skin, micro-expressions & native audio',
@@ -173,6 +173,11 @@ const breadcrumbSchema = {
         Rankings evaluated under our <a href="/methodology/" class="text-brand-blue hover:underline font-semibold">10-point weighted methodology (see methodology)</a>.
       </p>
       <ComparisonTable tools={pillarTools} />
+      <div class="mt-3 p-4 rounded-lg border border-paper-300 bg-paper-100 text-xs text-ink-700 leading-relaxed space-y-2">
+        <p>
+          <strong>Product Delivery &amp; Platform Access Note:</strong> Seedance 2.5 is a foundational diffusion model accessible exclusively through Everygen AI subscription plans and hosted MCP tools. MiniMax H3 Max is similarly integrated into Everygen AI, but also operates as an official standalone consumer portal at <a href="https://hailuoai.video" target="_blank" rel="nofollow noopener noreferrer" class="text-brand-blue font-semibold hover:underline">hailuoai.video</a>. Both are evaluated here using our standardized 10-point benchmark scale alongside standalone video platforms (Kling AI, Runway Gen-4.5, PixVerse V6), but creators should note the distinction between direct SaaS web portals and models accessed through multi-model routing aggregators.
+        </p>
+      </div>
       <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
         * Pricing audit notes: Kling Standard $10/mo (660 monthly credits; unlocks watermark-free exports and priority queue, on top of the 66-credit daily allowance via <a href="https://kling.ai/app/membership/membership-plan?r=26" target="_blank" rel="nofollow noopener noreferrer" class="underline">kling.ai</a> &middot; <a href="/images/pricing/kling-pricing.png" target="_blank" class="underline">pricing screenshot</a>) and MiniMax H3 Max ($14.99/mo Standard or $8.40/mo billed annually at $100.80/yr &mdash; 44% off, 1,000 credits/mo via <a href="https://hailuoai.video/subscribe" target="_blank" rel="nofollow noopener noreferrer" class="underline">hailuoai.video</a> &middot; <a href="/images/pricing/hailuo-pricing.png" target="_blank" class="underline">pricing screenshot</a>) are cross-referenced with archived pricing screenshots (November 2026). Runway and PixVerse V6 (free Basic plan; see <a href="https://pixverse.ai/" target="_blank" rel="nofollow noopener noreferrer" class="underline">pixverse.ai</a> for current paid tiers) are based on officially published pricing pages, not independently verified, and remain subject to regional promotion changes. Seedance 2.5 is accessed and billed through Everygen AI subscription tiers.
       </p>
