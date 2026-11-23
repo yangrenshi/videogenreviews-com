@@ -5,9 +5,9 @@ import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro'
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { EVERYGEN_ENGINES, PAGE_DATES } from '../../data/quotas';
 
-const title = 'Everygen AI Review 2026: Hands-On Test, Output Quality & Limits';
+const title = 'Everygen AI Review 2026: Specs, Output Quality & Limits';
 const description =
-  'Hands-on test of Everygen AI across Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash. We evaluate 30-second continuous generations, resolution, and limits.';
+  'Architectural and spec review of Everygen AI across Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash. We evaluate 30-second capabilities, resolution, and platform limits.';
 const canonicalPath = 'everygen-ai-review';
 
 const faqs: FaqItem[] = [
@@ -19,12 +19,12 @@ const faqs: FaqItem[] = [
   {
     question: 'Can Everygen AI generate 30-second continuous video?',
     answer:
-      'Yes. Through Seedance 2.5, Everygen supports native 30-second continuous video generation at 1080p resolution. For Kling 4.0, individual generations are 5–10 seconds, which can be composed sequentially on the platform up to 30 seconds.',
+      'Yes. Through Seedance 2.5, Everygen officially supports continuous video generation up to 30s in 1080p resolution. For Kling 4.0, generation delivers up to 30s with references.',
   },
   {
     question: 'How does Everygen AI compare in pricing?',
     answer:
-      'Pricing is broken down separately from our quality review. Plans start from $24/month on the monthly schedule, or $9/month billed annually. For detailed tier-by-tier breakdowns, visit our Everygen AI Pricing page.',
+      'Pricing is broken down separately from our spec and quality review. Plans start from $24/month on the monthly schedule, or $9/month billed annually. For detailed tier-by-tier breakdowns, visit our Everygen AI Pricing page.',
   },
   {
     question: 'Who develops Everygen AI?',
@@ -59,7 +59,7 @@ const reviewSchema = {
     url: 'https://videogenreviews.com',
   },
   reviewBody:
-    `Everygen AI by Viewmax LLC provides multi-model video generation across engines like ${EVERYGEN_ENGINES.list}, delivering native 30-second 1080p generation through Seedance 2.5 and composed 30s sequences through Kling 4.0.`,
+    `Everygen AI by Viewmax LLC provides multi-model video generation across engines like ${EVERYGEN_ENGINES.list}, delivering up to 30s in 1080p through Seedance 2.5 and up to 30s with references through Kling 4.0.`,
   datePublished: '2026-11-12',
   dateModified: PAGE_DATES.review.iso,
 };
@@ -108,25 +108,24 @@ const breadcrumbSchema = {
   <article class="space-y-10">
     <header class="border-b border-paper-300 pb-8">
       <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
-        Hands-On Lab Evaluation
+        Platform Specs &amp; Reference Review
       </div>
 
       <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
-        Everygen AI Review: What We Tested and What It Actually Delivers
+        Everygen AI Review: Specs, Reference Outputs &amp; Limits
       </h1>
 
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
-        A hands-on technical evaluation of Everygen AI by Viewmax LLC: testing actual video prompt runs across Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash for duration, motion stability, resolution, and platform limits.
+        A technical architecture evaluation of Everygen AI by Viewmax LLC: examining published engine capabilities across Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash against official high-resolution reference releases, continuous duration limits, and developer workflows.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
-        Updated {PAGE_DATES.review.display} &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
+        Updated {PAGE_DATES.review.display} &bull; Cross-referenced with official specifications and platform documentation on 2026-11-23 &bull; Written by <a href="/author/david-chen/" class="text-brand-blue font-semibold hover:underline">David Chen</a> &bull; VideoGen Reviews Editorial Team
       </div>
     </header>
 
     <KeyTakeaway
-      pickA="Everygen AI"
-      forScenarioA="creators who need 30-second continuous takes across multiple engines without juggling separate vendor accounts"
+      customRowA="For creators who need 30-second continuous takes and multi-engine access without juggling separate vendor accounts: choose <span class=&quot;text-brand-blue font-bold&quot;>Everygen AI</span>."
       pickB="Runway Gen-4.5 or Luma Ray 3.2"
       forScenarioB="commercial filmmakers demanding granular timeline camera brush controls and bespoke velocity keyframing"
     />
@@ -213,68 +212,68 @@ const breadcrumbSchema = {
     <!-- Pricing Reference Note -->
     <section class="bg-blue-50/50 border border-blue-200 rounded-lg p-4 text-xs sm:text-sm text-ink-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
       <div>
-        <strong>Looking for pricing details?</strong> Pricing is broken down separately from our hands-on output evaluation.
+        <strong>Looking for pricing details?</strong> Pricing is broken down separately from our spec and quality evaluation.
       </div>
       <a href="/everygen-ai-pricing/" class="text-brand-blue font-semibold hover:underline whitespace-nowrap">
         View Everygen AI Pricing Breakdown &rarr;
       </a>
     </section>
 
-    <!-- What We Tested (Hands-On Benchmark Section) -->
+    <!-- What We Compared (Specs, Reference Outputs & Documented Limits) -->
     <section class="space-y-6 pt-4">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
-        What We Tested: Hands-On Video Generation Benchmarks
+        What We Compared: Specs, Reference Outputs &amp; Documented Limits
       </h2>
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
-        To evaluate Everygen AI beyond promotional claims, our editorial lab executed multiple standardized generation runs across the primary models offered on the platform: Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash. Here are the documented findings from our test suite:
+        To evaluate Everygen AI based on documented platform architecture and official release media, we cross-referenced official model specifications against published high-resolution reference releases for Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash:
       </p>
 
       <div class="space-y-4">
-        <!-- Test Case 1 -->
+        <!-- Comparison 1 -->
         <div class="rounded-lg border border-paper-300 bg-white p-5 space-y-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-paper-200 pb-3">
-            <h3 class="text-base font-bold text-ink-900">Test 1: Long-Form Continuous Narrative (Seedance 2.5)</h3>
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-100 text-blue-800">Duration &amp; Drift Test</span>
+            <h3 class="text-base font-bold text-ink-900">Seedance 2.5: Long-Form Continuous Narrative Specification</h3>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-100 text-blue-800">Duration &amp; Resolution</span>
           </div>
           <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
-            <strong>Prompt:</strong> &ldquo;A lone astronomer walking slowly across a glass bridge inside a futuristic observatory under a spinning spiral galaxy, wide cinematic shot, ambient lighting.&rdquo;
+            <strong>Official Capability:</strong> Seedance 2.5 is officially specified for continuous sequence generation up to 30s in 1080p full high definition.
           </p>
           <ul class="text-xs text-ink-600 space-y-1 list-disc list-inside">
-            <li><strong>Duration &amp; Resolution:</strong> Rendered 30 seconds continuous at 1080p FHD resolution.</li>
-            <li><strong>Temporal Continuity:</strong> Architectural geometry remained anchored without major structural warping; subtle motion noise appeared around second 24.</li>
-            <li><strong>Watermarks:</strong> Clean, watermark-free output on paid generation.</li>
+            <li><strong>Continuous Duration:</strong> Up to 30s in 1080p without mandatory clip stitching.</li>
+            <li><strong>Reference Consistency:</strong> Official architectural releases show anchored scene geometry across long-form tracking shots.</li>
+            <li><strong>Watermarks:</strong> Unwatermarked exports unlocked on active paid plans.</li>
           </ul>
         </div>
 
-        <!-- Test Case 2 -->
+        <!-- Comparison 2 -->
         <div class="rounded-lg border border-paper-300 bg-white p-5 space-y-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-paper-200 pb-3">
-            <h3 class="text-base font-bold text-ink-900">Test 2: High-Velocity Physical Motion (Kling 4.0)</h3>
-            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-100 text-purple-800">Physics &amp; Biomechanics</span>
+            <h3 class="text-base font-bold text-ink-900">Kling 4.0: Reference-Conditioned Dynamics</h3>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-100 text-purple-800">Physics &amp; Reference Lock</span>
           </div>
           <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
-            <strong>Prompt:</strong> &ldquo;An athlete performing a gymnastics tumble pass on a wooden floor, dynamic camera tracking side angle, slow motion impact.&rdquo;
+            <strong>Official Capability:</strong> Kling 4.0 is officially designated for high-motion dynamics and sequence expansion up to 30s with references.
           </p>
           <ul class="text-xs text-ink-600 space-y-1 list-disc list-inside">
-            <li><strong>Duration &amp; Resolution:</strong> 5–10s base clip rendered at 1080p; sequential composition extended to 20 seconds.</li>
-            <li><strong>Temporal Continuity:</strong> Realistic momentum and anatomical limbs maintained throughout high-velocity rotations.</li>
-            <li><strong>Watermarks:</strong> Zero watermarks on subscriber export.</li>
+            <li><strong>Duration &amp; Conditioning:</strong> 5s–10s base generations, composable up to 30s with references.</li>
+            <li><strong>Biomechanical Reference:</strong> Published model demonstrations emphasize realistic physical momentum, athletic rotations, and multi-angle character locking.</li>
+            <li><strong>Watermarks:</strong> Standard paid subscription exports are clean and watermark-free.</li>
           </ul>
         </div>
 
-        <!-- Test Case 3 -->
+        <!-- Comparison 3 -->
         <div class="rounded-lg border border-paper-300 bg-white p-5 space-y-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-paper-200 pb-3">
-            <h3 class="text-base font-bold text-ink-900">Test 3: Fast Scene Iteration (Gemini Omni 1.1 Flash)</h3>
+            <h3 class="text-base font-bold text-ink-900">Gemini Omni 1.1 Flash: Multimodal Video &amp; Editing</h3>
             <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">Speed &amp; Multimodal Editing</span>
           </div>
           <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
-            <strong>Prompt:</strong> &ldquo;Timelapse of rain falling on a neon-lit Tokyo crosswalk, reflected puddle splashes, cinematic depth of field.&rdquo;
+            <strong>Official Capability:</strong> Gemini Omni 1.1 Flash is designed for fast multimodal video generation and instruction-guided editing passes.
           </p>
           <ul class="text-xs text-ink-600 space-y-1 list-disc list-inside">
-            <li><strong>Duration &amp; Resolution:</strong> Fast draft clip delivered at 1080p within minimal dispatch queue time.</li>
-            <li><strong>Temporal Continuity:</strong> High lighting fidelity and atmospheric consistency across fast camera pans.</li>
-            <li><strong>Watermarks:</strong> No watermark on active account output.</li>
+            <li><strong>Throughput:</strong> High-speed prompt-to-video dispatch with multimodal image and video guidance.</li>
+            <li><strong>Visual Fidelity:</strong> Official documentation highlights responsive prompt alignment and lighting consistency across atmospheric shifts.</li>
+            <li><strong>Watermarks:</strong> Delivered watermark-free on active subscriber credit allocations.</li>
           </ul>
         </div>
       </div>
@@ -312,7 +311,7 @@ const breadcrumbSchema = {
         <ul class="text-xs sm:text-sm space-y-2 text-ink-800 leading-relaxed">
           <li class="flex items-start">
             <span class="text-emerald-600 font-bold mr-2">&bull;</span>
-            <span><strong>Native 30s Takes</strong>: Seedance 2.5 delivers up to 30s in 1080p, and Kling 4.0 delivers up to 30s with references without manual prompt stitching.</span>
+            <span><strong>Extended 30s Capabilities</strong>: Seedance 2.5 delivers up to 30s in 1080p, and Kling 4.0 delivers up to 30s with references without manual prompt stitching.</span>
           </li>
           <li class="flex items-start">
             <span class="text-emerald-600 font-bold mr-2">&bull;</span>
@@ -330,7 +329,7 @@ const breadcrumbSchema = {
           <svg class="w-4 h-4 text-rose-600 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
           </svg>
-          Observed Limitations
+          Documented Limitations
         </h3>
         <ul class="text-xs sm:text-sm space-y-2 text-ink-800 leading-relaxed">
           <li class="flex items-start">
@@ -353,7 +352,7 @@ const breadcrumbSchema = {
     <section class="space-y-4 pt-4 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">The Bottom Line</h2>
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
-        Everygen AI by Viewmax LLC provides solid multi-model video aggregation. If your workflow prioritizes continuous 30-second sequences via Seedance 2.5 and agile switching between video engines, it offers clear operational advantages over managing disparate standalone services.
+        Everygen AI by Viewmax LLC provides solid multi-model video aggregation. If your workflow prioritizes continuous 30-second sequences via Seedance 2.5, reference-guided expansion via Kling 4.0, and agile switching between video engines, it offers clear operational advantages over managing disparate standalone services.
       </p>
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
         For detailed pricing plans and credit yields, see our <a href="/everygen-ai-pricing/" class="text-brand-blue font-semibold hover:underline">Everygen AI Pricing Guide</a>. To explore how it stacks up against competitors, review our <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">Top 10 Alternatives Guide</a>.
