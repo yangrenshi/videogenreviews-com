@@ -32,14 +32,14 @@ export interface ToolSpec {
 }
 
 export const EVERYGEN_ENGINES = {
-  list: 'Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash',
-  routingShort: 'Multi-engine routing (incl. Seedance 2.5, Kling 4.0, Gemini Omni 1.1 Flash) + unified credit system',
+  list: 'Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Nano Banana Pro, and Gemini Omni 1.1 Flash',
+  routingShort: 'Multi-engine routing (6 engines incl. Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Nano Banana Pro, Gemini Omni 1.1 Flash) + unified MCP & credits',
 } as const;
 
 export const EVERYGEN_MCP_CLIENTS = {
-  list: 'Claude Desktop, ChatGPT, Cursor, and Windsurf',
-  orList: 'Claude Desktop, Cursor, Windsurf, or ChatGPT',
-  shortTag: 'Claude Desktop, ChatGPT, Cursor, Windsurf',
+  list: 'Claude and ChatGPT (including Claude Fable 5.2 and GPT-6 Astra)',
+  orList: 'Claude or ChatGPT',
+  shortTag: 'Claude & ChatGPT',
 } as const;
 
 export const TOOLS_DATA = {
@@ -52,10 +52,10 @@ export const TOOLS_DATA = {
     startingPrice: 'From $24 / mo ($9 / mo billed annually)',
     duration: {
       native: '30s (via Seedance 2.5)',
-      platformComposed: 'up to 30s',
-      display: 'Up to 30 seconds (native on Seedance 2.5; composed on Kling 4.0)',
+      platformComposed: 'up to 30s with references (via Kling 4.0)',
+      display: 'Seedance 2.5 up to 30s in 1080p; Kling 4.0 up to 30s with references',
     },
-    maxDuration: 'Up to 30 seconds (native on Seedance 2.5; composed on Kling 4.0)',
+    maxDuration: 'Seedance 2.5 up to 30s in 1080p; Kling 4.0 up to 30s with references',
   },
   kling: {
     id: 'kling',
@@ -77,10 +77,10 @@ export const TOOLS_DATA = {
     pricingScreenshotUrl: '/images/pricing/kling-pricing.png',
     duration: {
       perGeneration: '5–10s',
-      platformComposed: 'up to 30s',
-      display: '5–10s per generation (platform composes up to 30s)',
+      platformComposed: 'up to 30s with references',
+      display: '5–10s per generation (up to 30s with references)',
     },
-    maxDuration: '5–10s per generation (platform composes up to 30s)',
+    maxDuration: '5–10s per generation (up to 30s with references)',
   },
   seedance: {
     id: 'seedance',
@@ -269,5 +269,49 @@ export const TOOLS_DATA = {
       display: 'Character motion clip',
     },
     maxDuration: 'Character motion clip',
+  },
+  sora: {
+    id: 'sora',
+    name: 'OpenAI Sora',
+    totalScore: '8.4',
+    metrics: [
+      { label: 'Prompt Adherence', score: 9.3 },
+      { label: 'Temporal Consistency', score: 8.6 },
+      { label: 'Visual Fidelity', score: 9.0 },
+      { label: 'Motion Quality', score: 8.3 },
+      { label: 'Value / Pricing', score: 6.8 },
+    ],
+    freeTierSummary: 'No free plan (Included in ChatGPT Plus/Pro)',
+    freeTierCard: 'No standalone free tier (Requires ChatGPT Plus at $20/mo or Pro)',
+    startingPrice: 'From $20 / mo (ChatGPT Plus tier)',
+    pricingCard: 'Included with ChatGPT Plus ($20/mo) and Pro tiers (see openai.com)',
+    pricingSourceUrl: 'https://openai.com/sora',
+    duration: {
+      perGeneration: '5–20s',
+      display: 'Up to 20 seconds at 1080p',
+    },
+    maxDuration: 'Up to 20 seconds at 1080p',
+  },
+  genmo: {
+    id: 'genmo',
+    name: 'Genmo Mochi 1',
+    totalScore: '7.1',
+    metrics: [
+      { label: 'Prompt Adherence', score: 7.6 },
+      { label: 'Temporal Consistency', score: 7.0 },
+      { label: 'Visual Fidelity', score: 7.4 },
+      { label: 'Motion Quality', score: 7.2 },
+      { label: 'Value / Pricing', score: 6.3 },
+    ],
+    freeTierSummary: 'Free open-source weights / Web trial available',
+    freeTierCard: 'Free open weights via Hugging Face; web credits available',
+    startingPrice: 'Free open weights (Cloud from $10/mo)',
+    pricingCard: 'Open weights Apache 2.0; Turbo hosted plans from $10/mo',
+    pricingSourceUrl: 'https://www.genmo.ai/',
+    duration: {
+      perGeneration: '5s',
+      display: '5 seconds',
+    },
+    maxDuration: '5 seconds',
   },
 } as const;

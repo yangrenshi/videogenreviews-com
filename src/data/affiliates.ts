@@ -20,6 +20,16 @@ export const AFFILIATE_DIRECTORY: Record<string, AffiliateEntry> = {
     name: 'Viggle AI',
     targetUrl: 'https://viggle.ai/?utm_source=videogenreviews&utm_medium=affiliate&ref=vgr',
   },
+  sora: {
+    slug: 'sora',
+    name: 'OpenAI Sora',
+    targetUrl: 'https://openai.com/sora',
+  },
+  genmo: {
+    slug: 'genmo',
+    name: 'Genmo Mochi 1',
+    targetUrl: 'https://www.genmo.ai/',
+  },
   kling: {
     slug: 'kling',
     name: 'Kling AI 4.0',

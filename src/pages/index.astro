@@ -13,7 +13,12 @@ const faqs: FaqItem[] = [
   {
     question: 'What is Everygen AI?',
     answer:
-      'Everygen AI (formerly Viewmax AI) is a multimodal generative video platform that provides unified access to leading video generation models, including Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash, under a single subscription credit system.',
+      'Everygen AI (formerly Viewmax AI) is a multimodal generative media platform operated by Viewmax LLC that provides unified access to 6 integrated models—Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Nano Banana Pro, and Gemini Omni 1.1 Flash—under a single subscription credit system and Everygen MCP integration.',
+  },
+  {
+    question: 'What models are integrated into Everygen AI?',
+    answer:
+      'Everygen features 6 official models: Seedance 2.5 (up to 30s in 1080p), Kling 4.0 (up to 30s with references), MiniMax H3 Max (H3 Max and Turbo, native audio), Grok Imagine (short clips with sound), Nano Banana Pro (photoreal stills), and Gemini Omni 1.1 Flash (video generation and editing).',
   },
   {
     question: 'Can you generate video for free on Everygen AI?',
@@ -26,14 +31,14 @@ const faqs: FaqItem[] = [
       'Everygen offers three subscription tiers: Starter at $24/month ($9/month billed annually at $108/year for ~200 credits), Pro at $49/month ($19/month billed annually at $228/year for ~500 credits), and Creator at $139/month ($49/month billed annually at $588/year for ~1,000 credits).',
   },
   {
-    question: 'What is the maximum continuous video duration on Everygen AI?',
+    question: 'Does Everygen AI support MCP (Model Context Protocol)?',
     answer:
-      'Everygen supports native 30-second continuous 1080p generation through Seedance 2.5, while Kling 4.0 generates 5–10 second clips per pass that can be composed on the platform up to 30 seconds.',
+      'Yes. Everygen officially supports the Model Context Protocol (Everygen MCP), enabling creators to invoke generation tools directly within Claude and ChatGPT (works in Claude Fable 5.2 and GPT-6 Astra) via everygen.ai/mcp.',
   },
   {
-    question: 'How does Everygen AI compare to standalone tools?',
+    question: 'What is the maximum continuous video duration on Everygen AI?',
     answer:
-      'Everygen acts as a unified aggregator for multiple video models under one subscription. If you need specialized standalone UI tools like Runway motion brushes or Kling recurring daily free credits, standalone access may be preferable.',
+      'Duration varies by engine: Seedance 2.5 generates up to 30s in 1080p, while Kling 4.0 delivers up to 30s with references.',
   },
 ];
 
@@ -99,9 +104,9 @@ const articleSchema = {
     <!-- Quick Verdict Component -->
     <KeyTakeaway
       pickA="Everygen AI"
-      forScenarioA="integrated multi-model video generation (Seedance 2.5, Kling 4.0, Gemini Omni 1.1 Flash) under a unified monthly or annual credit pool"
-      pickB="Runway Gen-4.5 or Kling AI Direct"
-      forScenarioB="dedicated standalone studio post-production interfaces or daily recurring free credits"
+      forScenarioA="integrated multi-model generation across Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Nano Banana Pro, and Gemini Omni 1.1 Flash with Everygen MCP support"
+      pickB="Runway Gen-4.5 or Standalone Portals"
+      forScenarioB="dedicated standalone timeline camera brushes or daily recurring free allowances"
     />
 
     <!-- Three Direct Pillar Navigation Gateways -->
@@ -116,7 +121,7 @@ const articleSchema = {
           <span>&rarr;</span>
         </div>
         <p class="text-xs text-ink-600 mt-2 leading-relaxed">
-          Prompt benchmark tests, rendering speed, 30-second sequence stability, and output limits.
+          Prompt benchmark tests, rendering speed, 30s stability, MCP workflow, and output limits.
         </p>
       </a>
 
@@ -156,30 +161,100 @@ const articleSchema = {
       </h2>
       <div class="space-y-4 text-ink-800 text-sm sm:text-base leading-relaxed">
         <p>
-          <strong>Everygen AI</strong> is a centralized multimodal video generation platform operated by <strong>Viewmax LLC</strong> (formerly marketed under the name <em>Viewmax AI</em>). Rather than operating a single isolated diffusion model, Everygen brings together high-tier generative video models—including <strong>Seedance 2.5</strong>, <strong>Kling 4.0</strong>, and <strong>Gemini Omni 1.1 Flash</strong>—into a single web dashboard and unified compute credit system.
+          <strong>Everygen AI</strong> is a centralized multimodal generation platform operated by <strong>Viewmax LLC</strong> (formerly marketed under the product identity <em>Viewmax AI</em>). Rather than restricting users to a single proprietary neural model, Everygen orchestrates 6 distinct frontier foundation models under a single unified dashboard and compute credit ledger.
         </p>
         <p>
-          For digital creators and video teams, this architecture eliminates the need to maintain separate subscriptions, billing portals, and API keys across individual video model providers. Users purchase credits that can be allocated dynamically across supported models based on specific production demands.
+          Regarding extended video duration, <strong>Seedance 2.5 delivers up to 30s in 1080p</strong> continuous rendering, while <strong>Kling 4.0 delivers up to 30s with references</strong>. This dual-architecture design gives creators flexibility depending on whether they require uninterrupted timeline generation or reference-guided continuity.
         </p>
       </div>
     </section>
 
-    <!-- 2. Supported Models & Video Capabilities (Concise Summary + Link to Review) -->
+    <!-- 2. Supported Models & Video Capabilities (Full 6 Models Aligned with Official Claims) -->
     <section class="space-y-4 pt-6 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
         Supported Models &amp; Video Capabilities
       </h2>
-      <div class="space-y-3 text-ink-800 text-sm sm:text-base leading-relaxed">
-        <p>
-          Everygen provides access to multiple model backends with distinct strengths: Seedance 2.5 delivers native continuous 30-second sequences at 1080p, Kling 4.0 handles high-motion dynamic scenes with multi-angle reference locking, and Gemini Omni 1.1 Flash powers fast multimodal video workflows.
+      <p class="text-sm text-ink-700 leading-relaxed">
+        According to official specifications published on <a href="https://everygen.ai" target="_blank" rel="noopener noreferrer" class="text-brand-blue font-semibold hover:underline">everygen.ai</a>, Everygen integrates 6 specialized engines:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-lg border border-paper-300 bg-white space-y-1.5">
+          <div class="text-xs font-bold uppercase text-brand-blue">Video Foundation</div>
+          <div class="text-base font-bold text-ink-900">Seedance 2.5</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Up to 30s in 1080p continuous generation for stable long-form narrative sequences.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white space-y-1.5">
+          <div class="text-xs font-bold uppercase text-purple-700">Dynamic Physics</div>
+          <div class="text-base font-bold text-ink-900">Kling 4.0</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Up to 30s with references for biomechanical motions, liquid flow, and athletic physics.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white space-y-1.5">
+          <div class="text-xs font-bold uppercase text-emerald-800">Portrait &amp; Speech</div>
+          <div class="text-base font-bold text-ink-900">MiniMax H3 Max</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            H3 Max and Turbo, native audio for organic facial micro-expressions and synchronized speech.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white space-y-1.5">
+          <div class="text-xs font-bold uppercase text-blue-700">Audio Synthesis</div>
+          <div class="text-base font-bold text-ink-900">Grok Imagine</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Short clips with sound for rapid social and atmospheric audio-visual generation.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white space-y-1.5">
+          <div class="text-xs font-bold uppercase text-amber-800">Still Generation</div>
+          <div class="text-base font-bold text-ink-900">Nano Banana Pro</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Photoreal stills designed for high-resolution conceptual staging and image prompts.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white space-y-1.5">
+          <div class="text-xs font-bold uppercase text-indigo-700">Multimodal Editing</div>
+          <div class="text-base font-bold text-ink-900">Gemini Omni 1.1 Flash</div>
+          <p class="text-xs text-ink-700 leading-relaxed">
+            Video generation and editing for high-speed instruction-driven video transformations.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-sm text-ink-700 bg-paper-100 p-4 rounded-lg border border-paper-300 mt-4">
+        For detailed benchmark tests, prompt results, and temporal stability evaluations across these models, read our full <a href="/everygen-ai-review/" class="text-brand-blue font-semibold hover:underline">Everygen AI Review</a>.
+      </p>
+    </section>
+
+    <!-- 3. Everygen MCP Integration Block -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Everygen MCP: Native Agentic Workflow
+      </h2>
+      <div class="rounded-lg border border-blue-200 bg-blue-50/40 p-6 space-y-3">
+        <div class="flex items-center space-x-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-blue bg-blue-100 px-2 py-0.5 rounded">
+            Developer Integration
+          </span>
+          <span class="text-xs font-medium text-ink-600">Claude Fable 5.2 &bull; GPT-6 Astra</span>
+        </div>
+        <p class="text-sm text-ink-800 leading-relaxed">
+          A featured capability highlighted on the official homepage is <strong>Everygen MCP</strong>: allowing developers and content creators to call Everygen video and image generation models directly inside <strong>Claude and ChatGPT</strong>. Rather than navigating browser dashboards, teams can dispatch generations programmatically through the official Model Context Protocol gateway at <a href="https://everygen.ai/mcp" target="_blank" rel="noopener noreferrer" class="text-brand-blue font-semibold hover:underline">everygen.ai/mcp</a>.
         </p>
-        <p class="text-sm text-ink-700 bg-paper-100 p-4 rounded-lg border border-paper-300">
-          For detailed prompt benchmark results, temporal consistency evaluations, and resolution tests, read our full hands-on <a href="/everygen-ai-review/" class="text-brand-blue font-semibold hover:underline">Everygen AI Review</a>.
+        <p class="text-xs text-ink-600">
+          Learn how credit confirmation and prompt dispatch work in our <a href="/everygen-ai-review/#mcp-integration" class="text-brand-blue font-semibold hover:underline">Everygen AI Review MCP Analysis &rarr;</a>
         </p>
       </div>
     </section>
 
-    <!-- 3. Pricing & Credit Economics (Concise Summary + Link to Pricing) -->
+    <!-- 4. Pricing & Credit Economics (Concise Summary + Link to Pricing) -->
     <section class="space-y-4 pt-6 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
         Pricing Plans &amp; Credit Structure
@@ -194,7 +269,7 @@ const articleSchema = {
       </div>
     </section>
 
-    <!-- 4. Free Trial & Usability (Concise Summary + Link to Is-Free) -->
+    <!-- 5. Free Trial & Usability (Concise Summary + Link to Is-Free) -->
     <section class="space-y-4 pt-6 border-t border-paper-300">
       <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
         Free Trial &amp; Credit Usability
@@ -209,7 +284,7 @@ const articleSchema = {
       </div>
     </section>
 
-    <!-- 5. Editorial Next Steps & Alternatives -->
+    <!-- 6. Editorial Next Steps & Alternatives -->
     <section class="rounded-lg bg-paper-100 border border-paper-300 p-6 sm:p-8 space-y-4">
       <h2 class="text-xl font-bold text-ink-900 tracking-tight">
         Next Steps &amp; Market Alternatives

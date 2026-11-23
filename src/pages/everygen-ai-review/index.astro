@@ -126,7 +126,7 @@ const breadcrumbSchema = {
 
     <KeyTakeaway
       pickA="Everygen AI"
-      forScenarioA="creators needing 30-second continuous takes and multi-engine access without managing multiple individual vendor accounts"
+      forScenarioA="creators who need 30-second continuous takes across multiple engines without juggling separate vendor accounts"
       pickB="Runway Gen-4.5 or Luma Ray 3.2"
       forScenarioB="commercial filmmakers demanding granular timeline camera brush controls and bespoke velocity keyframing"
     />
@@ -142,7 +142,7 @@ const breadcrumbSchema = {
             <span class="text-4xl sm:text-5xl font-extrabold text-ink-900 tracking-tight">4.2</span>
             <span class="text-base font-semibold text-ink-500">/ 5.0</span>
           </div>
-          <p class="text-xs text-ink-500 mt-1">Evaluated as the unweighted mean of five dimensions: model breadth, duration capability, workflow efficiency, visual fidelity, and camera controls.</p>
+          <p class="text-xs text-ink-500 mt-1">Evaluated as the unweighted mean of five dimensions: model breadth, duration capability, MCP integration, visual fidelity, and camera controls.</p>
         </div>
 
         <a
@@ -180,7 +180,7 @@ const breadcrumbSchema = {
 
         <div class="space-y-1.5">
           <div class="flex justify-between text-xs text-ink-700">
-            <span>Workflow Efficiency</span>
+            <span>MCP Integration</span>
             <span class="font-bold text-ink-900">4.6</span>
           </div>
           <div class="w-full bg-paper-300 h-1.5 rounded-full overflow-hidden">
@@ -280,6 +280,26 @@ const breadcrumbSchema = {
       </div>
     </section>
 
+    <!-- Everygen MCP Section -->
+    <section id="mcp-integration" class="rounded-lg border border-blue-200 bg-blue-50/40 p-6 space-y-3">
+      <div class="flex items-center space-x-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-blue bg-blue-100 px-2 py-0.5 rounded">
+          MCP Integration
+        </span>
+        <h2 class="text-lg font-bold text-ink-900">
+          Everygen MCP: Calling Models in Claude and ChatGPT
+        </h2>
+      </div>
+      <p class="text-xs sm:text-sm text-ink-800 leading-relaxed">
+        A standout capability verified on the official platform is <strong>Everygen MCP</strong> (Model Context Protocol). Rather than switching between web browser windows, developers can invoke Everygen generation tasks directly within <strong>Claude and ChatGPT</strong> (including Claude Fable 5.2 and GPT-6 Astra) using the official protocol endpoint at <a href="https://everygen.ai/mcp" target="_blank" rel="noopener noreferrer" class="text-brand-blue font-semibold hover:underline">everygen.ai/mcp</a>.
+      </p>
+      <ul class="text-xs text-ink-700 space-y-1 list-disc list-inside">
+        <li><strong>In-IDE Prompt Dispatch:</strong> Trigger video generation prompts without leaving the conversational agent window.</li>
+        <li><strong>Credit Guardrails:</strong> Prompts display credit consumption estimates prior to render execution.</li>
+        <li><strong>Multi-Engine Selection:</strong> Target specific models (Seedance 2.5, Kling 4.0, MiniMax H3 Max, etc.) via natural language tool calls.</li>
+      </ul>
+    </section>
+
     <!-- Key Strengths vs Trade-offs -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-paper-300">
       <div class="rounded-lg bg-emerald-50/50 border border-emerald-200/80 p-5">
@@ -292,15 +312,15 @@ const breadcrumbSchema = {
         <ul class="text-xs sm:text-sm space-y-2 text-ink-800 leading-relaxed">
           <li class="flex items-start">
             <span class="text-emerald-600 font-bold mr-2">&bull;</span>
-            <span><strong>Native 30s Long-Form Takes</strong>: Seedance 2.5 produces continuous 30-second sequences without requiring manual prompt stitching.</span>
+            <span><strong>Native 30s Takes</strong>: Seedance 2.5 delivers up to 30s in 1080p, and Kling 4.0 delivers up to 30s with references without manual prompt stitching.</span>
           </li>
           <li class="flex items-start">
             <span class="text-emerald-600 font-bold mr-2">&bull;</span>
-            <span><strong>Multi-Model Variety</strong>: Access to Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash under a unified dashboard.</span>
+            <span><strong>Everygen MCP Workflow</strong>: Connects directly with Claude and ChatGPT via <a href="https://everygen.ai/mcp" target="_blank" rel="noopener noreferrer" class="text-brand-blue font-semibold hover:underline">everygen.ai/mcp</a> for agentic video generation.</span>
           </li>
           <li class="flex items-start">
             <span class="text-emerald-600 font-bold mr-2">&bull;</span>
-            <span><strong>Clean HD Exports</strong>: 1080p outputs with zero watermarks on active paid accounts.</span>
+            <span><strong>6 Integrated Models</strong>: Access to Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, Nano Banana Pro, and Gemini Omni 1.1 Flash under a unified dashboard.</span>
           </li>
         </ul>
       </div>
