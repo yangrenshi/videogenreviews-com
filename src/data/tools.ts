@@ -95,7 +95,7 @@ export const TOOLS_DATA = {
     ],
     freeTierSummary: 'No standalone free tier (Everygen account includes ~10 promotional credits)',
     freeTierCard: 'No standalone free tier (Everygen account includes ~10 promotional credits)',
-    startingPrice: 'Subscription via Everygen ($9/mo+)',
+    startingPrice: 'Via Everygen subscription ($24/mo, or $9/mo billed annually)',
     duration: {
       native: '30s',
       display: '30 seconds continuous (native 1080p)',
