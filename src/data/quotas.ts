@@ -11,14 +11,14 @@ export { TOOLS_DATA, EVERYGEN_ENGINES, EVERYGEN_MCP_CLIENTS };
  * 分页面独立记录的内容核验日期（避免每次构建导致未改动页面也刷新 dateModified）
  */
 export const PAGE_DATES = {
-  home: { iso: '2026-11-14', display: 'November 14, 2026' },
-  review: { iso: '2026-11-14', display: 'November 14, 2026' },
-  pricing: { iso: '2026-11-14', display: 'November 14, 2026' },
-  isFree: { iso: '2026-11-14', display: 'November 14, 2026' },
-  alternatives: { iso: '2026-11-14', display: 'November 14, 2026' },
+  home: { iso: '2026-11-23', display: 'November 23, 2026' },
+  review: { iso: '2026-11-23', display: 'November 23, 2026' },
+  pricing: { iso: '2026-11-23', display: 'November 23, 2026' },
+  isFree: { iso: '2026-11-23', display: 'November 23, 2026' },
+  alternatives: { iso: '2026-11-23', display: 'November 23, 2026' },
   best: { iso: '2026-11-14', display: 'November 14, 2026' },
   free: { iso: '2026-11-14', display: 'November 14, 2026' },
-  viewmax: { iso: '2026-11-13', display: 'November 13, 2026' },
+  viewmax: { iso: '2026-11-23', display: 'November 23, 2026' },
   methodology: { iso: '2026-11-14', display: 'November 14, 2026' },
   authorDavidChen: { iso: '2026-11-13', display: 'November 13, 2026' },
   about: { iso: '2026-11-12', display: 'November 12, 2026' },

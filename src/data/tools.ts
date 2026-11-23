@@ -32,8 +32,8 @@ export interface ToolSpec {
 }
 
 export const EVERYGEN_ENGINES = {
-  list: 'Seedance 2.5, Kling 4.0, MiniMax H3 Max, Grok Imagine, and Gemini Omni 1.1 Flash',
-  routingShort: 'Multi-engine routing (5 engines incl. Kling 4.0, Seedance 2.5, Gemini Omni 1.1 Flash) + unified MCP/credits',
+  list: 'Seedance 2.5, Kling 4.0, and Gemini Omni 1.1 Flash',
+  routingShort: 'Multi-engine routing (incl. Seedance 2.5, Kling 4.0, Gemini Omni 1.1 Flash) + unified credit system',
 } as const;
 
 export const EVERYGEN_MCP_CLIENTS = {
@@ -49,7 +49,7 @@ export const TOOLS_DATA = {
     totalScore: '8.4',
     freeTierSummary: 'Promotional trial (~10 credits; below render threshold)',
     freeTierCard: '10 promotional signup credits (requires paid plan for full renders)',
-    startingPrice: 'From $9 / mo (annual; ~$24/mo monthly)',
+    startingPrice: 'From $24 / mo ($9 / mo billed annually)',
     duration: {
       native: '30s (via Seedance 2.5)',
       platformComposed: 'up to 30s',
