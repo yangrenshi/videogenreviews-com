@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/author/david-chen",
+      "destination": "/editorial-team/",
+      "permanent": true
+    },
+    {
+      "source": "/author/david-chen/",
+      "destination": "/editorial-team/",
+      "permanent": true
+    }
+  ]
+}

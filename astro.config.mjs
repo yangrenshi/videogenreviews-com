@@ -1,6 +1,25 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import { PAGE_DATES } from './src/data/quotas.ts';
+
+// Map URL paths to their respective Single Source of Truth date in PAGE_DATES
+const SITEMAP_DATE_MAPPING = {
+  '/': PAGE_DATES.home.iso,
+  '/everygen-ai-review/': PAGE_DATES.review.iso,
+  '/everygen-ai-pricing/': PAGE_DATES.pricing.iso,
+  '/is-everygen-ai-free/': PAGE_DATES.isFree.iso,
+  '/everygen-ai-alternatives/': PAGE_DATES.alternatives.iso,
+  '/best-ai-video-generator/': PAGE_DATES.best.iso,
+  '/ai-video-generator-free/': PAGE_DATES.free.iso,
+  '/viewmax-ai/': PAGE_DATES.viewmax.iso,
+  '/methodology/': PAGE_DATES.methodology.iso,
+  '/editorial-team/': PAGE_DATES.editorialTeam.iso,
+  '/about/': PAGE_DATES.about.iso,
+  '/contact/': PAGE_DATES.contact.iso,
+  '/privacy-policy/': PAGE_DATES.privacyPolicy.iso,
+  '/affiliate-disclosure/': PAGE_DATES.affiliateDisclosure.iso,
+};
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,24 +30,15 @@ export default defineConfig({
       applyBaseStyles: true,
     }),
     sitemap({
-      filter: (page) => !page.includes('/404') && !page.includes('/go/'),
+      filter: (page) =>
+        !page.includes('/404') &&
+        !page.includes('/go/') &&
+        !page.includes('/author/'),
       serialize(item) {
-        const url = item.url;
-        if (
-          url.endsWith('/about/') ||
-          url.endsWith('/contact/') ||
-          url.endsWith('/privacy-policy/') ||
-          url.endsWith('/affiliate-disclosure/')
-        ) {
-          item.lastmod = '2026-11-12';
-        } else if (
-          url.endsWith('/author/david-chen/') ||
-          url.endsWith('/editorial-team/') ||
-          url.endsWith('/viewmax-ai/')
-        ) {
-          item.lastmod = '2026-11-23';
-        } else {
-          item.lastmod = '2026-11-14';
+        const urlObj = new URL(item.url);
+        const path = urlObj.pathname;
+        if (SITEMAP_DATE_MAPPING[path]) {
+          item.lastmod = SITEMAP_DATE_MAPPING[path];
         }
         return item;
       },
