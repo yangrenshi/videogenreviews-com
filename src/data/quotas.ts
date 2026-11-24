@@ -20,7 +20,7 @@ export const PAGE_DATES = {
   free: { iso: '2026-11-14', display: 'November 14, 2026' },
   viewmax: { iso: '2026-11-23', display: 'November 23, 2026' },
   methodology: { iso: '2026-11-14', display: 'November 14, 2026' },
-  authorDavidChen: { iso: '2026-11-23', display: 'November 23, 2026' },
+  editorialTeam: { iso: '2026-11-23', display: 'November 23, 2026' },
   about: { iso: '2026-11-12', display: 'November 12, 2026' },
   contact: { iso: '2026-11-12', display: 'November 12, 2026' },
   privacyPolicy: { iso: '2026-11-12', display: 'November 12, 2026' },

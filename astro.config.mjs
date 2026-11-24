@@ -23,9 +23,10 @@ export default defineConfig({
           item.lastmod = '2026-11-12';
         } else if (
           url.endsWith('/author/david-chen/') ||
+          url.endsWith('/editorial-team/') ||
           url.endsWith('/viewmax-ai/')
         ) {
-          item.lastmod = '2026-11-13';
+          item.lastmod = '2026-11-23';
         } else {
           item.lastmod = '2026-11-14';
         }
