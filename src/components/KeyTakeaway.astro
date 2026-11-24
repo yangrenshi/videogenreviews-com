@@ -6,6 +6,7 @@ interface Props {
   pickB?: string;
   forScenarioB?: string;
   customRowB?: string;
+  customRowC?: string;
   pickC?: string;
   forScenarioC?: string;
   pickD?: string;
@@ -21,6 +22,7 @@ const {
   pickB,
   forScenarioB,
   customRowB,
+  customRowC,
   pickC,
   forScenarioC,
   pickD,
@@ -48,16 +50,18 @@ const {
     ) : null}
     {customRowB ? (
       <p set:html={`&bull; ${customRowB}`} />
-    ) : (
+    ) : pickB && forScenarioB ? (
       <p>
         &bull; <strong>If you prioritize {forScenarioB}:</strong> Choose <span class="text-brand-blue font-bold">{pickB}</span>.
       </p>
-    )}
-    {pickC && forScenarioC && (
+    ) : null}
+    {customRowC ? (
+      <p set:html={`&bull; ${customRowC}`} />
+    ) : pickC && forScenarioC ? (
       <p>
         &bull; <strong>For {forScenarioC}:</strong> Go with <span class="text-brand-blue font-bold">{pickC}</span>.
       </p>
-    )}
+    ) : null}
     {pickD && forScenarioD && (
       <p>
         &bull; <strong>If you focus on {forScenarioD}:</strong> Select <span class="text-brand-blue font-bold">{pickD}</span>.
