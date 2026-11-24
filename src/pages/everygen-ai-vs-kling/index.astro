@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import KeyTakeaway from '../../components/KeyTakeaway.astro';
+import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { TOOLS_DATA, PAGE_DATES } from '../../data/quotas';
+
+const title = 'Everygen AI vs Kling AI (2026): Credits, Quality & Pricing Compared';
+const description =
+  'Everygen AI vs Kling AI compared. Contrast unified multi-engine credits and MCP support against Kling\'s 66 daily recurring credits and native physics simulation.';
+const canonicalPath = 'everygen-ai-vs-kling';
+
+const faqs: FaqItem[] = [
+  {
+    question: 'Can I access Kling 4.0 directly inside Everygen AI?',
+    answer:
+      'Yes. Everygen officially integrates Kling 4.0 into its multi-engine dashboard and MCP routing system, allowing paid subscribers to generate Kling clips using Everygen account credits without maintaining a separate Kling membership.',
+  },
+  {
+    question: 'How do the pricing and credit structures compare?',
+    answer:
+      'Everygen plans start from $24/month ($9/month billed annually) for ~200 multi-model credits. Kling AI standalone subscriptions start at $10/month for 660 monthly credits, in addition to providing 66 daily recurring free credits on signup without requiring a credit card upfront.',
+  },
+  {
+    question: 'Can I transfer credits between Everygen and Kling AI?',
+    answer:
+      'No. Kling standalone subscription credits operate on Kling\'s proprietary credit system at kling.ai and cannot be transferred, merged, or converted into Everygen account credits.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.answer,
+    },
+  })),
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews Editorial Team',
+    url: 'https://videogenreviews.com/editorial-team/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  datePublished: '2026-11-24',
+  dateModified: PAGE_DATES.vsKling.iso,
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://videogenreviews.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Alternatives',
+      item: 'https://videogenreviews.com/everygen-ai-alternatives/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Everygen AI vs Kling AI',
+      item: 'https://videogenreviews.com/everygen-ai-vs-kling/',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  schema={[articleSchema, faqSchema, breadcrumbSchema]}
+>
+  <Breadcrumbs
+    crumbs={[
+      { label: 'Alternatives', href: '/everygen-ai-alternatives/' },
+      { label: 'Everygen vs Kling AI' },
+    ]}
+  />
+
+  <article class="space-y-10">
+    <header class="border-b border-paper-300 pb-8">
+      <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-2">
+        Platform Head-to-Head Comparison
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Everygen AI vs Kling AI
+      </h1>
+
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
+        Comparing unified multi-engine routing against dedicated standalone simulation physics. An objective breakdown of credit models, rendering limits, and workflow flexibility.
+      </p>
+
+      <div class="text-xs text-ink-500 font-medium">
+        Updated {PAGE_DATES.vsKling.display} &bull; Cross-referenced with official pricing pages on 2026-11-23 &bull; Written by <a href="/editorial-team/" class="text-brand-blue font-semibold hover:underline">VideoGen Reviews Editorial Team</a>
+      </div>
+    </header>
+
+    <KeyTakeaway
+      pickA="Everygen AI (Score: 8.4/10)"
+      forScenarioA="accessing multiple backends (Kling 4.0, Seedance 2.5, MiniMax H3 Max, Grok Imagine, Nano Banana Pro, Gemini Omni 1.1 Flash) under one credit balance with Model Context Protocol (MCP)"
+      pickB="Kling AI 4.0 (Score: 8.9/10)"
+      forScenarioB="66 daily recurring zero-card credits, standalone queue control, and industry-leading human athletic physics"
+    />
+
+    <!-- Comparison Summary Table -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Core Specifications at a Glance
+      </h2>
+      <div class="overflow-x-auto rounded-lg border border-paper-300">
+        <table class="min-w-full divide-y divide-paper-300 text-left text-xs sm:text-sm">
+          <thead class="bg-paper-100 font-semibold text-ink-900">
+            <tr>
+              <th scope="col" class="py-3.5 pl-4 pr-3">Feature</th>
+              <th scope="col" class="px-3 py-3.5 text-brand-blue">Everygen AI</th>
+              <th scope="col" class="px-3 py-3.5 text-indigo-900">Kling AI 4.0</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-paper-300 bg-white text-ink-700">
+            <tr>
+              <td class="py-3 pl-4 pr-3 font-semibold text-ink-900">Platform Category</td>
+              <td class="px-3 py-3">Multi-engine aggregator &amp; MCP router</td>
+              <td class="px-3 py-3">Dedicated standalone diffusion engine</td>
+            </tr>
+            <tr>
+              <td class="py-3 pl-4 pr-3 font-semibold text-ink-900">Benchmark Score</td>
+              <td class="px-3 py-3 font-bold text-ink-900">{TOOLS_DATA.everygen.totalScore} / 10</td>
+              <td class="px-3 py-3 font-bold text-ink-900">{TOOLS_DATA.kling.totalScore} / 10 (Overall #1)</td>
+            </tr>
+            <tr>
+              <td class="py-3 pl-4 pr-3 font-semibold text-ink-900">Starting Price</td>
+              <td class="px-3 py-3">{TOOLS_DATA.everygen.startingPrice}</td>
+              <td class="px-3 py-3">{TOOLS_DATA.kling.startingPrice}</td>
+            </tr>
+            <tr>
+              <td class="py-3 pl-4 pr-3 font-semibold text-ink-900">Free Tier Allowance</td>
+              <td class="px-3 py-3">{TOOLS_DATA.everygen.freeTierSummary}</td>
+              <td class="px-3 py-3 text-emerald-800 font-medium">{TOOLS_DATA.kling.freeTierSummary}</td>
+            </tr>
+            <tr>
+              <td class="py-3 pl-4 pr-3 font-semibold text-ink-900">Continuous Duration</td>
+              <td class="px-3 py-3">{TOOLS_DATA.everygen.maxDuration}</td>
+              <td class="px-3 py-3">{TOOLS_DATA.kling.maxDuration}</td>
+            </tr>
+            <tr>
+              <td class="py-3 pl-4 pr-3 font-semibold text-ink-900">Developer MCP Support</td>
+              <td class="px-3 py-3 text-emerald-700 font-semibold">Yes (Claude &amp; ChatGPT via everygen.ai/mcp)</td>
+              <td class="px-3 py-3 text-ink-500">Standalone Web &amp; API Portal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Pricing & Credits Comparison -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Pricing &amp; Credit Models Explained
+      </h2>
+      <div class="space-y-4 text-sm sm:text-base text-ink-800 leading-relaxed">
+        <p>
+          The most critical operational difference between Everygen AI and Kling AI lies in how credits are distributed and replenished:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+            <h3 class="font-bold text-ink-900 text-base">Everygen AI Credit System</h3>
+            <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+              Everygen plans start from $24/month ($9/month billed annually) for 200 credits, Pro is $49/mo ($19/mo annual) for 500 credits, and Creator is $139/mo ($49/mo annual) for 1,000 credits. A single credit balance pays for 6 integrated engines, but promotional signup accounts receive 10 credits which fall below the ~11 credits required for an entry-level render.
+            </p>
+          </div>
+          <div class="p-5 rounded-lg border border-paper-300 bg-paper-100 space-y-2">
+            <h3 class="font-bold text-ink-900 text-base">Kling AI Standalone Economy</h3>
+            <p class="text-xs sm:text-sm text-ink-700 leading-relaxed">
+              Kling AI provides 66 recurring daily free credits upon email signup without requiring a credit card upfront (~2 standard clips per day). Paid Standard tiers start at $10/month at kling.ai for 660 monthly credits, removing watermarks and granting priority access during peak queue hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Models & Capabilities -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Models &amp; Functional Capabilities
+      </h2>
+      <div class="space-y-4 text-sm sm:text-base text-ink-800 leading-relaxed">
+        <p>
+          <strong>Kling 4.0 is available on both platforms:</strong> Subscribers on Everygen's Pro and Creator plans can select Kling 4.0 directly within the Everygen dashboard, taking advantage of Everygen MCP to trigger generations from Claude or ChatGPT.
+        </p>
+        <p>
+          However, creators requiring dedicated standalone physics workflows—including Kling's native reference image conditioning, vertical 9:16 aspect ratio controls, and daily free generation replenishments—often find direct subscription at kling.ai more cost-effective if they do not require Seedance 2.5 or other multi-engine models.
+        </p>
+      </div>
+    </section>
+
+    <!-- Visual Quality & Duration Limits -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Visual Quality &amp; Duration Limits
+      </h2>
+      <div class="space-y-3 text-sm text-ink-800 leading-relaxed">
+        <p>
+          <strong>Duration:</strong> Kling renders clips in 5 to 10-second bursts, which can be extended or composed up to 30 seconds with reference images. Everygen, through its integration with Seedance 2.5, supports uninterrupted native 30-second takes in 1080p, while also offering Kling 4.0 for short-clip athletic dynamics.
+        </p>
+        <p>
+          <strong>Biomechanics &amp; Physics:</strong> Kling 4.0 scored 9.0/10 in our benchmark for Motion Quality, accurately rendering footstep ground friction, liquid dynamics, and athletic acceleration without limb distortion.
+        </p>
+      </div>
+    </section>
+
+    <!-- Which Should You Choose? -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Which Tool Should You Choose?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+        <div class="p-4 rounded-lg border border-brand-blue/30 bg-blue-50/20 space-y-2">
+          <strong class="text-brand-blue block text-sm">Choose Everygen AI if:</strong>
+          <ul class="list-disc list-inside space-y-1 text-ink-700">
+            <li>You need 30-second continuous takes via Seedance 2.5 alongside Kling 4.0</li>
+            <li>You automate rendering via Model Context Protocol (MCP) in Claude or ChatGPT</li>
+            <li>You want one billing invoice for video, portrait, and image generation</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-lg border border-indigo-200 bg-indigo-50/20 space-y-2">
+          <strong class="text-indigo-900 block text-sm">Choose Kling AI standalone if:</strong>
+          <ul class="list-disc list-inside space-y-1 text-ink-700">
+            <li>You want 66 daily recurring credits without entering a credit card</li>
+            <li>Your primary focus is realistic athletic movement and human biomechanics</li>
+            <li>You prefer a dedicated $10/mo entry tier specifically optimized for Kling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation & Related -->
+    <section class="rounded-lg bg-paper-100 border border-paper-300 p-6 space-y-3">
+      <h2 class="text-lg font-bold text-ink-900">Related Everygen AI Guides</h2>
+      <p class="text-sm text-ink-700 leading-relaxed">
+        Compare other tools in our <a href="/everygen-ai-vs-runway/" class="text-brand-blue font-semibold hover:underline">Everygen AI vs Runway comparison</a>, review full market rankings in our <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Best Alternatives Guide</a>, or examine credit yields in <a href="/everygen-ai-pricing/" class="text-brand-blue font-semibold hover:underline">Everygen AI Pricing</a>.
+      </p>
+    </section>
+
+    <FaqAccordion faqs={faqs} />
+  </article>
+</BaseLayout>

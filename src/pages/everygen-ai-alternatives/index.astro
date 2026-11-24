@@ -22,6 +22,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   },
   {
     name: 'Kling AI 4.0',
+    url: '/everygen-ai-vs-kling/',
     badge: 'Top Pick',
     score: '8.9',
     bestFor: 'Realistic human movement, sports action & character reference lock',
@@ -46,6 +47,7 @@ const atAGlanceTools: ToolComparisonItem[] = [
   },
   {
     name: 'Runway Gen-4.5',
+    url: '/everygen-ai-vs-runway/',
     badge: 'Director Grade',
     score: '8.0',
     bestFor: 'Multi-motion brush, custom camera velocity curves & studio VFX',
@@ -263,6 +265,16 @@ const breadcrumbSchema = {
         Everygen AI is listed in row 1 as our comparative baseline against 10 dedicated standalone video generation platforms.
       </p>
       <ComparisonTable tools={atAGlanceTools} />
+      <div class="mt-3 p-3.5 rounded-lg border border-paper-300 bg-paper-100/70 text-xs text-ink-700 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <strong class="text-ink-900 font-semibold">Head-to-Head Deep Dives:</strong> Compare direct trade-offs in our dedicated guides:
+        </div>
+        <div class="space-x-2 shrink-0">
+          <a href="/everygen-ai-vs-kling/" class="text-brand-blue font-semibold hover:underline">Everygen AI vs Kling AI &rarr;</a>
+          <span class="text-ink-400">&bull;</span>
+          <a href="/everygen-ai-vs-runway/" class="text-brand-blue font-semibold hover:underline">Everygen AI vs Runway &rarr;</a>
+        </div>
+      </div>
       <p class="text-[11px] text-ink-500 mt-2 leading-relaxed italic">
         * Pricing audit notes: Official pricing schedules cross-referenced as of November 2026. Kling Standard from $10/mo (<a href="https://kling.ai/app/membership/membership-plan?r=26" target="_blank" rel="nofollow noopener noreferrer" class="underline">kling.ai</a> &middot; last checked: 2026-11-23), OpenAI Sora included with ChatGPT Plus from $20/mo (<a href="https://openai.com/sora" target="_blank" rel="nofollow noopener noreferrer" class="underline">openai.com/sora</a> &middot; last checked: 2026-11-23), Kaiber from $10/mo (<a href="https://kaiber.ai/pricing" target="_blank" rel="nofollow noopener noreferrer" class="underline">kaiber.ai</a> &middot; last checked: 2026-11-23), Runway Standard from $15/mo (<a href="https://runwayml.com/pricing" target="_blank" rel="nofollow noopener noreferrer" class="underline">runwayml.com</a> &middot; last checked: 2026-11-23), OpenArt from $14/mo (<a href="https://openart.ai/pricing" target="_blank" rel="nofollow noopener noreferrer" class="underline">openart.ai</a> &middot; last checked: 2026-11-23), Luma from $30/mo (<a href="https://lumalabs.ai/dream-machine" target="_blank" rel="nofollow noopener noreferrer" class="underline">lumalabs.ai</a> &middot; last checked: 2026-11-23), Genmo Mochi 1 open weights with cloud from $10/mo (<a href="https://www.genmo.ai/" target="_blank" rel="nofollow noopener noreferrer" class="underline">genmo.ai</a> &middot; last checked: 2026-11-23), Pika from $10/mo (<a href="https://pika.art/pricing" target="_blank" rel="nofollow noopener noreferrer" class="underline">pika.art</a> &middot; last checked: 2026-11-23), Viggle from $7.99/mo (<a href="https://viggle.ai/" target="_blank" rel="nofollow noopener noreferrer" class="underline">viggle.ai</a> &middot; last checked: 2026-11-23), and PixVerse (<a href="https://pixverse.ai/" target="_blank" rel="nofollow noopener noreferrer" class="underline">pixverse.ai</a> &middot; last checked: 2026-11-23). Everygen plans start from $24/mo ($9/mo annual) (<span class="source-note">Source: everygen.ai/pricing &middot; last checked: 2026-11-23</span>).
       </p>
@@ -305,7 +317,11 @@ const breadcrumbSchema = {
         visitUrl="/go/kling/"
         screenshotUrl="/images/kling-ui.webp"
         screenshotCaption="Kling AI 4.0 generation workspace showing prompt input console, duration parameters, and multi-model configuration controls."
-      />
+      >
+        <p class="text-xs pt-1 font-medium">
+          For a direct breakdown of credit pricing and standalone vs aggregator trade-offs, read our full comparison: <a href="/everygen-ai-vs-kling/" class="text-brand-blue font-semibold hover:underline">Everygen AI vs Kling AI &rarr;</a>
+        </p>
+      </ToolCard>
 
       <!-- 2. OpenAI Sora -->
       <ToolCard
@@ -391,7 +407,11 @@ const breadcrumbSchema = {
         freeTier="125 one-time starter credits (~10 seconds total)"
         pricing="$15.00 / mo ($12/mo billed annually for Standard)"
         visitUrl="/go/runway/"
-      />
+      >
+        <p class="text-xs pt-1 font-medium">
+          For a deep dive comparing Everygen's credit aggregator model against Runway's studio timeline, see our dedicated guide: <a href="/everygen-ai-vs-runway/" class="text-brand-blue font-semibold hover:underline">Everygen AI vs Runway &rarr;</a>
+        </p>
+      </ToolCard>
 
       <!-- 5. OpenArt Video -->
       <ToolCard

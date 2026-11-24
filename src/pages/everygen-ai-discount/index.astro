@@ -1,0 +1,363 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import KeyTakeaway from '../../components/KeyTakeaway.astro';
+import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { PAGE_DATES, SHARED_FAQ_ANSWERS } from '../../data/quotas';
+
+const title = 'Everygen AI Discount & Annual Pricing (2026): Save Up to 65%';
+const description =
+  'Save up to 65% on Everygen AI with annual billing. Complete breakdown of Starter, Pro, and Creator annual discounts, monthly credit allotments, and billing policies.';
+const canonicalPath = 'everygen-ai-discount';
+
+const discountTiers = [
+  {
+    tier: 'Starter',
+    monthlyPrice: '$24 / mo',
+    annualPrice: '$9 / mo',
+    annualBilled: '$108 billed annually',
+    savings: '62.5% (~63% off)',
+    dollarSavings: '$180 / year saved',
+    credits: '200 credits / mo',
+    bestFor: 'Light exploration, short social clips & basic experimentation',
+  },
+  {
+    tier: 'Pro',
+    monthlyPrice: '$49 / mo',
+    annualPrice: '$19 / mo',
+    annualBilled: '$228 billed annually',
+    savings: '61.2% (~61% off)',
+    dollarSavings: '$360 / year saved',
+    credits: '500 credits / mo',
+    bestFor: 'Regular creators, consistent multi-model video generation & testing',
+  },
+  {
+    tier: 'Creator',
+    monthlyPrice: '$139 / mo',
+    annualPrice: '$49 / mo',
+    annualBilled: '$588 billed annually',
+    savings: '64.7% (~65% off)',
+    dollarSavings: '$1,080 / year saved',
+    credits: '1,000 credits / mo',
+    bestFor: 'High-volume production, commercial agency rendering & full MCP integration',
+  },
+];
+
+const faqs: FaqItem[] = [
+  {
+    question: 'How much discount does Everygen AI offer on annual billing?',
+    answer:
+      'Everygen AI offers between 61% and 65% savings when opting for annual billing over month-to-month plans: Starter drops from $24/mo to $9/mo (~63% off), Pro drops from $49/mo to $19/mo (~61% off), and Creator drops from $139/mo to $49/mo (~65% off).',
+  },
+  {
+    question: 'Do I need a promo code or coupon to get the Everygen AI discount?',
+    answer:
+      'No promo code or coupon is required. Everygen AI\'s annual discounts are standard published subscription pricing automatically applied on the official billing page when toggling to annual billing.',
+  },
+  {
+    question: 'Are annual plan credits delivered all at once or monthly?',
+    answer:
+      'On annual plans, credits are delivered in monthly allotments (200 credits/mo for Starter, 500/mo for Pro, and 1,000/mo for Creator) rather than an upfront 12-month lump sum.',
+  },
+  {
+    question: 'Can I test Everygen AI for free before buying an annual plan?',
+    answer:
+      SHARED_FAQ_ANSWERS.everygen10CreditsLimit,
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.answer,
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://videogenreviews.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Pricing & Cost',
+      item: 'https://videogenreviews.com/everygen-ai-pricing/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Everygen AI Discounts',
+      item: 'https://videogenreviews.com/everygen-ai-discount/',
+    },
+  ],
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  author: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews Editorial Team',
+    url: 'https://videogenreviews.com/editorial-team/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'VideoGen Reviews',
+    url: 'https://videogenreviews.com',
+  },
+  datePublished: '2026-11-24',
+  dateModified: PAGE_DATES.discount.iso,
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  schema={[articleSchema, faqSchema, breadcrumbSchema]}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    <!-- Breadcrumbs -->
+    <Breadcrumbs
+      crumbs={[
+        { label: 'Pricing & Cost', href: '/everygen-ai-pricing/' },
+        { label: 'Everygen AI Discounts' },
+      ]}
+    />
+
+    <!-- Header -->
+    <header class="mb-10 text-left">
+      <div class="inline-block px-2.5 py-1 text-xs font-semibold rounded bg-emerald-100 text-emerald-800 mb-3 uppercase tracking-wider">
+        Official Savings Breakdown
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
+        Everygen AI Discounts and Annual Billing
+      </h1>
+      <p class="text-base sm:text-lg text-ink-700 leading-relaxed font-normal mb-3">
+        Looking for an Everygen AI discount? The most effective way to lower your generative video costs is switching from monthly billing to annual billing, which reduces your ongoing subscription expenses by 61% to 65% across all three subscription tiers.
+      </p>
+      <div class="text-xs text-ink-500 font-medium">
+        Updated {PAGE_DATES.discount.display} &bull; Written by <a href="/editorial-team/" class="text-brand-blue font-semibold hover:underline">VideoGen Reviews Editorial Team</a>
+      </div>
+    </header>
+
+    <!-- Key Takeaway -->
+    <KeyTakeaway
+      pickA="Annual Billing Discount"
+      forScenarioA="saving 61% to 65% on effective monthly cost across Starter ($9/mo), Pro ($19/mo), and Creator ($49/mo)"
+      pickB="No Promo Codes Needed"
+      forScenarioB="standard published rates transparently configured inside everygen.ai checkout without coupon hunt"
+      pickC="Monthly Credit Allocations"
+      forScenarioC="annual plans deliver credits in monthly installments (200, 500, or 1,000 credits/mo)"
+    />
+
+    <!-- Evergreen Discount Breakdown Table -->
+    <section class="my-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 tracking-tight mb-3">
+        Everygen AI Annual Discount Comparison (2026)
+      </h2>
+      <p class="text-sm text-ink-600 mb-6 leading-relaxed">
+        Everygen AI offers standard evergreen annual discounts directly on its official pricing page. No third-party coupons, promo links, or time-sensitive codes are needed. Here is how annual billing compares against standard monthly rates:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="border-b-2 border-ink-900 bg-white text-ink-900 font-semibold text-xs uppercase tracking-wider">
+              <th class="py-3 px-3 min-w-[100px]">Tier</th>
+              <th class="py-3 px-3 min-w-[110px]">Monthly Rate</th>
+              <th class="py-3 px-3 min-w-[130px]">Annual Rate</th>
+              <th class="py-3 px-3 min-w-[110px]">Discount</th>
+              <th class="py-3 px-3 min-w-[120px]">Annual Savings</th>
+              <th class="py-3 px-3 min-w-[130px]">Monthly Credits</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-paper-300 text-ink-800">
+            {discountTiers.map((t) => (
+              <tr class="hover:bg-paper-100 transition-colors">
+                <td class="py-3.5 px-3 font-semibold text-ink-900">
+                  <div class="font-bold text-ink-900">{t.tier}</div>
+                  <div class="text-xs text-ink-500 font-normal">{t.bestFor}</div>
+                </td>
+                <td class="py-3.5 px-3 text-ink-700 font-medium">
+                  {t.monthlyPrice}
+                </td>
+                <td class="py-3.5 px-3 text-ink-900 font-bold">
+                  <div>{t.annualPrice}</div>
+                  <div class="text-[11px] text-ink-500 font-normal">({t.annualBilled})</div>
+                </td>
+                <td class="py-3.5 px-3 font-semibold text-emerald-700">
+                  {t.savings}
+                </td>
+                <td class="py-3.5 px-3 font-semibold text-ink-900">
+                  {t.dollarSavings}
+                </td>
+                <td class="py-3.5 px-3 text-ink-800 font-medium">
+                  {t.credits}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-ink-500 italic mt-2">
+        <span class="source-note">Source: everygen.ai/pricing &middot; Last verified: 2026-11-23</span>. Annual savings calculated relative to paying month-to-month for 12 consecutive months.
+      </p>
+    </section>
+
+    <!-- How to Switch to Annual Billing -->
+    <section class="my-10 border-t border-paper-300 pt-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 tracking-tight mb-4">
+        How to Activate the Everygen AI Annual Discount
+      </h2>
+      <p class="text-sm text-ink-700 leading-relaxed mb-6">
+        Switching to annual billing can be completed directly within your account settings on the official platform without contacting sales:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="w-7 h-7 rounded-full bg-ink-900 text-white font-bold text-xs flex items-center justify-center mb-3">1</div>
+          <h3 class="font-bold text-sm text-ink-900 mb-1">Create or Log In</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">Sign in to your account at everygen.ai using your standard credentials.</p>
+        </div>
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="w-7 h-7 rounded-full bg-ink-900 text-white font-bold text-xs flex items-center justify-center mb-3">2</div>
+          <h3 class="font-bold text-sm text-ink-900 mb-1">Navigate to Billing</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">Open Account Settings and click on Subscription or Pricing Plans.</p>
+        </div>
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="w-7 h-7 rounded-full bg-ink-900 text-white font-bold text-xs flex items-center justify-center mb-3">3</div>
+          <h3 class="font-bold text-sm text-ink-900 mb-1">Toggle Annual</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">Select the "Billed Annually" switch to reveal the discounted yearly rates.</p>
+        </div>
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="w-7 h-7 rounded-full bg-ink-900 text-white font-bold text-xs flex items-center justify-center mb-3">4</div>
+          <h3 class="font-bold text-sm text-ink-900 mb-1">Confirm Checkout</h3>
+          <p class="text-xs text-ink-600 leading-relaxed">Complete checkout at $108/yr (Starter), $228/yr (Pro), or $588/yr (Creator).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credit Allotment & Rollover Rules -->
+    <section class="my-10 border-t border-paper-300 pt-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 tracking-tight mb-4">
+        Credit Allotments &amp; Rollover Rules on Annual Plans
+      </h2>
+      <div class="space-y-4 text-sm text-ink-800 leading-relaxed">
+        <p>
+          Before committing to an annual subscription, creators must understand how Everygen AI manages compute credit disbursement:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+          <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
+            <h3 class="font-bold text-ink-900 text-sm mb-1">Monthly Staged Refills</h3>
+            <p class="text-xs text-ink-700 leading-relaxed">
+              Paying annually does <strong>not</strong> grant 2,400, 6,000, or 12,000 credits in a single lump sum on day one. Instead, credits are dispensed in monthly installments (200, 500, or 1,000 credits per month) on your recurring billing anniversary.
+            </p>
+          </div>
+          <div class="p-4 rounded-lg border border-paper-300 bg-paper-100">
+            <h3 class="font-bold text-ink-900 text-sm mb-1">Subscription Cycle Resets</h3>
+            <p class="text-xs text-ink-700 leading-relaxed">
+              Standard subscription credits reset at each monthly billing rollover. If you have fluctuating monthly render demands, pairing a base annual subscription with standalone top-up credit packs ensures unspent top-up balances remain available.
+            </p>
+          </div>
+        </div>
+        <p>
+          Need higher render volume beyond your plan's monthly allocation? Everygen allows purchasing standalone credit packs. Keep in mind that orders of 1,000+ credits bill at a lower unit rate (as shown on the Creator tier), which helps large studios minimize per-render expenses. For exact per-clip output calculations across Seedance 2.5, Kling 4.0, and MiniMax, refer to our comprehensive <a href="/everygen-ai-pricing/" class="text-brand-blue font-semibold hover:underline">Everygen AI Pricing &amp; Cost Guide</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4 Common Misconceptions -->
+    <section class="my-10 border-t border-paper-300 pt-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 tracking-tight mb-4">
+        4 Common Misconceptions About Everygen AI Discounts
+      </h2>
+      <div class="space-y-4">
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="flex items-start space-x-3">
+            <span class="text-amber-600 font-bold text-base mt-0.5">&times;</span>
+            <div>
+              <h3 class="text-sm font-bold text-ink-900 mb-1">Misconception 1: "You need a secret coupon code or influencer promo link"</h3>
+              <p class="text-xs text-ink-700 leading-relaxed">
+                Many third-party coupon directories list bogus strings like "SAVE50" or "FALLDEAL". In reality, Everygen AI does not require coupon codes. The 61% to 65% annual savings are standard published rates accessible directly within the official checkout console.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="flex items-start space-x-3">
+            <span class="text-amber-600 font-bold text-base mt-0.5">&times;</span>
+            <div>
+              <h3 class="text-sm font-bold text-ink-900 mb-1">Misconception 2: "Annual plans give you all 12 months of credits on day one"</h3>
+              <p class="text-xs text-ink-700 leading-relaxed">
+                As detailed above, annual subscribers receive monthly credit drops (200, 500, or 1,000 credits/mo). This prevents server overload on foundation model endpoints and aligns with commercial platform fair-use policies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="flex items-start space-x-3">
+            <span class="text-amber-600 font-bold text-base mt-0.5">&times;</span>
+            <div>
+              <h3 class="text-sm font-bold text-ink-900 mb-1">Misconception 3: "There are hidden student or non-profit discount codes online"</h3>
+              <p class="text-xs text-ink-700 leading-relaxed">
+                Everygen does not list dedicated educational or student discount forms on its official pricing page. The public annual billing option represents the maximum verifiable discount available to any user in 2026.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-lg border border-paper-300 bg-white">
+          <div class="flex items-start space-x-3">
+            <span class="text-amber-600 font-bold text-base mt-0.5">&times;</span>
+            <div>
+              <h3 class="text-sm font-bold text-ink-900 mb-1">Misconception 4: "You can fully test video generation using the 10-credit free trial"</h3>
+              <p class="text-xs text-ink-700 leading-relaxed">
+                While new signups receive 10 promotional credits, Everygen's lowest-cost video generation (Seedance 2 Fast) consumes ~11 credits per clip. The trial credits let you explore the dashboard and model interface, but completing an actual render requires an active plan or credit bundle. Read our full analysis in <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">Is Everygen AI Free?</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="my-10 border-t border-paper-300 pt-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 tracking-tight mb-4">
+        Frequently Asked Questions About Everygen AI Discounts
+      </h2>
+      <FaqAccordion faqs={faqs} />
+    </section>
+
+    <!-- Footnote & Disclaimer -->
+    <footer class="mt-12 pt-6 border-t border-paper-300 text-xs text-ink-500 leading-relaxed">
+      <p class="italic mb-3">
+        <strong>Editorial Disclosure:</strong> This guide does not contain promotional coupon codes or unverified discounts; all pricing calculations reflect standard published rates on <a href="https://everygen.ai/pricing" target="_blank" rel="nofollow noopener noreferrer" class="underline">everygen.ai/pricing</a> (<span class="source-note">Source: everygen.ai/pricing &middot; Last verified: 2026-11-23</span>). We do not accept payment to promote specific plans.
+      </p>
+      <div class="flex flex-wrap gap-4 pt-2">
+        <a href="/everygen-ai-pricing/" class="text-brand-blue font-semibold hover:underline">&larr; Return to Everygen AI Pricing &amp; Cost Guide</a>
+        <span class="text-ink-400">&bull;</span>
+        <a href="/everygen-ai-review/" class="text-brand-blue font-semibold hover:underline">Read Everygen AI Model Review &rarr;</a>
+        <span class="text-ink-400">&bull;</span>
+        <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">View 10 Standalone Alternatives &rarr;</a>
+      </div>
+    </footer>
+  </div>
+</BaseLayout>

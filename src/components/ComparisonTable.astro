@@ -1,6 +1,7 @@
 ---
 export interface ToolComparisonItem {
   name: string;
+  url?: string;
   badge?: string;
   bestFor: string;
   freeTier: string;
@@ -32,7 +33,11 @@ const showScore = tools.some((t) => !!t.score);
         <tr class={idx === 0 ? 'bg-blue-50/40 hover:bg-blue-50/70 transition-colors' : 'hover:bg-paper-100 transition-colors'}>
           <td class="py-3.5 px-3 font-semibold text-ink-900">
             <div class="flex items-center space-x-2">
-              <span>{t.name}</span>
+              {t.url ? (
+                <a href={t.url} class="text-brand-blue hover:underline">{t.name}</a>
+              ) : (
+                <span>{t.name}</span>
+              )}
               {t.badge && (
                 <span class="inline-block px-1.5 py-0.5 text-[11px] rounded font-medium bg-paper-200 text-ink-700">
                   {t.badge}

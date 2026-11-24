@@ -5,9 +5,9 @@ import FaqAccordion, { type FaqItem } from '../../components/FaqAccordion.astro'
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { PAGE_DATES } from '../../data/quotas';
 
-const title = 'Everygen AI Pricing 2026: Starter $24/mo ($9/mo Annual), Pro & Creator';
+const title = 'Everygen AI Pricing & Cost (2026): $24, $49 & $139 Plans';
 const description =
-  'Plans are $24 / $49 / $139 per month, or $9 / $19 / $49 per month billed annually. Compare Everygen AI Starter, Pro, and Creator tiers, credit yields, and commercial usage rights.';
+  'How much does Everygen AI cost? Plans bill at $24, $49, or $139/month (or $9, $19, and $49/mo billed annually). Compare credit allocations, volume rates, and real cost per video.';
 const canonicalPath = 'everygen-ai-pricing';
 
 const faqs: FaqItem[] = [
@@ -100,11 +100,11 @@ const breadcrumbSchema = {
       </div>
 
       <h1 class="text-3xl sm:text-5xl font-extrabold text-ink-900 tracking-tight leading-tight mb-4">
-        Everygen AI Pricing: Monthly vs Annual Plans &amp; Credit Rates
+        Everygen AI Pricing: Plans, Credits &amp; Real Cost Per Video
       </h1>
 
       <p class="text-base sm:text-lg text-ink-700 leading-relaxed max-w-3xl font-normal mb-3">
-        Plans are $24 / $49 / $139 per month, or $9 / $19 / $49 per month billed annually. A cross-referenced breakdown of Everygen AI subscription tiers by Viewmax LLC, credit yields, and commercial usage rights.
+        How much does Everygen AI cost? Official subscriptions start with Starter at $24/mo ($9/mo billed annually), Pro at $49/mo ($19/mo billed annually), and Creator at $139/mo ($49/mo billed annually). Below is the full breakdown of credit allocations, volume discounts, and calculated output costs per video generation.
       </p>
 
       <div class="text-xs text-ink-500 font-medium">
@@ -372,11 +372,72 @@ const breadcrumbSchema = {
       </p>
     </section>
 
+    <!-- Real Cost Per Video Analysis -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        How Much Does Everygen AI Cost Per Video?
+      </h2>
+      <div class="space-y-4 text-sm sm:text-base text-ink-800 leading-relaxed">
+        <p>
+          Because Everygen operates on a shared credit consumption model rather than fixed per-render limits, the real cost per video depends directly on the engine selected and whether you subscribe monthly or annually:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-sm text-ink-700 pl-2">
+          <li>
+            <strong>Short 5-Second Clips (Seedance 2 Fast):</strong> Consumes ~11.1 credits per generation. On the Starter monthly tier ($24 for 200 credits), this equals approximately 18 clips (~$1.33 per generation). On the annual rate ($9/mo for 200 credits), the effective cost drops to approximately <strong>$0.50 per 5-second clip</strong>.
+          </li>
+          <li>
+            <strong>Standard 5-Second Generations (Seedance 2 Standard):</strong> Consumes ~19.2 credits per generation, yielding approximately 10 clips on Starter (200 credits), 26 clips on Pro (500 credits), and 61 clips on Creator (1,000 credits at the lower volume rate).
+          </li>
+          <li>
+            <strong>Continuous 30-Second Takes (Seedance 2.5 1080p):</strong> High-resolution long takes consume ~67 to 115 credits per render. Starter yields an estimated ~1 to 3 full 30-second sequences, Pro yields ~4 to 7 takes, and Creator yields ~9 to 15 takes.
+          </li>
+          <li>
+            <strong>Still Frames (Nano Banana Pro):</strong> Consumes 4 credits per generation, yielding 50 images on Starter (200 ÷ 4), 125 images on Pro (500 ÷ 4), and 250 images on Creator (1,000 ÷ 4).
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Plan Cost Comparison & Volume Discounts -->
+    <section class="space-y-4 pt-6 border-t border-paper-300">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        Everygen AI Cost vs Other Plans
+      </h2>
+      <div class="space-y-4 text-sm sm:text-base text-ink-800 leading-relaxed">
+        <p>
+          Comparing subscription tiers reveals clear cost-efficiency thresholds across the three official packages:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+          <div class="p-4 rounded-lg border border-paper-300 bg-paper-100 space-y-2 text-xs sm:text-sm">
+            <h3 class="font-bold text-ink-900 text-sm">Starter Cost Model</h3>
+            <p class="text-ink-700">
+              $24/mo ($9/mo annual). At 200 credits, you pay base unit rates ($0.12/credit monthly, $0.045/credit annual). Ideal for casual testing and light personal clip creation.
+            </p>
+          </div>
+          <div class="p-4 rounded-lg border border-brand-blue/30 bg-blue-50/20 space-y-2 text-xs sm:text-sm">
+            <h3 class="font-bold text-brand-blue text-sm">Pro Cost Model</h3>
+            <p class="text-ink-700">
+              $49/mo ($19/mo annual). Delivers 500 monthly credits plus a 500-credit bonus in month 1, cutting early unit cost in half while unlocking Kling 4.0 access and priority GPU dispatch.
+            </p>
+          </div>
+          <div class="p-4 rounded-lg border border-paper-300 bg-paper-100 space-y-2 text-xs sm:text-sm">
+            <h3 class="font-bold text-ink-900 text-sm">Creator Volume Tier</h3>
+            <p class="text-ink-700">
+              $139/mo ($49/mo annual). Unit credit cost drops at volume: orders of 1,000+ credits bill at a lower rate (~9.4 for Fast clips, ~16.4 for Standard), providing maximum value for production studios.
+            </p>
+          </div>
+        </div>
+        <p class="text-xs text-ink-600">
+          To explore annual subscription savings in detail, see our complete guide on <a href="/everygen-ai-discount/" class="text-brand-blue font-semibold hover:underline">Everygen AI Discounts &amp; Annual Billing</a>.
+        </p>
+      </div>
+    </section>
+
     <!-- Navigation Hub -->
     <section class="rounded-lg bg-paper-100 border border-paper-300 p-6 sm:p-8 space-y-3">
       <h2 class="text-lg font-bold text-ink-900">Compare Alternatives &amp; Free Trial Rules</h2>
       <p class="text-sm text-ink-700 leading-relaxed">
-        Seeking free daily credits instead of a paid monthly plan? Read our <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">Free Trial &amp; Quotas Guide</a>, evaluate model capabilities and specs in our <a href="/everygen-ai-review/" class="text-brand-blue font-semibold hover:underline">Everygen AI Review</a>, or compare <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Top Video Alternatives</a>.
+        Seeking free daily credits instead of a paid monthly plan? Read our <a href="/is-everygen-ai-free/" class="text-brand-blue font-semibold hover:underline">Free Trial &amp; Quotas Guide</a>, explore <a href="/everygen-ai-discount/" class="text-brand-blue font-semibold hover:underline">Annual Discounts</a>, evaluate model capabilities and specs in our <a href="/everygen-ai-review/" class="text-brand-blue font-semibold hover:underline">Everygen AI Review</a>, or compare <a href="/everygen-ai-alternatives/" class="text-brand-blue font-semibold hover:underline">10 Top Video Alternatives</a>.
       </p>
     </section>
 
