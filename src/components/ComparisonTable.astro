@@ -7,6 +7,7 @@ export interface ToolComparisonItem {
   freeTier: string;
   startingPrice: string;
   score?: string;
+  scoreLabel?: string;
 }
 
 interface Props {
@@ -47,7 +48,11 @@ const showScore = tools.some((t) => !!t.score);
           </td>
           {showScore && (
             <td class="py-3.5 px-3 text-ink-900 font-bold text-xs">
-              {t.score ? (
+              {t.scoreLabel ? (
+                <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-blue-50 text-blue-900 border border-blue-200 font-bold whitespace-nowrap">
+                  {t.scoreLabel}
+                </span>
+              ) : t.score ? (
                 <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold">
                   {t.score} / 10
                 </span>

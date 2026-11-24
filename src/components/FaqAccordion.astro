@@ -6,20 +6,32 @@ export interface FaqItem {
 
 interface Props {
   faqs: FaqItem[];
+  title?: string;
+  subtitle?: string;
+  hideHeader?: boolean;
 }
 
-const { faqs } = Astro.props;
+const {
+  faqs,
+  title = 'Frequently Asked Questions',
+  subtitle = 'Direct answers addressing common model capability and credit queries.',
+  hideHeader = false,
+} = Astro.props;
 ---
 
-<div class="my-14 border-t border-paper-300 pt-10">
-  <div class="mb-6">
-    <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
-      Frequently Asked Questions
-    </h2>
-    <p class="text-sm text-ink-500 mt-1">
-      Direct answers addressing common model capability and credit queries.
-    </p>
-  </div>
+<div class={hideHeader ? '' : 'my-14 border-t border-paper-300 pt-10'}>
+  {!hideHeader && (
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-ink-900 tracking-tight">
+        {title}
+      </h2>
+      {subtitle && (
+        <p class="text-sm text-ink-500 mt-1">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  )}
 
   <div class="divide-y divide-paper-300">
     {faqs.map((faq) => (

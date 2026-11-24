@@ -165,9 +165,9 @@ export const TOOLS_DATA = {
     startingPrice: '$15 / mo ($12/mo annual)',
     duration: {
       perGeneration: '5–10s',
-      display: '10 seconds',
+      display: '5–10 seconds',
     },
-    maxDuration: '10 seconds',
+    maxDuration: '5–10 seconds',
   },
   openart: {
     id: 'openart',
